@@ -1,0 +1,75 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.standing": {
+            "geometry": "Geometry.status",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "overlay_color": { "r": "1.0", "g": "1.0", "b": "1.0", "a": 1.0 },
+            "is_hurt_color": {},
+            "on_fire_color": {},
+            "textures": [
+                "Texture.standing"
+            ]
+        },
+        "controller.render.moving": {
+            "geometry": "Geometry.status",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "overlay_color": { "r": "1.0", "g": "1.0", "b": "1.0", "a": 1.0 },
+            "is_hurt_color": {},
+            "on_fire_color": {},
+            "textures": [
+                "Texture.moving"
+            ]
+        },
+        "controller.render.sprinting": {
+            "geometry": "Geometry.status",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "overlay_color": { "r": "1.0", "g": "1.0", "b": "1.0", "a": 1.0 },
+            "is_hurt_color": {},
+            "on_fire_color": {},
+            "textures": [
+                "Texture.sprinting"
+            ]
+        },
+        "controller.render.jumping": {
+            "geometry": "Geometry.status",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "overlay_color": { "r": "1.0", "g": "1.0", "b": "1.0", "a": 1.0 },
+            "is_hurt_color": {},
+            "on_fire_color": {},
+            "textures": [
+                "Texture.jumping"
+            ]
+        },
+        "controller.render.sneaking": {
+            "geometry": "Geometry.status",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "overlay_color": { "r": "1.0", "g": "1.0", "b": "1.0", "a": 1.0 },
+            "is_hurt_color": {},
+            "on_fire_color": {},
+            "textures": [
+                "Texture.sneaking"
+            ]
+        }
+    }
+}

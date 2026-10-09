@@ -1,0 +1,17 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.azelux_cosmetics": {
+            "loop": true,
+            "bones": {
+                "root": {
+                    "rotation": [
+                        "variable.azelux_cosmetics = 1.0;",
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+  "namespace": "azelux_cosmetic_preview_template",
+  "preview_texture": {
+    "type": "image",
+    "texture": "('azelux/assets/mod_menu/cosmetics/' + $preview_path)",
+    "$preview_path|default": "capes/none_preview",
+    "layer": "$preview_layer",
+    "$preview_layer|default": 2,
+    "size": [
+      "105%",
+      "105%"
+    ],
+    "offset": [-4,-12]
+  },
+  "preview_text": {
+    "type": "label",
+    "text": "$preview_text",
+    "$preview_text|default": "No Preview Available",
+    "font_type": "STD",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "font_scale_factor": 0.5,
+    "alpha": 0.7,
+    "offset": [
+      "-2%",
+      -8
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$in_tab",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "template": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$preview_toggle_name",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "preview_texture@preview_texture": {} 
+      },
+      {
+        "preview_text@preview_text": {}
+      }
+    ]
+  }
+}

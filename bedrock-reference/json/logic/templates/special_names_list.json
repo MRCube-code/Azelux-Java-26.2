@@ -1,0 +1,446 @@
+{
+  "namespace": "azelux_special_names_list",
+
+  "list": {
+    "type": "panel",
+    "size": ["100%c",10],
+    "controls": [
+     {
+        "Owner@azelux_player_list_extras.tag_template": {
+          "$tag_text": "§4§lOWNER",
+          "$tag_username": "VelanMC"
+        }
+      },
+      {
+        "Owner@azelux_player_list_extras.tag_template": {
+          "$tag_text": "§4§lOWNER",
+          "$tag_username": "lliT008"
+        }
+      },
+      {
+        "Admin@azelux_player_list_extras.tag_template": {
+          "$tag_text": "§c§lAdmin",
+          "$tag_username": "PepeOnMCBE"
+        }
+      },
+      {
+        "Moderator@azelux_player_list_extras.tag_template": {
+          "$tag_text": "§d§lMOD",
+          "$tag_username": "stxdevs"
+        }
+      },
+      {
+        "Cape@azelux_player_list_extras.tag_template": {
+          "$tag_text": "§8CAPE",
+          "$tag_username": "Larsiic"
+        }
+      },
+      {
+        "Adam@azelux_player_list_extras.tag_template": {
+          "$tag_text": "§cAdam",
+          "$tag_username": "Crimson20055"
+        }
+      },
+      {
+        "PatarHD@azelux_player_list_extras.tag_template": {
+          "$tag_text": "§l§cYT",
+          "$tag_username": "PatarHD123"
+        }
+      }
+    ]
+  },
+  "og_list": {
+    "type": "panel",
+    "size": ["100%c",10],
+    "$og_tag": "§6OG",
+    "controls": [
+      {
+        "OG1@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "FoliyoMC"}
+      },
+      {
+        "OG2@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "GeeveyXDMCYT"}
+      },
+      {
+        "OG3@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "bruhcaution"}
+      },
+      {
+        "OG4@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "legalisers"}
+      },
+      {
+        "OG5@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "feartheblu"}
+      },
+      {
+        "OG6@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Chrome7773"}
+      },
+      {
+        "OG7@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Zloinkmc"}
+      },
+      {
+        "OG8@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "AdityaYTGamerz"}
+      },
+      {
+        "OG9@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "soitozi0"}
+      },
+      {
+        "OG10@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "panda687"}
+      },
+      {
+        "OG11@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Tizzum9884"}
+      },
+      {
+        "OG12@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "DarthTwoS194"}
+      },
+      {
+        "OG13@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "RoyalPRinCeee30"}
+      },
+      {
+        "OG14@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "MCotoulas"}
+      },
+      {
+        "OG15@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Matminer09"}
+      },
+      {
+        "OG16@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Habh1"}
+      },
+      {
+        "OG17@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "meurkii"}
+      },
+      {
+        "OG18@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Vivo6810"}
+      },
+      {
+        "OG19@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Raprap123409"}
+      },
+      {
+        "OG20@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "knarrenbro"}
+      },
+      {
+        "OG21@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Kobguy"}
+      },
+      {
+        "OG22@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "imtickleyou3657"}
+      },
+      {
+        "OG23@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "win6683"}
+      },
+      {
+        "OG24@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Swighton1"}
+      },
+      {
+        "OG25@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "ashwagg67"}
+      },
+      {
+        "OG26@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": ".insetnight5045"}
+      },
+      {
+        "OG27@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "JOSHFRAGS674"}
+      },
+      {
+        "OG28@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "oji6175"}
+      },
+      {
+        "OG29@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Nakovik"}
+      },
+      {
+        "OG30@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "aaaaboh"}
+      },
+      {
+        "OG31@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Mie1022 1"}
+      },
+      {
+        "OG32@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "triomischief"}
+      },
+      {
+        "OG33@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "KrynxtVeil"}
+      },
+      {
+        "OG34@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Chromeolgy"}
+      },
+      {
+        "OG35@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Positive1012"}
+      },
+      {
+        "OG36@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Hyoukaaa0"}
+      },
+      {
+        "OG37@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Notwemmbu__82439"}
+      },
+      {
+        "OG38@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "LionHeart4D3742"}
+      },
+      {
+        "OG39@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Carlcookey16"}
+      },
+      {
+        "OG40@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Wiiiffiieess"}
+      },
+      {
+        "OG41@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Z4kH4z3n"}
+      },
+      {
+        "OG42@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "M1KEXS"}
+      },
+      {
+        "OG43@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "st3f9027"}
+      },
+      {
+        "OG44@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Max123487yes"}
+      },
+      {
+        "OG45@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Manmadeee"}
+      },
+      {
+        "OG46@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "gaboj59"}
+      },
+      {
+        "OG47@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "DarkMyth 9333"}
+      },
+      {
+        "OG48@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "frogthegamer199"}
+      },
+      {
+        "OG49@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Prince90882108"}
+      },
+      {
+        "OG50@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Blockbuilder628"}
+      },
+      {
+        "OG51@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "SilentGreenMC"}
+      },
+      {
+        "OG52@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "BorgiePlayz"}
+      },
+      {
+        "OG53@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "BRENJA0531"}
+      },
+      {
+        "OG54@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "ProxyPieIsPro"}
+      },
+      {
+        "OG55@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Viablecobra405"}
+      },
+      {
+        "OG56@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "ROY79577"}
+      },
+      {
+        "OG57@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "miniputzim"}
+      },
+      {
+        "OG58@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Bpeedy"}
+      },
+      {
+        "OG59@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "tainoz0"}
+      },
+      {
+        "OG60@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Jazzkiboy22"}
+      },
+      {
+        "OG61@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "meganihgah"}
+      },
+      {
+        "OG62@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "ViceCloser"}
+      },
+      {
+        "OG63@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Cryingobsidiann"}
+      },
+      {
+        "OG64@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "TechnoPig8263"}
+      },
+      {
+        "OG65@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "EuronymousX3"}
+      },
+      {
+        "OG66@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "AceSpades432892"}
+      },
+      {
+        "OG67@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Keirax8747"}
+      },
+      {
+        "OG68@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "SyamilMCTZY"}
+      },
+      {
+        "OG69@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "HYSYPRIME25"}
+      },
+      {
+        "OG70@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "ZenChan7943"}
+      },
+      {
+        "OG71@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "ThinWeevil76857"}
+      },
+      {
+        "OG72@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Clownedonfrfr"}
+      },
+      {
+        "OG73@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "xEntodan"}
+      },
+      {
+        "OG74@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "EntoDaDeer"}
+      },
+      {
+        "OG75@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "KingID8086"}
+      },
+      {
+        "OG76@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "notchyves"}
+      },
+      {
+        "OG77@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "ekalamlangto"}
+      },
+      {
+        "OG78@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Sebastian93494"}
+      },
+      {
+        "OG79@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Benno4299"}
+      },
+      {
+        "OG80@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "playpolicy"}
+      },
+      {
+        "OG81@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "zed7555"}
+      },
+      {
+        "OG82@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "TkhideYTok"}
+      },
+      {
+        "OG83@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Tineee8122"}
+      },
+      {
+        "OG84@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Notwemmbu82439"}
+      },
+      {
+        "OG85@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Thereallacm"}
+      },
+      {
+        "OG86@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "RenamedAce93572"}
+      },
+      {
+        "OG87@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "WindyWave826"}
+      },
+      {
+        "OG88@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "HeroSpace6913"}
+      },
+      {
+        "OG89@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Minemystic2924"}
+      },
+      {
+        "OG90@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "LSGAMING10000"}
+      },
+      {
+        "OG91@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Flexyus3000"}
+      },
+      {
+        "OG92@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "deadshot_mru"}
+      },
+      {
+        "OG93@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Xastron2118"}
+      },
+      {
+        "OG94@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Jersznn"}
+      },
+      {
+        "OG95@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Varkao7"}
+      },
+      {
+        "OG96@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Shqdxwyt"}
+      },
+      {
+        "OG97@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "theflaked1"}
+      },
+      {
+        "OG98@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Eukie2344"}
+      },
+      {
+        "OG99@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "NPvhx"}
+      },
+      {
+        "OG100@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Elyaaali112"}
+      },
+      {
+        "OG101@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "MALKI17899"}
+      },
+      {
+        "OG102@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "AeroMugmss"}
+      },
+      {
+        "OG103@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "iamcheezy67"}
+      },
+      {
+        "OG104@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "botetexp"}
+      },
+      {
+        "OG105@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "qmshl"}
+      },
+      {
+        "OG106@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "eN5CC"}
+      },
+      {
+        "OG107@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "xLukiiq"}
+      },
+      {
+        "OG108@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Jamaludin7292"}
+      },
+      {
+        "OG109@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Nick44502"}
+      },
+      {
+        "OG110@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "sbp4442"}
+      },
+      {
+        "OG111@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Zxyzne"}
+      },
+      {
+        "OG112@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Cyyannnnnnn"}
+      },
+      {
+        "OG113@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "dxrth owns u"}
+      },
+      {
+        "OG114@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Noixenoc"}
+      },
+      {
+        "OG115@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "orpheusdviel"}
+      },
+      {
+        "OG116@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "gayman13"}
+      },
+      {
+        "OG117@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "MasonEatLead"}
+      },
+      {
+        "OG118@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "MR6DRY"}
+      },
+      {
+        "OG119@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "JSZPLAYZ"}
+      },
+      {
+        "OG120@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Wemmbu8338"}
+      },
+      {
+        "OG121@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Umbryx4561"}
+      },
+      {
+        "OG122@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Fair Gaming9"}
+      },
+      {
+        "OG123@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Fair Gaming7"}
+      },
+      {
+        "OG124@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "JAY S3AN8337"}
+      },
+      {
+        "OG125@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "Equitee9808"}
+      },
+      {
+        "OG126@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "ItsmeFlare01"}
+      },
+      {
+        "OG127@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "SharpLoww"}
+      },
+      {
+        "OG128@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "MrFroggbest"}
+      },
+      {
+        "OG129@azelux_player_list_extras.tag_template": {"$tag_text": "$og_tag", "$tag_username": "yvl kenn"}
+      }
+    ]
+  }
+}

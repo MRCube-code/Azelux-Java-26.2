@@ -1,0 +1,60 @@
+{
+    "namespace": "azelux_modules_list",
+    "content": {
+      "type": "panel",
+      "bindings": [
+        {
+          "binding_name": "#hud_visible",
+          "binding_name_override": "#visible",
+          "binding_type": "global"
+        }
+      ],
+      "controls": [
+        {
+          "chunk_player_position@azelux_chunkmap.chunk_player_position": {}
+        },
+        {
+          "custom_mods_list@mods_list_mod.mods_list": {}
+        },
+        {
+          "durability_viewer_main_panel@azelux_durability_viewer_mod.durability_viewer_main_panel": {}
+        },
+        {
+          "inventory_hud_panel@azelux_inventory_hud.inventory_hud_panel": {}
+        },
+        {
+          "offhand_hud_panel@azelux_offhand_hud.offhand_hud_panel": {}
+        },
+        {
+          "azelux_f8_screen@azelux_f8_screen.content": {}
+        },
+        {
+          "2@armor_hud_mod.armor_hud_main": {}
+        },
+        {
+          "4@direction_hud_mod.direction_hud_main": {}
+        },
+        {
+          "5@player_list_mod.content": {}
+        },
+        {
+          "6@server_address_mod.azelux_server_address_mod": {}
+        },
+        {
+          "8@moving_status_mod.moving_status_main": {}
+        },
+        {
+          "8@custom_crosshair_mod.custom_crosshair_panel": {}
+        },
+        {
+          "chunkmapcontents@azelux_chunkmap.contents": {}
+        },
+        {
+          "10@fullbright_mod.fullbright_main": {}
+        },
+        {
+          "11@custom_chat.bottom_chat": {}
+        }
+      ]
+    }
+  }

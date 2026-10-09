@@ -1,0 +1,120 @@
+{
+  "namespace": "custom_crosshair_mod",
+
+  "custom_crosshair_preset": {
+    "type": "image",
+    "size": [16,16],
+    "texture": "('azelux/assets/modules/crosshair/crosshair_' + $crosshair_number)",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "color": "$custom_crosshair_color",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "('custom_crosshair_selected_' + $crosshair_number)",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "all_crosshairs": {
+    "type": "panel",
+    "$custom_crosshair_color": "$crosshair_color",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "('custom_crosshair_color' + $c)",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {"1@custom_crosshair_preset": {"$crosshair_number": 1}},
+      {"2@custom_crosshair_preset": {"$crosshair_number": 2}},
+      {"3@custom_crosshair_preset": {"$crosshair_number": 3}},
+      {"4@custom_crosshair_preset": {"$crosshair_number": 4}},
+      {"5@custom_crosshair_preset": {"$crosshair_number": 5}},
+      {"6@custom_crosshair_preset": {"$crosshair_number": 6}},
+      {"7@custom_crosshair_preset": {"$crosshair_number": 7}},
+      {"8@custom_crosshair_preset": {"$crosshair_number": 8}}
+    ]
+  },
+
+  "custom_crosshair_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "cursor_renderer": {
+          "type": "custom",
+          "size": [ 16, 16 ],
+          "offset": [100,0],
+          "renderer": "cursor_renderer",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "custom_crosshair_main_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "custom_crosshair_custom_panel": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "custom_crosshair_main_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "cursor_renderer": {
+                "type": "custom",
+                "size": [ 16, 16 ],
+                "renderer": "cursor_renderer",
+                "layer": 4,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "custom_crosshair_default_color",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "custom_crosshair_panel2": {
+                "type": "panel",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "custom_crosshair_default_color",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {"1@all_crosshairs":{"$crosshair_color": "$custom_color_red","$c": 1}},
+                  {"2@all_crosshairs":{"$crosshair_color": "$custom_color_orange","$c": 2}},
+                  {"3@all_crosshairs":{"$crosshair_color": "$custom_color_yellow","$c": 3}},
+                  {"4@all_crosshairs":{"$crosshair_color": "$custom_color_green","$c": 4}},
+                  {"5@all_crosshairs":{"$crosshair_color": "$custom_color_light_blue","$c": 5}},
+                  {"6@all_crosshairs":{"$crosshair_color": "$custom_color_blue","$c": 6}},
+                  {"7@all_crosshairs":{"$crosshair_color": "$custom_color_magenta","$c": 7}},
+                  {"8@all_crosshairs":{"$crosshair_color": "$custom_color_white","$c": 8}}
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

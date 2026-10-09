@@ -1,0 +1,17 @@
+{
+    "format_version": 1,
+    "header": {
+        "description": "©Azelux Productions.\nRestart your game after applying the pack.\nMade by VelanMC, lliT and Pepe.\nDisable Vibrant Visuals for the best experience!\ndsc.gg/azelux",
+        "name": "Azelux Client",
+        "uuid": "df2b38d0-a646-4f4e-8f97-68eff27ddffd",
+        "version": [7, 1, 0]
+    },
+    "modules": [
+        {
+            "description": "V1.0.0",
+            "type": "resources",
+            "uuid": "12855895-df20-4ede-ab4e-7d36432468fc",
+            "version": [7, 1, 0]
+		} 
+	]
+}

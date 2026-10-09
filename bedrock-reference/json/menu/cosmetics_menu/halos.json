@@ -1,0 +1,260 @@
+{
+  "namespace": "azelux_client_halos",
+
+  "halos_menu": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [
+      "12%",
+      "4%"
+    ],
+    "controls": [
+      {
+        "button_list_row_1@azelux_client_halos.button_list_row_1": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "button_list_row_2@azelux_client_halos.button_list_row_2": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [0,30]
+        }
+      },
+      {
+        "button_list_row_3@azelux_client_halos.button_list_row_3": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [0,60]
+        }
+      }
+    ]
+  },
+
+  "button_list_row_1": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "halos_1@mod_menu_toggles.cosmetics_halos_mod_toggle": {
+          "$toggle_group_forced_index": 1,
+          "size": [
+            30,
+            30
+          ],
+          "$halos": "clear",
+          "$toggle_group_default_selected": "$halo_default_selected",
+          "$toggle_view_binding_name": "halo_selected_1"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "halos_2@mod_menu_toggles.cosmetics_halos_mod_toggle": {
+          "$toggle_group_forced_index": 2,
+          "size": [
+            30,
+            30
+          ],
+          "$halos": "halos_preview_2",
+          "$toggle_group_default_selected": "$halo_default_selected",
+          "$toggle_view_binding_name": "halo_selected_2"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "halos_3@mod_menu_toggles.cosmetics_halos_mod_toggle": {
+          "$toggle_group_forced_index": 3,
+          "size": [
+            30,
+            30
+          ],
+          "$halos": "halos_preview_3",
+          "$toggle_group_default_selected": "$halo_default_selected",
+          "$toggle_view_binding_name": "halo_selected_3"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "halos_4@mod_menu_toggles.cosmetics_halos_mod_toggle": {
+          "$toggle_group_forced_index": 4,
+          "size": [
+            30,
+            30
+          ],
+          "$halos": "halos_preview_4",
+          "$toggle_group_default_selected": "$halo_default_selected",
+          "$toggle_view_binding_name": "halo_selected_4"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "halos_5@mod_menu_toggles.cosmetics_halos_mod_toggle": {
+          "$toggle_group_forced_index": 5,
+          "size": [
+            30,
+            30
+          ],
+          "$halos": "halos_preview_5",
+          "$toggle_group_default_selected": "$halo_default_selected",
+          "$toggle_view_binding_name": "halo_selected_5"
+        }
+      }
+    ]
+  },
+
+  "button_list_row_2": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "halos_6@mod_menu_toggles.cosmetics_halos_mod_toggle": {
+          "$toggle_group_forced_index": 6,
+          "size": [
+            30,
+            30
+          ],
+          "$halos": "halos_preview_6",
+          "$toggle_group_default_selected": "$halo_default_selected",
+          "$toggle_view_binding_name": "halo_selected_6"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "halos_7@mod_menu_toggles.cosmetics_halos_mod_toggle": {
+          "$toggle_group_forced_index": 7,
+          "size": [
+            30,
+            30
+          ],
+          "$halos": "halos_preview_7",
+          "$toggle_group_default_selected": "$halo_default_selected",
+          "$toggle_view_binding_name": "halo_selected_7"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "halos_8@mod_menu_toggles.cosmetics_halos_mod_toggle": {
+          "$toggle_group_forced_index": 8,
+          "size": [
+            30,
+            30
+          ],
+          "$halos": "halos_preview_8",
+          "$toggle_group_default_selected": "$halo_default_selected",
+          "$toggle_view_binding_name": "halo_selected_8"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "halos_9@mod_menu_toggles.cosmetics_halos_mod_toggle": {
+          "$toggle_group_forced_index": 9,
+          "size": [
+            30,
+            30
+          ],
+          "$halos": "halos_preview_9",
+          "$toggle_group_default_selected": "$halo_default_selected",
+          "$toggle_view_binding_name": "halo_selected_9"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "halos_10@mod_menu_toggles.cosmetics_halos_mod_toggle": {
+          "$toggle_group_forced_index": 10,
+          "size": [
+            30,
+            30
+          ],
+          "$halos": "halos_preview_10",
+          "$toggle_group_default_selected": "$halo_default_selected",
+          "$toggle_view_binding_name": "halo_selected_10"
+        }
+      }
+    ]
+  },
+
+  "button_list_row_3": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "halos_11@mod_menu_toggles.cosmetics_halos_mod_toggle": {
+          "$toggle_group_forced_index": 11,
+          "size": [
+            30,
+            30
+          ],
+          "$halos": "halos_preview_11",
+          "$toggle_group_default_selected": "$halo_default_selected",
+          "$toggle_view_binding_name": "halo_selected_11"
+        }
+      }
+    ]
+  }
+}

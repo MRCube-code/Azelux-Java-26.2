@@ -1,0 +1,1185 @@
+{
+  "namespace": "title_screen_menu",
+  "toggleable_text": {
+    "type": "label",
+    "text": "dsc.gg/azelux",
+    "font_type": "STD",
+    "font_scale_factor": 0.66,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [
+      0,
+      50
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "text_toggle_state",
+        // The toggle name specified in the $toggle_view_binding_name
+        "source_property_name": "#toggle_state",
+        // The binding data that returns the toggle state as a boolean value
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "Logo": {
+    "type": "image",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [
+      0,
+      -56
+    ],
+    "size": [
+      58,
+      58
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "mods_toggle_state",
+        // The toggle name specified in the $toggle_view_binding_name
+        "source_property_name": "(not #toggle_state)",
+        // The binding data that returns the toggle state as a boolean value
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "cosmetics_toggle_state",
+        // The toggle name specified in the $toggle_view_binding_name
+        "source_property_name": "(not #toggle_state)",
+        // The binding data that returns the toggle state as a boolean value
+        "target_property_name": "#visible"
+      }
+    ],
+    "texture": "azelux/assets/common/white_and_text",
+    "layer": 3
+  },
+  "post_default": {
+    "type": "image",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "offset": [
+      0,
+      -15
+    ],
+    "size": [
+      95,
+      47.5
+    ],
+    "texture": "azelux/assets/common/blog_post_default",
+    "layer": 3
+  },
+  "dark_bg": {
+    "type": "image",
+    "fill": true,
+    "size": [
+      "110%",
+      "110%"
+    ],
+    "alpha": 0.25,
+    "texture": "textures/ui/screen_background",
+    "layer": -999
+  },
+
+  "Info": {
+    "type": "stack_panel",
+    "size": ["100%","100%"],
+    "offset": [5,-2],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "azelux_client_version_prefix": {
+          "type": "label",
+          "layer": 1,
+          "font_type": "$azelux_font",
+          "text": "Azelux Client (",
+          "font_scale_factor": 0.5,
+          "alpha": "$azelux_alpha",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "azelux_client_version_year@azelux_common.element": {
+          "type": "label",
+          "layer": 1,
+          "font_type": "$azelux_font",
+          "text": "$azelux_client_year",
+          "font_scale_factor": 0.5,
+          "alpha": "$azelux_alpha",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "azelux_client_version_name@azelux_common.element": {
+          "type": "label",
+          "layer": 1,
+          "font_type": "$azelux_font",
+          "text": "ac",
+          "font_scale_factor": 0.5,
+          "alpha": "$azelux_alpha",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "azelux_client_version_2@azelux_common.element": {
+          "type": "label",
+          "layer": 1,
+          "font_type": "$azelux_font",
+          "text": "$azelux_client_version",
+          "font_scale_factor": 0.5,
+          "alpha": "$azelux_alpha",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "azelux_client_version_suffix_dev@azelux_common.element": {
+          "ignored": "(not $azelux_is_dev)",
+          "type": "label",
+          "layer": 1,
+          "font_type": "$azelux_font",
+          "text": "/dev",
+          "font_scale_factor": 0.5,
+          "alpha": "$azelux_alpha",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "azelux_client_version_suffix_beta@azelux_common.element": {
+          "ignored": "(not $azelux_is_beta)",
+          "type": "label",
+          "layer": 1,
+          "font_type": "$azelux_font",
+          "text": "/beta",
+          "font_scale_factor": 0.5,
+          "alpha": "$azelux_alpha",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "azelux_client_version_suffix_release@azelux_common.element": {
+          "ignored": "(not $azelux_is_release)",
+          "type": "label",
+          "layer": 1,
+          "font_type": "$azelux_font",
+          "text": "/release",
+          "font_scale_factor": 0.5,
+          "alpha": "$azelux_alpha",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "azelux_client_version_suffix_bracket@azelux_common.element": {
+          "type": "label",
+          "layer": 1,
+          "font_type": "$azelux_font",
+          "text": ")",
+          "font_scale_factor": 0.5,
+          "alpha": "$azelux_alpha",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      }
+    ]
+  },
+
+
+  "copyright": {
+    "type": "label",
+    "layer": 2,
+    "offset": [
+      -5,
+      -2
+    ],
+    "text": "Not affiliated with Mojang or Microsoft. Do not distribute!",
+    "font_type": "Roboto-Regular",
+    "shadow": false,
+    "font_scale_factor": 0.5,
+    "alpha": 0.5,
+    "anchor_from": "top_right",
+    "anchor_to": "top_right"
+  },
+  "Labels": {
+    "type": "panel",
+    "size": [
+      "100%-2px",
+      10
+    ],
+    "offset": [
+      0,
+      -2
+    ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {
+        "Info@title_screen_menu.Info": {}
+      },
+      {
+        "copyright@title_screen_menu.copyright": {}
+      }
+    ]
+  },
+  "gamertag": {
+    "type": "panel",
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "offset": [
+      45,
+      10
+    ],
+    "size": [
+      60,
+      32
+    ],
+    "controls": [
+      {
+        "stacked_column": {
+          "type": "stack_panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "offset": [
+            -20,
+            5
+          ],
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "gamertag_pic_and_label": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [
+                  10,
+                  10
+                ],
+                "controls": [
+                  {
+                    "gamerpic_with_border": {
+                      "type": "panel",
+                      "size": [
+                        "100%",
+                        "100%"
+                      ],
+                      "controls": [
+                        {
+                          "gamerpic": {
+                            "type": "image",
+                            "size": [
+                              10,
+                              10
+                            ],
+                            "offset": [
+                              -10,
+                              1
+                            ],
+                            "layer": 2,
+                            "bindings": [
+                              {
+                                "binding_name": "#gamerpic_texture_path",
+                                "binding_name_override": "#texture"
+                              },
+                              {
+                                "binding_name": "#gamerpic_texture_location_type",
+                                "binding_name_override": "#texture_file_system"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "spacer": {
+                      "type": "panel",
+                      "size": [
+                        1,
+                        0
+                      ]
+                    }
+                  },
+                  {
+                    "label_panel": {
+                      "type": "panel",
+                      "size": [
+                        "100%c",
+                        "100%"
+                      ],
+                      "controls": [
+                        {
+                          "gamertag_label": {
+                            "type": "label",
+                            "color": [
+                              1.0,
+                              1.0,
+                              1.0
+                            ],
+                            "layer": 2,
+                            "text": "#gamertag_label",
+                            "alpha": 0.9,
+                            "size": [
+                              "default",
+                              "100%"
+                            ],
+                            "font_scale_factor": 0.55,
+                            "font_type": "Roboto-Regular",
+                            "offset": [
+                              -3,
+                              1
+                            ],
+                            "bindings": [
+                              {
+                                "binding_name": "#gamertag_label"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#gamertag_pic_and_label_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "cb_panel": {
+    "type": "panel",
+    "size": [
+      "200% - 2px",
+      "132% - 2px"
+    ]
+  },
+  "stack_panel": {
+    "type": "panel",
+    "size": [
+      "100%",
+      15.6695704
+    ]
+  },
+  "play_button@cb_buttons.custom_text_button": {
+    "$pressed_button_name": "button.menu_play",
+    "$sigma": "S I N G L E P L A Y E R",
+    "$button_text": "",
+    "$default_button_texture|default": "azelux/assets/buttons/button_default",
+    "$hover_button_texture|default": "azelux/assets/buttons/button_hover",
+    "$pressed_button_texture|default": "azelux/assets/buttons/button_hover",
+    "$locked_button_texture|default": "azelux/assets/buttons/red_button",
+    "$pressed_no_hover_texture|default": "azelux/assets/buttons/button_hover",
+    "offset": [
+      0,
+      -24
+    ],
+    "size": [
+      138,
+      15
+    ]
+  },
+  "mult@cb_buttons.custom_text_button": {
+    "size": [
+      138,
+      15
+    ],
+    "offset": [
+      0,
+      -25
+    ],
+    "$default_button_texture|default": "azelux/assets/buttons/button_default",
+    "$hover_button_texture|default": "azelux/assets/buttons/button_hover",
+    "$pressed_button_texture|default": "azelux/assets/buttons/button_hover",
+    "$locked_button_texture|default": "azelux/assets/buttons/red_button",
+    "$pressed_no_hover_texture|default": "azelux/assets/buttons/button_hover",
+    "$pressed_button_name": "button.menu_servers",
+    "$sigma": "M U L T I P L A Y E R",
+    "$button_text": ""
+  },
+  "store_button@cb_buttons.custom_text_button": {
+    "size": [
+      138,
+      15
+    ],
+    "offset": [
+      0,
+      -26
+    ],
+    "$default_button_texture|default": "azelux/assets/buttons/red_button_default",
+    "$hover_button_texture|default": "azelux/assets/buttons/red_button_hover",
+    "$pressed_button_texture|default": "azelux/assets/buttons/red_button_hover",
+    "$locked_button_texture|default": "azelux/assets/buttons/red_button",
+    "$pressed_no_hover_texture|default": "azelux/assets/buttons/red_button_hover",
+    "$pressed_button_name": "button.menu_store",
+    "$sigma": "S T O R E",
+    "$button_text": ""
+  },
+  "azelux_mods_button@azelux_toggles.light_text_toggle_radio_sus": {
+    "size": [
+      16,
+      16
+    ],
+    "layer": 5,
+    "offset": [
+      -32,
+      -5.5
+    ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "$toggle_default_state": false,
+    "$icon": "azelux/assets/icons/azelux_mods",
+    "$toggle_group_forced_index": 0,
+    "$toggle_name": "mods_toggle_state",
+    "$hover_text_text": "AZELUX SETTINGS",
+    "$hover_text_offset": [
+      0,
+      -14
+    ],
+    "$rizzoffset": [
+      0,
+      -13
+    ],
+    // Required but has no effect unless a hardcoded toggle name is used.
+    "$toggle_view_binding_name": "mods_toggle_state"
+  },
+  "settings_button@cb_buttons.custom_content_button_white": {
+    "$pressed_button_name": "button.menu_settings",
+    "size": [
+      16,
+      16
+    ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "$icon": "azelux/assets/icons/settings2",
+    "$default_button_texture|default": "azelux/assets/buttons/button_default",
+    "$hover_button_texture|default": "azelux/assets/buttons/button_hover",
+    "$pressed_button_texture|default": "azelux/assets/buttons/button_hover",
+    "$locked_button_texture|default": "azelux/assets/buttons/red_button",
+    "$pressed_no_hover_texture|default": "azelux/assets/buttons/button_hover",
+    "offset": [
+      -16,
+      -5.5
+    ],
+    "$sigmahovertext": "MINECRAFT SETTINGS",
+    "$hover_text_offset": [
+      0,
+      -14
+    ],
+    "$rizzoffset": [
+      0,
+      -13
+    ]
+  },
+  "skin_button@azelux_toggles.light_text_toggle_radio_sus": {
+    "size": [
+      16,
+      16
+    ],
+    "layer": 5,
+    "offset": [
+      0,
+      -5.5
+    ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "$toggle_default_state": true,
+    "$icon": "azelux/assets/icons/profile",
+    "$toggle_group_forced_index": 0,
+    "$hover_text_text": "AZELUX COSMETICS",
+    "$toggle_name": "cosmetics_toggle_state",
+    "$hover_text_offset": [
+      0,
+      -14
+    ],
+    "$rizzoffset": [
+      0,
+      -13
+    ],
+    // Required but has no effect unless a hardcoded toggle name is used.
+    "$toggle_view_binding_name": "cosmetics_toggle_state"
+    // The toggle name that allows us to retrieve data.
+  },
+  "cosmetic_button@cb_buttons.custom_content_button_white": {
+    "$default_button_texture|default": "azelux/assets/buttons/button_default",
+    "$hover_button_texture|default": "azelux/assets/buttons/button_hover",
+    "$pressed_button_texture|default": "azelux/assets/buttons/button_hover",
+    "$locked_button_texture|default": "azelux/assets/buttons/red_button",
+    "$pressed_no_hover_texture|default": "azelux/assets/buttons/button_hover",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [
+      16,
+      16
+    ],
+    "layer": 5,
+    "offset": [
+      16,
+      -5.5
+    ],
+    "$pressed_button_texture|default": "ui/BCLU/textures/BG2",
+    "$pressed_button_name": "button.menu_store",
+    "$icon": "azelux/assets/icons/store",
+    "$sigmahovertext": "STORE",
+    "$hover_text_offset": [
+      0,
+      -14
+    ],
+    "$rizzoffset": [
+      0,
+      -13
+    ]
+  },
+  "skin_changer_button@cb_buttons.custom_content_button_white": {
+    "$default_button_texture|default": "azelux/assets/buttons/button_default",
+    "$hover_button_texture|default": "azelux/assets/buttons/button_hover",
+    "$pressed_button_texture|default": "azelux/assets/buttons/button_hover",
+    "$locked_button_texture|default": "azelux/assets/buttons/red_button",
+    "$pressed_no_hover_texture|default": "azelux/assets/buttons/button_hover",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [
+      16,
+      16
+    ],
+    "layer": 5,
+    "offset": [
+      32,
+      -5.5
+    ],
+    "$pressed_button_texture|default": "ui/BCLU/textures/BG2",
+    "$pressed_button_name": "button.to_profile_screen",
+    "$icon": "azelux/assets/icons/account_switcher",
+    "$sigmahovertext": "SKIN CHANGER",
+    "$hover_text_offset": [
+      0,
+      -14
+    ],
+    "$rizzoffset": [
+      0,
+      -13
+    ]
+  },
+  "exit_button@cb_buttons.custom_content_button_white": {
+    "$icon": "azelux/assets/icons/exit1",
+    "$default_button_texture|default": "azelux/assets/buttons/button_default",
+    "$hover_button_texture|default": "azelux/assets/buttons/red_button_hover",
+    "$pressed_button_texture|default": "azelux/assets/buttons/red_button_hover",
+    "$locked_button_texture|default": "azelux/assets/buttons/red_button",
+    "$pressed_no_hover_texture|default": "azelux/assets/buttons/red_button_hover",
+    "anchor_to": "top_right",
+    "anchor_from": "top_right",
+    "$pressed_button_name": "button.menu_exit",
+    "size": [
+      16,
+      16
+    ],
+    "offset": [
+      -5,
+      4.7
+    ],
+    "$sigmahovertext": "QUIT",
+    "$hover_text_offset": [
+      0,
+      13
+    ],
+    "$rizzoffset": [
+      0,
+      14
+    ]
+  },
+  "account_button@cb_buttons.custom_content_button_white": {
+    "$icon": "azelux/assets/icons/account",
+    "$default_button_texture|default": "azelux/assets/buttons/button_default",
+    "$hover_button_texture|default": "azelux/assets/buttons/button_hover",
+    "$pressed_button_texture|default": "azelux/assets/buttons/button_hover",
+    "$locked_button_texture|default": "azelux/assets/buttons/red_button",
+    "$pressed_no_hover_texture|default": "azelux/assets/buttons/button_hover",
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "$pressed_button_name": "button.feedback_button_pressed",
+    "size": [
+      16,
+      16
+    ],
+    "offset": [
+      5,
+      4.7
+    ],
+    "$rizzoffset": [
+      0,
+      13
+    ],
+    "$sigmahovertext": "FEEDBACK",
+    "$hover_text_offset": [
+      0,
+      13
+    ],
+    "$rizzoffset": [
+      0,
+      14
+    ]
+  },
+  "custom_toggle@azelux_toggles.light_text_toggle": {
+    "size": [
+      16,
+      16
+    ],
+    "offset": [
+      20.5,
+      4.7
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$toggle_default_state": false,
+    "$icon": "azelux/assets/icons/link",
+    "$hover_text_text": "LINKS",
+    "$hover_text_offset": [
+      0,
+      13
+    ],
+    "$rizzoffset": [
+      0,
+      14
+    ],
+    "$toggle_name": "text_visibility_toggle",
+    // Required but has no effect unless a hardcoded toggle name is used.
+    "$toggle_view_binding_name": "text_toggle_state"
+    // The toggle name that allows us to retrieve data.
+  },
+  "cb_main_buttons": {
+    "type": "stack_panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "orientation": "vertical",
+    "controls": [
+      {
+        "padding": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "10%"
+          ]
+        }
+      },
+      {
+        "padding_fill_1": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "fill"
+          ]
+        }
+      },
+      {
+        "cb_buttons": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "@title_screen_menu.cb_buttons": {}
+            }
+          ]
+        }
+      },
+      {
+        "padding_fill_2": {
+          "type": "panel",
+          "size": [
+            "200%",
+            "fill"
+          ]
+        }
+      },
+      {
+        "padding_3": {
+          "type": "panel",
+          "size": [
+            "100%",
+            10
+          ]
+        }
+      }
+    ]
+  },
+  "Buttons": {
+    "type": "panel",
+    "offset": [
+      0,
+      28
+    ],
+    "size": [
+      100,
+      "100%c"
+    ],
+    "controls": [
+      {
+        "stack_panels": {
+          "type": "stack_panel",
+          "size": [
+            "100%",
+            "100%c"
+          ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mods_toggle_state",
+              // The toggle name specified in the $toggle_view_binding_name
+              "source_property_name": "(not #toggle_state)",
+              // The binding data that returns the toggle state as a boolean value
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "cosmetics_toggle_state",
+              // The toggle name specified in the $toggle_view_binding_name
+              "source_property_name": "(not #toggle_state)",
+              // The binding data that returns the toggle state as a boolean value
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "@title_screen_menu.stack_panel": {
+                "controls": [
+                  {
+                    "@title_screen_menu.play_button": {}
+                  }
+                ]
+              }
+            },
+            {
+              "@title_screen_menu.stack_panel": {
+                "controls": [
+                  {
+                    "@title_screen_menu.mult": {}
+                  }
+                ]
+              }
+            },
+            {
+              "@title_screen_menu.stack_panel": {
+                "controls": [
+                  {
+                    "@title_screen_menu.store_button": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "contents": {
+    "type": "panel",
+    "size": ["100%","100%"],
+    "controls": [
+      {
+        "contents_2@contents_2": {
+          "ignored": "$introduction_menu"
+        }
+      },
+      {
+        "introduction_screen@azelux_introduction_screen.introduction_screen": {
+          "visible": "$introduction_menu"
+        }
+      }
+    ]
+  },
+
+  "contents_2": {
+    "type": "panel",
+    "size": ["100%","100%"],
+    "controls": [
+      {
+        "azelux_start_screen_modules@azelux_start_screen_modules.content":{
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mods_toggle_state",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "right_version": {
+          "type": "panel",
+          "$a_client_version": "$azelux_client_version",
+          "$a_config_version": "$azelux_config_version",
+          "visible": "($a_client_version = $a_config_version)",
+          "controls": [
+            {
+              "mod_menu@azelux_client_mod_menu.start_mod_menu": {
+                "$ingame_username_ignored": true
+              }
+            },
+            {
+              "cosmetics_menu@azelux_client_cosmetics_menu.cosmetics_menu": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "cosmetics_toggle_state",
+                    // The toggle name specified in the $toggle_view_binding_name
+                    "source_property_name": "#toggle_state",
+                    // The binding data that returns the toggle state as a boolean value
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "injection_overlay@injection_screen.content": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "injection_disabler",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "custom_toggle@title_screen_menu.custom_toggle": {}
+            },
+            {
+              "toggleable_text@title_screen_menu.toggleable_text": {}
+            },
+            {
+              "account_button@title_screen_menu.account_button": {}
+            },
+            {
+              "dark_bg@title_screen_menu.dark_bg": {}
+            },
+            {
+              "bottom_buttons": {
+                "type": "panel",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mods_toggle_state",
+                    // The toggle name specified in the $toggle_view_binding_name
+                    "source_property_name": "(not #toggle_state)",
+                    // The binding data that returns the toggle state as a boolean value
+                    "target_property_name": "#visible"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "cosmetics_toggle_state",
+                    // The toggle name specified in the $toggle_view_binding_name
+                    "source_property_name": "(not #toggle_state)",
+                    // The binding data that returns the toggle state as a boolean value
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls":
+                [
+                  {
+                    "settings_button@title_screen_menu.settings_button": {}
+                  },
+                  {
+                    "account_switcher_button@title_screen_menu.skin_changer_button": {}
+                  },
+                  {
+                    "cosmetic@title_screen_menu.cosmetic_button": {}
+                  },
+                  {
+                    "azelux_mods_button@title_screen_menu.azelux_mods_button": {}
+                  },
+                  {
+                    "skin_panel@title_screen_menu.skin_button": {}
+                  }
+                ]
+              }
+            },
+            {
+              "Logo@title_screen_menu.Logo": {}
+            },
+            {
+              "exit_button@title_screen_menu.exit_button": {}
+            },
+            {
+              "Buttons@title_screen_menu.Buttons": {}
+            },
+            {
+              "post_default@post_default": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mods_toggle_state",
+                    // The toggle name specified in the $toggle_view_binding_name
+                    "source_property_name": "(not #toggle_state)",
+                    // The binding data that returns the toggle state as a boolean value
+                    "target_property_name": "#visible"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "cosmetics_toggle_state",
+                    // The toggle name specified in the $toggle_view_binding_name
+                    "source_property_name": "(not #toggle_state)",
+                    // The binding data that returns the toggle state as a boolean value
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "Labels@title_screen_menu.Labels": {}
+            }
+          ]
+        }
+      },
+      {
+        "wrong_version": {
+          "type": "panel",
+          "$a_client_version": "$azelux_client_version",
+          "$a_config_version": "$azelux_config_version",
+          "visible": "(not ($a_client_version = $a_config_version))",
+          "controls": [
+            {
+              "sigma_test": {
+                "type": "label",
+                "font_type": "$azelux_font",
+                "font_scale_factor": 1,
+                "offset": [0,-25],
+                "text": "§cWRONG CLIENT VERSION. PLEASE UPDATE. DSC.GG/AZELUX"
+              }
+            },
+            {
+              "sigmar": {
+                "type": "panel",
+                "controls": [
+                  {
+                    "dark_bg@title_screen_menu.dark_bg": {}
+                  },
+                  {
+                    "bottom_buttons": {
+                      "type": "panel",
+                      "controls": [
+                        {
+                          "settings_button@title_screen_menu.settings_button": {}
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "buttons_panel": {
+    "type": "panel",
+    "controls": [
+      {"play_button@azelux_start_screen.play_button": {}},
+      {"settings_button@azelux_start_screen.settings_button": {}}
+    ]
+  },
+
+  "play_button@azelux_buttons.main_button": {
+    "$pressed_button_name": "button.menu_play",
+    "$button_text": "Play",
+    "$azelux_button_text_offset": [0,-1.5],
+    "offset": [0,-24],
+    "size": [138,14]
+  },
+
+  "settings_button@azelux_buttons.main_button": {
+    "font_type": "$azelux_font",
+    "$pressed_button_name": "button.menu_settings",
+    "$button_text": "Settings",
+    "$azelux_button_text_offset": [0,-1.5],
+    "offset": [0,-8],
+    "size": [138,14]
+  },
+
+  //Logo
+
+  "logo_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "logo": {
+          "type": "image",
+          "texture": "ui/azelux/textures/logo/logo_with_text_below",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [ 150,100],
+          "offset": [ 0,-70],
+          "layer": 1,
+          "alpha": "1"
+        }
+      }
+    ]
+  },
+
+  // News
+
+  "news_panel": {
+    "type": "panel",
+    "offset": [ 0, -11 ],
+    "$news_size": [ 125, 62.5 ],
+    "controls": [
+      { "news_image1@azelux_start_screen_news.news_image1": {} },
+      { "news_image2@azelux_start_screen_news.news_image2": {} },
+      { "news_image3@azelux_start_screen_news.news_image3": {} },
+      { "news_image4@azelux_start_screen_news.news_image4": {} },
+      { "news_image5@azelux_start_screen_news.news_image5": {} },
+      { "news_image6@azelux_start_screen_news.news_image6": {} }
+    ]
+  },
+
+  // All visible labels (copyright & version)
+
+  "label_panel": {
+    "type": "panel",
+    "size": ["100%-2px",10],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      { "copyright_text@azelux_start_screen.copyright_text": {} },
+      { "version_texts@azelux_start_screen.version_texts": {} }
+    ]
+  },
+
+  "copyright_text@azelux_common.element": {
+    "$azelux_type": "label",
+    "layer": 1,
+    "offset": [-5,-2],
+    "text": "Not affiliated with Mojang or Microsoft.",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "font_scale_factor": 0.6666,
+    "font_type": "$azelux_font"
+  },
+
+  "version_texts": {
+    "type": "stack_panel",
+    "size": ["100%","100%"],
+    "offset": [5,-2],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "azelux_client_version_prefix@azelux_common.element": {
+          "$azelux_type": "label",
+          "layer": 1,
+          "font_type": "$azelux_font",
+          "text": "Azelux Client (",
+          "font_scale_factor": 0.6666,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "azelux_client_version_year@azelux_common.element": {
+          "$azelux_type": "label",
+          "layer": 1,
+          "font_type": "$azelux_font",
+          "text": "$azelux_client_year",
+          "font_scale_factor": 0.6666,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "azelux_client_version_name@azelux_common.element": {
+          "$azelux_type": "label",
+          "layer": 1,
+          "font_type": "$azelux_font",
+          "text": "ac",
+          "font_scale_factor": 0.6666,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "azelux_client_version_2@azelux_common.element": {
+          "$azelux_type": "label",
+          "layer": 1,
+          "font_type": "$azelux_font",
+          "text": "$azelux_client_version",
+          "font_scale_factor": 0.6666,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "azelux_client_version_suffix_dev@azelux_common.element": {
+          "ignored": "(not $azelux_is_dev)",
+          "$azelux_type": "label",
+          "layer": 1,
+          "font_type": "$azelux_font",
+          "text": "/dev",
+          "font_scale_factor": 0.6666,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "azelux_client_version_suffix_beta@azelux_common.element": {
+          "ignored": "(not $azelux_is_beta)",
+          "$azelux_type": "label",
+          "layer": 1,
+          "font_type": "$azelux_font",
+          "text": "/beta",
+          "font_scale_factor": 0.6666,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "azelux_client_version_suffix_release@azelux_common.element": {
+          "ignored": "(not $azelux_is_release)",
+          "$azelux_type": "label",
+          "layer": 1,
+          "font_type": "$azelux_font",
+          "text": "/release",
+          "font_scale_factor": 0.6666,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "azelux_client_version_suffix_bracket@azelux_common.element": {
+          "$azelux_type": "label",
+          "layer": 1,
+          "font_type": "$azelux_font",
+          "text": ")",
+          "font_scale_factor": 0.6666,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      }
+    ]
+  }
+}

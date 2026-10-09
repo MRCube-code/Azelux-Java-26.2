@@ -1,0 +1,158 @@
+{
+  "namespace": "direction_hud_mod",
+  "direction_hud_main": {
+    "type": "panel",
+    "size": ["100%","100%"],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "direction_hud_main_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "panel_blc": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "direction_hud_legacy_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "blc_direction_hud@mod_menu_sliders.movable_mod": {
+                "$x_slider": "direction_hud_position_x",
+                "$y_slider": "direction_hud_position_y",
+                "$custom_controls": [
+                  {
+                    "direction_hud_panel": {
+                      "type": "panel",
+                      "anchor_to": "center",
+                      "anchor_from": "center",
+                      "offset": [0,-10],
+                      "controls": [
+                        {
+                          "direction_hud_pointer": {
+                            "type": "image",
+                            "offset": [
+                              0,
+                              -5
+                            ],
+                            "size": [
+                              13,
+                              2
+                            ],
+                            "texture": "azelux/assets/modules/direction_hud/pointer",
+                            "layer": 1
+                          }
+                        },
+                        {
+                          "direction_hud": {
+                            "type": "custom",
+                            "renderer": "paper_doll_renderer",
+                            "offset": [
+                              35.2,
+                              2811.5
+                            ],
+                            "size": [
+                              39,
+                              39
+                            ],
+                            "layer": 1
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_legacy": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "direction_hud_legacy_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "legacy_direction_hud@mod_menu_sliders.movable_mod": {
+                "$x_slider": "direction_hud_legacy_position_x",
+                "$y_slider": "direction_hud_legacy_position_y",
+                "$custom_controls": [
+                  {
+                    "direction_hud_panel": {
+                      "type": "panel",
+                      "anchor_to": "center",
+                      "anchor_from": "center",
+                      "offset": [0,-50],
+                      "controls": [
+                        {
+                          "direction_hud": {
+                            "type": "custom",
+                            "renderer": "paper_doll_renderer",
+                            "offset": [
+                              35.6,
+                              5655
+                            ],
+                            "size": [
+                              39,
+                              39
+                            ],
+                            "layer": 2
+                          }
+                        },
+                        {
+                          "direction_hud_background": {
+                            "type": "image",
+                            "offset": [
+                              -0.2,
+                              45.6
+                            ],
+                            "size": [
+                              71.5,
+                              12
+                            ],
+                            "texture": "azelux/assets/modules/direction_hud/direction_hud_legacy_background",
+                            "layer": 1
+                          }
+                        },
+                        {
+                          "direction_hud_line": {
+                            "type": "image",
+                            "offset": [
+                              -0.2,
+                              45.6
+                            ],
+                            "size": [
+                              9,
+                              12
+                            ],
+                            "texture": "azelux/assets/modules/direction_hud/direction_hud_legacy_pointer",
+                            "layer": 3
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

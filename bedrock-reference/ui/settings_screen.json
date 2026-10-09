@@ -1,0 +1,29 @@
+{
+  "selector_stack_panel": {
+    "$settings_spatial_pattern_fix_enabled": false,
+    "modifications": [
+      {
+        "control_name": "accessibility_button",
+        "operation": "insert_before",
+        "value": [
+          {
+            "1@custom_section.button": {}
+          }
+        ]
+      }
+    ]
+  },
+  "section_content_panels/general_and_controls_sections": {
+    "modifications": [
+      {
+        "control_name": "accessibility_section",
+        "operation": "insert_before",
+        "value": [
+          {
+            "2@custom_section.azelux_section": {}
+          }
+        ]
+      }
+    ]
+  }
+}

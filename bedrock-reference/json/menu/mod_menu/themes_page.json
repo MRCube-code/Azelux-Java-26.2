@@ -1,0 +1,133 @@
+{
+  "namespace": "azelux_client_themes_page",
+
+  "themes_page": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "alpha": 0.7,
+    "offset": [10,-147.5],
+    "controls": [
+      {
+        "desc": {
+          "type": "stack_panel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [80,100],
+          "controls": [
+            {
+              "description": {
+                "type": "label",
+                "text": "Azelux Client currently includes 4 Emotes, that you can toggle by doing the following:",
+                "alpha": 0.75,
+                "font_type": "Roboto-Regular",
+                "font_scale_factor": 0.55,
+                "layer": 12,
+                "offset": [
+                  0,
+                  17
+                ],
+                "anchor_from": "center",
+                "anchor_to": "center"
+              }
+            },
+            {
+              "panel": {
+                "type": "panel",
+                "size": [3,3]
+              }
+            },
+            {
+              "description": {
+                "type": "label",
+                "text": "Floss Dance: Sneak, Jump, Look Down",
+                "alpha": 0.75,
+                "font_type": "Roboto-Regular",
+                "font_scale_factor": 0.55,
+                "layer": 12,
+                "anchor_from": "center",
+                "anchor_to": "center"
+              }
+            },
+            {
+              "panel": {
+                "type": "panel",
+                "size": [3,3]
+              }
+            },
+            {
+              "description": {
+                "type": "label",
+                "text": "Griddy: Sneak, Jump, Look Up",
+                "alpha": 0.75,
+                "font_type": "Roboto-Regular",
+                "font_scale_factor": 0.55,
+                "layer": 12,
+                "anchor_from": "center",
+                "anchor_to": "center"
+              }
+            },
+            {
+              "panel": {
+                "type": "panel",
+                "size": [3,3]
+              }
+            },
+            {
+              "dab": {
+                "type": "label",
+                "text": "Dab: Sneak, Look Down, Click",
+                "alpha": 0.75,
+                "font_type": "Roboto-Regular",
+                "font_scale_factor": 0.55,
+                "layer": 12,
+                "anchor_from": "center",
+                "anchor_to": "center"
+              }
+            },
+            {
+              "panel": {
+                "type": "panel",
+                "size": [3,3]
+              }
+            },
+            {
+              "description": {
+                "type": "label",
+                "text": "Pray: Sneak, Look Up, Click",
+                "alpha": 0.75,
+                "font_type": "Roboto-Regular",
+                "font_scale_factor": 0.55,
+                "layer": 12,
+                "anchor_from": "center",
+                "anchor_to": "center"
+              }
+            },
+            {
+              "panel": {
+                "type": "panel",
+                "size": [3,3]
+              }
+            },
+            {
+              "description": {
+                "type": "label",
+                "text": "Please note that you have to switch to first person after using an emote before using another emote.",
+                "alpha": 0.75,
+                "font_type": "Roboto-Regular",
+                "font_scale_factor": 0.55,
+                "layer": 12,
+                "offset": [
+                  0,
+                  17
+                ],
+                "anchor_from": "center",
+                "anchor_to": "center"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

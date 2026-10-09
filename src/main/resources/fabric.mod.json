@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "azelux",
+  "version": "${version}",
+  "name": "Azelux Client",
+  "description": "Azelux Client 7.1.0 Java Edition reimplementation for Minecraft 26.2.",
+  "authors": ["Azelux Productions", "Java port"],
+  "license": "ARR",
+  "icon": "assets/azelux/common/pack_icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.azelux.client.AzeluxClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.0",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

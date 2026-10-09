@@ -1,0 +1,2848 @@
+{
+  "namespace": "azelux_client_capes",
+
+  "capes_menu@scrolling_panels.custom_scrolling_panel": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$show_background": false,
+    "layer": 8,
+    "$scroll_size": [
+      3,
+      "100%"
+    ],
+    "$scroll_bar_left_padding_size": [
+      2,
+      2
+    ],
+    "offset": [
+      "12%",
+      1.5
+    ],
+    "size": [
+      "50%",
+      "98.5%"
+    ],
+    "$scrolling_content": "azelux_client_capes.capes_menu_scrolling_content"
+  },
+
+  "capes_menu_scrolling_content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "controls": [
+      {
+        "spacer0": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "section": {
+          "type": "label",
+          "text": "A z e l u x   C a p e s",
+          "font_type": "STD",
+          "font_scale_factor": 0.7,
+          "alpha": 0.8,
+          "layer": 9,
+          "size": [
+            "100%",
+            10
+          ]
+        }
+      },
+      {
+        "spacer1": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_azelux_row_1@azelux_client_capes.button_list_azelux_row_1": {}
+      },
+      {
+        "spacer1": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "section": {
+          "type": "label",
+          "text": "H D   C a p e s",
+          "font_type": "STD",
+          "font_scale_factor": 0.7,
+          "alpha": 0.8,
+          "layer": 9,
+          "size": [
+            "100%",
+            10
+          ]
+        }
+      },
+      {
+        "spacerHD1": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "button_list_hd_row_1@azelux_client_capes.button_list_hd_row_1": {}
+      },
+      {
+        "spacer10": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_hd_row_2@azelux_client_capes.button_list_hd_row_2": {}
+      },
+      {
+        "spacer10": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_hd_row_3@azelux_client_capes.button_list_hd_row_3": {}
+      },
+      {
+        "spacer0": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_hd_row_4@azelux_client_capes.button_list_hd_row_4": {}
+      },
+      {
+        "spacer0": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "section": {
+          "type": "label",
+          "text": "L u n a r   C a p e s",
+          "font_type": "STD",
+          "font_scale_factor": 0.7,
+          "alpha": 0.8,
+          "layer": 9,
+          "size": [
+            "100%",
+            10
+          ]
+        }
+      },
+      {
+        "spacerLunar1": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "button_list_lunar_row_1@azelux_client_capes.button_list_lunar_row_1": {}
+      },
+      {
+        "spacerLunar2": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_lunar_row_2@azelux_client_capes.button_list_lunar_row_2": {}
+      },
+      {
+        "spacerLunar3": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_lunar_row_3@azelux_client_capes.button_list_lunar_row_3": {}
+      },
+      {
+        "spacerLunar4": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_lunar_row_4@azelux_client_capes.button_list_lunar_row_4": {}
+      },
+      {
+        "spacerLunar5": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_lunar_row_5@azelux_client_capes.button_list_lunar_row_5": {}
+      },
+      {
+        "spacerLunar6": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_lunar_row_6@azelux_client_capes.button_list_lunar_row_6": {}
+      },
+      {
+        "spacerLunar7": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_lunar_row_7@azelux_client_capes.button_list_lunar_row_7": {}
+      },
+      {
+        "spacerLunar8": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_lunar_row_8@azelux_client_capes.button_list_lunar_row_8": {}
+      },
+      {
+        "spacer0": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "section": {
+          "type": "label",
+          "text": "M i n e c r a f t   C a p e s",
+          "font_type": "STD",
+          "font_scale_factor": 0.7,
+          "alpha": 0.8,
+          "layer": 9,
+          "size": [
+            "100%",
+            10
+          ]
+        }
+      },
+      {
+        "spacer1": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_row_1@azelux_client_capes.button_list_row_1": {}
+      },
+      {
+        "spacer1": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_row_2@azelux_client_capes.button_list_row_2": {}
+      },
+      {
+        "spacer2": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "button_list_row_3@azelux_client_capes.button_list_row_3": {}
+      },
+      {
+        "spacer3": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "button_list_row_4@azelux_client_capes.button_list_row_4": {}
+      },
+      {
+        "spacer4": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "button_list_row_5@azelux_client_capes.button_list_row_5": {}
+      },
+      {
+        "spacer5": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "button_list_row_6@azelux_client_capes.button_list_row_6": {}
+      },
+      {
+        "spacer6": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "button_list_row_7@azelux_client_capes.button_list_row_7": {}
+      },
+      {
+        "spacer7": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "button_list_row_8@azelux_client_capes.button_list_row_8": {}
+      },
+      {
+        "spacer8": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "button_list_row_9@azelux_client_capes.button_list_row_9": {}
+      },
+      {
+        "spacer9": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_row_10@azelux_client_capes.button_list_row_10": {}
+      },
+      {
+        "spacer10": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_list_azelux_row_1": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "azelux_cape_1@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 1,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "clear",
+          "$is_hd_cape": false,
+          "$is_lunar_cape": false,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_1"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "azelux_cape_2@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 2,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_azelux2",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_2"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "azelux_cape_3@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 3,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_azelux3",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_3"
+        }
+      }
+    ]
+  },
+
+  "button_list_hd_row_1": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "hd_cape_1@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 4,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_hd1",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_4"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "hd_cape_2@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 5,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_hd2",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_5"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "hd_cape_3@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 6,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_hd3",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_6"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "hd_cape_4@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 7,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_hd4",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_7"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "hd_cape_5@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 8,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_hd5",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_8"
+        }
+      }
+    ]
+  },
+
+  "button_list_hd_row_2": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "hd_cape_6@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 9,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_hd6",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_9"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "hd_cape_7@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 10,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_hd7",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_10"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "hd_cape_8@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 11,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_hd8",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_11"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "hd_cape_9@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 12,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_hd9",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_12"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "hd_cape_10@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 13,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_hd10",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_13"
+        }
+      }
+    ]
+  },
+
+  "button_list_hd_row_3": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "hd_cape_11@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 14,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_hd11",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_14"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "hd_cape_12@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 15,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_hd12",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_15"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "hd_cape_13@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 16,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_hd13",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_16"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "hd_cape_14@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 17,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_hd14",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_17"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "hd_cape_15@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 18,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_hd15",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_18"
+        }
+      }
+    ]
+  },
+
+  "button_list_hd_row_4": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "hd_cape_16@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 19,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_hd16",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_19"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "hd_cape_17@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 20,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_hd17",
+          "$is_hd_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_20"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_list_lunar_row_1": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "lunar_cape_1@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 21,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar1",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_21"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_2@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 22,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar2",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_22"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_3@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 23,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar3",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_23"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_4@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 24,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar4",
+          "$cape_uv": [2, 3],
+          "$cape_uv_size": [30, 47],
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_24"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_5@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 25,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar5",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_25"
+        }
+      }
+    ]
+  },
+
+  "button_list_lunar_row_2": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "lunar_cape_6@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 26,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar6",
+          "$is_lunar_cape": true,
+          "$cape_uv": [2, 2],
+          "$cape_uv_size": [20, 32],
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_26"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_7@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 27,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar7",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_27"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_8@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 28,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar8",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_28"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_9@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 29,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar9",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_29"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_10@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 30,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar10",
+          "$is_lunar_cape": true,
+          "$cape_uv": [8, 8],
+          "$cape_uv_size": [80, 128],
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_30"
+        }
+      }
+    ]
+  },
+
+  "button_list_lunar_row_3": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "lunar_cape_11@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 31,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar11",
+          "$is_lunar_cape": true,
+          "$cape_uv": [2, 2],
+          "$cape_uv_size": [20, 32],
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_31"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_12@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 32,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar12",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_32"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_13@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 33,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar13",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_33"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_14@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 34,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar14",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_34"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_15@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 35,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar15",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_35"
+        }
+      }
+    ]
+  },
+
+  "button_list_lunar_row_4": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "lunar_cape_16@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 36,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar16",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_36"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_17@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 37,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar17",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_37"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_18@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 38,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar18",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_38"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_19@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 39,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar19",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_39"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_20@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 40,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar20",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_40"
+        }
+      }
+    ]
+  },
+
+  "button_list_lunar_row_5": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "lunar_cape_21@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 41,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar21",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_41"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_22@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 42,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar22",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_42"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_23@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 43,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar23",
+          "$is_lunar_cape": true,
+          "$cape_uv": [32, 32],
+          "$cape_uv_size": [320, 512],
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_43"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_24@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 44,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar24",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_44"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_25@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 45,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar25",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_45"
+        }
+      }
+    ]
+  },
+
+  "button_list_lunar_row_6": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "lunar_cape_26@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 46,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar26",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_46"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_27@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 47,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar27",
+          "$cape_uv": [8,8],
+          "$cape_uv_size": [80,128],
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_47"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_28@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 48,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar28",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_48"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_29@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 49,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar29",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_49"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_30@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 50,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar30",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_50"
+        }
+      }
+    ]
+  },
+
+  "button_list_lunar_row_7": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "lunar_cape_31@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 51,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar31",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_51"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_32@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 52,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar32",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_52"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_33@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 53,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar33",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_53"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_34@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 54,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar34",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_54"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_35@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 55,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar35",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_55"
+        }
+      }
+    ]
+  },
+
+  "button_list_lunar_row_8": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "lunar_cape_36@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 56,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar36",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_56"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_37@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 57,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar37",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_57"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_38@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 58,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar38",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_58"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_39@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 59,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar39",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_59"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "lunar_cape_40@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 60,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "_lunar40",
+          "$is_lunar_cape": true,
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_60"
+        }
+      }
+    ]
+  },
+
+  "button_list_row_1": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "cape_2@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 61,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "2",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_61"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_3@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 62,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "3",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_62"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_4@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 63,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "4",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_63"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_5@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 64,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "5",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_64"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_6@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 65,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "6",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_65"
+        }
+      }
+    ]
+  },
+
+  "button_list_row_2": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "cape_70@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 66,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "51",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_66"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_7@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 67,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "7",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_67"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_8@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 68,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "8",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_68"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_9@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 69,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "9",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_69"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_10@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 70,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "10",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_70"
+        }
+      }
+    ]
+  },
+
+  "button_list_row_3": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "cape_11@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 71,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "11",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_71"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_12@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 72,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "12",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_72"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_13@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 73,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "13",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_73"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_14@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 74,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "14",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_74"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_15@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 75,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "15",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_75"
+        }
+      }
+    ]
+  },
+
+  "button_list_row_4": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "cape_16@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 76,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "16",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_76"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_17@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 77,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "17",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_77"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_18@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 78,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "18",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_78"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_19@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 79,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "19",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_79"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_20@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 80,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "20",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_80"
+        }
+      }
+    ]
+  },
+
+  "button_list_row_5": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "cape_21@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 81,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "21",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_81"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_22@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 82,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "22",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_82"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_23@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 83,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "23",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_83"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_24@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 84,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "24",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_84"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_25@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 85,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "25",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_85"
+        }
+      }
+    ]
+  },
+
+  "button_list_row_6": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "cape_26@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 86,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "26",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_86"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_27@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 87,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "27",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_87"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_28@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 88,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "28",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_88"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_29@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 89,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "29",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_89"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_30@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 90,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "30",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_90"
+        }
+      }
+    ]
+  },
+
+  "button_list_row_7": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "cape_31@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 91,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "31",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_91"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_32@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 92,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "32",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_92"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_33@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 93,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "33",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_93"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_34@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 94,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "34",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_94"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_35@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 95,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "35",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_95"
+        }
+      }
+    ]
+  },
+
+  "button_list_row_8": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "cape_36@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 96,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "36",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_96"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_37@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 97,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "37",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_97"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_38@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 98,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "38",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_98"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_39@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 99,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "39",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_99"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_40@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 100,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "40",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_100"
+        }
+      }
+    ]
+  },
+
+  "button_list_row_9": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "cape_41@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 101,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "41",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_101"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_42@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 102,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "42",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_102"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_43@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 103,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "43",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_103"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_44@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 104,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "44",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_104"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_45@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 105,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "45",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_105"
+        }
+      }
+    ]
+  },
+  "button_list_row_10": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "cape_41@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 106,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "46",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_106"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_42@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 107,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "47",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_107"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_43@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 108,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "48",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_108"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_44@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 109,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "49",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_109"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "cape_45@mod_menu_toggles.cosmetics_cape_mod_toggle": {
+          "$toggle_group_forced_index": 110,
+          "size": [
+            30,
+            39.3
+          ],
+          "$cape_id": "50",
+          "$toggle_group_default_selected": "$cape_default_selected",
+          "$toggle_view_binding_name": "cape_selected_110"
+        }
+      }
+    ]
+  }
+}

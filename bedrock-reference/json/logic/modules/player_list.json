@@ -1,0 +1,426 @@
+{
+  "namespace": "player_list_mod",
+  "player_list_button@azelux_toggles.light_text_toggle": {
+    "$icon": "azelux/assets/icons/account",
+    "$hover_text_text": "PLAYERS",
+    "type": "input_panel",
+    "$toggle_view_binding_name": "player_list_button_toggle",
+    "$toggle_name": "hud_button_list_toggle",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$toggle_default_state": false,
+    "prevent_touch_input": true,
+    "offset": [
+      -58.5,
+      0.5
+    ],
+    "size": [
+      20,
+      20
+    ],
+    "$hover_text_offset": [
+      0,
+      17
+    ],
+    "$rizzoffset": [
+      0,
+      18
+    ],
+    "bindings": [
+      {
+        "binding_condition": "always",
+        "binding_name": "#inventory_touch_button",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ]
+  },
+
+  "mobile_playerlist": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "player_list_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "1@player_list": {}
+      }
+    ]
+  },
+
+  "tab_playerlist": {
+    "type": "button",
+    "size": ["100%", "100%"],
+    "layer": -2,
+    "default_control": "default",
+    "hover_control": "hover",
+    "pressed_control": "pressed",
+    "button_mappings": [
+      {
+        "from_button_id": "button.scoreboard",
+        "to_button_id": "button.scoreboard",
+        "mapping_type": "global"
+      }
+    ],
+    "controls": [
+      {
+        "default": {
+          "type": "input_panel",
+          "$button_mappings": [
+            {
+              "from_button_id": "button.inventory_left",
+              "to_button_id": "button.hotbar_inventory_left",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.inventory_right",
+              "to_button_id": "button.hotbar_inventory_right",
+              "mapping_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "hover": {
+          "type": "input_panel",
+          "$button_mappings": [
+            {
+              "from_button_id": "button.inventory_left",
+              "to_button_id": "button.hotbar_inventory_left",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.inventory_right",
+              "to_button_id": "button.hotbar_inventory_right",
+              "mapping_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "pressed": {
+          "type": "panel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "controls": [
+            {
+              "player_list@player_list_mod.player_list": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "player_list": {
+    "type": "panel",
+    "size": ["60%", "50%"],
+    "layer": 10000,
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0,15],
+    "controls": [
+      {
+        "title": {
+          "type": "label",
+          "text": "#text",
+          "bindings": [
+            {
+              "binding_name": "#player_list_title"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "#player_list_title",
+              "target_property_name": "#text"
+            }
+          ],
+          "font_type": "normal",
+          "font_scale_factor": 1,
+          "text_alignment": "center",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": ["100%", 12],
+          "layer": 5,
+          "color": [1.0,1.0,1.0],
+          "offset": [0,1],
+          "controls": [
+          ]
+        }
+      },
+      {
+        "title_background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.35,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "player_list_background_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "layer": 1,
+          "size": [
+            "100%",
+            14
+          ],
+          "offset": [0,-1.3],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "player_grid": {
+          "type": "grid",
+          "collection_name": "players_collection",
+          "grid_item_template": "player_list_mod.player_list_item",
+          "grid_dimension_binding": "#players_grid_dimension",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [0, 16],
+          "size": ["25%", "100%c"],
+          "bindings": [
+            {
+              "binding_name": "#players_grid_dimension",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "player_list_item": {
+    "type": "panel",
+    "size": ["25%", 14],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "row_bg": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "player_list_background_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "alpha": 0.35,
+          "layer": 2,
+          "size": ["400%", 14],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "controls": [
+            {
+              "avatar": {
+                "type": "image",
+                "texture": "#texture",
+                "texture_file_system": "#texture_source",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "offset": [4, 0],
+                "size": [8, 8],
+                "layer": 5,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "player_list_icon_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  },
+                  {
+                    "binding_collection_name": "players_collection",
+                    "binding_name": "#texture",
+                    "binding_type": "collection"
+                  },
+                  {
+                    "binding_collection_name": "players_collection",
+                    "binding_name": "#texture_source",
+                    "binding_name_override": "#texture_file_system",
+                    "binding_type": "collection"
+                  }
+                ]
+              }
+            },
+            {
+              "user_list@azelux_user_list.user_list_panel":{}
+            },
+            {
+              "tag_name_stacker": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "layer": 5,
+                "size": [
+                  "100%c",
+                  10
+                ],
+                "offset": [
+                  16,
+                  2
+                ],
+                "controls":[
+                  {
+                    "list_of_names@azelux_special_names_list.list": {}
+                  },
+                  {
+                    "og_list@azelux_special_names_list.og_list": {}
+                  },
+                  {
+                    "spacer": {
+                      "type": "panel",
+                      "size": [2,2]
+                    }
+                  },
+                  {
+                    "name": {
+                      "type": "label",
+                      "text": "#gamertag",
+                      "font_type": "normal",
+                      "font_scale_factor": 0.666,
+                      "size": ["default", 10],
+                      "max_size": [100, 10],
+                      "bindings": [
+                        {
+                          "binding_name": "#gamertag",
+                          "binding_type": "collection",
+                          "binding_collection_name": "players_collection"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "row_bg": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "player_list_background_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "alpha": 0.0,
+          "layer": 2,
+          "size": ["400%", 14],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "controls": [
+            {
+              "avatar": {
+                "type": "image",
+                "texture": "#texture",
+                "texture_file_system": "#texture_source",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "offset": [4, 0],
+                "size": [8, 8],
+                "layer": 5,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "player_list_icon_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  },
+                  {
+                    "binding_collection_name": "players_collection",
+                    "binding_name": "#texture",
+                    "binding_type": "collection"
+                  },
+                  {
+                    "binding_collection_name": "players_collection",
+                    "binding_name": "#texture_source",
+                    "binding_name_override": "#texture_file_system",
+                    "binding_type": "collection"
+                  }
+                ]
+              }
+            },
+            {
+              "user_list@azelux_user_list.user_list_panel":{}
+            },
+            {
+              "tag_name_stacker": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "layer": 5,
+                "size": [
+                  "100%c",
+                  10
+                ],
+                "offset": [
+                  16,
+                  2
+                ],
+                "controls":[
+                  {
+                    "list_of_names@azelux_special_names_list.list": {}
+                  },
+                  {
+                    "spacer": {
+                      "type": "panel",
+                      "size": [2,2]
+                    }
+                  },
+                  {
+                    "name": {
+                      "type": "label",
+                      "text": "#gamertag",
+                      "font_type": "normal",
+                      "font_scale_factor": 0.666,
+                      "size": ["default", 10],
+                      "max_size": [100, 10],
+                      "bindings": [
+                        {
+                          "binding_name": "#gamertag",
+                          "binding_type": "collection",
+                          "binding_collection_name": "players_collection"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "content": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "tab_list_main_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "1@tab_playerlist": {} },
+      { "2@player_list_button": {} },
+      { "3@mobile_playerlist": {} }
+    ]
+  }
+}

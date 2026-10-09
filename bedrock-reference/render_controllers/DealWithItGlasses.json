@@ -1,0 +1,18 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.dealwithitglasses": {
+            "geometry": "geometry.dealwithitglasses",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": [
+                "texture.glasses"
+            ],
+            "is_hurt_color": {},
+            "on_fire_color": {}
+        }
+    }
+}

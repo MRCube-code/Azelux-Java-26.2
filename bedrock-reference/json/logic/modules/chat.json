@@ -1,0 +1,297 @@
+{
+  "namespace": "custom_chat",
+  "bottom_chat": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "max_size": [
+      "100%",
+      "50%"
+    ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [
+      0,
+      -55
+    ],
+    "controls": [
+      {
+        "chat_panel": {
+          "type": "panel",
+          "clips_children": true,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "hide_chat_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "size": [
+            "40%",
+            "100%c"
+          ],
+          "max_size": [
+            "40%",
+            140
+          ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "controls": [
+            {
+              "stack_panel_animated": {
+                "type": "stack_panel",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "chat_mod_animation_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "factory": {
+                  "name": "chat_item_factory",
+                  "max_children_size": 50,
+                  "control_ids": {
+                    "chat_item": "chat_item@custom_chat.bottom_chat_grid_item_animated"
+                  }
+                }
+              }
+            },
+            {
+              "stack_panel_not_animated": {
+                "type": "stack_panel",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "chat_mod_animation_toggle",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "factory": {
+                  "name": "chat_item_factory",
+                  "max_children_size": 50,
+                  "control_ids": {
+                    "chat_item": "chat_item@custom_chat.bottom_chat_grid_item_notanimated"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "chat_main_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "bottom_chat_grid_item_animated": {
+    "type": "panel",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "chat_messages_no_background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.0,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "chat_mod_background_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "size": [
+            "100%",
+            "100%c+2px"
+          ],
+          "anims": [
+            "@custom_chat.chat_animation_in"
+          ],
+          "controls": [
+            {
+              "chat_text@hud.chat_label": {
+                "anchor_from": "middle_left",
+                "anchor_to": "middle_left",
+                "line_padding": -1,
+                "offset": [
+                  2,
+                  0.5
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chat_messages_background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.5,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "chat_mod_background_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "size": [
+            "100%",
+            "100%c+2px"
+          ],
+          "anims": [
+            "@custom_chat.chat_animation_in"
+          ],
+          "controls": [
+            {
+              "chat_text@hud.chat_label": {
+                "anchor_from": "middle_left",
+                "anchor_to": "middle_left",
+                "line_padding": -1,
+                "offset": [
+                  2,
+                  0.5
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "bottom_chat_grid_item_notanimated": {
+    "type": "panel",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "chat_messages_no_background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.0,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "chat_mod_background_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "size": [
+            "100%",
+            "100%c+2px"
+          ],
+          "anims": [
+            "@hud.anim_chat_bg_wait"
+          ],
+          "controls": [
+            {
+              "chat_text@hud.chat_label": {
+                "anchor_from": "middle_left",
+                "anchor_to": "middle_left",
+                "line_padding": -1,
+                "offset": [
+                  2,
+                  0.5
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chat_messages_background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.5,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "chat_mod_background_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "size": [
+            "100%",
+            "100%c+2px"
+          ],
+          "anims": [
+            "@hud.anim_chat_bg_wait"
+          ],
+          "controls": [
+            {
+              "chat_text@hud.chat_label": {
+                "anchor_from": "middle_left",
+                "anchor_to": "middle_left",
+                "line_padding": -1,
+                "offset": [
+                  2,
+                  0.5
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "chat_animation_in": {
+    "anim_type": "offset",
+    "easing": "out_quad",
+    "duration": 0.3,
+    "from": [
+      "-100%",
+      0
+    ],
+    "to": [
+      0,
+      0
+    ],
+    "next": "@custom_chat.chat_animation_stay"
+  },
+  "chat_animation_stay": {
+    "anim_type": "wait",
+    "duration": 4,
+    "next": "@custom_chat.chat_animation_out"
+  },
+  "chat_animation_out": {
+    "anim_type": "offset",
+    "easing": "in_quad",
+    "duration": 0.2,
+    "from": [
+      0,
+      0
+    ],
+    "to": [
+      "-100%",
+      0
+    ],
+    "destroy_at_end": "chat_grid_item"
+  }
+}

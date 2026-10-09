@@ -1,0 +1,6 @@
+{
+  "namespace": "start",
+  "start_screen": {
+    "$screen_content": "title_screen_menu.contents"
+  }
+}

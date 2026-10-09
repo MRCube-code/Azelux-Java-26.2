@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.badlionshield0001": {
+      "geometry": "geometry.badlionshield0001",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "texture.shield"
+      ],
+      "is_hurt_color": {},
+      "on_fire_color": {}
+    }
+  }
+}

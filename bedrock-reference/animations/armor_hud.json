@@ -1,0 +1,23 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.player.armorhud": {
+            "loop": true,
+            "bones": {
+                "armorhud_pos": {
+                    "position": [
+                        0,
+                        "(query.is_crawling || q.is_swimming ? -20 : 0.0)",
+                        0
+                    ],
+                    "rotation": [
+                        "(query.is_gliding ? -query.body_x_rotation + -90)",
+                        "(query.is_riding ? query.target_y_rotation)",
+                        0
+                    ],
+                    "scale": 1
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,80 @@
+{
+  "namespace": "injection_screen",
+
+  "logo_wait": {
+    "anim_type": "wait",
+    "duration": 6,
+    "next": "@injection_screen.logo_move_up"
+  },
+
+  "logo_move_up": {
+    "anim_type": "offset",
+    "easing": "in_out_quad",
+    "duration": 1,
+    "from": [0,350],
+    "to": [0,-10],
+    "next": "@injection_screen.logo_move_up2"
+  },
+
+  "logo_move_up2": {
+    "anim_type": "offset",
+    "easing": "in_out_quad",
+    "duration": 1,
+    "from": [0,-10],
+    "to": [0,5],
+    "next": "@injection_screen.logo_wait_2"
+  },
+
+  "logo_wait_2": {
+    "anim_type": "wait",
+    "duration": 3,
+    "next": "@injection_screen.logo_disappear"
+  },
+
+  "logo_disappear": {
+    "anim_type": "alpha",
+    "easing": "in_out_quad",
+    "duration": 0.6,
+    "from": 1,
+    "to": 0
+  },
+
+  "background_wait": {
+    "anim_type": "wait",
+    "duration": 11.5,
+    "next": "@injection_screen.background_disappear"
+  },
+
+  "background_disappear": {
+    "anim_type": "alpha",
+    "easing": "in_out_quad",
+    "duration": 0.6,
+    "from": 1,
+    "to": 0
+  },
+
+  "content": {
+    "type": "panel",
+    "layer": 10000,
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "azelux/assets/background/loading_screen",
+          "size": ["120%","120%"],
+          "fill": true,
+          "alpha": "@injection_screen.background_wait"
+        }
+      },
+      {
+        "logo": {
+          "type": "image",
+          "texture": "azelux/assets/common/logo_hd",
+          "size": [60,60],
+          "offset": [0,350],
+          "uv": "@injection_screen.logo_wait"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "namespace": "azelux_client_players",
+
+  "players_menu": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [
+      "12%",
+      "4%"
+    ],
+    "controls": [
+      {
+        "button_list_row_1@azelux_client_players.button_list_row_1": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      }
+    ]
+  },
+
+  "button_list_row_1": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "players_1@mod_menu_toggles.cosmetics_players_mod_toggle": {
+          "$toggle_group_forced_index": 1,
+          "size": [
+            30,
+            39.3
+          ],
+          "$players": "clear",
+          "$toggle_group_default_selected": "$player_default_selected",
+          "$toggle_view_binding_name": "players_selected_1"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "players_2@mod_menu_toggles.cosmetics_players_mod_toggle": {
+          "$toggle_group_forced_index": 2,
+          "size": [
+            30,
+            39.3
+          ],
+          "$players": "player_preview_2",
+          "$toggle_group_default_selected": "$player_default_selected",
+          "$toggle_view_binding_name": "players_selected_2"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "players_3@mod_menu_toggles.cosmetics_players_mod_toggle": {
+          "$toggle_group_forced_index": 3,
+          "size": [
+            30,
+            39.3
+          ],
+          "$players": "player_preview_3",
+          "$toggle_group_default_selected": "$player_default_selected",
+          "$toggle_view_binding_name": "players_selected_3"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      }
+    ]
+  }
+}

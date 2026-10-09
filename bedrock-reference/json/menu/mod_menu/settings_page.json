@@ -1,0 +1,88 @@
+{
+  "namespace": "azelux_client_settings_page",
+
+  "settings_page": {
+    "type": "image",
+    "texture": "azelux/assets/common/ya",
+    "size": ["91%","91%"],
+    "controls": [
+      {
+        "stackpanel": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [76,19],
+          "controls": [
+            {
+              "top_label": {
+                "type": "label",
+                "font_type": "STD",
+                "font_scale_factor": 0.43,
+                "text": "GENERAL (REQUIRES SAVING CONFIG)",
+                "text_alignment": "left",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "alpha": 0.4,
+                "offset": [-76.5,19]
+              }
+            },
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [3,3]
+              }
+            },
+            {
+              "disableinjection@common_toggles.animated_toggle": {
+                "size": [20, 6.666],
+                "offset": [-76.5, 25],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$toggle_view_binding_name": "injection_disabler",
+                "$switch_title": "Hide Azelux Loading Screen",
+                "$toggle_default_state": "$injection_disabler_default_state"
+              }
+            },
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [3,3]
+              }
+            },
+            {
+              "thirdpersonnametag@common_toggles.animated_toggle": {
+                "size": [20, 6.666],
+                "offset": [-76.5, 25],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$toggle_view_binding_name": "third_person_nametag",
+                "$switch_title": "Show Nametag in Third Person",
+                "$toggle_default_state": "$third_person_nametag_default_state"
+              }
+            },
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [3,3]
+              }
+            },
+            {
+              "top_label": {
+                "type": "label",
+                "font_type": "STD",
+                "font_scale_factor": 0.43,
+                "text": "Made by VelanMC, lliT008 and PepeOnMCBE <3",
+                "text_alignment": "left",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "alpha": 0.4,
+                "offset": [-76.5,19]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

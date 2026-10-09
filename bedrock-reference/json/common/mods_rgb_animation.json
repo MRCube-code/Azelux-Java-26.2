@@ -1,0 +1,210 @@
+{
+  "namespace": "mods_rgb_animation",
+
+  "alpha_template": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": 0.12
+  },
+
+  "label_frame_01_wait@mods_rgb_animation.alpha_template": {
+    "from": 1,
+    "to": 1,
+    "next": "@mods_rgb_animation.label_frame_02_wait"
+  },
+  "label_frame_02_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_03_wait"
+  },
+  "label_frame_03_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_04_wait"
+  },
+  "label_frame_04_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_05_wait"
+  },
+  "label_frame_05_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_06_wait"
+  },
+  "label_frame_06_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_07_wait"
+  },
+  "label_frame_07_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_08_wait"
+  },
+  "label_frame_08_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_09_wait"
+  },
+  "label_frame_09_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_10_wait"
+  },
+  "label_frame_10_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_11_wait"
+  },
+  "label_frame_11_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_12_wait"
+  },
+  "label_frame_12_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_13_wait"
+  },
+  "label_frame_13_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_14_wait"
+  },
+  "label_frame_14_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_15_wait"
+  },
+  "label_frame_15_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_16_wait"
+  },
+  "label_frame_16_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_17_wait"
+  },
+  "label_frame_17_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_18_wait"
+  },
+  "label_frame_18_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_19_wait"
+  },
+  "label_frame_19_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_20_wait"
+  },
+  "label_frame_20_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_21_wait"
+  },
+  "label_frame_21_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_22_wait"
+  },
+  "label_frame_22_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_23_wait"
+  },
+  "label_frame_23_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_24_wait"
+  },
+  "label_frame_24_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_25_wait"
+  },
+  "label_frame_25_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_26_wait"
+  },
+  "label_frame_26_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_27_wait"
+  },
+  "label_frame_27_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_28_wait"
+  },
+  "label_frame_28_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_29_wait"
+  },
+  "label_frame_29_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_30_wait"
+  },
+  "label_frame_30_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_31_wait"
+  },
+  "label_frame_31_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_32_wait"
+  },
+  "label_frame_32_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_33_wait"
+  },
+  "label_frame_33_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_34_wait"
+  },
+  "label_frame_34_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_35_wait"
+  },
+  "label_frame_35_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_36_wait"
+  },
+  "label_frame_36_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_37_wait"
+  },
+  "label_frame_37_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_38_wait"
+  },
+  "label_frame_38_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_39_wait"
+  },
+  "label_frame_39_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 0,
+    "next": "@mods_rgb_animation.label_frame_40_wait"
+  },
+  "label_frame_40_wait@mods_rgb_animation.alpha_template": {
+    "from": 0,
+    "to": 1,
+    "next": "@mods_rgb_animation.label_frame_01_wait"
+  }
+}

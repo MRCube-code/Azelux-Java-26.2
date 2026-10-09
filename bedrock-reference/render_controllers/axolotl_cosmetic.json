@@ -1,0 +1,18 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.axolotl_cosmetic": {
+            "geometry": "geometry.axolotl_cosmetic",
+            "materials": [
+                {
+                    "*": "Material.entity_alphatest_unlit"
+                }
+            ],
+            "textures": [
+                "texture.axolotl_cosmetic"
+            ],
+            "is_hurt_color": {},
+            "on_fire_color": {}
+        }
+    }
+}

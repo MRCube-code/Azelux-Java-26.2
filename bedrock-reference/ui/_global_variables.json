@@ -1,0 +1,182 @@
+{
+	"$armor_hud_main_toggle": false,
+
+	"$armor_hud_boots_position_x": 0,
+	"$armor_hud_boots_position_y": 52,
+	"$armor_hud_leggings_position_x": 0,
+	"$armor_hud_leggings_position_y": 47,
+	"$armor_hud_chestplate_position_x": 0,
+	"$armor_hud_chestplate_position_y": 41,
+	"$armor_hud_helmet_position_x": 0,
+	"$armor_hud_helmet_position_y": 36,
+
+	"$direction_main_toggle": false,
+
+	"$direction_hud_legacy_toggle_default_state": false,
+	"$direction_hud_position_x": 49,
+	"$direction_hud_position_y": 0,
+	"$direction_hud_legacy_position_x": 59,
+	"$direction_hud_legacy_position_y": 86,
+
+	"$glint_colorizer_main_toggle": false,
+	"$custom_glint_color_default_selected": 4,
+
+	"$f8_screen_main_toggle": false,
+
+	"$server_address_main_toggle": false,
+
+	"$server_address_background_toggle_default_state": true,
+	"$server_address_icon_toggle_default_state": true,
+	"$server_address_position_x": 15,
+	"$server_address_position_y": 97,
+
+	"$shiny_pots_main_toggle": false,
+
+	"$shiny_pots_color_default_selected": 4,
+
+	"$moving_status_main_toggle": false,
+
+	"$moving_status_background_toggle_default_state": true,
+	"$moving_status_position_x": 96,
+	"$moving_status_position_y": 0,
+
+	"$custom_crosshair_main_toggle": false,
+
+	"$custom_crosshair_default_selected": 6,
+	"$custom_crosshair_default_color_toggle_default_state": false,
+	"$custom_crosshair_color_default_selected": 4,
+
+	"$tab_list_main_toggle": false,
+
+	"$player_list_background_toggle_default_state": true,
+	"$player_list_icon_toggle_default_state": true,
+
+	"$fullbright_main_toggle": false,
+
+	"$chunkmap_main_toggle": false,
+
+	"$chunkmap_background_toggle_default_state": true,
+	"$chunkmap_position_x": 96,
+	"$chunkmap_position_y": 90,
+
+	"$hitbox_main_toggle": 0,
+
+	"$inventory_hud_main_toggle": false,
+
+	"$inventory_hud_position_x": 90,
+	"$inventory_hud_position_y": 73,
+
+	"$chat_main_toggle": false,
+
+	"$chat_mod_background_toggle_default_state": true,
+	"$chat_mod_animation_toggle_default_state": true,
+	"$hide_chat_toggle_default_state": false,
+
+	"$mods_list_main_toggle": false,
+
+	"$left_hand_main_toggle": false,
+
+	"$durability_viewer_main_toggle": false,
+	"$durability_viewer_background_toggle_default_state": false,
+	"$durability_viewer_position_x": 0,
+	"$durability_viewer_position_y": 0,
+
+	"$offhand_hud_main_toggle": false,
+	"$offhand_hud_position_x": 32,
+	"$offhand_hud_position_y": 97,
+
+	"$hit_color_main_toggle": false,
+	"$custom_hit_color_default_selected": 4,
+
+	"$chunk_border_main_toggle": false,
+
+	"$framex_main_toggle": false,
+
+	"$low_fire_toggle_default_state": true,
+	"$better_grass_toggle_default_state": true,
+	"$disable_particles_toggle_default_state": true,
+	"$clear_water_toggle_default_state": true,
+	"$disable_animations_toggle_default_state": true,
+
+	"$introduction_menu": false,
+
+	"$injection_disabler_default_state": true,
+	"$third_person_nametag_default_state": 1,
+	"$cape_physics_toggle_default_state": true,
+
+	"$username": "Steve",
+
+	"$cape_default_selected": 3,
+	"$wings_default_selected": 2,
+	"$axolotl_default_selected": 1,
+	"$glasses_default_selected": 2,
+	"$halo_default_selected": 10,
+	"$shields_default_selected": 1,
+	"$player_default_selected": 3,
+
+	"$azelux_is_dev": false,
+	"$azelux_is_beta": false,
+	"$azelux_is_release": true,
+	"$azelux_client_year": "2026",
+	"$azelux_client_version": "0.2",
+	"$azelux_font": "Roboto-Regular",
+	"$azelux_alpha": 0.5,
+	"$azelux_config_version": "0.2",
+	"$azelux_config_save_state": false,
+
+	"$shiny_pots_color": [1.0, 0.333, 1.0],
+
+	"$lingering_potion_counter_item_id": 601,
+	"$potion_counter_item_id": 459,
+	"$splash_potion_counter_item_id": 600,
+
+	"$custom_color_red": [1,0,0],
+	"$custom_color_orange": [1,0.5,0],
+	"$custom_color_yellow": [1,1,0],
+	"$custom_color_green": [0,1,0],
+	"$custom_color_light_blue": [0.5,0.75,1],
+	"$custom_color_blue": [0,0,1],
+	"$custom_color_magenta": [1,0,1],
+	"$custom_color_white": [1,1,1],
+
+	"$label_color_frame_01": [ 1.000, 0.247, 0.200 ], /* Red */
+	"$label_color_frame_02": [ 1.000, 0.400, 0.200 ],
+	"$label_color_frame_03": [ 1.000, 0.549, 0.200 ],
+	"$label_color_frame_04": [ 1.000, 0.698, 0.200 ],
+	"$label_color_frame_05": [ 1.000, 0.851, 0.200 ], /* Orange */
+	"$label_color_frame_06": [ 1.000, 1.000, 0.200 ],
+	"$label_color_frame_07": [ 1.000, 1.000, 0.200 ],
+	"$label_color_frame_08": [ 1.000, 1.000, 0.200 ],
+	"$label_color_frame_09": [ 0.937, 1.000, 0.200 ], /* Yellow */
+	"$label_color_frame_10": [ 0.784, 1.000, 0.200 ],
+	"$label_color_frame_11": [ 0.635, 1.000, 0.200 ],
+	"$label_color_frame_12": [ 0.482, 1.000, 0.200 ],
+	"$label_color_frame_13": [ 0.333, 1.000, 0.200 ], /* Lime */
+	"$label_color_frame_14": [ 0.200, 1.000, 0.212 ],
+	"$label_color_frame_15": [ 0.200, 1.000, 0.365 ],
+	"$label_color_frame_16": [ 0.200, 1.000, 0.514 ],
+	"$label_color_frame_17": [ 0.200, 1.000, 0.667 ], /* Green */
+	"$label_color_frame_18": [ 0.200, 1.000, 0.816 ],
+	"$label_color_frame_19": [ 0.200, 1.000, 0.965 ],
+	"$label_color_frame_20": [ 0.200, 1.000, 1.000 ],
+	"$label_color_frame_21": [ 0.200, 1.000, 1.000 ], /* Cyan/Aqua */
+	"$label_color_frame_22": [ 0.200, 0.969, 1.000 ],
+	"$label_color_frame_23": [ 0.200, 0.820, 1.000 ],
+	"$label_color_frame_24": [ 0.200, 0.671, 1.000 ],
+	"$label_color_frame_25": [ 0.200, 0.518, 1.000 ], /* Light Blue */
+	"$label_color_frame_26": [ 0.200, 0.369, 1.000 ],
+	"$label_color_frame_27": [ 0.200, 0.216, 1.000 ],
+	"$label_color_frame_28": [ 0.329, 0.200, 1.000 ],
+	"$label_color_frame_29": [ 0.478, 0.200, 1.000 ], /* Blue */
+	"$label_color_frame_30": [ 0.631, 0.200, 1.000 ],
+	"$label_color_frame_31": [ 0.780, 0.200, 1.000 ],
+	"$label_color_frame_32": [ 0.933, 0.200, 1.000 ],
+	"$label_color_frame_33": [ 1.000, 0.200, 1.000 ], /* Purple */
+	"$label_color_frame_34": [ 1.000, 0.200, 1.000 ],
+	"$label_color_frame_35": [ 1.000, 0.200, 1.000 ],
+	"$label_color_frame_36": [ 1.000, 0.200, 0.855 ],
+	"$label_color_frame_37": [ 1.000, 0.200, 0.702 ], /* Pink */
+	"$label_color_frame_38": [ 1.000, 0.200, 0.553 ],
+	"$label_color_frame_39": [ 1.000, 0.200, 0.404 ],
+	"$label_color_frame_40": [ 1.000, 0.200, 0.251 ]
+}

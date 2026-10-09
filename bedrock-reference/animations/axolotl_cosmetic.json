@@ -1,0 +1,40 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.axolotl_cosmetic": {
+            "loop": true,
+            "bones": {
+                "axolotl_cosmetic_bone": {
+                    "rotation": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "position": [
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            }
+        },
+        "animation.thirdpersonnametag": {
+            "loop": true,
+            "override_previous_animation": true,
+            "bones": {
+                "thirdpersonnametag_bone": {
+                    "rotation": [
+                        "query.head_x_rotation(0) * 2 - query.body_x_rotation(0)",
+                        "query.head_y_rotation(0) - query.body_y_rotation(0)",
+                        0
+                    ],
+                    "position": [
+                        0,
+                        "39 - query.is_sneaking * 2",
+                        0
+                    ]
+                }
+            }
+        }
+    }
+}

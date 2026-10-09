@@ -1,0 +1,21 @@
+{
+	"format_version" : "1.8.0",
+	"animations" : {
+		"animation.player.hitboxrot" : {
+			"loop" : true,
+			"bones" : {
+				"hitbox" : {
+					"rotation" : [ 0.0, "-query.body_y_rotation", 0.0 ]
+				}
+			}
+		},
+		"animation.player.axis" : {
+			"loop" : true,
+			"bones" : {
+				"axis" : {
+					"rotation" : [ 0.0, "-query.body_y_rotation", 0.0 ]
+				}
+			}
+		}
+	}
+}

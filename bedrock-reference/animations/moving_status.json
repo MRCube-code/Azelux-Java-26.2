@@ -1,0 +1,23 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.player.status": {
+            "loop": true,
+            "bones": {
+                "moving_status_bone": {
+                    "position": [
+                        -1448,
+                        "(query.is_swimming ? -28.5) - 0",
+                        0
+                    ],
+                    "rotation": [
+                        "(query.is_gliding ? -query.body_x_rotation + -90)",
+                        "(query.is_riding ? query.target_y_rotation)",
+                        0
+                    ],
+                    "scale": 1.4
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,656 @@
+{
+  "namespace": "azelux_f8_screen",
+
+  "hud_button@cb_buttons.custom_text_button": {
+    "$sigma": "F8",
+    "$button_text": "",
+    "$pressed_button_name": "button.hide_paperdoll_hud",
+    "$default_button_texture|default": "azelux/assets/buttons/button_default",
+    "$hover_button_texture|default": "azelux/assets/buttons/button_hover",
+    "$pressed_button_texture|default": "azelux/assets/buttons/button_hover",
+    "$locked_button_texture|default": "azelux/assets/buttons/red_button",
+    "$pressed_no_hover_texture|default": "azelux/assets/buttons/button_hover",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+    "prevent_touch_input": true,
+    "offset": [
+      58.5,
+      0.5
+    ],
+    "size": [
+      20,
+      20
+    ],
+    "bindings": [
+      {
+        "binding_condition": "always",
+        "binding_name": "#inventory_touch_button",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ]
+  },
+
+  "template_line": {
+    "type": "image",
+    "texture": "azelux/assets/common/gray",
+    "alpha": 1,
+    "size": ["100%c+2px",10]
+  },
+
+  "template_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical"
+  },
+
+  "template_label": {
+    "type": "label",
+    "font_type": "default",
+    "font_scale_factor": 1
+  },
+
+  "true_label": {
+    "type": "label",
+    "font_type": "default",
+    "font_scale_factor": 1,
+    "text": "true",
+    "color": [0.33,1,0.33]
+  },
+
+  "false_label": {
+    "type": "label",
+    "font_type": "default",
+    "font_scale_factor": 1,
+    "text": "false",
+    "color": [1,0.33,0.33]
+  },
+
+  "content": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": ["100%","100%"],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "f8_screen_main_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "content2@azelux_f8_screen.content2": {}
+      },
+      {
+        "mobile@azelux_f8_screen.hud_button": {}
+      }
+    ]
+  },
+
+  "content2": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": ["100%","100%"],
+    "bindings": [
+      {
+        "binding_name": "#paper_doll_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "right_side@azelux_f8_screen.right_side": {}
+      },
+      {
+        "left_side@azelux_f8_screen.left_side": {}
+      }
+    ]
+  },
+
+  "left_side": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "left_side@template_stack_panel": {
+          "offset": [1,1],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "label@template_line":{
+                "controls": [
+                  {
+                    "template_label@template_label": {
+                      "text": "Minecraft Bedrock (minecraft/vanilla/release)"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "label@template_line":{
+                "controls": [
+                  {
+                    "stack_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        {
+                          "template_label@template_label": {
+                            "text": "Azelux Client ("
+                          }
+                        },
+                        {
+                          "template_label@template_label": {
+                            "text": "ac"
+                          }
+                        },
+                        {
+                          "template_label@template_label": {
+                            "text": "$azelux_client_version"
+                          }
+                        },
+                        {
+                          "template_label@template_label": {
+                            "ignored": "(not $azelux_is_dev)",
+                            "text": "/dev"
+                          }
+                        },
+                        {
+                          "template_label@template_label": {
+                            "ignored": "(not $azelux_is_beta)",
+                            "text": "/beta"
+                          }
+                        },
+                        {
+                          "template_label@template_label": {
+                            "ignored": "(not $azelux_is_release)",
+                            "text": "/release"
+                          }
+                        },
+                        {
+                          "template_label@template_label": {
+                            "text": ")"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "label@template_line":{
+                "controls": [
+                  {
+                    "stack_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        {
+                          "template_label@template_label": {
+                            "text": "minecraft:"
+                          }
+                        },
+                        {
+                          "template_label@template_label": {
+                            "text": "world",
+                            "ignored": "$is_on_3p_server"
+                          }
+                        },
+                        {
+                          "template_label@template_label": {
+                            "text": "online_server",
+                            "ignored": "(not $is_on_3p_server)"
+                          }
+                        },
+                        {
+                          "template_label@template_label": {
+                            "text": " @ "
+                          }
+                        },
+                        {
+                          "template_label@template_label": {
+                            "text": "$username"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [12,12]
+              }
+            },
+            {
+              "label@template_line":{
+                "controls": [
+                  {
+                    "template_label@template_label": {
+                      "text": "#text",
+                      "bindings": [
+                        {
+                          "binding_name": "#player_position_text",
+                          "binding_name_override": "#text",
+                          "binding_condition": "always_when_visible",
+                          "binding_type": "global"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "template_label@template_label": {
+                      "text": "Position: Not enabled",
+                      "bindings": [
+                        {
+                          "binding_name": "(not #player_position_visible)",
+                          "binding_name_override": "#visible",
+                          "binding_condition": "always",
+                          "binding_type": "global"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "label@template_line":{
+                "controls": [
+                  {
+                    "template_label@template_label": {
+                      "text": "#text",
+                      "bindings": [
+                        {
+                          "binding_name": "#number_of_days_played_text",
+                          "binding_name_override": "#text",
+                          "binding_condition": "always_when_visible",
+                          "binding_type": "global"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "template_label@template_label": {
+                      "text": "Days played: Not enabled",
+                      "bindings": [
+                        {
+                          "binding_name": "(not #number_of_days_played_visible)",
+                          "binding_name_override": "#visible",
+                          "binding_condition": "always",
+                          "binding_type": "global"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "label@template_line":{
+                "controls": [
+                  {
+                    "stack_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        {
+                          "template_label@template_label": {
+                            "text": "Gamemode: "
+                          }
+                        },
+                        {
+                          "template_label@template_label": {
+                            "text": "survival",
+                            "bindings": [
+                              {
+                                "binding_name": "(not #is_creative_mode)",
+                                "binding_name_override": "#visible",
+                                "binding_condition": "always",
+                                "binding_type": "global"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "template_label@template_label": {
+                            "text": "creative",
+                            "bindings": [
+                              {
+                                "binding_name": "#is_creative_mode",
+                                "binding_name_override": "#visible",
+                                "binding_condition": "always",
+                                "binding_type": "global"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "label@template_line":{
+                "controls": [
+                  {
+                    "stack_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        {
+                          "template_label@template_label": {
+                            "text": "GDK-Version: "
+                          }
+                        },
+                        {
+                          "template_label@true_label": {
+                            "ignored": "$build_platform_UWP"
+                          }
+                        },
+                        {
+                          "template_label@false_label": {
+                            "ignored": "(not $build_platform_UWP)"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "label@template_line":{
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "offset": [0,10],
+                "controls": [
+                  {
+                    "stack_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        {
+                          "template_label@template_label": {
+                            "text": "Is Pre Release: "
+                          }
+                        },
+                        {
+                          "template_label@true_label": {
+                            "ignored": "(not $pre_release)"
+                          }
+                        },
+                        {
+                          "template_label@false_label": {
+                            "ignored": "$pre_release"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "label@template_line":{
+                "controls": [
+                  {
+                    "stack_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        {
+                          "template_label@template_label": {
+                            "text": "Is Dev Release: "
+                          }
+                        },
+                        {
+                          "template_label@true_label": {
+                            "ignored": "$is_publish"
+                          }
+                        },
+                        {
+                          "template_label@false_label": {
+                            "ignored": "(not $is_publish)"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "label@template_line":{
+                "controls": [
+                  {
+                    "stack_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        {
+                          "template_label@template_label": {
+                            "text": "Device: "
+                          }
+                        },
+                        {
+                          "template_label@template_label": {
+                            "text": "Windows",
+                            "visible": "$win10_edition"
+                          }
+                        },
+                        {
+                          "template_label@template_label": {
+                            "text": "Console",
+                            "visible": "$console_edition"
+                          }
+                        },
+                        {
+                          "template_label@template_label": {
+                            "text": "Mobile",
+                            "visible": "(not $win10_edition)"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "label@template_line":{
+                "controls": [
+                  {
+                    "stack_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        {
+                          "template_label@template_label": {
+                            "text": "UI Layout: "
+                          }
+                        },
+                        {
+                          "template_label@template_label": {
+                            "text": "Pocket",
+                            "visible": "$pocket_screen"
+                          }
+                        },
+                        {
+                          "template_label@template_label": {
+                            "text": "Desktop",
+                            "visible": "$desktop_screen"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "right_side": {
+    "type": "panel",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [-1,1],
+    "controls": [
+      {
+        "label@template_line":{
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "controls": [
+            {
+              "template_label@template_label": {
+                "text": "C++ ISO/IEC"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "label@template_line":{
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [0,10],
+          "controls": [
+            {
+              "stack_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "controls": [
+                  {
+                    "template_label@template_label": {
+                      "text": "Can Splitscreen: "
+                    }
+                  },
+                  {
+                    "template_label@true_label": {
+                      "ignored": "(not $can_splitscreen)"
+                    }
+                  },
+                  {
+                    "template_label@false_label": {
+                      "ignored": "$can_splitscreen"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "label@template_line":{
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [0,20],
+          "controls": [
+            {
+              "stack_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "controls": [
+                  {
+                    "template_label@template_label": {
+                      "text": "Controller: "
+                    }
+                  },
+                  {
+                    "template_label@true_label": {
+                      "ignored": "(not $game_pad)"
+                    }
+                  },
+                  {
+                    "template_label@false_label": {
+                      "ignored": "$game_pad"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "label@template_line":{
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [0,30],
+          "controls": [
+            {
+              "stack_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "controls": [
+                  {
+                    "template_label@template_label": {
+                      "text": "Touch: "
+                    }
+                  },
+                  {
+                    "template_label@true_label": {
+                      "ignored": "(not $touch)"
+                    }
+                  },
+                  {
+                    "template_label@false_label": {
+                      "ignored": "$touch"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "label@template_line":{
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [0,40],
+          "controls": [
+            {
+              "stack_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "controls": [
+                  {
+                    "template_label@template_label": {
+                      "text": "Mouse: "
+                    }
+                  },
+                  {
+                    "template_label@true_label": {
+                      "ignored": "(not $mouse)"
+                    }
+                  },
+                  {
+                    "template_label@false_label": {
+                      "ignored": "$mouse"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

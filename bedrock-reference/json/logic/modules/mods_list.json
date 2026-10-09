@@ -1,0 +1,114 @@
+{
+  "namespace": "mods_list_mod",
+
+  "template_text": {
+    "type": "label",
+    "color": "$custom_color",
+    "alpha": "$custom_alpha",
+    "font_scale_factor": 1,
+    "size": [ "default", 10 ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$mod_main_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "mods_list": {
+    "type": "panel",
+    "$text_label_control|default": "mods_list_mod.all_mods_list",
+    "controls": [
+      { "01@$text_label_control": { "$custom_color": [0.1,0.1,0.1], "layer": 2,"offset": [1,1] } },
+      { "01@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_01_wait", "$custom_color": "$label_color_frame_20", "layer": 3 } },
+      { "02@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_40_wait", "$custom_color": "$label_color_frame_19", "layer": 3 } },
+      { "03@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_39_wait", "$custom_color": "$label_color_frame_18", "layer": 3 } },
+      { "04@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_38_wait", "$custom_color": "$label_color_frame_17", "layer": 3 } },
+      { "05@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_37_wait", "$custom_color": "$label_color_frame_16", "layer": 3 } },
+      { "06@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_36_wait", "$custom_color": "$label_color_frame_15", "layer": 3 } },
+      { "07@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_35_wait", "$custom_color": "$label_color_frame_14", "layer": 3 } },
+      { "08@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_34_wait", "$custom_color": "$label_color_frame_13", "layer": 3 } },
+      { "09@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_33_wait", "$custom_color": "$label_color_frame_12", "layer": 3 } },
+      { "10@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_32_wait", "$custom_color": "$label_color_frame_11", "layer": 3 } },
+      { "11@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_31_wait", "$custom_color": "$label_color_frame_10", "layer": 3 } },
+      { "12@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_30_wait", "$custom_color": "$label_color_frame_09", "layer": 3 } },
+      { "13@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_29_wait", "$custom_color": "$label_color_frame_08", "layer": 3 } },
+      { "14@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_28_wait", "$custom_color": "$label_color_frame_07", "layer": 3 } },
+      { "15@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_27_wait", "$custom_color": "$label_color_frame_06", "layer": 3 } },
+      { "16@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_26_wait", "$custom_color": "$label_color_frame_05", "layer": 3 } },
+      { "17@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_25_wait", "$custom_color": "$label_color_frame_04", "layer": 3 } },
+      { "18@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_24_wait", "$custom_color": "$label_color_frame_03", "layer": 3 } },
+      { "19@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_23_wait", "$custom_color": "$label_color_frame_02", "layer": 3 } },
+      { "20@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_22_wait", "$custom_color": "$label_color_frame_01", "layer": 3 } },
+      { "21@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_21_wait", "$custom_color": "$label_color_frame_40", "layer": 3 } },
+      { "22@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_20_wait", "$custom_color": "$label_color_frame_39", "layer": 3 } },
+      { "23@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_19_wait", "$custom_color": "$label_color_frame_38", "layer": 3 } },
+      { "24@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_18_wait", "$custom_color": "$label_color_frame_37", "layer": 3 } },
+      { "25@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_17_wait", "$custom_color": "$label_color_frame_36", "layer": 3 } },
+      { "26@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_16_wait", "$custom_color": "$label_color_frame_35", "layer": 3 } },
+      { "27@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_15_wait", "$custom_color": "$label_color_frame_34", "layer": 3 } },
+      { "28@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_14_wait", "$custom_color": "$label_color_frame_33", "layer": 3 } },
+      { "29@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_13_wait", "$custom_color": "$label_color_frame_32", "layer": 3 } },
+      { "30@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_12_wait", "$custom_color": "$label_color_frame_31", "layer": 3 } },
+      { "31@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_11_wait", "$custom_color": "$label_color_frame_30", "layer": 3 } },
+      { "32@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_10_wait", "$custom_color": "$label_color_frame_29", "layer": 3 } },
+      { "33@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_09_wait", "$custom_color": "$label_color_frame_28", "layer": 3 } },
+      { "34@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_08_wait", "$custom_color": "$label_color_frame_27", "layer": 3 } },
+      { "35@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_07_wait", "$custom_color": "$label_color_frame_26", "layer": 3 } },
+      { "36@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_06_wait", "$custom_color": "$label_color_frame_25", "layer": 3 } },
+      { "37@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_05_wait", "$custom_color": "$label_color_frame_24", "layer": 3 } },
+      { "38@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_04_wait", "$custom_color": "$label_color_frame_23", "layer": 3 } },
+      { "39@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_03_wait", "$custom_color": "$label_color_frame_22", "layer": 3 } },
+      { "40@$text_label_control": { "$custom_alpha": "@mods_rgb_animation.label_frame_02_wait", "$custom_color": "$label_color_frame_21", "layer": 3 } },
+      { "00@$text_label_control": { "$custom_color": "$label_color_frame_20", "layer": 2 } }
+    ]
+  },
+
+  "all_mods_list": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "mods_list_main_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [3,3],
+          "orientation": "vertical",
+          "controls": [
+            {"custom_crosshair@template_text": {"$mod_main_toggle": "custom_crosshair_main_toggle","text": "Custom Crosshair"}},
+            {"durability_viewer@template_text": {"$mod_main_toggle": "durability_viewer_main_toggle","text": "Durability Viewer"}},
+            {"server_address@template_text": {"$mod_main_toggle": "server_address_main_toggle","text": "Server Address"}},
+            {"chunk_borders@template_text": {"$mod_main_toggle": "chunk_border_main_toggle","text": "Chunk Borders"}},
+            {"inventory_hud@template_text": {"$mod_main_toggle": "inventory_hud_main_toggle","text": "Inventory Hud"}},
+            {"glint_colorizer@template_text": {"$mod_main_toggle": "glint_colorizer_main_toggle","text": "Glint Colorizer"}},
+            {"moving_status@template_text": {"$mod_main_toggle": "moving_status_main_toggle","text": "Moving Status"}},
+            {"direction_hud@template_text": {"$mod_main_toggle": "direction_hud_main_toggle","text": "Direction Hud"}},
+            {"offhand_hud@template_text": {"$mod_main_toggle": "offhand_hud_main_toggle","text": "Offhand Hud"}},
+            {"chat@template_text": {"$mod_main_toggle": "chat_main_toggle","text": "Bottom Chat"}},
+            {"armor_hud@template_text": {"$mod_main_toggle": "armor_hud_main_toggle","text": "Armor Hud"}},
+            {"shiny_pots@template_text": {"$mod_main_toggle": "shiny_pots_main_toggle","text": "Shiny Pots"}},
+            {"left_hand@template_text": {"$mod_main_toggle": "left_hand_main_toggle","text": "Left Hand"}},
+            {"fullbright@template_text": {"$mod_main_toggle": "fullbright_main_toggle","text": "Fullbright"}},
+            {"chunkmap@template_text": {"$mod_main_toggle": "chunkmap_main_toggle","text": "Chunkmap"}},
+            {"mods_list@template_text": {"$mod_main_toggle": "mods_list_main_toggle","text": "Mods List"}},
+            {"hitbox@template_text": {"$mod_main_toggle": "hitbox_main_toggle","text": "Hitboxes"}},
+            {"hit_color@template_text": {"$mod_main_toggle": "hit_color_main_toggle","text": "Hit Color"}},
+            {"tab_list@template_text": {"$mod_main_toggle": "tab_list_main_toggle","text": "Tab List"}},
+            {"f8_screen@template_text": {"$mod_main_toggle": "f8_screen_main_toggle","text": "F8 Menu"}},
+            {"framex@template_text": {"$mod_main_toggle": "framex_main_toggle","text": "FrameX"}}
+          ]
+        }
+      }
+    ]
+  }
+}

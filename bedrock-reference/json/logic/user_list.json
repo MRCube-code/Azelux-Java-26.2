@@ -1,0 +1,406 @@
+{
+  "namespace": "azelux_user_list",
+
+  "user_list_panel": {
+    "type": "panel",
+    "controls": [
+      {"1@azelux_player_list_extras.icon_template": {"$username": "VelanMC", "$custom_layer":50, "$own_color": [0.66, 0.0, 0.0]}},
+      {"2@azelux_player_list_extras.icon_template": {"$username": "lliT008)", "$custom_layer":50, "$own_color": [0.66, 0.0, 0.0]}},
+      {"2@azelux_player_list_extras.icon_template": {"$username": "PepeOnMCBE", "$custom_layer":50, "$own_color": [1.0, 0.25, 0.25]}},
+      {"1@azelux_player_list_extras.icon_template": {"$username": "stxdevs", "$custom_layer":50, "$own_color": [1, 0.33, 1]}},
+      {
+        "3@azelux_player_list_extras.icon_template": {"$username": "$username"}
+      },
+      {
+        "3@azelux_player_list_extras.icon_template": {"$username": "FoliyoMC"}
+      },
+      {
+        "4@azelux_player_list_extras.icon_template": {"$username": "GeeveyXDMCYT"}
+      },
+      {
+        "5@azelux_player_list_extras.icon_template": {"$username": "bruhcaution"}
+      },
+      {
+        "6@azelux_player_list_extras.icon_template": {"$username": "legalisers"}
+      },
+      {
+        "7@azelux_player_list_extras.icon_template": {"$username": "feartheblu"}
+      },
+      {
+        "8@azelux_player_list_extras.icon_template": {"$username": "Chrome7773"}
+      },
+      {
+        "9@azelux_player_list_extras.icon_template": {"$username": "Zloinkmc"}
+      },
+      {
+        "10@azelux_player_list_extras.icon_template": {"$username": "AdityaYTGamerz"}
+      },
+      {
+        "11@azelux_player_list_extras.icon_template": {"$username": "soitozi0"}
+      },
+      {
+        "12@azelux_player_list_extras.icon_template": {"$username": "panda687"}
+      },
+      {
+        "13@azelux_player_list_extras.icon_template": {"$username": "Tizzum9884"}
+      },
+      {
+        "14@azelux_player_list_extras.icon_template": {"$username": "DarthTwoS194"}
+      },
+      {
+        "15@azelux_player_list_extras.icon_template": {"$username": "RoyalPRinCeee30"}
+      },
+      {
+        "16@azelux_player_list_extras.icon_template": {"$username": "MCotoulas"}
+      },
+      {
+        "17@azelux_player_list_extras.icon_template": {"$username": "Matminer09"}
+      },
+      {
+        "18@azelux_player_list_extras.icon_template": {"$username": "Habh1"}
+      },
+      {
+        "19@azelux_player_list_extras.icon_template": {"$username": "meurkii"}
+      },
+      {
+        "20@azelux_player_list_extras.icon_template": {"$username": "Vivo6810"}
+      },
+      {
+        "21@azelux_player_list_extras.icon_template": {"$username": "Raprap123409"}
+      },
+      {
+        "22@azelux_player_list_extras.icon_template": {"$username": "knarrenbro"}
+      },
+      {
+        "23@azelux_player_list_extras.icon_template": {"$username": "Kobguy"}
+      },
+      {
+        "24@azelux_player_list_extras.icon_template": {"$username": "imtickleyou3657"}
+      },
+      {
+        "25@azelux_player_list_extras.icon_template": {"$username": "win6683"}
+      },
+      {
+        "26@azelux_player_list_extras.icon_template": {"$username": "Swighton1"}
+      },
+      {
+        "27@azelux_player_list_extras.icon_template": {"$username": "ashwagg67"}
+      },
+      {
+        "28@azelux_player_list_extras.icon_template": {"$username": ".insetnight5045"}
+      },
+      {
+        "29@azelux_player_list_extras.icon_template": {"$username": "JOSHFRAGS674"}
+      },
+      {
+        "30@azelux_player_list_extras.icon_template": {"$username": "oji6175"}
+      },
+      {
+        "31@azelux_player_list_extras.icon_template": {"$username": "Nakovik"}
+      },
+      {
+        "32@azelux_player_list_extras.icon_template": {"$username": "aaaaboh"}
+      },
+      {
+        "33@azelux_player_list_extras.icon_template": {"$username": "Mie1022 1"}
+      },
+      {
+        "34@azelux_player_list_extras.icon_template": {"$username": "triomischief"}
+      },
+      {
+        "35@azelux_player_list_extras.icon_template": {"$username": "KrynxtVeil"}
+      },
+      {
+        "36@azelux_player_list_extras.icon_template": {"$username": "Chromeolgy"}
+      },
+      {
+        "37@azelux_player_list_extras.icon_template": {"$username": "Positive1012"}
+      },
+      {
+        "38@azelux_player_list_extras.icon_template": {"$username": "Hyoukaaa0"}
+      },
+      {
+        "39@azelux_player_list_extras.icon_template": {"$username": "Notwemmbu__82439"}
+      },
+      {
+        "40@azelux_player_list_extras.icon_template": {"$username": "LionHeart4D3742"}
+      },
+      {
+        "41@azelux_player_list_extras.icon_template": {"$username": "Carlcookey16"}
+      },
+      {
+        "42@azelux_player_list_extras.icon_template": {"$username": "Wiiiffiieess"}
+      },
+      {
+        "43@azelux_player_list_extras.icon_template": {"$username": "Z4kH4z3n"}
+      },
+      {
+        "44@azelux_player_list_extras.icon_template": {"$username": "M1KEXS"}
+      },
+      {
+        "45@azelux_player_list_extras.icon_template": {"$username": "st3f9027"}
+      },
+      {
+        "46@azelux_player_list_extras.icon_template": {"$username": "Max123487yes"}
+      },
+      {
+        "47@azelux_player_list_extras.icon_template": {"$username": "Manmadeee"}
+      },
+      {
+        "48@azelux_player_list_extras.icon_template": {"$username": "gaboj59"}
+      },
+      {
+        "49@azelux_player_list_extras.icon_template": {"$username": "DarkMyth 9333"}
+      },
+      {
+        "50@azelux_player_list_extras.icon_template": {"$username": "frogthegamer199"}
+      },
+      {
+        "51@azelux_player_list_extras.icon_template": {"$username": "Prince90882108"}
+      },
+      {
+        "52@azelux_player_list_extras.icon_template": {"$username": "Blockbuilder628"}
+      },
+      {
+        "53@azelux_player_list_extras.icon_template": {"$username": "SilentGreenMC"}
+      },
+      {
+        "54@azelux_player_list_extras.icon_template": {"$username": "BorgiePlayz"}
+      },
+      {
+        "55@azelux_player_list_extras.icon_template": {"$username": "BRENJA0531"}
+      },
+      {
+        "56@azelux_player_list_extras.icon_template": {"$username": "ProxyPieIsPro"}
+      },
+      {
+        "57@azelux_player_list_extras.icon_template": {"$username": "Viablecobra405"}
+      },
+      {
+        "58@azelux_player_list_extras.icon_template": {"$username": "ROY79577"}
+      },
+      {
+        "59@azelux_player_list_extras.icon_template": {"$username": "miniputzim"}
+      },
+      {
+        "60@azelux_player_list_extras.icon_template": {"$username": "Bpeedy"}
+      },
+      {
+        "61@azelux_player_list_extras.icon_template": {"$username": "tainoz0"}
+      },
+      {
+        "62@azelux_player_list_extras.icon_template": {"$username": "Jazzkiboy22"}
+      },
+      {
+        "63@azelux_player_list_extras.icon_template": {"$username": "meganihgah"}
+      },
+      {
+        "64@azelux_player_list_extras.icon_template": {"$username": "ViceCloser"}
+      },
+      {
+        "65@azelux_player_list_extras.icon_template": {"$username": "Cryingobsidiann"}
+      },
+      {
+        "66@azelux_player_list_extras.icon_template": {"$username": "TechnoPig8263"}
+      },
+      {
+        "67@azelux_player_list_extras.icon_template": {"$username": "EuronymousX3"}
+      },
+      {
+        "68@azelux_player_list_extras.icon_template": {"$username": "AceSpades432892"}
+      },
+      {
+        "69@azelux_player_list_extras.icon_template": {"$username": "Keirax8747"}
+      },
+      {
+        "70@azelux_player_list_extras.icon_template": {"$username": "SyamilMCTZY"}
+      },
+      {
+        "71@azelux_player_list_extras.icon_template": {"$username": "HYSYPRIME25"}
+      },
+      {
+        "72@azelux_player_list_extras.icon_template": {"$username": "ZenChan7943"}
+      },
+      {
+        "73@azelux_player_list_extras.icon_template": {"$username": "ThinWeevil76857"}
+      },
+      {
+        "74@azelux_player_list_extras.icon_template": {"$username": "Clownedonfrfr"}
+      },
+      {
+        "75@azelux_player_list_extras.icon_template": {"$username": "xEntodan"}
+      },
+      {
+        "76@azelux_player_list_extras.icon_template": {"$username": "EntoDaDeer"}
+      },
+      {
+        "77@azelux_player_list_extras.icon_template": {"$username": "KingID8086"}
+      },
+      {
+        "78@azelux_player_list_extras.icon_template": {"$username": "notchyves"}
+      },
+      {
+        "79@azelux_player_list_extras.icon_template": {"$username": "ekalamlangto"}
+      },
+      {
+        "80@azelux_player_list_extras.icon_template": {"$username": "Sebastian93494"}
+      },
+      {
+        "81@azelux_player_list_extras.icon_template": {"$username": "Benno4299"}
+      },
+      {
+        "82@azelux_player_list_extras.icon_template": {"$username": "playpolicy"}
+      },
+      {
+        "83@azelux_player_list_extras.icon_template": {"$username": "zed7555"}
+      },
+      {
+        "84@azelux_player_list_extras.icon_template": {"$username": "TkhideYTok"}
+      },
+      {
+        "85@azelux_player_list_extras.icon_template": {"$username": "Tineee8122"}
+      },
+      {
+        "86@azelux_player_list_extras.icon_template": {"$username": "Notwemmbu82439"}
+      },
+      {
+        "87@azelux_player_list_extras.icon_template": {"$username": "Thereallacm"}
+      },
+      {
+        "88@azelux_player_list_extras.icon_template": {"$username": "RenamedAce93572"}
+      },
+      {
+        "89@azelux_player_list_extras.icon_template": {"$username": "WindyWave826"}
+      },
+      {
+        "90@azelux_player_list_extras.icon_template": {"$username": "HeroSpace6913"}
+      },
+      {
+        "91@azelux_player_list_extras.icon_template": {"$username": "Minemystic2924"}
+      },
+      {
+        "92@azelux_player_list_extras.icon_template": {"$username": "LSGAMING10000"}
+      },
+      {
+        "93@azelux_player_list_extras.icon_template": {"$username": "Flexyus3000"}
+      },
+      {
+        "94@azelux_player_list_extras.icon_template": {"$username": "deadshot_mru"}
+      },
+      {
+        "95@azelux_player_list_extras.icon_template": {"$username": "Xastron2118"}
+      },
+      {
+        "96@azelux_player_list_extras.icon_template": {"$username": "Jersznn"}
+      },
+      {
+        "97@azelux_player_list_extras.icon_template": {"$username": "Varkao7"}
+      },
+      {
+        "98@azelux_player_list_extras.icon_template": {"$username": "Shqdxwyt"}
+      },
+      {
+        "99@azelux_player_list_extras.icon_template": {"$username": "theflaked1"}
+      },
+      {
+        "100@azelux_player_list_extras.icon_template": {"$username": "Eukie2344"}
+      },
+      {
+        "101@azelux_player_list_extras.icon_template": {"$username": "NPvhx"}
+      },
+      {
+        "102@azelux_player_list_extras.icon_template": {"$username": "Elyaaali112"}
+      },
+      {
+        "103@azelux_player_list_extras.icon_template": {"$username": "MALKI17899"}
+      },
+      {
+        "104@azelux_player_list_extras.icon_template": {"$username": "AeroMugmss"}
+      },
+      {
+        "105@azelux_player_list_extras.icon_template": {"$username": "iamcheezy67"}
+      },
+      {
+        "106@azelux_player_list_extras.icon_template": {"$username": "botetexp"}
+      },
+      {
+        "107@azelux_player_list_extras.icon_template": {"$username": "qmshl"}
+      },
+      {
+        "108@azelux_player_list_extras.icon_template": {"$username": "eN5CC"}
+      },
+      {
+        "109@azelux_player_list_extras.icon_template": {"$username": "xLukiiq"}
+      },
+      {
+        "110@azelux_player_list_extras.icon_template": {"$username": "Jamaludin7292"}
+      },
+      {
+        "111@azelux_player_list_extras.icon_template": {"$username": "Nick44502"}
+      },
+      {
+        "112@azelux_player_list_extras.icon_template": {"$username": "sbp4442"}
+      },
+      {
+        "113@azelux_player_list_extras.icon_template": {"$username": "Zxyzne"}
+      },
+      {
+        "114@azelux_player_list_extras.icon_template": {"$username": "Cyyannnnnnn"}
+      },
+      {
+        "115@azelux_player_list_extras.icon_template": {"$username": "dxrth owns u"}
+      },
+      {
+        "116@azelux_player_list_extras.icon_template": {"$username": "Noixenoc"}
+      },
+      {
+        "117@azelux_player_list_extras.icon_template": {"$username": "orpheusdviel"}
+      },
+      {
+        "118@azelux_player_list_extras.icon_template": {"$username": "gayman13"}
+      },
+      {
+        "119@azelux_player_list_extras.icon_template": {"$username": "MasonEatLead"}
+      },
+      {
+        "120@azelux_player_list_extras.icon_template": {"$username": "MR6DRY"}
+      },
+      {
+        "121@azelux_player_list_extras.icon_template": {"$username": "JSZPLAYZ"}
+      },
+      {
+        "122@azelux_player_list_extras.icon_template": {"$username": "Wemmbu8338"}
+      },
+      {
+        "123@azelux_player_list_extras.icon_template": {"$username": "Umbryx4561"}
+      },
+      {
+        "124@azelux_player_list_extras.icon_template": {"$username": "Fair Gaming9"}
+      },
+      {
+        "125@azelux_player_list_extras.icon_template": {"$username": "Fair Gaming7"}
+      },
+      {
+        "126@azelux_player_list_extras.icon_template": {"$username": "JAY S3AN8337"}
+      },
+      {
+        "127@azelux_player_list_extras.icon_template": {"$username": "Equitee9808"}
+      },
+      {
+        "128@azelux_player_list_extras.icon_template": {"$username": "ItsmeFlare01"}
+      },
+      {
+        "129@azelux_player_list_extras.icon_template": {"$username": "Crimson20055"}
+      },
+      {
+        "130@azelux_player_list_extras.icon_template": {"$username": "SharpLoww"}
+      },
+      {
+        "131@azelux_player_list_extras.icon_template": {"$username": "MrFroggbest"}
+      },
+      {
+        "132@azelux_player_list_extras.icon_template": {"$username": "yvl kenn"}
+      }
+    ]
+  }
+}

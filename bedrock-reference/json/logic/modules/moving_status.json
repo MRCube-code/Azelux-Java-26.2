@@ -1,0 +1,105 @@
+{
+  "namespace": "moving_status_mod",
+
+  "moving_status_main@mod_menu_sliders.movable_mod": {
+    "$x_slider": "moving_status_position_x",
+    "$y_slider": "moving_status_position_y",
+    "$custom_size_for_fixing": ["100%-30px", "100%-10px"],
+    "$custom_controls": [
+      {
+        "moving_status_main": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "moving_status_main_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "offset": [-2,-33.5],
+          "controls": [
+            {
+              "moving_status_with_bg": {
+                "type": "panel",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "moving_status_background",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "status_background": {
+                      "type": "image",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "size": [ 53, 16 ],
+                      "offset": [ 0, 26 ],
+                      "texture": "textures/ui/Black",
+                      "alpha": 0.35,
+                      "controls": [
+                        {
+                          "status": {
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "layer": 10,
+                            "renderer": "live_player_renderer",
+                            "size": [ 12, 12 ],
+                            "offset": [ 1039, -10 ],
+                            "type": "custom"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "moving_status_without_bg": {
+                "type": "panel",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "moving_status_background",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "status_background": {
+                      "type": "image",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "size": [ 53, 16 ],
+                      "offset": [ 0, 26 ],
+                      "texture": "textures/ui/Black",
+                      "alpha": 0.0,
+                      "controls": [
+                        {
+                          "status": {
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "layer": 10,
+                            "renderer": "live_player_renderer",
+                            "size": [ 12, 12 ],
+                            "offset": [ 1039, -10 ],
+                            "type": "custom"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

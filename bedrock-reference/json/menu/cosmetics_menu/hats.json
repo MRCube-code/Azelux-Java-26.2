@@ -1,0 +1,218 @@
+{
+  "namespace": "azelux_client_hats",
+
+  "hats_menu@scrolling_panels.custom_scrolling_panel": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$show_background": false,
+    "layer": 8,
+    "$scroll_size": [
+      3,
+      "100%"
+    ],
+    "$scroll_bar_left_padding_size": [
+      2,
+      2
+    ],
+    "offset": [
+      "12%",
+      1.5
+    ],
+    "size": [
+      "50%",
+      "98.5%"
+    ],
+    "$scrolling_content": "azelux_client_hats.hats_menu_scrolling_content"
+  },
+
+  "hats_menu_scrolling_content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "controls": [
+      {
+        "spacer0": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "section": {
+          "type": "label",
+          "text": "A x o l o t l s",
+          "font_type": "STD",
+          "font_scale_factor": 0.7,
+          "alpha": 0.8,
+          "layer": 9,
+          "size": [
+            "100%",
+            10
+          ]
+        }
+      },
+      {
+        "spacer0": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_row_1@button_list_row_1": {}
+      },
+      {
+        "spacer1": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "section": {
+          "type": "label",
+          "text": "G l a s s e s",
+          "font_type": "STD",
+          "font_scale_factor": 0.7,
+          "alpha": 0.8,
+          "layer": 9,
+          "size": [
+            "100%",
+            10
+          ]
+        }
+      },
+      {
+        "spacer1": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_row_2@button_list_row_2": {}
+      }
+    ]
+  },
+
+  "button_list_row_1": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      30
+    ],
+    "controls": [
+      {
+        "hats_1@mod_menu_toggles.cosmetics_hats_mod_toggle": {
+          "$toggle_group_forced_index": 1,
+          "size": [
+            30,
+            30
+          ],
+          "$hats": "clear",
+          "$toggle_group_default_selected": "$axolotl_default_selected",
+          "$toggle_view_binding_name": "axolotl_selected_1",
+          "$toggle_name": "cosmetic_axolotls"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "hats_2@mod_menu_toggles.cosmetics_hats_mod_toggle": {
+          "$toggle_group_forced_index": 2,
+          "size": [
+            30,
+            30
+          ],
+          "$hats": "axolotl_preview_2",
+          "$toggle_group_default_selected": "$axolotl_default_selected",
+          "$toggle_view_binding_name": "axolotl_selected_2",
+          "$toggle_name": "cosmetic_axolotls"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "hats_3@mod_menu_toggles.cosmetics_hats_mod_toggle": {
+          "$toggle_group_forced_index": 3,
+          "size": [
+            30,
+            30
+          ],
+          "$hats": "axolotl_preview_3",
+          "$toggle_group_default_selected": "$axolotl_default_selected",
+          "$toggle_view_binding_name": "axolotl_selected_3",
+          "$toggle_name": "cosmetic_axolotls"
+        }
+      }
+    ]
+  },
+
+  "button_list_row_2": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      30
+    ],
+    "controls": [
+      {
+        "hats_6@mod_menu_toggles.cosmetics_hats_mod_toggle": {
+          "$toggle_group_forced_index": 1,
+          "size": [
+            30,
+            30
+          ],
+          "$hats": "clear",
+          "$toggle_group_default_selected": "$glasses_default_selected",
+          "$toggle_view_binding_name": "glasses_selected_1",
+          "$toggle_name": "cosmetic_glasses"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "hats_7@mod_menu_toggles.cosmetics_hats_mod_toggle": {
+          "$toggle_group_forced_index": 2,
+          "size": [
+            30,
+            30
+          ],
+          "$hats": "glasses_preview_2",
+          "$toggle_group_default_selected": "$glasses_default_selected",
+          "$toggle_view_binding_name": "glasses_selected_2",
+          "$toggle_name": "cosmetic_glasses"
+        }
+      }
+    ]
+  }
+}

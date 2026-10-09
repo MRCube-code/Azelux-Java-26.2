@@ -1,0 +1,311 @@
+{
+  "namespace": "common_toggles",
+
+  "toggle_state_panel": {
+    "type": "panel",
+
+    "$toggle_state_panel_size|default": [ "100%", "100%" ],
+    "size": "$toggle_state_panel_size",
+
+    "$ui_button_panel|default": "common_buttons.new_ui_button_panel",
+    "controls": [
+      { "button_panel@$ui_button_panel": {} }
+    ]
+  },
+
+  "toggle_state_panel_hover_test": {
+    "type": "panel",
+    "$hover_text_text|default": "",
+    "$toggle_state_panel_size|default": [ "100%", "100%" ],
+    "size": "$toggle_state_panel_size",
+    "$ui_button_panel|default": "common_buttons.new_ui_button_panel",
+    "controls": [
+      { "button_panel@$ui_button_panel": {} },
+      {
+        "panel": {
+          "type": "panel",
+          "$show_text|default": "true",
+          "visible": "$show_text",
+          "controls": [
+            {
+              "hover_text_test": {
+                "type": "label",
+                "text": "$hover_text_text",
+                "color": [
+                  0.75,
+                  0.78,
+                  0.78
+                ],
+                "layer": 20,
+                "offset": "$hover_text_offset",
+                "shadow": false,
+                "font_type": "STD",
+                "font_scale_factor": 0.4,
+                "alpha": 1,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "scale": [
+                  100,
+                  50
+                ]
+              }
+            },
+            {
+              "label_background": {
+                "type": "image",
+                "texture": "azelux/assets/buttons/background_text",
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": "$rizzoffset",
+                "alpha": 1,
+                "size": "$skibidisize",
+                "layer": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "toggle_unchecked2@common_toggles.toggle_state_panel": {
+    "$new_ui_button_texture": "$default_texture",
+    "$content_alpha": "$default_texture_alpha",
+    "$button_image_color": "$default_texture_color",
+    "$text_color": "$default_text_color",
+    "$glyph_color": "$default_glyph_color",
+    "$toggle_image": "$unchecked_image",
+    "$border_layer": 1,
+    "$border_visible": "$default_border_visible",
+    "$border_color": "$default_border_color",
+    "$toggle_unchecked": true,
+    "$default_state": true,
+    "layer": 1
+  },
+
+  "toggle_checked2@common_toggles.toggle_state_panel": {
+    "$new_ui_button_texture": "$hover_texture",
+    "$content_alpha": "$default_checked_texture_alpha",
+    "$button_image_color": "$default_checked_texture_color",
+    "$text_color": "$default_checked_text_color",
+    "$glyph_color": "$default_checked_glyph_color",
+    "$toggle_image": "$checked_image",
+    "$border_layer": 2,
+    "$border_visible": "$default_border_visible",
+    "$border_color": "$default_border_color",
+    "$toggle_checked": true,
+    "$pressed_state": true,
+    "layer": 2
+  },
+
+  "toggle_unchecked_hover2@common_toggles.toggle_state_panel_hover_test": {
+    "$new_ui_button_texture": "$pressed_texture",
+    "$content_alpha": "$hover_texture_alpha",
+    "$button_image_color": "$hover_texture_color",
+    "$text_color": "$hover_text_color",
+    "$glyph_color": "$hover_glyph_color",
+    "$toggle_image": "$unchecked_image",
+    "$border_layer": 3,
+    "$border_visible": "$hover_border_visible",
+    "$border_color": "$hover_border_color",
+    "$toggle_unchecked_hover": true,
+    "$hover_state": true,
+    "layer": 3
+  },
+
+  "toggle_checked_hover2@common_toggles.toggle_state_panel_hover_test": {
+    "$new_ui_button_texture": "$pressed_no_hover_texture",
+    "$content_alpha": "$hover_checked_texture_alpha",
+    "$button_image_color": "$hover_checked_texture_color",
+    "$text_color": "$hover_checked_text_color",
+    "$glyph_color": "$hover_checked_glyph_color",
+    "$toggle_image": "$checked_image",
+    "$border_layer": 4,
+    "$border_visible": "$hover_border_visible",
+    "$border_color": "$hover_border_color",
+    "$toggle_checked_hover": true,
+    "$pressed_state": true,
+    "layer": 4
+  },
+
+  "toggle_on_panel@common.empty_panel": {
+    "controls": [
+      {
+        "switch_knob": {
+          "type": "image",
+          "texture": "azelux/assets/mod_menu/switch_on",
+          "layer": 2,
+          "size": [12.5, 6.25],
+          "anims": [
+            {
+              "fade_color": {
+                "anim_type": "alpha",
+                "easing": "out_quart",
+                "duration": 0.3666666666,
+                "from": 0,
+                "to": 1
+              }
+            },
+            {
+              "slide_knob": {
+                "anim_type": "offset",
+                "easing": "out_quart",
+                "duration": 0.3666666666,
+                "from": ["-75%+11px", 0],
+                "to": ["75%-11px", 0]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "toggle_off_panel@common.empty_panel": {
+    "controls": [
+      {
+        "switch_knob": {
+          "type": "image",
+          "texture": "azelux/assets/mod_menu/switch_off",
+          "layer": 0,
+          "size": [12.5, 6.25],
+          "anims": [
+            {
+              "fade_color": {
+                "anim_type": "alpha",
+                "easing": "out_quart",
+                "duration": 0.3666666666,
+                "from": 0,
+                "to": 1
+              }
+            },
+            {
+              "slide_knob": {
+                "anim_type": "offset",
+                "easing": "out_quart",
+                "duration": 0.3666666666,
+                "from": ["75%-11px", 0],
+                "to": ["-75%+11px", 0]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "animated_toggle@common_toggles.light_ui_toggle": {
+    "$default_texture": "azelux/assets/common/clear",
+    "$hover_texture": "azelux/assets/common/clear",
+    "$pressed_texture": "azelux/assets/common/clear",
+    "$pressed_no_hover_texture": "azelux/assets/common/clear",
+    "$default_border_visible": false,
+    "$hover_border_visible": false,
+
+    "$exit": "common_toggles.toggle_off_panel",
+    "$ent": "common_toggles.toggle_on_panel",
+
+    "controls": [
+      {
+        "background@common.empty_image": {
+          "size": [18.75, 6.25],
+          "texture": "azelux/assets/mod_menu/switch_background"
+        }
+      },
+      {
+        "$toggle_view_binding_name@$template_toggle": {
+          "controls": [
+            { "unchecked@$unchecked_control": {} },
+            { "checked@$checked_control": {} },
+            { "unchecked_hover@$unchecked_hover_control": {} },
+            { "checked_hover@$checked_hover_control": {} },
+            { "unchecked_locked@$unchecked_locked_control": {} },
+            { "checked_locked@$checked_locked_control": {} },
+            { "unchecked_locked_hover@$unchecked_locked_hover_control": {} },
+            { "checked_locked_hover@$checked_locked_hover_control": {} },
+
+            {
+              "on_state_container": {
+                "type": "collection_panel",
+                "size": ["100%-1px", "100%-1px"],
+                "layer": 1,
+                "propagate_alpha": true,
+                "factory": {
+                  "name": "toggle_on_factory",
+                  "control_name": "$ent",
+                  "max_children_size": 1
+                },
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$toggle_view_binding_name",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#toggle_state"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(1 * #toggle_state)",
+                    "target_property_name": "#alpha"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(1 * #toggle_state)",
+                    "target_property_name": "#collection_length"
+                  }
+                ]
+              }
+            },
+
+            {
+              "off_state_container": {
+                "type": "collection_panel",
+                "size": ["100%-1px", "100%-1px"],
+                "layer": 1,
+                "propagate_alpha": true,
+                "factory": {
+                  "name": "toggle_off_factory",
+                  "control_name": "$exit",
+                  "max_children_size": 1
+                },
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$toggle_view_binding_name",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#toggle_state"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(1 * (not #toggle_state))",
+                    "target_property_name": "#alpha"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(1 * (not #toggle_state))",
+                    "target_property_name": "#collection_length"
+                  }
+                ]
+              }
+            },
+
+            {
+              "switch_label": {
+                "type": "label",
+                "text": "$switch_title",
+                "layer": 2,
+                "font_type": "Roboto-Regular",
+                "offset": [23.5, -1.3],
+                "font_scale_factor": 0.55,
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "alignment": "left",
+                "alpha": 0.75,
+                "shadow": false
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

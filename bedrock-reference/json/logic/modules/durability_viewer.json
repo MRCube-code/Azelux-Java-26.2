@@ -1,0 +1,322 @@
+{
+  "namespace": "azelux_durability_viewer_mod",
+
+  "durability_viewer_main_panel": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": ["50%",-4],
+    "$custom_size_for_fixing|default": ["100%-15px", "100%-10px"],
+    "controls": [
+      {
+        "durability_viewer_main_panelyh@mod_menu_sliders.movable_mod": {
+          "$x_slider": "durability_viewer_position_x",
+          "$y_slider": "durability_viewer_position_y",
+          "$custom_controls": [
+            {
+              "durability_viewer_main_panel2@azelux_durability_viewer_mod.durability_viewer_main_panel2": {
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "durability_viewer_main_panel2": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [-40,-1],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "durability_viewer_main_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "durability_viewer_hotbar_collection@azelux_durability_viewer_mod.durability_viewer_hotbar_collection": {
+        }
+      }
+    ]
+  },
+
+  "durability_viewer_hotbar_collection": {
+    "type": "stack_panel",
+    "size": [
+      "100%c",
+      10
+    ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$hotbar_collection_name|default": "hotbar_items",
+    "collection_name": "$hotbar_collection_name",
+    "offset": [
+      0.5,
+      0
+    ],
+    "controls": [
+      {
+        "0@azelux_durability_viewer_mod.durability_viewer_grid": {
+          "collection_index": 0
+        }
+      },
+      {
+        "1@azelux_durability_viewer_mod.durability_viewer_grid": {
+          "collection_index": 1
+        }
+      },
+      {
+        "2@azelux_durability_viewer_mod.durability_viewer_grid": {
+          "collection_index": 2
+        }
+      },
+      {
+        "3@azelux_durability_viewer_mod.durability_viewer_grid": {
+          "collection_index": 3
+        }
+      },
+      {
+        "4@azelux_durability_viewer_mod.durability_viewer_grid": {
+          "collection_index": 4
+        }
+      },
+      {
+        "5@azelux_durability_viewer_mod.durability_viewer_grid": {
+          "collection_index": 5
+        }
+      },
+      {
+        "6@azelux_durability_viewer_mod.durability_viewer_grid": {
+          "collection_index": 6
+        }
+      },
+      {
+        "7@azelux_durability_viewer_mod.durability_viewer_grid": {
+          "collection_index": 7
+        }
+      },
+      {
+        "8@azelux_durability_viewer_mod.durability_viewer_grid": {
+          "collection_index": 8
+        }
+      }
+    ]
+  },
+
+  "durability_viewer_grid": {
+    "type": "panel",
+    "layer": 10,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [
+      "100%c",
+      0
+    ],
+    "$item_collection_name": "$hotbar_collection_name",
+    "controls": [
+      {
+        "panel_no_bg": {
+          "type": "panel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "durability_viewer_background_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "durability_viewer_no_background": {
+                "type": "image",
+                "offset": [
+                  0,
+                  5
+                ],
+                "size": [
+                  "100%c + 9px",
+                  "100%c + 5px"
+                ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "texture": "textures/ui/Black",
+                "alpha": 0.0,
+                "bindings": [
+                  {
+                    "binding_name": "#item_durability_total_amount",
+                    "binding_type": "collection",
+                    "binding_collection_name": "hotbar_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#item_durability_total_amount > 0)",
+                    "target_property_name": "#condition1"
+                  },
+                  {
+                    "binding_name": "#slot_selected",
+                    "binding_name_override": "#condition2",
+                    "binding_type": "collection",
+                    "binding_collection_name": "hotbar_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#condition1 and #condition2)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "durability_viewer_background_content@azelux_durability_viewer_mod.durability_viewer_background_content": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_bg": {
+          "type": "panel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "durability_viewer_background_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "durability_viewer_background": {
+                "type": "image",
+                "offset": [
+                  0,
+                  5
+                ],
+                "size": [
+                  "100%c + 9px",
+                  "100%c + 5px"
+                ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "texture": "textures/ui/Black",
+                "alpha": 0.35,
+                "bindings": [
+                  {
+                    "binding_name": "#item_durability_total_amount",
+                    "binding_type": "collection",
+                    "binding_collection_name": "hotbar_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#item_durability_total_amount > 0)",
+                    "target_property_name": "#condition1"
+                  },
+                  {
+                    "binding_name": "#slot_selected",
+                    "binding_name_override": "#condition2",
+                    "binding_type": "collection",
+                    "binding_collection_name": "hotbar_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#condition1 and #condition2)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "durability_viewer_background_content@azelux_durability_viewer_mod.durability_viewer_background_content": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "durability_viewer_background_content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 10,
+    "size": [
+      "100%c",
+      10
+    ],
+    "offset": [0,0.6],
+    "controls": [
+      {
+        "durability_viewer_current_label": {
+          "shadow": false,
+          "type": "label",
+          "text": "#text",
+          "bindings": [
+            {
+              "binding_name": "#slot_selected",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$hotbar_collection_name"
+            },
+            {
+              "binding_name": "#item_durability_current_amount",
+              "binding_type": "collection",
+              "binding_collection_name": "hotbar_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#current_value < #item_durability_current_amount) - (#current_value > #item_durability_current_amount) + #current_value)",
+              "target_property_name": "#current_value"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('§z' + #current_value)",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "durability_view_total_label": {
+          "type": "label",
+          "shadow": false,
+          "text": "#text",
+          "bindings": [
+            {
+              "binding_name": "#slot_selected",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$hotbar_collection_name"
+            },
+            {
+              "binding_name": "#item_durability_total_amount",
+              "binding_type": "collection",
+              "binding_collection_name": "hotbar_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#total_value < #item_durability_total_amount) - (#total_value > #item_durability_total_amount) + #total_value)",
+              "target_property_name": "#total_value"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('§r/' + #total_value)",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

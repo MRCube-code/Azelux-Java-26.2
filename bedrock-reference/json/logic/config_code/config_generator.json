@@ -1,0 +1,731 @@
+{
+  "namespace": "mods_selection_code",
+
+  "options_text": {
+    "type": "label",
+    "font_type": "Roboto-Bold",
+    "font_scale_factor": 1.3,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$option",
+        "source_property_name": "$property",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "code_text": {
+    "type": "label",
+    "font_type": "Roboto-Bold",
+    "font_scale_factor": 1.3,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$selection",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "code_text_no_binding": {
+    "type": "label",
+    "font_type": "$custom_font",
+    "$custom_font|default": "Roboto-Bold",
+    "font_scale_factor": 1.3
+  },
+
+  "mods_options_stack_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "image": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.9,
+          "layer": 98,
+          "size": ["110%","110%"],
+          "fill": true,
+          "ignored": "$code_background_ignored",
+          "$code_background_ignored|default": false
+        }
+      },
+      {
+        "mods_options_panel": {
+          "type": "panel",
+          "layer": 100,
+          "controls": [
+            {
+              "mods_options_stack_panel_1": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "controls": [
+                  {
+                    "prefix": {
+                      "type": "label",
+                      "font_type": "Roboto-Bold",
+                      "font_scale_factor": 1.3,
+                      "text": "acx1@"
+                    }
+                  },
+                  {
+                    "armor_hud": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "armor_hud_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "armor_hud_main_toggle", "$property": "#toggle_state" } },
+                        { "slider_label_1@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "armor_hud_boots_position_x" } },
+                        { "slider_label_2@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "armor_hud_boots_position_y" } },
+                        { "slider_label_3@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "armor_hud_leggings_position_x" } },
+                        { "slider_label_4@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "armor_hud_leggings_position_y" } },
+                        { "slider_label_5@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "armor_hud_chestplate_position_x" } },
+                        { "slider_label_6@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "armor_hud_chestplate_position_y" } },
+                        { "slider_label_7@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "armor_hud_helmet_position_x" } },
+                        { "slider_label_8@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "armor_hud_helmet_position_y" } }
+                      ]
+                    }
+                  },
+                  {
+                    "direction_hud": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "direction_hud_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "direction_hud_main_toggle", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "direction_hud_legacy_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "direction_hud_legacy_toggle", "$property": "#toggle_state" } },
+                        { "slider_label_1@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "direction_hud_position_x" } },
+                        { "slider_label_2@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "direction_hud_position_y" } },
+                        { "slider_label_3@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "direction_hud_legacy_position_x" } },
+                        { "slider_label_4@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "direction_hud_legacy_position_y" } }
+                      ]
+                    }
+                  },
+                  {
+                    "glint_colorizer": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "glint_colorizer_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "glint_colorizer_main_toggle", "$property": "#toggle_state" } },
+                        { "color_selector_1@options_text": { "text": "1", "$option": "glint_selected_1", "$property": "#toggle_state" } },
+                        { "color_selector_2@options_text": { "text": "2", "$option": "glint_selected_2", "$property": "#toggle_state" } },
+                        { "color_selector_3@options_text": { "text": "3", "$option": "glint_selected_3", "$property": "#toggle_state" } },
+                        { "color_selector_4@options_text": { "text": "4", "$option": "glint_selected_4", "$property": "#toggle_state" } },
+                        { "color_selector_5@options_text": { "text": "5", "$option": "glint_selected_5", "$property": "#toggle_state" } },
+                        { "color_selector_6@options_text": { "text": "6", "$option": "glint_selected_6", "$property": "#toggle_state" } },
+                        { "color_selector_7@options_text": { "text": "7", "$option": "glint_selected_7", "$property": "#toggle_state" } },
+                        { "color_selector_8@options_text": { "text": "8", "$option": "glint_selected_8", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "f8_screen": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "f8_screen_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "f8_screen_main_toggle", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "server_address": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "server_address_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "server_address_main_toggle", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "server_address_background_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "server_address_background_toggle", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "server_address_icon_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "server_address_icon_toggle", "$property": "#toggle_state" } },
+                        { "slider_label_1@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "server_address_position_x" } },
+                        { "slider_label_2@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "server_address_position_y" } }
+                      ]
+                    }
+                  },
+                  {
+                    "shiny_pots": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "shiny_pots_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "shiny_pots_main_toggle", "$property": "#toggle_state" } },
+                        { "color_selector_1@options_text": { "text": "1", "$option": "shiny_pots_selected_1", "$property": "#toggle_state" } },
+                        { "color_selector_2@options_text": { "text": "2", "$option": "shiny_pots_selected_2", "$property": "#toggle_state" } },
+                        { "color_selector_3@options_text": { "text": "3", "$option": "shiny_pots_selected_3", "$property": "#toggle_state" } },
+                        { "color_selector_4@options_text": { "text": "4", "$option": "shiny_pots_selected_4", "$property": "#toggle_state" } },
+                        { "color_selector_5@options_text": { "text": "5", "$option": "shiny_pots_selected_5", "$property": "#toggle_state" } },
+                        { "color_selector_6@options_text": { "text": "6", "$option": "shiny_pots_selected_6", "$property": "#toggle_state" } },
+                        { "color_selector_7@options_text": { "text": "7", "$option": "shiny_pots_selected_7", "$property": "#toggle_state" } },
+                        { "color_selector_8@options_text": { "text": "8", "$option": "shiny_pots_selected_8", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "moving_status": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "moving_status_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "moving_status_main_toggle", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "moving_status_background", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "moving_status_background", "$property": "#toggle_state" } },
+                        { "slider_label_1@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "moving_status_position_x" } },
+                        { "slider_label_2@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "moving_status_position_y" } }
+                      ]
+                    }
+                  },
+                  {
+                    "custom_crosshair": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "custom_crosshair_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "custom_crosshair_main_toggle", "$property": "#toggle_state" } },
+                        { "crosshair_selector_1@options_text": { "text": "1", "$option": "custom_crosshair_selected_1", "$property": "#toggle_state" } },
+                        { "crosshair_selector_2@options_text": { "text": "2", "$option": "custom_crosshair_selected_2", "$property": "#toggle_state" } },
+                        { "crosshair_selector_3@options_text": { "text": "3", "$option": "custom_crosshair_selected_3", "$property": "#toggle_state" } },
+                        { "crosshair_selector_4@options_text": { "text": "4", "$option": "custom_crosshair_selected_4", "$property": "#toggle_state" } },
+                        { "crosshair_selector_5@options_text": { "text": "5", "$option": "custom_crosshair_selected_5", "$property": "#toggle_state" } },
+                        { "crosshair_selector_6@options_text": { "text": "6", "$option": "custom_crosshair_selected_6", "$property": "#toggle_state" } },
+                        { "crosshair_selector_7@options_text": { "text": "7", "$option": "custom_crosshair_selected_7", "$property": "#toggle_state" } },
+                        { "crosshair_selector_8@options_text": { "text": "8", "$option": "custom_crosshair_selected_8", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "custom_crosshair_default_color", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "custom_crosshair_default_color", "$property": "#toggle_state" } },
+                        { "color_selector_1@options_text": { "text": "1", "$option": "custom_crosshair_color1", "$property": "#toggle_state" } },
+                        { "color_selector_2@options_text": { "text": "2", "$option": "custom_crosshair_color2", "$property": "#toggle_state" } },
+                        { "color_selector_3@options_text": { "text": "3", "$option": "custom_crosshair_color3", "$property": "#toggle_state" } },
+                        { "color_selector_4@options_text": { "text": "4", "$option": "custom_crosshair_color4", "$property": "#toggle_state" } },
+                        { "color_selector_5@options_text": { "text": "5", "$option": "custom_crosshair_color5", "$property": "#toggle_state" } },
+                        { "color_selector_6@options_text": { "text": "6", "$option": "custom_crosshair_color6", "$property": "#toggle_state" } },
+                        { "color_selector_7@options_text": { "text": "7", "$option": "custom_crosshair_color7", "$property": "#toggle_state" } },
+                        { "color_selector_8@options_text": { "text": "8", "$option": "custom_crosshair_color8", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "mods_options_stack_panel_2": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "offset": [0,15],
+                "controls": [
+                  {
+                    "prefix": {
+                      "type": "label",
+                      "font_type": "Roboto-Bold",
+                      "font_scale_factor": 1.3,
+                      "text": "acx2@"
+                    }
+                  },
+                  {
+                    "tab_list": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "tab_list_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "tab_list_main_toggle", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "player_list_background_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "player_list_background_toggle", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "player_list_icon_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "player_list_icon_toggle", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "fullbright": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "fullbright_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "fullbright_main_toggle", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "chunkmap": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "chunkmap_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "chunkmap_main_toggle", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "chunkmap_background_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "chunkmap_background_toggle", "$property": "#toggle_state" } },
+                        { "slider_label_1@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "chunkmap_position_x" } },
+                        { "slider_label_2@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "chunkmap_position_y" } }
+                      ]
+                    }
+                  },
+                  {
+                    "hitboxes": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "hitbox_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "hitbox_main_toggle", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "inventory_hud": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "inventory_hud_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "inventory_hud_main_toggle", "$property": "#toggle_state" } },
+                        { "slider_label_1@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "inventory_hud_position_x" } },
+                        { "slider_label_2@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "inventory_hud_position_y" } }
+                      ]
+                    }
+                  },
+                  {
+                    "custom_chat": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "chat_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "chat_main_toggle", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "chat_mod_background_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "chat_mod_background_toggle", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "chat_mod_animation_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "chat_mod_animation_toggle", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "hide_chat_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "hide_chat_toggle", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "mods_list": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "mods_list_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "mods_list_main_toggle", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "left_hand": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "left_hand_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "left_hand_main_toggle", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "durability_viewer": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "durability_viewer_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "durability_viewer_main_toggle", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "durability_viewer_background_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "durability_viewer_background_toggle", "$property": "#toggle_state" } },
+                        { "slider_label_1@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "durability_viewer_position_x" } },
+                        { "slider_label_2@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "durability_viewer_position_y" } }
+                      ]
+                    }
+                  },
+                  {
+                    "offhand_hud": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "offhand_hud_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "offhand_hud_main_toggle", "$property": "#toggle_state" } },
+                        { "slider_label_1@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "offhand_hud_position_x" } },
+                        { "slider_label_2@mod_menu_slider_labels.slider_label_100": { "$controlling_slider_name": "offhand_hud_position_y" } }
+                      ]
+                    }
+                  },
+                  {
+                    "hit_color": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "hit_color_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "hit_color_main_toggle", "$property": "#toggle_state" } },
+                        { "color_selector_1@options_text": { "text": "1", "$option": "hit_color_selected_1", "$property": "#toggle_state" } },
+                        { "color_selector_2@options_text": { "text": "2", "$option": "hit_color_selected_2", "$property": "#toggle_state" } },
+                        { "color_selector_3@options_text": { "text": "3", "$option": "hit_color_selected_3", "$property": "#toggle_state" } },
+                        { "color_selector_4@options_text": { "text": "4", "$option": "hit_color_selected_4", "$property": "#toggle_state" } },
+                        { "color_selector_5@options_text": { "text": "5", "$option": "hit_color_selected_5", "$property": "#toggle_state" } },
+                        { "color_selector_6@options_text": { "text": "6", "$option": "hit_color_selected_6", "$property": "#toggle_state" } },
+                        { "color_selector_7@options_text": { "text": "7", "$option": "hit_color_selected_7", "$property": "#toggle_state" } },
+                        { "color_selector_8@options_text": { "text": "8", "$option": "hit_color_selected_8", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "chunkborder": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "chunk_border_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "chunk_border_main_toggle", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "framex": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "framex_main_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "framex_main_toggle", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "low_fire_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "low_fire_toggle", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "better_grass_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "better_grass_toggle", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "disable_particles_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "disable_particles_toggle", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "clear_water_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "clear_water_toggle", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "disable_animations_toggle", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "disable_animations_toggle", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "settings": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "injection_disabler", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "injection_disabler", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "third_person_nametag", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "third_person_nametag", "$property": "(not #toggle_state)" } },
+                        { "main_toggle_on@options_text": { "text": "1", "$option": "cape_physics_toggle", "$property": "#toggle_state" } },
+                        { "main_toggle_off@options_text": { "text": "0", "$option": "cape_physics_toggle", "$property": "(not #toggle_state)" } }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "mods_options_stack_panel_3": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "offset": [0,30],
+                "controls": [
+                  {
+                    "prefix": {
+                      "type": "label",
+                      "font_type": "Roboto-Bold",
+                      "font_scale_factor": 1.3,
+                      "text": "acx3@"
+                    }
+                  },
+                  {
+                    "capes": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "cape_000@options_text": { "text": "001", "$option": "cape_selected_1", "$property": "#toggle_state" } },
+                        { "cape_001@options_text": { "text": "002", "$option": "cape_selected_2", "$property": "#toggle_state" } },
+                        { "cape_002@options_text": { "text": "003", "$option": "cape_selected_3", "$property": "#toggle_state" } },
+                        { "cape_003@options_text": { "text": "004", "$option": "cape_selected_4", "$property": "#toggle_state" } },
+                        { "cape_004@options_text": { "text": "005", "$option": "cape_selected_5", "$property": "#toggle_state" } },
+                        { "cape_005@options_text": { "text": "006", "$option": "cape_selected_6", "$property": "#toggle_state" } },
+                        { "cape_006@options_text": { "text": "007", "$option": "cape_selected_7", "$property": "#toggle_state" } },
+                        { "cape_007@options_text": { "text": "008", "$option": "cape_selected_8", "$property": "#toggle_state" } },
+                        { "cape_008@options_text": { "text": "009", "$option": "cape_selected_9", "$property": "#toggle_state" } },
+                        { "cape_009@options_text": { "text": "010", "$option": "cape_selected_10", "$property": "#toggle_state" } },
+                        { "cape_010@options_text": { "text": "011", "$option": "cape_selected_11", "$property": "#toggle_state" } },
+                        { "cape_011@options_text": { "text": "012", "$option": "cape_selected_12", "$property": "#toggle_state" } },
+                        { "cape_012@options_text": { "text": "013", "$option": "cape_selected_13", "$property": "#toggle_state" } },
+                        { "cape_013@options_text": { "text": "014", "$option": "cape_selected_14", "$property": "#toggle_state" } },
+                        { "cape_014@options_text": { "text": "015", "$option": "cape_selected_15", "$property": "#toggle_state" } },
+                        { "cape_015@options_text": { "text": "016", "$option": "cape_selected_16", "$property": "#toggle_state" } },
+                        { "cape_016@options_text": { "text": "017", "$option": "cape_selected_17", "$property": "#toggle_state" } },
+                        { "cape_017@options_text": { "text": "018", "$option": "cape_selected_18", "$property": "#toggle_state" } },
+                        { "cape_018@options_text": { "text": "019", "$option": "cape_selected_19", "$property": "#toggle_state" } },
+                        { "cape_019@options_text": { "text": "020", "$option": "cape_selected_20", "$property": "#toggle_state" } },
+                        { "cape_020@options_text": { "text": "021", "$option": "cape_selected_21", "$property": "#toggle_state" } },
+                        { "cape_021@options_text": { "text": "022", "$option": "cape_selected_22", "$property": "#toggle_state" } },
+                        { "cape_022@options_text": { "text": "023", "$option": "cape_selected_23", "$property": "#toggle_state" } },
+                        { "cape_023@options_text": { "text": "024", "$option": "cape_selected_24", "$property": "#toggle_state" } },
+                        { "cape_024@options_text": { "text": "025", "$option": "cape_selected_25", "$property": "#toggle_state" } },
+                        { "cape_025@options_text": { "text": "026", "$option": "cape_selected_26", "$property": "#toggle_state" } },
+                        { "cape_026@options_text": { "text": "027", "$option": "cape_selected_27", "$property": "#toggle_state" } },
+                        { "cape_027@options_text": { "text": "028", "$option": "cape_selected_28", "$property": "#toggle_state" } },
+                        { "cape_028@options_text": { "text": "029", "$option": "cape_selected_29", "$property": "#toggle_state" } },
+                        { "cape_029@options_text": { "text": "030", "$option": "cape_selected_30", "$property": "#toggle_state" } },
+                        { "cape_030@options_text": { "text": "031", "$option": "cape_selected_31", "$property": "#toggle_state" } },
+                        { "cape_031@options_text": { "text": "032", "$option": "cape_selected_32", "$property": "#toggle_state" } },
+                        { "cape_032@options_text": { "text": "033", "$option": "cape_selected_33", "$property": "#toggle_state" } },
+                        { "cape_033@options_text": { "text": "034", "$option": "cape_selected_34", "$property": "#toggle_state" } },
+                        { "cape_034@options_text": { "text": "035", "$option": "cape_selected_35", "$property": "#toggle_state" } },
+                        { "cape_035@options_text": { "text": "036", "$option": "cape_selected_36", "$property": "#toggle_state" } },
+                        { "cape_036@options_text": { "text": "037", "$option": "cape_selected_37", "$property": "#toggle_state" } },
+                        { "cape_037@options_text": { "text": "038", "$option": "cape_selected_38", "$property": "#toggle_state" } },
+                        { "cape_038@options_text": { "text": "039", "$option": "cape_selected_39", "$property": "#toggle_state" } },
+                        { "cape_039@options_text": { "text": "040", "$option": "cape_selected_40", "$property": "#toggle_state" } },
+                        { "cape_040@options_text": { "text": "041", "$option": "cape_selected_41", "$property": "#toggle_state" } },
+                        { "cape_041@options_text": { "text": "042", "$option": "cape_selected_42", "$property": "#toggle_state" } },
+                        { "cape_042@options_text": { "text": "043", "$option": "cape_selected_43", "$property": "#toggle_state" } },
+                        { "cape_043@options_text": { "text": "044", "$option": "cape_selected_44", "$property": "#toggle_state" } },
+                        { "cape_044@options_text": { "text": "045", "$option": "cape_selected_45", "$property": "#toggle_state" } },
+                        { "cape_045@options_text": { "text": "046", "$option": "cape_selected_46", "$property": "#toggle_state" } },
+                        { "cape_046@options_text": { "text": "047", "$option": "cape_selected_47", "$property": "#toggle_state" } },
+                        { "cape_047@options_text": { "text": "048", "$option": "cape_selected_48", "$property": "#toggle_state" } },
+                        { "cape_048@options_text": { "text": "049", "$option": "cape_selected_49", "$property": "#toggle_state" } },
+                        { "cape_049@options_text": { "text": "050", "$option": "cape_selected_50", "$property": "#toggle_state" } },
+                        { "cape_050@options_text": { "text": "051", "$option": "cape_selected_51", "$property": "#toggle_state" } },
+                        { "cape_051@options_text": { "text": "052", "$option": "cape_selected_52", "$property": "#toggle_state" } },
+                        { "cape_052@options_text": { "text": "053", "$option": "cape_selected_53", "$property": "#toggle_state" } },
+                        { "cape_053@options_text": { "text": "054", "$option": "cape_selected_54", "$property": "#toggle_state" } },
+                        { "cape_054@options_text": { "text": "055", "$option": "cape_selected_55", "$property": "#toggle_state" } },
+                        { "cape_055@options_text": { "text": "056", "$option": "cape_selected_56", "$property": "#toggle_state" } },
+                        { "cape_056@options_text": { "text": "057", "$option": "cape_selected_57", "$property": "#toggle_state" } },
+                        { "cape_057@options_text": { "text": "058", "$option": "cape_selected_58", "$property": "#toggle_state" } },
+                        { "cape_058@options_text": { "text": "059", "$option": "cape_selected_59", "$property": "#toggle_state" } },
+                        { "cape_059@options_text": { "text": "060", "$option": "cape_selected_60", "$property": "#toggle_state" } },
+                        { "cape_060@options_text": { "text": "061", "$option": "cape_selected_61", "$property": "#toggle_state" } },
+                        { "cape_061@options_text": { "text": "062", "$option": "cape_selected_62", "$property": "#toggle_state" } },
+                        { "cape_062@options_text": { "text": "063", "$option": "cape_selected_63", "$property": "#toggle_state" } },
+                        { "cape_063@options_text": { "text": "064", "$option": "cape_selected_64", "$property": "#toggle_state" } },
+                        { "cape_064@options_text": { "text": "065", "$option": "cape_selected_65", "$property": "#toggle_state" } },
+                        { "cape_065@options_text": { "text": "066", "$option": "cape_selected_66", "$property": "#toggle_state" } },
+                        { "cape_066@options_text": { "text": "067", "$option": "cape_selected_67", "$property": "#toggle_state" } },
+                        { "cape_067@options_text": { "text": "068", "$option": "cape_selected_68", "$property": "#toggle_state" } },
+                        { "cape_068@options_text": { "text": "069", "$option": "cape_selected_69", "$property": "#toggle_state" } },
+                        { "cape_069@options_text": { "text": "070", "$option": "cape_selected_70", "$property": "#toggle_state" } },
+                        { "cape_070@options_text": { "text": "071", "$option": "cape_selected_71", "$property": "#toggle_state" } },
+                        { "cape_071@options_text": { "text": "072", "$option": "cape_selected_72", "$property": "#toggle_state" } },
+                        { "cape_072@options_text": { "text": "073", "$option": "cape_selected_73", "$property": "#toggle_state" } },
+                        { "cape_073@options_text": { "text": "074", "$option": "cape_selected_74", "$property": "#toggle_state" } },
+                        { "cape_074@options_text": { "text": "075", "$option": "cape_selected_75", "$property": "#toggle_state" } },
+                        { "cape_075@options_text": { "text": "076", "$option": "cape_selected_76", "$property": "#toggle_state" } },
+                        { "cape_076@options_text": { "text": "077", "$option": "cape_selected_77", "$property": "#toggle_state" } },
+                        { "cape_077@options_text": { "text": "078", "$option": "cape_selected_78", "$property": "#toggle_state" } },
+                        { "cape_078@options_text": { "text": "079", "$option": "cape_selected_79", "$property": "#toggle_state" } },
+                        { "cape_079@options_text": { "text": "080", "$option": "cape_selected_80", "$property": "#toggle_state" } },
+                        { "cape_080@options_text": { "text": "081", "$option": "cape_selected_81", "$property": "#toggle_state" } },
+                        { "cape_081@options_text": { "text": "082", "$option": "cape_selected_82", "$property": "#toggle_state" } },
+                        { "cape_082@options_text": { "text": "083", "$option": "cape_selected_83", "$property": "#toggle_state" } },
+                        { "cape_083@options_text": { "text": "084", "$option": "cape_selected_84", "$property": "#toggle_state" } },
+                        { "cape_084@options_text": { "text": "085", "$option": "cape_selected_85", "$property": "#toggle_state" } },
+                        { "cape_085@options_text": { "text": "086", "$option": "cape_selected_86", "$property": "#toggle_state" } },
+                        { "cape_086@options_text": { "text": "087", "$option": "cape_selected_87", "$property": "#toggle_state" } },
+                        { "cape_087@options_text": { "text": "088", "$option": "cape_selected_88", "$property": "#toggle_state" } },
+                        { "cape_088@options_text": { "text": "089", "$option": "cape_selected_89", "$property": "#toggle_state" } },
+                        { "cape_089@options_text": { "text": "090", "$option": "cape_selected_90", "$property": "#toggle_state" } },
+                        { "cape_090@options_text": { "text": "091", "$option": "cape_selected_91", "$property": "#toggle_state" } },
+                        { "cape_091@options_text": { "text": "092", "$option": "cape_selected_92", "$property": "#toggle_state" } },
+                        { "cape_092@options_text": { "text": "093", "$option": "cape_selected_93", "$property": "#toggle_state" } },
+                        { "cape_093@options_text": { "text": "094", "$option": "cape_selected_94", "$property": "#toggle_state" } },
+                        { "cape_094@options_text": { "text": "095", "$option": "cape_selected_95", "$property": "#toggle_state" } },
+                        { "cape_095@options_text": { "text": "096", "$option": "cape_selected_96", "$property": "#toggle_state" } },
+                        { "cape_096@options_text": { "text": "097", "$option": "cape_selected_97", "$property": "#toggle_state" } },
+                        { "cape_097@options_text": { "text": "098", "$option": "cape_selected_98", "$property": "#toggle_state" } },
+                        { "cape_098@options_text": { "text": "099", "$option": "cape_selected_99", "$property": "#toggle_state" } },
+                        { "cape_099@options_text": { "text": "100", "$option": "cape_selected_100", "$property": "#toggle_state" } },
+                        { "cape_100@options_text": { "text": "101", "$option": "cape_selected_101", "$property": "#toggle_state" } },
+                        { "cape_101@options_text": { "text": "102", "$option": "cape_selected_102", "$property": "#toggle_state" } },
+                        { "cape_102@options_text": { "text": "103", "$option": "cape_selected_103", "$property": "#toggle_state" } },
+                        { "cape_103@options_text": { "text": "104", "$option": "cape_selected_104", "$property": "#toggle_state" } },
+                        { "cape_104@options_text": { "text": "105", "$option": "cape_selected_105", "$property": "#toggle_state" } },
+                        { "cape_105@options_text": { "text": "106", "$option": "cape_selected_106", "$property": "#toggle_state" } },
+                        { "cape_106@options_text": { "text": "107", "$option": "cape_selected_107", "$property": "#toggle_state" } },
+                        { "cape_107@options_text": { "text": "108", "$option": "cape_selected_108", "$property": "#toggle_state" } },
+                        { "cape_108@options_text": { "text": "109", "$option": "cape_selected_109", "$property": "#toggle_state" } },
+                        { "cape_109@options_text": { "text": "110", "$option": "cape_selected_110", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "wings": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "wings1@options_text": { "text": "01", "$option": "wings_selected_1", "$property": "#toggle_state" } },
+                        { "wings2@options_text": { "text": "02", "$option": "wings_selected_2", "$property": "#toggle_state" } },
+                        { "wings3@options_text": { "text": "03", "$option": "wings_selected_3", "$property": "#toggle_state" } },
+                        { "wings4@options_text": { "text": "04", "$option": "wings_selected_4", "$property": "#toggle_state" } },
+                        { "wings5@options_text": { "text": "05", "$option": "wings_selected_5", "$property": "#toggle_state" } },
+                        { "wings6@options_text": { "text": "06", "$option": "wings_selected_6", "$property": "#toggle_state" } },
+                        { "wings7@options_text": { "text": "07", "$option": "wings_selected_7", "$property": "#toggle_state" } },
+                        { "wings8@options_text": { "text": "08", "$option": "wings_selected_8", "$property": "#toggle_state" } },
+                        { "wings9@options_text": { "text": "09", "$option": "wings_selected_9", "$property": "#toggle_state" } },
+                        { "wings10@options_text": { "text": "10", "$option": "wings_selected_10", "$property": "#toggle_state" } },
+                        { "wings11@options_text": { "text": "11", "$option": "wings_selected_11", "$property": "#toggle_state" } },
+                        { "wings12@options_text": { "text": "12", "$option": "wings_selected_12", "$property": "#toggle_state" } },
+                        { "wings13@options_text": { "text": "13", "$option": "wings_selected_13", "$property": "#toggle_state" } },
+                        { "wings14@options_text": { "text": "14", "$option": "wings_selected_14", "$property": "#toggle_state" } },
+                        { "wings15@options_text": { "text": "15", "$option": "wings_selected_15", "$property": "#toggle_state" } },
+                        { "wings16@options_text": { "text": "16", "$option": "wings_selected_16", "$property": "#toggle_state" } },
+                        { "wings17@options_text": { "text": "17", "$option": "wings_selected_17", "$property": "#toggle_state" } },
+                        { "wings18@options_text": { "text": "18", "$option": "wings_selected_18", "$property": "#toggle_state" } },
+                        { "wings19@options_text": { "text": "19", "$option": "wings_selected_19", "$property": "#toggle_state" } },
+                        { "wings20@options_text": { "text": "20", "$option": "wings_selected_20", "$property": "#toggle_state" } },
+                        { "wings21@options_text": { "text": "21", "$option": "wings_selected_21", "$property": "#toggle_state" } },
+                        { "wings22@options_text": { "text": "22", "$option": "wings_selected_22", "$property": "#toggle_state" } },
+                        { "wings23@options_text": { "text": "23", "$option": "wings_selected_23", "$property": "#toggle_state" } },
+                        { "wings24@options_text": { "text": "24", "$option": "wings_selected_24", "$property": "#toggle_state" } },
+                        { "wings25@options_text": { "text": "25", "$option": "wings_selected_25", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "axolotls": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "axolotl1@options_text": { "text": "1", "$option": "axolotl_selected_1", "$property": "#toggle_state" } },
+                        { "axolotl2@options_text": { "text": "2", "$option": "axolotl_selected_2", "$property": "#toggle_state" } },
+                        { "axolotl3@options_text": { "text": "3", "$option": "axolotl_selected_3", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "glasses": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "axolotl1@options_text": { "text": "1", "$option": "glasses_selected_1", "$property": "#toggle_state" } },
+                        { "axolotl2@options_text": { "text": "2", "$option": "glasses_selected_2", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "halos": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "halo1@options_text": { "text": "01", "$option": "halo_selected_1", "$property": "#toggle_state" } },
+                        { "halo2@options_text": { "text": "02", "$option": "halo_selected_2", "$property": "#toggle_state" } },
+                        { "halo3@options_text": { "text": "03", "$option": "halo_selected_3", "$property": "#toggle_state" } },
+                        { "halo4@options_text": { "text": "04", "$option": "halo_selected_4", "$property": "#toggle_state" } },
+                        { "halo5@options_text": { "text": "05", "$option": "halo_selected_5", "$property": "#toggle_state" } },
+                        { "halo6@options_text": { "text": "06", "$option": "halo_selected_6", "$property": "#toggle_state" } },
+                        { "halo7@options_text": { "text": "07", "$option": "halo_selected_7", "$property": "#toggle_state" } },
+                        { "halo8@options_text": { "text": "08", "$option": "halo_selected_8", "$property": "#toggle_state" } },
+                        { "halo9@options_text": { "text": "09", "$option": "halo_selected_9", "$property": "#toggle_state" } },
+                        { "halo10@options_text": { "text": "10", "$option": "halo_selected_10", "$property": "#toggle_state" } },
+                        { "halo11@options_text": { "text": "11", "$option": "halo_selected_11", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "shields": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "shield1@options_text": { "text": "01", "$option": "shields_selected_1", "$property": "#toggle_state" } },
+                        { "shield2@options_text": { "text": "02", "$option": "shields_selected_2", "$property": "#toggle_state" } },
+                        { "shield3@options_text": { "text": "03", "$option": "shields_selected_3", "$property": "#toggle_state" } },
+                        { "shield4@options_text": { "text": "04", "$option": "shields_selected_4", "$property": "#toggle_state" } },
+                        { "shield5@options_text": { "text": "05", "$option": "shields_selected_5", "$property": "#toggle_state" } },
+                        { "shield6@options_text": { "text": "06", "$option": "shields_selected_6", "$property": "#toggle_state" } },
+                        { "shield7@options_text": { "text": "07", "$option": "shields_selected_7", "$property": "#toggle_state" } },
+                        { "shield8@options_text": { "text": "08", "$option": "shields_selected_8", "$property": "#toggle_state" } },
+                        { "shield9@options_text": { "text": "09", "$option": "shields_selected_9", "$property": "#toggle_state" } },
+                        { "shield10@options_text": { "text": "10", "$option": "shields_selected_10", "$property": "#toggle_state" } },
+                        { "shield11@options_text": { "text": "11", "$option": "shields_selected_11", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "players": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        { "players1@options_text": { "text": "1", "$option": "players_selected_1", "$property": "#toggle_state" } },
+                        { "players2@options_text": { "text": "2", "$option": "players_selected_2", "$property": "#toggle_state" } },
+                        { "players3@options_text": { "text": "3", "$option": "players_selected_3", "$property": "#toggle_state" } }
+                      ]
+                    }
+                  },
+                  {
+                    "divider@code_text": {
+                      "text": "@"
+                    }
+                  },
+                  {
+                    "background": {
+                      "type": "image",
+                      "texture": "textures/ui/White",
+                      "size": [
+                        25,
+                        25
+                      ],
+                      "min_size": [
+                        15,
+                        15
+                      ],
+                      "visible": "$ingame_username_ignored",
+                      "layer": 500,
+                      "controls": [
+                        {
+                          "qr_code": {
+                            "type": "custom",
+                            "renderer": "qr_code_renderer",
+                            "size": [
+                              "100% - 2px",
+                              "100% - 2px"
+                            ],
+                            "anchor_to": "center",
+                            "anchor_from": "center",
+                            "bindings": [
+                              {
+                                "binding_name": "#gamertag_label",
+                                "binding_name_override": "#qr_code_content"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "background2": {
+                      "type": "image",
+                      "texture": "textures/ui/White",
+                      "size": [
+                        25,
+                        25
+                      ],
+                      "min_size": [
+                        15,
+                        15
+                      ],
+                      "ignored": "$ingame_username_ignored",
+                      "layer": 500,
+                      "controls": [
+                        {
+                          "qr_code": {
+                            "type": "custom",
+                            "renderer": "qr_code_renderer",
+                            "size": [
+                              "100% - 2px",
+                              "100% - 2px"
+                            ],
+                            "anchor_to": "center",
+                            "anchor_from": "center",
+                            "property_bag": {
+                              "#qr_code_content": "$username"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,698 @@
+{
+  "namespace": "azelux_client_wings",
+
+  "wings_menu@scrolling_panels.custom_scrolling_panel": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$show_background": false,
+    "layer": 8,
+    "$scroll_size": [
+      3,
+      "100%"
+    ],
+    "$scroll_bar_left_padding_size": [
+      2,
+      2
+    ],
+    "offset": [
+      "12%",
+      1.5
+    ],
+    "size": [
+      "50%",
+      "98.5%"
+    ],
+    "$scrolling_content": "azelux_client_wings.wings_menu_scrolling_content"
+  },
+
+  "wings_menu_scrolling_content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "controls": [
+      {
+        "spacer0": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "section": {
+          "type": "label",
+          "text": "B a s i c - W i n g s",
+          "font_type": "STD",
+          "font_scale_factor": 0.7,
+          "alpha": 0.8,
+          "layer": 9,
+          "size": [
+            "100%",
+            10
+          ]
+        }
+      },
+      {
+        "spacer0": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_row_1@button_list_row_1": {}
+      },
+      {
+        "spacer1": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_row_2@button_list_row_2": {}
+      },
+      {
+        "spacer1": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "section": {
+          "type": "label",
+          "text": "S p e c i a l - W i n g s",
+          "font_type": "STD",
+          "font_scale_factor": 0.7,
+          "alpha": 0.8,
+          "layer": 9,
+          "size": [
+            "100%",
+            10
+          ]
+        }
+      },
+      {
+        "spacer1": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_row_3@button_list_row_3": {}
+      },
+      {
+        "spacer1": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "section": {
+          "type": "label",
+          "text": "S h a d e d - W i n g s",
+          "font_type": "STD",
+          "font_scale_factor": 0.7,
+          "alpha": 0.8,
+          "layer": 9,
+          "size": [
+            "100%",
+            10
+          ]
+        }
+      },
+      {
+        "spacer1": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_row_4@button_list_row_4": {}
+      },
+      {
+        "spacer1": {
+          "type": "panel",
+          "size": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "button_list_row_5@button_list_row_5": {}
+      }
+    ]
+  },
+
+  "button_list_row_1": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "wings_1@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 1,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "clear",
+          "$wings_uv_size": [256,256],
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_1"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_2@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 2,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings2",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_2"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_3@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 3,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings3",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_3"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_4@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 4,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings4",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_4"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_5@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 5,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings5",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_5"
+        }
+      }
+    ]
+  },
+
+  "button_list_row_2": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "wings_6@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 6,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings6",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_6"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_7@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 7,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings7",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_7"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_8@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 8,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings8",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_8"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_9@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 9,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings9",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_9"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_10@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 10,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings10",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_10"
+        }
+      }
+    ]
+  },
+
+  "button_list_row_3": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "wings_11@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 11,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings11",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_11"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_12@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 12,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings12",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_12"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_13@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 13,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings13",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_13"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_14@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 14,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings14",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_14"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_15@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 15,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings15",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_15"
+        }
+      }
+    ]
+  },
+  "button_list_row_4": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "wings_16@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 16,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings16",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_16"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_17@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 17,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings17",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_17"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_18@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 18,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings18",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_18"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_19@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 19,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings19",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_19"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_20@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 20,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings20",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_20"
+        }
+      }
+    ]
+  },
+
+  "button_list_row_5": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      39.3
+    ],
+    "controls": [
+      {
+        "wings_21@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 21,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings21",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_21"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_22@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 22,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings22",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_22"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_23@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 23,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings23",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_23"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_24@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 24,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings24",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_24"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "wings_25@mod_menu_toggles.cosmetics_wings_mod_toggle": {
+          "$toggle_group_forced_index": 25,
+          "size": [
+            30,
+            39.3
+          ],
+          "$wings": "wings25",
+          "$toggle_group_default_selected": "$wings_default_selected",
+          "$toggle_view_binding_name": "wings_selected_25"
+        }
+      }
+    ]
+  }
+}

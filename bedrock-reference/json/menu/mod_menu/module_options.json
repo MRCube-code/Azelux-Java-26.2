@@ -1,0 +1,2226 @@
+{
+  "namespace": "module_options",
+
+  "scrollable_content_template": {
+    "type": "panel",
+    "size": ["100%", "100%c"],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": ["100%", "100%c"],
+          "padding": [10, 10, 10, 10],
+          "controls": "$custom_controls"
+        }
+      }
+    ]
+  },
+
+  "content": {
+    "type": "panel",
+    "controls": [
+      {
+        "armor_hud_settings@module_options.module_settings_template": {
+          "$options_toggle_name": "armor_hud_settings",
+          "$options_binding_name": "armor_hud_settings_toggle",
+          "$header_text": "A R M O R   S T A T U S",
+          "$desc_text": "Displays information about the armor you have equipped and the item you are holding on the HUD.",
+          "$settings_available": true,
+          "$use_different_offset": true,
+          "$custom_controls": [
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [3, 9]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "armor_hud_boots_position_x@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "armor_hud_boots_position_x",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "Boots X Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$armor_hud_boots_position_x" }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "armor_hud_boots_position_y@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "armor_hud_boots_position_y",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "Boots Y Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$armor_hud_boots_position_y" }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [3, 3]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "armor_hud_leggings_position_x@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "armor_hud_leggings_position_x",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "Leggings X Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$armor_hud_leggings_position_x" }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "armor_hud_leggings_position_y@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "armor_hud_leggings_position_y",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "Leggings Y Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$armor_hud_leggings_position_y" }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [3, 3]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "armor_hud_chestplate_position_x@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "armor_hud_chestplate_position_x",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "Chestplate X Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$armor_hud_chestplate_position_x" }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "armor_hud_chestplate_position_y@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "armor_hud_chestplate_position_y",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "Chestplate Y Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$armor_hud_chestplate_position_y" }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [3, 3]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "armor_hud_helmet_position_x@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "armor_hud_helmet_position_x",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "Helmet X Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$armor_hud_helmet_position_x" }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "armor_hud_helmet_position_y@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "armor_hud_helmet_position_y",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "Helmet Y Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$armor_hud_helmet_position_y" }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "direction_hud_settings@module_options.module_settings_template": {
+          "$options_toggle_name": "direction_hud_settings",
+          "$options_binding_name": "direction_hud_settings_toggle",
+          "$header_text": "D I R E C T I O N   H U D",
+          "$desc_text": "Displays your cardinal information on the HUD.",
+          "$settings_available": true,
+          "$custom_controls": [
+            {
+              "switch_wrapper": {
+                "type": "panel",
+                "size": ["100%", 15],
+                "controls": [
+                  {
+                    "switch@common_toggles.animated_toggle": {
+                      "size": [20, 6.666],
+                      "offset": [-72, 3],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$toggle_view_binding_name": "direction_hud_legacy_toggle",
+                      "$toggle_default_state": "$direction_hud_legacy_toggle_default_state",
+                      "$switch_title": "Use Legacy Style"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [3, 3]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "direction_hud_legacy_toggle",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "direction_hud_position_x@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "direction_hud_position_x",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "X Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$direction_hud_position_x" }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "direction_hud_legacy_toggle",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "direction_hud_position_y@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "direction_hud_position_y",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "Y Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$direction_hud_position_y" }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "direction_hud_legacy_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "direction_hud_legacy_position_x@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "direction_hud_legacy_position_x",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "X Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": {"#slider_steps": 100, "#slider_value": "$direction_hud_legacy_position_x"}
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "direction_hud_legacy_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "direction_hud_legacy_position_y@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "direction_hud_legacy_position_y",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "Y Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$direction_hud_legacy_position_y" }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+
+      {
+        "glint_colorizer_settings@module_options.module_settings_template": {
+          "$options_toggle_name": "glint_colorizer_settings",
+          "$options_binding_name": "glint_colorizer_settings_toggle",
+          "$header_text": "G L I N T   C O L O R I Z E R",
+          "$desc_text": "Colorizes the color of the enchantment glint.",
+          "$settings_available": true,
+          "$custom_controls": [
+            {
+              "switch_wrapper": {
+                "type": "panel",
+                "size": ["100%", 15],
+                "controls": [
+                  {
+                    "vertical_list": {
+                      "type": "stack_panel",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [80.5,3],
+                      "orientation": "vertical",
+                      "controls": [
+                        {
+                          "top_label": {
+                            "type": "label",
+                            "font_type": "STD",
+                            "font_scale_factor": 0.43,
+                            "text": "PICK ANY COLOR",
+                            "text_alignment": "left",
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle",
+                            "alpha": 0.4
+                          }
+                        },
+                        {
+                          "spacer": {
+                            "type": "panel",
+                            "size": [3,3]
+                          }
+                        },
+                        {
+                          "tab_list_2": {
+                            "type": "stack_panel",
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle",
+                            "orientation": "horizontal",
+                            "controls": [
+                              {
+                                "red_color_glint@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "glint_selected_1",
+                                  "$toggle_group_forced_index": 1,
+                                  "$toggle_group_default_selected": "$custom_glint_color_default_selected",
+                                  "$toggle_name": "custom_color_glint2",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [1,0,0],
+                                  "size": [13, 13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5,2.5]
+                                }
+                              },
+                              {
+                                "orange_color_glint@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "glint_selected_2",
+                                  "$toggle_group_forced_index": 2,
+                                  "$toggle_name": "custom_color_glint2",
+                                  "$toggle_group_default_selected": "$custom_glint_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [1,0.5,0],
+                                  "size": [13, 13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5,2.5]
+                                }
+                              },
+                              {
+                                "yellow_color_glint@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "glint_selected_3",
+                                  "$toggle_group_forced_index": 3,
+                                  "$toggle_name": "custom_color_glint2",
+                                  "$toggle_group_default_selected": "$custom_glint_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [1,1,0],
+                                  "size": [13, 13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5,2.5]
+                                }
+                              },
+                              {
+                                "green_color_glint@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "glint_selected_4",
+                                  "$toggle_group_forced_index": 4,
+                                  "$toggle_name": "custom_color_glint2",
+                                  "$toggle_group_default_selected": "$custom_glint_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [0,1,0],
+                                  "size": [13, 13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5,2.5]
+                                }
+                              },
+                              {
+                                "light_blue_color_glint@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "glint_selected_5",
+                                  "$toggle_group_forced_index": 5,
+                                  "$toggle_name": "custom_color_glint2",
+                                  "$toggle_group_default_selected": "$custom_glint_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [0.5,0.75,1],
+                                  "size": [13, 13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5,2.5]
+                                }
+                              },
+                              {
+                                "blue_color_glint@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "glint_selected_6",
+                                  "$toggle_group_forced_index": 6,
+                                  "$toggle_name": "custom_color_glint2",
+                                  "$toggle_group_default_selected": "$custom_glint_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [0,0,1],
+                                  "size": [13, 13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5,2.5]
+                                }
+                              },
+                              {
+                                "magenta_color_glint@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "glint_selected_7",
+                                  "$toggle_group_forced_index": 7,
+                                  "$toggle_name": "custom_color_glint2",
+                                  "$toggle_group_default_selected": "$custom_glint_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [1,0,1],
+                                  "size": [13, 13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5,2.5]
+                                }
+                              },
+                              {
+                                "white_color_glint@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "glint_selected_8",
+                                  "$toggle_group_forced_index": 8,
+                                  "$toggle_name": "custom_color_glint2",
+                                  "$toggle_group_default_selected": "$custom_glint_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [1,1,1],
+                                  "size": [13, 13]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+
+      {
+        "f8_screen_settings@module_options.module_settings_template": {
+          "$options_toggle_name": "f8_screen_settings",
+          "$options_binding_name": "f8_screen_settings_toggle",
+          "$header_text": "F 8   S C R E E N",
+          "$desc_text": "Displays various variables and other information on the HUD."
+        }
+      },
+
+      {
+        "server_address_settings@module_options.module_settings_template": {
+          "$options_toggle_name": "server_address_settings",
+          "$options_binding_name": "server_address_settings_toggle",
+          "$header_text": "S E R V E R   A D D R E S S",
+          "$desc_text": "Displays the address of the server you're connected to on the HUD.",
+          "$settings_available": true,
+          "$custom_controls": [
+            {
+              "switch_wrapper": {
+                "type": "panel",
+                "size": ["100%", 15],
+                "controls": [
+                  {
+                    "switch@common_toggles.animated_toggle": {
+                      "size": [20, 6.666],
+                      "offset": [-72, 3],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$toggle_view_binding_name": "server_address_background_toggle",
+                      "$toggle_default_state": "$server_address_background_toggle_default_state",
+                      "$switch_title": "Enable Background"
+                    }
+                  },
+                  {
+                    "switch6@common_toggles.animated_toggle": {
+                      "size": [20, 6.666],
+                      "offset": [-72, 12.666],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$toggle_view_binding_name": "server_address_icon_toggle",
+                      "$toggle_default_state": "$server_address_icon_toggle_default_state",
+                      "$switch_title": "Enable Icon"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [3, 13]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "server_address_position_x@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "server_address_position_x",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "X Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$server_address_position_x" }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "server_address_position_y@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "server_address_position_y",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "Y Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$server_address_position_y" }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+
+      {
+        "shiny_pots_settings@module_options.module_settings_template": {
+          "$options_toggle_name": "shiny_pots_settings",
+          "$options_binding_name": "shiny_pots_settings_toggle",
+          "$header_text": "S H I N Y   P O T S",
+          "$desc_text": "Highlights all sorts of potions in your hotbar.",
+          "$settings_available": true,
+          "$custom_controls": [
+            {
+              "switch_wrapper": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  15
+                ],
+                "controls": [
+                  {
+                    "vertical_list": {
+                      "type": "stack_panel",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [
+                        80.5,
+                        3
+                      ],
+                      "orientation": "vertical",
+                      "controls": [
+                        {
+                          "top_label": {
+                            "type": "label",
+                            "font_type": "STD",
+                            "font_scale_factor": 0.43,
+                            "text": "PICK ANY COLOR",
+                            "text_alignment": "left",
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle",
+                            "alpha": 0.4
+                          }
+                        },
+                        {
+                          "spacer": {
+                            "type": "panel",
+                            "size": [
+                              3,
+                              3
+                            ]
+                          }
+                        },
+                        {
+                          "shiny_pots_color_list": {
+                            "type": "stack_panel",
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle",
+                            "orientation": "horizontal",
+                            "controls": [
+                              {
+                                "red_color_glint@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "shiny_pots_selected_1",
+                                  "$toggle_group_forced_index": 1,
+                                  "$toggle_name": "custom_shiny_pots_color",
+                                  "$toggle_group_default_selected": "$shiny_pots_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [
+                                    1,
+                                    0,
+                                    0
+                                  ],
+                                  "size": [
+                                    13,
+                                    13
+                                  ]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [
+                                    2.5,
+                                    2.5
+                                  ]
+                                }
+                              },
+                              {
+                                "orange_color_glint@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "shiny_pots_selected_2",
+                                  "$toggle_group_forced_index": 2,
+                                  "$toggle_name": "custom_shiny_pots_color",
+                                  "$toggle_group_default_selected": "$shiny_pots_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [
+                                    1,
+                                    0.5,
+                                    0
+                                  ],
+                                  "size": [
+                                    13,
+                                    13
+                                  ]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [
+                                    2.5,
+                                    2.5
+                                  ]
+                                }
+                              },
+                              {
+                                "yellow_color_glint@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "shiny_pots_selected_3",
+                                  "$toggle_group_forced_index": 3,
+                                  "$toggle_name": "custom_shiny_pots_color",
+                                  "$toggle_group_default_selected": "$shiny_pots_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [
+                                    1,
+                                    1,
+                                    0
+                                  ],
+                                  "size": [
+                                    13,
+                                    13
+                                  ]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [
+                                    2.5,
+                                    2.5
+                                  ]
+                                }
+                              },
+                              {
+                                "green_color_glint@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "shiny_pots_selected_4",
+                                  "$toggle_group_forced_index": 4,
+                                  "$toggle_name": "custom_shiny_pots_color",
+                                  "$toggle_group_default_selected": "$shiny_pots_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [
+                                    0,
+                                    1,
+                                    0
+                                  ],
+                                  "size": [
+                                    13,
+                                    13
+                                  ]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [
+                                    2.5,
+                                    2.5
+                                  ]
+                                }
+                              },
+                              {
+                                "light_blue_color_glint@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "shiny_pots_selected_5",
+                                  "$toggle_group_forced_index": 5,
+                                  "$toggle_name": "custom_shiny_pots_color",
+                                  "$toggle_group_default_selected": "$shiny_pots_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [
+                                    0.5,
+                                    0.75,
+                                    1
+                                  ],
+                                  "size": [
+                                    13,
+                                    13
+                                  ]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [
+                                    2.5,
+                                    2.5
+                                  ]
+                                }
+                              },
+                              {
+                                "blue_color_glint@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "shiny_pots_selected_6",
+                                  "$toggle_group_forced_index": 6,
+                                  "$toggle_name": "custom_shiny_pots_color",
+                                  "$toggle_group_default_selected": "$shiny_pots_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [
+                                    0,
+                                    0,
+                                    1
+                                  ],
+                                  "size": [
+                                    13,
+                                    13
+                                  ]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [
+                                    2.5,
+                                    2.5
+                                  ]
+                                }
+                              },
+                              {
+                                "magenta_color_shiny_pots@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "shiny_pots_selected_7",
+                                  "$toggle_group_forced_index": 7,
+                                  "$toggle_name": "custom_shiny_pots_color",
+                                  "$toggle_group_default_selected": "$shiny_pots_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [
+                                    1,
+                                    0,
+                                    1
+                                  ],
+                                  "size": [
+                                    13,
+                                    13
+                                  ]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [
+                                    2.5,
+                                    2.5
+                                  ]
+                                }
+                              },
+                              {
+                                "white_color_shiny_pots@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "shiny_pots_selected_8",
+                                  "$toggle_group_forced_index": 8,
+                                  "$toggle_name": "custom_shiny_pots_color",
+                                  "$toggle_group_default_selected": "$shiny_pots_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [
+                                    1,
+                                    1,
+                                    1
+                                  ],
+                                  "size": [
+                                    13,
+                                    13
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+
+      {
+        "moving_status_settings@module_options.module_settings_template": {
+          "$options_toggle_name": "moving_status_settings",
+          "$options_binding_name": "moving_status_settings_toggle",
+          "$header_text": "M O V I N G   S T A T U S",
+          "$desc_text": "Shows your current moving status on the HUD.",
+          "$settings_available": true,
+          "$custom_controls": [
+            {
+              "switch_wrapper": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  15
+                ],
+                "controls": [
+                  {
+                    "switch@common_toggles.animated_toggle": {
+                      "size": [20, 6.666],
+                      "offset": [-72, 3],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$toggle_default_state": "$moving_status_background_toggle_default_state",
+                      "$toggle_view_binding_name": "moving_status_background",
+                      "$switch_title": "Enable Background"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [3, 3]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "moving_status_position_x@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "moving_status_position_x",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "X Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$moving_status_position_x" }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "moving_status_position_y@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "moving_status_position_y",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "Y Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$moving_status_position_y" }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+
+      {
+        "custom_crosshair_settings@module_options.module_settings_template": {
+          "$options_toggle_name": "custom_crosshair_settings",
+          "$options_binding_name": "custom_crosshair_settings_toggle",
+          "$header_text": "C R O S S H A I R",
+          "$desc_text": "Customize the in-game crosshair to your likings.",
+          "$settings_available": true,
+          "$custom_controls": [
+            {
+              "switch_wrapper": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  15
+                ],
+                "controls": [
+                  {
+                    "vertical_list": {
+                      "type": "stack_panel",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [
+                        80.5,
+                        3
+                      ],
+                      "orientation": "vertical",
+                      "controls": [
+                        {
+                          "top_label": {
+                            "type": "label",
+                            "font_type": "STD",
+                            "font_scale_factor": 0.43,
+                            "text": "CHOOSE CROSSHAIR STYLE",
+                            "text_alignment": "left",
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle",
+                            "alpha": 0.4
+                          }
+                        },
+                        {
+                          "spacer": {
+                            "type": "panel",
+                            "size": [3,3]
+                          }
+                        },
+                        {
+                          "tab_list_crosshairs": {
+                            "type": "stack_panel",
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle",
+                            "orientation": "horizontal",
+                            "controls": [
+                              {
+                                "crosshair_1@mod_menu_toggles.mod_menu_crosshair_picker": {
+                                  "$toggle_view_binding_name": "custom_crosshair_selected_1",
+                                  "$toggle_group_forced_index": 1,
+                                  "$toggle_name": "selected_crosshair",
+                                  "$toggle_group_default_selected": "$custom_crosshair_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$crosshair_id": "crosshair_1",
+                                  "size": [13, 13],
+                                  "$button_size": [13,13]
+                                }
+                              },
+                              { "spacer": { "type": "panel", "size": [2.5, 2.5] } },
+                              {
+                                "crosshair_2@mod_menu_toggles.mod_menu_crosshair_picker": {
+                                  "$toggle_view_binding_name": "custom_crosshair_selected_2",
+                                  "$toggle_group_forced_index": 2,
+                                  "$toggle_name": "selected_crosshair",
+                                  "$toggle_group_default_selected": "$custom_crosshair_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$crosshair_id": "crosshair_2",
+                                  "size": [13, 13],
+                                  "$button_size": [13,13]
+                                }
+                              },
+                              { "spacer": { "type": "panel", "size": [2.5, 2.5] } },
+                              {
+                                "crosshair_3@mod_menu_toggles.mod_menu_crosshair_picker": {
+                                  "$toggle_view_binding_name": "custom_crosshair_selected_3",
+                                  "$toggle_group_forced_index": 3,
+                                  "$toggle_name": "selected_crosshair",
+                                  "$toggle_group_default_selected": "$custom_crosshair_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$crosshair_id": "crosshair_3",
+                                  "size": [13, 13],
+                                  "$button_size": [13,13]
+                                }
+                              },
+                              { "spacer": { "type": "panel", "size": [2.5, 2.5] } },
+                              {
+                                "crosshair_4@mod_menu_toggles.mod_menu_crosshair_picker": {
+                                  "$toggle_view_binding_name": "custom_crosshair_selected_4",
+                                  "$toggle_group_forced_index": 4,
+                                  "$toggle_name": "selected_crosshair",
+                                  "$toggle_group_default_selected": "$custom_crosshair_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$crosshair_id": "crosshair_4",
+                                  "size": [13, 13],
+                                  "$button_size": [13,13]
+                                }
+                              },
+                              { "spacer": { "type": "panel", "size": [2.5, 2.5] } },
+                              {
+                                "crosshair_5@mod_menu_toggles.mod_menu_crosshair_picker": {
+                                  "$toggle_view_binding_name": "custom_crosshair_selected_5",
+                                  "$toggle_group_forced_index": 5,
+                                  "$toggle_name": "selected_crosshair",
+                                  "$toggle_group_default_selected": "$custom_crosshair_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$crosshair_id": "crosshair_5",
+                                  "size": [13, 13],
+                                  "$button_size": [13,13]
+                                }
+                              },
+                              { "spacer": { "type": "panel", "size": [2.5, 2.5] } },
+                              {
+                                "crosshair_6@mod_menu_toggles.mod_menu_crosshair_picker": {
+                                  "$toggle_view_binding_name": "custom_crosshair_selected_6",
+                                  "$toggle_group_forced_index": 6,
+                                  "$toggle_name": "selected_crosshair",
+                                  "$toggle_group_default_selected": "$custom_crosshair_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$crosshair_id": "crosshair_6",
+                                  "size": [13, 13],
+                                  "$button_size": [13,13]
+                                }
+                              },
+                              { "spacer": { "type": "panel", "size": [2.5, 2.5] } },
+                              {
+                                "crosshair_7@mod_menu_toggles.mod_menu_crosshair_picker": {
+                                  "$toggle_view_binding_name": "custom_crosshair_selected_7",
+                                  "$toggle_group_forced_index": 7,
+                                  "$toggle_name": "selected_crosshair",
+                                  "$toggle_group_default_selected": "$custom_crosshair_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$crosshair_id": "crosshair_7",
+                                  "size": [13, 13],
+                                  "$button_size": [13,13]
+                                }
+                              },
+                              { "spacer": { "type": "panel", "size": [2.5, 2.5] } },
+                              {
+                                "crosshair_8@mod_menu_toggles.mod_menu_crosshair_picker": {
+                                  "$toggle_view_binding_name": "custom_crosshair_selected_8",
+                                  "$toggle_group_forced_index": 8,
+                                  "$toggle_name": "selected_crosshair",
+                                  "$toggle_group_default_selected": "$custom_crosshair_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$crosshair_id": "crosshair_8",
+                                  "size": [13, 13],
+                                  "$button_size": [13,13]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "switch_wrapper": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  15
+                ],
+                "controls": [
+                  {
+                    "vertical_list": {
+                      "type": "stack_panel",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [
+                        80.5,
+                        10.6
+                      ],
+                      "orientation": "vertical",
+                      "controls": [
+                        {
+                          "second_label": {
+                            "type": "label",
+                            "font_type": "STD",
+                            "font_scale_factor": 0.43,
+                            "text": "COLOR",
+                            "text_alignment": "left",
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle",
+                            "alpha": 0.4
+                          }
+                        },
+                        {
+                          "spacer3": {
+                            "type": "panel",
+                            "size": [3,3]
+                          }
+                        },
+                        {
+                          "switch@common_toggles.animated_toggle": {
+                            "size": [20, 6.666],
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle",
+                            "$toggle_view_binding_name": "custom_crosshair_default_color",
+                            "$toggle_default_state": "$custom_crosshair_default_color_toggle_default_state",
+                            "$switch_title": "Vanilla Color (requires config saving)"
+                          }
+                        },
+                        {
+                          "spacer4": {
+                            "type": "panel",
+                            "size": [3,3]
+                          }
+                        },
+                        {
+                          "tab_list_colors": {
+                            "type": "stack_panel",
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "custom_crosshair_default_color",
+                                "source_property_name": "(not #toggle_state)",
+                                "target_property_name": "#visible"
+                              }
+                            ],
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle",
+                            "orientation": "horizontal",
+                            "controls": [
+                              {
+                                "1@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "custom_crosshair_color1",
+                                  "$toggle_group_forced_index": 1,
+                                  "$toggle_name": "custom_crosshair_color",
+                                  "$toggle_group_default_selected": "$custom_crosshair_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [1,0,0],
+                                  "size": [13, 13],
+                                  "$button_size": [13,13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5,2.5]
+                                }
+                              },
+                              {
+                                "2@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "custom_crosshair_color2",
+                                  "$toggle_group_forced_index": 2,
+                                  "$toggle_name": "custom_crosshair_color",
+                                  "$toggle_group_default_selected": "$custom_crosshair_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [1,0.5,0],
+                                  "size": [13, 13],
+                                  "$button_size": [13,13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5,2.5]
+                                }
+                              },
+                              {
+                                "3@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "custom_crosshair_color3",
+                                  "$toggle_group_forced_index": 3,
+                                  "$toggle_name": "custom_crosshair_color",
+                                  "$toggle_group_default_selected": "$custom_crosshair_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [1,1,0],
+                                  "size": [13, 13],
+                                  "$button_size": [13,13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5,2.5]
+                                }
+                              },
+                              {
+                                "4@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "custom_crosshair_color4",
+                                  "$toggle_group_forced_index": 4,
+                                  "$toggle_name": "custom_crosshair_color",
+                                  "$toggle_group_default_selected": "$custom_crosshair_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [0,1,0],
+                                  "size": [13, 13],
+                                  "$button_size": [13,13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5,2.5]
+                                }
+                              },
+                              {
+                                "5@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "custom_crosshair_color5",
+                                  "$toggle_group_forced_index": 5,
+                                  "$toggle_name": "custom_crosshair_color",
+                                  "$toggle_group_default_selected": "$custom_crosshair_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [0.5,0.75,1],
+                                  "size": [13, 13],
+                                  "$button_size": [13,13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5,2.5]
+                                }
+                              },
+                              {
+                                "6@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "custom_crosshair_color6",
+                                  "$toggle_group_forced_index": 6,
+                                  "$toggle_name": "custom_crosshair_color",
+                                  "$toggle_group_default_selected": "$custom_crosshair_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [0,0,1],
+                                  "size": [13, 13],
+                                  "$button_size": [13,13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5,2.5]
+                                }
+                              },
+                              {
+                                "7@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "custom_crosshair_color7",
+                                  "$toggle_group_forced_index": 7,
+                                  "$toggle_name": "custom_crosshair_color",
+                                  "$toggle_group_default_selected": "$custom_crosshair_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [1,0,1],
+                                  "size": [13, 13],
+                                  "$button_size": [13,13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5,2.5]
+                                }
+                              },
+                              {
+                                "8@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "custom_crosshair_color8",
+                                  "$toggle_group_forced_index": 8,
+                                  "$toggle_name": "custom_crosshair_color",
+                                  "$toggle_group_default_selected": "$custom_crosshair_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [1,1,1],
+                                  "size": [13, 13],
+                                  "$button_size": [13,13]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+
+      {
+        "tab_list_settings@module_options.module_settings_template": {
+          "$options_toggle_name": "tab_list_settings",
+          "$options_binding_name": "tab_list_settings_toggle",
+          "$header_text": "T A B   L I S T",
+          "$desc_text": "View all players connected to your world/servers by pressing TAB.",
+          "$settings_available": true,
+          "$custom_controls": [
+            {
+              "switch_wrapper": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  15
+                ],
+                "controls": [
+                  {
+                    "switch@common_toggles.animated_toggle": {
+                      "size": [20, 6.666],
+                      "offset": [-72, 3],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$toggle_view_binding_name": "player_list_background_toggle",
+                      "$toggle_default_state": "$player_list_background_toggle_default_state",
+                      "$switch_title": "Enable Background"
+                    }
+                  },
+                  {
+                    "switch2@common_toggles.animated_toggle": {
+                      "size": [20, 6.666],
+                      "offset": [-72, 12.666],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$toggle_default_state": "$player_list_icon_toggle_default_state",
+                      "$toggle_view_binding_name": "player_list_icon_toggle",
+                      "$switch_title": "Enable Icon"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+
+      {
+        "chunkmap_settings@module_options.module_settings_template": {
+          "$options_toggle_name": "chunkmap_settings",
+          "$options_binding_name": "chunkmap_settings_toggle",
+          "$header_text": "C H U N K M A P",
+          "$desc_text": "Show your position on the map on the HUD.",
+          "$settings_available": true,
+          "$custom_controls": [
+            {
+              "switch_wrapper": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  10
+                ],
+                "controls": [
+                  {
+                    "switch@common_toggles.animated_toggle": {
+                      "size": [20, 6.666],
+                      "offset": [-72, 3],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$toggle_view_binding_name": "chunkmap_background_toggle",
+                      "$toggle_default_state": "$chunkmap_background_toggle_default_state",
+                      "$switch_title": "Enable Background"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [3, 13]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "chunkmap_position_x@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "chunkmap_position_x",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "X Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$chunkmap_position_x" }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "chunkmap_position_y@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "chunkmap_position_y",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "Y Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$chunkmap_position_y" }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+
+      {
+        "inventory_hud_settings@module_options.module_settings_template": {
+          "$options_toggle_name": "inventory_hud_settings",
+          "$options_binding_name": "inventory_hud_settings_toggle",
+          "$header_text": "I N V E N T O R Y   H U D",
+          "$desc_text": "Shows your current inventory on the HUD.",
+          "$settings_available": true,
+          "$custom_controls": [
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [3, 9]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "inventory_hud_position_x@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "inventory_hud_position_x",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "X Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$inventory_hud_position_x" }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "inventory_hud_position_y@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "inventory_hud_position_y",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "Y Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$inventory_hud_position_y" }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+
+      {
+        "chat_settings@module_options.module_settings_template": {
+          "$options_toggle_name": "chat_settings",
+          "$options_binding_name": "chat_settings_toggle",
+          "$header_text": "B O T T O M   C H A T",
+          "$desc_text": "Customize the way your chat appears on the HUD.",
+          "$settings_available": true,
+          "$custom_controls": [
+            {
+              "switch_wrapper": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  10
+                ],
+                "controls": [
+                  {
+                    "switch@common_toggles.animated_toggle": {
+                      "size": [20, 6.666],
+                      "offset": [-72, 3],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$toggle_view_binding_name": "chat_mod_background_toggle",
+                      "$toggle_default_state": "$chat_mod_background_toggle_default_state",
+                      "$switch_title": "Enable Background"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "switch_wrapper": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  10
+                ],
+                "controls": [
+                  {
+                    "switch@common_toggles.animated_toggle": {
+                      "size": [20, 6.666],
+                      "offset": [-72, 3],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$toggle_view_binding_name": "chat_mod_animation_toggle",
+                      "$toggle_default_state": "$chat_mod_animation_toggle_default_state",
+                      "$switch_title": "Enable Animation"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "switch_wrapper": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  10
+                ],
+                "controls": [
+                  {
+                    "switch@common_toggles.animated_toggle": {
+                      "size": [20, 6.666],
+                      "offset": [-72, 3],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$toggle_view_binding_name": "hide_chat_toggle",
+                      "$toggle_default_state": "$hide_chat_toggle_default_state",
+                      "$switch_title": "Hide Chat Completely"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+
+      {
+        "durability_viewer_settings@module_options.module_settings_template": {
+          "$options_toggle_name": "durability_viewer_settings",
+          "$options_binding_name": "durability_viewer_settings_toggle",
+          "$header_text": "D U R A B I L I T Y   V I E W E R",
+          "$desc_text": "Shows the durability of the item you're holding on the HUD.",
+          "$settings_available": true,
+          "$custom_controls": [
+            {
+              "switch_wrapper": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  15
+                ],
+                "controls": [
+                  {
+                    "switch@common_toggles.animated_toggle": {
+                      "size": [20, 6.666],
+                      "offset": [-72, 3],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$toggle_view_binding_name": "durability_viewer_background_toggle",
+                      "$toggle_default_state": "$durability_viewer_background_toggle_default_state",
+                      "$switch_title": "Enable Background"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [3, 3]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "durability_viewer_position_x@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "durability_viewer_position_x",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "X Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$durability_viewer_position_x" }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "durability_viewer_position_y@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "durability_viewer_position_y",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "Y Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$durability_viewer_position_y" }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+
+      {
+        "offhand_hud_settings@module_options.module_settings_template": {
+          "$options_toggle_name": "offhand_hud_settings",
+          "$options_binding_name": "offhand_hud_settings_toggle",
+          "$header_text": "O F F H A N D   H U D",
+          "$desc_text": "Shows the item equipped in your offand on the HUD.",
+          "$settings_available": true,
+          "$custom_controls": [
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [3, 9]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "offhand_hud_position_x@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "offhand_hud_position_x",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "X Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$offhand_hud_position_x" }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "wrapper": {
+                "type": "panel",
+                "size": ["100%", 20],
+                "controls": [
+                  {
+                    "offhand_hud_position_y@mod_menu_sliders.slider": {
+                      "size": [130, 12],
+                      "$slider_name": "offhand_hud_position_y",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$custom_slider_label_top": "Y Position",
+                      "$slider_steps": 100,
+                      "offset": [-15,-2],
+                      "property_bag": { "#slider_steps": 100, "#slider_value": "$offhand_hud_position_y" }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+
+      {
+        "hit_color_settings@module_options.module_settings_template": {
+          "$options_toggle_name": "hit_color_settings",
+          "$options_binding_name": "hit_color_settings_toggle",
+          "$header_text": "H I T   C O L O R",
+          "$desc_text": "Colorizes the damage color overlay.",
+          "$settings_available": true,
+          "$custom_controls": [
+            {
+              "switch_wrapper": {
+                "type": "panel",
+                "size": ["100%", 15],
+                "controls": [
+                  {
+                    "vertical_list": {
+                      "type": "stack_panel",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [80.5,3],
+                      "orientation": "vertical",
+                      "controls": [
+                        {
+                          "top_label": {
+                            "type": "label",
+                            "font_type": "STD",
+                            "font_scale_factor": 0.43,
+                            "text": "PICK ANY COLOR",
+                            "text_alignment": "left",
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle",
+                            "alpha": 0.4
+                          }
+                        },
+                        {
+                          "spacer": {
+                            "type": "panel",
+                            "size": [3,3]
+                          }
+                        },
+                        {
+                          "tab_list_2": {
+                            "type": "stack_panel",
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle",
+                            "orientation": "horizontal",
+                            "controls": [
+                              {
+                                "red_hit_color@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "hit_color_selected_1",
+                                  "$toggle_group_forced_index": 1,
+                                  "$toggle_group_default_selected": "$custom_hit_color_default_selected",
+                                  "$toggle_name": "custom_hit_color2",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [1, 0, 0],
+                                  "size": [13, 13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5, 2.5]
+                                }
+                              },
+                              {
+                                "orange_hit_color@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "hit_color_selected_2",
+                                  "$toggle_group_forced_index": 2,
+                                  "$toggle_name": "custom_hit_color2",
+                                  "$toggle_group_default_selected": "$custom_hit_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [1, 0.5, 0],
+                                  "size": [13, 13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5, 2.5]
+                                }
+                              },
+                              {
+                                "yellow_hit_color@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "hit_color_selected_3",
+                                  "$toggle_group_forced_index": 3,
+                                  "$toggle_name": "custom_hit_color2",
+                                  "$toggle_group_default_selected": "$custom_hit_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [1, 1, 0],
+                                  "size": [13, 13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5, 2.5]
+                                }
+                              },
+                              {
+                                "green_hit_color@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "hit_color_selected_4",
+                                  "$toggle_group_forced_index": 4,
+                                  "$toggle_name": "custom_hit_color2",
+                                  "$toggle_group_default_selected": "$custom_hit_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [0, 1, 0],
+                                  "size": [13, 13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5, 2.5]
+                                }
+                              },
+                              {
+                                "light_blue_hit_color@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "hit_color_selected_5",
+                                  "$toggle_group_forced_index": 5,
+                                  "$toggle_name": "custom_hit_color2",
+                                  "$toggle_group_default_selected": "$custom_hit_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [0.5, 0.75, 1],
+                                  "size": [13, 13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5, 2.5]
+                                }
+                              },
+                              {
+                                "blue_hit_color@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "hit_color_selected_6",
+                                  "$toggle_group_forced_index": 6,
+                                  "$toggle_name": "custom_hit_color2",
+                                  "$toggle_group_default_selected": "$custom_hit_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [0, 0, 1],
+                                  "size": [13, 13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5, 2.5]
+                                }
+                              },
+                              {
+                                "magenta_hit_color@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "hit_color_selected_7",
+                                  "$toggle_group_forced_index": 7,
+                                  "$toggle_name": "custom_hit_color2",
+                                  "$toggle_group_default_selected": "$custom_hit_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [1, 0, 1],
+                                  "size": [13, 13]
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [2.5, 2.5]
+                                }
+                              },
+                              {
+                                "white_hit_color@mod_menu_toggles.mod_menu_color_picker": {
+                                  "$toggle_view_binding_name": "hit_color_selected_8",
+                                  "$toggle_group_forced_index": 8,
+                                  "$toggle_name": "custom_hit_color2",
+                                  "$toggle_group_default_selected": "$custom_hit_color_default_selected",
+                                  "$mod_toggle_text": "",
+                                  "$custom_color": [1, 1, 1],
+                                  "size": [13, 13]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+
+      {
+        "framex_settings@module_options.module_settings_template": {
+          "$options_toggle_name": "framex_settings",
+          "$options_binding_name": "framex_settings_toggle",
+          "$header_text": "F R A M E   X",
+          "$desc_text": "Adjust various settings to boost your performance and improve your experience.",
+          "$settings_available": true,
+          "$custom_controls": [
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [3,1]
+              }
+            },
+            {
+              "switch_wrapper": {
+                "type": "panel",
+                "size": ["100%", 8],
+                "controls": [
+                  {
+                    "General": {
+                      "type": "label",
+                      "font_type": "STD",
+                      "font_scale_factor": 0.43,
+                      "text": "GENERAL",
+                      "text_alignment": "left",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "alpha": 0.4,
+                      "offset": [-73.5,0]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "switch_wrapper": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  12
+                ],
+                "controls": [
+                  {
+                    "lowfire@common_toggles.animated_toggle": {
+                      "size": [20, 6.666],
+                      "offset": [-72, 0],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$toggle_view_binding_name": "low_fire_toggle",
+                      "$switch_title": "Low Fire",
+                      "$toggle_default_state": "$low_fire_toggle_default_state"
+                    }
+                  },
+                  {
+                    "bettergrass@common_toggles.animated_toggle": {
+                      "size": [20, 6.666],
+                      "offset": [-72, 9],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$toggle_view_binding_name": "better_grass_toggle",
+                      "$switch_title": "Better Grass",
+                      "$toggle_default_state": "$better_grass_toggle_default_state"
+                    }
+                  },
+                  {
+                    "particledisabler@common_toggles.animated_toggle": {
+                      "size": [20, 6.666],
+                      "offset": [-72, 18],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$toggle_view_binding_name": "disable_particles_toggle",
+                      "$switch_title": "Disable Particles",
+                      "$toggle_default_state": "$disable_particles_toggle_default_state"
+                    }
+                  },
+                  {
+                    "clearwater@common_toggles.animated_toggle": {
+                      "size": [20, 6.666],
+                      "offset": [-72, 27],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$toggle_view_binding_name": "clear_water_toggle",
+                      "$switch_title": "Clear Water",
+                      "$toggle_default_state": "$clear_water_toggle_default_state"
+                    }
+                  },
+                  {
+                    "noanimations@common_toggles.animated_toggle": {
+                      "size": [20, 6.666],
+                      "offset": [-72, 36],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "$toggle_view_binding_name": "disable_animations_toggle",
+                      "$switch_title": "Disable Animations",
+                      "$toggle_default_state": "$disable_animations_toggle_default_state"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "module_settings_template": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$options_binding_name",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [ // fuck scroll panels
+      {
+        "my_scrolling_panel@scrolling_panels.custom_scrolling_panel": {
+          "size": ["100%", "76%"],
+          "$show_background": false,
+          "$scrolling_content": "module_options.scrollable_content_template",
+          "$scroll_size": [3, "100% - 4px"],
+          "offset": [-5,24],
+          "$scroll_bar_left_padding_size": [26, 0],
+          "ignored": "$use_different_offset",
+          "$use_different_offset|default": true
+        }
+      },
+      {
+        "my_scrolling_panel@scrolling_panels.custom_scrolling_panel": {
+          "size": ["96%", "76%"],
+          "$show_background": false,
+          "$scrolling_content": "module_options.scrollable_content_template",
+          "$scroll_size": [3, "100% - 4px"],
+          "offset": [-1,24],
+          "$scroll_bar_left_padding_size": [4, 0],
+          "ignored": "(not $use_different_offset)"
+        }
+      },
+      {
+        "mod_settings_background": {
+          "type": "image",
+          "texture": "azelux/assets/mod_menu/mod_settings_background",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [
+            23,
+            5
+          ],
+          "size": [
+            "92.5%",
+            "92.5%"
+          ]
+        }
+      },
+      {
+        "module_settings_templatelol": {
+          "type": "panel",
+          "offset": [
+            -40,
+            20
+          ],
+          "controls": [
+            {
+              "leave_button@azelux_toggles.light_text_toggle_radio_back_mod_options": {
+                "size": [
+                  13,
+                  13
+                ],
+                "$icon_size": [
+                  6,
+                  6
+                ],
+                "layer": 5,
+                "offset": [
+                  -40.5,
+                  0.5
+                ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$show_text": false,
+                "$toggle_default_state": true,
+                "$icon": "icons/exit",
+                "$toggle_group_forced_index": 1,
+                "$toggle_name": "$options_toggle_name",
+                "$toggle_view_binding_name": "$options_binding_name"
+              }
+            },
+            {
+              "header": {
+                "type": "label",
+                "text": "$header_text",
+                "alpha": 0.75,
+                "font_type": "STD",
+                "font_scale_factor": 0.65,
+                "layer": 1000,
+                "offset": [
+                  132,
+                  2.3
+                ],
+                "text_alignment": "left",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            },
+            {
+              "description": {
+                "type": "label",
+                "text": "$desc_text",
+                "alpha": 0.75,
+                "font_type": "Roboto-Regular",
+                "font_scale_factor": 0.48,
+                "layer": 1000,
+                "offset": [
+                  117,
+                  17
+                ],
+                "text_alignment": "left",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            },
+            {
+              "description": {
+                "type": "label",
+                "text": "We don't support settings for this module yet.",
+                "alpha": 0.75,
+                "ignored": "$settings_available",
+                "font_type": "Roboto-Regular",
+                "font_scale_factor": 0.55,
+                "layer": 1000,
+                "offset": [
+                  60,
+                  33
+                ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

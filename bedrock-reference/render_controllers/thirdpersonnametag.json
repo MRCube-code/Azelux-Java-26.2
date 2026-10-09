@@ -1,0 +1,19 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.thirdpersonnametag": {
+      "geometry": "geometry.thirdpersonnametag",
+      "materials": [
+        {
+          "*": "Material.thirdpersonnametag_material"
+        }
+      ],
+      "textures": [
+        "query.is_in_ui ? Texture.empty : Texture.thirdpersonnametag"
+      ],
+      "ignore_lighting" : true,
+      "is_hurt_color": {},
+      "on_fire_color": {}
+    }
+  }
+}

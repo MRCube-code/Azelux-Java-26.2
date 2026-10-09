@@ -1,0 +1,47 @@
+{
+  "namespace": "azelux_offhand_hud",
+  "offhand_hud_panel": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "offhand_hud_main_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "offhand_hud@mod_menu_sliders.movable_mod": {
+          "$x_slider": "offhand_hud_position_x",
+          "$y_slider": "offhand_hud_position_y",
+          "$custom_controls": [
+            {
+              "offhand_slot": {
+                "type": "image",
+                "size": [20,20],
+                "texture": "textures/ui/slot",
+                "controls": [
+                  {
+                    "offhand_renderer": {
+                      "renderer": "live_player_renderer",
+                      "size": [
+                        16,
+                        16
+                      ],
+                      "offset": [-0.2,2674.5],
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "layer": 2,
+                      "type": "custom"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,598 @@
+{
+  "namespace": "azelux_client_modules_page",
+
+  "modules_page": {
+    "type": "image",
+    "texture": "azelux/assets/common/ya",
+    "size": ["91%","91%"],
+    "controls": [
+      {
+        "mod_list@azelux_client_modules_page.sigmapanel": {}
+      },
+      {
+        "module_options@module_options.content": {}
+      }
+    ]
+  },
+
+  "sigmapanel": {
+    "type": "panel",
+    "size": ["100%","100%"],
+    "offset": [-4,18],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "direction_hud_settings_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "armor_hud_settings_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "glint_colorizer_settings_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "f8_screen_settings_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "hit_color_settings_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "server_address_settings_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "shiny_pots_settings_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "moving_status_settings_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "custom_crosshair_settings_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "tab_list_settings_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "chat_settings_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "inventory_hud_settings_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "offhand_hud_settings_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "framex_settings_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "durability_viewer_settings_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "chunkmap_settings_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "stackpanelforscrolling" : {
+          "type": "stack_panel",
+          "size": ["100%", "100%"],
+          "orientation": "vertical",
+          "layer": 1,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "my_scrolling_panel@scrolling_panels.custom_scrolling_panel": {
+                "anchor_to": "top_left",
+                "anchor_from": "top_left",
+                "$show_background": false,
+                "size": [ "100%", "100%" ],
+                "$scrolling_content": "azelux_client_modules_page.mod_list_container",
+                "$scroll_size": [ 5, "100%" ],
+                "$scrolling_pane_size": [ "100%", "94%" ],
+                "$scrolling_pane_offset": [ 2, 0 ],
+                "$scroll_bar_right_padding_size": [ 0, 0 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "mod_list_container": {
+    "type": "panel",
+    "size": ["105%","100%c"],
+    "controls": [
+      {
+        "mod_list_wrapper": {
+          "type": "panel",
+          "padding": [10,0,0,0],
+          "size": [
+            "100%",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "mod_list": {
+                "type": "grid",
+                "size": ["73.5%", "36%c"],
+                "grid_dimensions": [3, 7],
+                "offset": [30.5,1.5],
+                "grid_rescaling_type": "none",
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "controls": [
+                  //Row 1
+                  {
+                    "armor_hud@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "armor_hud",
+                      "$mod_name": "Armor Status",
+                      "$settings_binding_name": "armor_hud_settings_toggle",
+                      "$settings_toggle_name": "armor_hud_settings",
+                      "$mods_toggle_view_binding_name": "armor_hud_main_toggle",
+                      "$main_mod_toggle_default_state": "$armor_hud_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        0,
+                        0
+                      ]
+                    }
+                  },
+                  {
+                    "direction_hud@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "direction_hud",
+                      "$mod_name": "Direction HUD",
+                      "$is_new_mod": true,
+                      "$settings_binding_name": "direction_hud_settings_toggle",
+                      "$settings_toggle_name": "direction_hud_settings",
+                      "$mods_toggle_name": "direction_hud_main_toggle",
+                      "$mods_toggle_view_binding_name": "direction_hud_main_toggle",
+                      "$main_mod_toggle_default_state": "$direction_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        1,
+                        0
+                      ]
+                    }
+                  },
+                  {
+                    "glint_colorizer@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "glint_colorizer",
+                      "$mod_name": "Glint Colorizer",
+                      "$requires_config_saving": true,
+                      "$settings_binding_name": "glint_colorizer_toggle",
+                      "$settings_toggle_name": "glint_colorizer_settings",
+                      "$toggle_group_forced_index": 0,
+                      "$mods_toggle_view_binding_name": "glint_colorizer_main_toggle",
+                      "$main_mod_toggle_default_state": "$glint_colorizer_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        2,
+                        0
+                      ]
+                    }
+                  },
+                  //Row2
+                  {
+                    "f3_screen@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "f8_screen",
+                      "$mod_name": "F8 Menu",
+                      "$settings_binding_name": "f8_screen_toggle",
+                      "$settings_toggle_name": "f8_screen_settings",
+                      "$toggle_group_forced_index": 0,
+                      "$mods_toggle_view_binding_name": "f8_screen_main_toggle",
+                      "$main_mod_toggle_default_state": "$f8_screen_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        0,
+                        1
+                      ]
+                    }
+                  },
+                  {
+                    "server_address@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "server_address",
+                      "$mod_name": "Server Address",
+                      "$settings_binding_name": "server_address_toggle",
+                      "$settings_toggle_name": "server_address_settings",
+                      "$toggle_group_forced_index": 0,
+                      "$mods_toggle_view_binding_name": "server_address_main_toggle",
+                      "$main_mod_toggle_default_state": "$server_address_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        1,
+                        1
+                      ]
+                    }
+                  },
+                  {
+                    "shiny_pots@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "shiny_pots",
+                      "$mod_name": "Shiny Pots",
+                      "$settings_binding_name": "shiny_pots_toggle",
+                      "$settings_toggle_name": "shiny_pots_settings",
+                      "$toggle_group_forced_index": 0,
+                      "$is_new_mod": true,
+                      "$mods_toggle_view_binding_name": "shiny_pots_main_toggle",
+                      "$main_mod_toggle_default_state": "$shiny_pots_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        2,
+                        1
+                      ]
+                    }
+                  },
+                  //Row3
+                  {
+                    "moving_status@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "moving_status",
+                      "$mod_name": "Moving Status",
+                      "$settings_binding_name": "moving_status_toggle",
+                      "$settings_toggle_name": "moving_status_settings",
+                      "$toggle_group_forced_index": 0,
+                      "$mods_toggle_view_binding_name": "moving_status_main_toggle",
+                      "$main_mod_toggle_default_state": "$moving_status_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        0,
+                        2
+                      ]
+                    }
+                  },
+                  {
+                    "custom_crosshair@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "custom_crosshair",
+                      "$mod_name": "Crosshair",
+                      "$settings_binding_name": "custom_crosshair_toggle",
+                      "$settings_toggle_name": "custom_crosshair_settings",
+                      "$toggle_group_forced_index": 0,
+                      "$mods_toggle_view_binding_name": "custom_crosshair_main_toggle",
+                      "$main_mod_toggle_default_state": "$custom_crosshair_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        1,
+                        2
+                      ]
+                    }
+                  },
+                  {
+                    "tab_list@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "tab_list",
+                      "$mod_name": "Tab List",
+                      "$settings_binding_name": "tab_list_toggle",
+                      "$settings_toggle_name": "tab_list_settings",
+                      "$toggle_group_forced_index": 0,
+                      "$is_new_mod": true,
+                      "$mods_toggle_view_binding_name": "tab_list_main_toggle",
+                      "$main_mod_toggle_default_state": "$tab_list_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        2,
+                        2
+                      ]
+                    }
+                  },
+                  //Row4
+                  {
+                    "fullbright@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "fullbright",
+                      "$mod_name": "Fullbright",
+                      "$settings_binding_name": "fullbright_toggle",
+                      "$settings_toggle_name": "fullbright_settings",
+                      "$toggle_group_forced_index": 0,
+                      "$is_new_mod": true,
+                      "$mods_toggle_view_binding_name": "fullbright_main_toggle",
+                      "$main_mod_toggle_default_state": "$fullbright_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        0,
+                        3
+                      ]
+                    }
+                  },
+                  {
+                    "chunkmap@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "chunkmap",
+                      "$mod_name": "Chunkmap (Beta)",
+                      "$settings_binding_name": "chunkmap_toggle",
+                      "$settings_toggle_name": "chunkmap_settings",
+                      "$toggle_group_forced_index": 0,
+                      "$mods_toggle_view_binding_name": "chunkmap_main_toggle",
+                      "$main_mod_toggle_default_state": "$chunkmap_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        1,
+                        3
+                      ]
+                    }
+                  },
+                  {
+                    "hitbox@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "hitbox",
+                      "$mod_name": "Hitboxes",
+                      "$requires_config_saving": true,
+                      "$is_new_mod": true,
+                      "$settings_binding_name": "hitbox_toggle",
+                      "$settings_toggle_name": "hitbox_settings",
+                      "$toggle_group_forced_index": 0,
+                      "$mods_toggle_view_binding_name": "hitbox_main_toggle",
+                      "$main_mod_toggle_default_state": "$hitbox_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        2,
+                        3
+                      ]
+                    }
+                  },
+                  {
+                    "inventory_hud@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "inventory_hud",
+                      "$mod_name": "Inventory HUD",
+                      "$settings_binding_name": "inventory_hud_toggle",
+                      "$settings_toggle_name": "inventory_hud_settings",
+                      "$toggle_group_forced_index": 0,
+                      "$mods_toggle_view_binding_name": "inventory_hud_main_toggle",
+                      "$main_mod_toggle_default_state": "$inventory_hud_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        0,
+                        4
+                      ]
+                    }
+                  },
+                  {
+                    "chat@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "chat",
+                      "$mod_name": "Bottom Chat",
+                      "$settings_binding_name": "chat_toggle",
+                      "$settings_toggle_name": "chat_settings",
+                      "$toggle_group_forced_index": 0,
+                      "$mods_toggle_view_binding_name": "chat_main_toggle",
+                      "$main_mod_toggle_default_state": "$chat_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        1,
+                        4
+                      ]
+                    }
+                  },
+                  {
+                    "mods_list@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "mods_list",
+                      "$mod_name": "Mods List",
+                      "$settings_binding_name": "mods_list_toggle",
+                      "$settings_toggle_name": "mods_list_settings",
+                      "$is_new_mod": true,
+                      "$toggle_group_forced_index": 0,
+                      "$mods_toggle_view_binding_name": "mods_list_main_toggle",
+                      "$main_mod_toggle_default_state": "$mods_list_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        2,
+                        4
+                      ]
+                    }
+                  },
+                  {
+                    "left_hand@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "left_hand",
+                      "$mod_name": "Left Hand (Beta)",
+                      "$requires_config_saving": true,
+                      "$settings_binding_name": "left_hand_toggle",
+                      "$settings_toggle_name": "left_hand_settings",
+                      "$is_new_mod": true,
+                      "$toggle_group_forced_index": 0,
+                      "$mods_toggle_view_binding_name": "left_hand_main_toggle",
+                      "$main_mod_toggle_default_state": "$left_hand_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        0,
+                        5
+                      ]
+                    }
+                  },
+                  {
+                    "durability_viewer@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "durability_viewer",
+                      "$mod_name": "Durability Viewer",
+                      "$settings_binding_name": "durability_viewer_toggle",
+                      "$settings_toggle_name": "durability_viewer_settings",
+                      "$toggle_group_forced_index": 0,
+                      "$mods_toggle_view_binding_name": "durability_viewer_main_toggle",
+                      "$main_mod_toggle_default_state": "$durability_viewer_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        1,
+                        5
+                      ]
+                    }
+                  },
+                  {
+                    "offhand_hud@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "offhand_hud",
+                      "$mod_name": "Offhand HUD",
+                      "$settings_binding_name": "offhand_hud_toggle",
+                      "$settings_toggle_name": "offhand_hud_settings",
+                      "$is_new_mod": true,
+                      "$toggle_group_forced_index": 0,
+                      "$mods_toggle_view_binding_name": "offhand_hud_main_toggle",
+                      "$main_mod_toggle_default_state": "$offhand_hud_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        2,
+                        5
+                      ]
+                    }
+                  },
+                  {
+                    "hit_color@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "hit_color",
+                      "$mod_name": "Hit Color",
+                      "$requires_config_saving": true,
+                      "$settings_binding_name": "hit_color_toggle",
+                      "$settings_toggle_name": "hit_color_settings",
+                      "$is_new_mod": true,
+                      "$toggle_group_forced_index": 0,
+                      "$mods_toggle_view_binding_name": "hit_color_main_toggle",
+                      "$main_mod_toggle_default_state": "$hit_color_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        0,
+                        6
+                      ]
+                    }
+                  },
+                  {
+                    "chunk_borders@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "chunk_borders",
+                      "$mod_name": "Chunk Borders",
+                      "$requires_config_saving": true,
+                      "$settings_binding_name": "chunk_borders_toggle",
+                      "$settings_toggle_name": "chunk_borders_settings",
+                      "$toggle_group_forced_index": 0,
+                      "$mods_toggle_view_binding_name": "chunk_border_main_toggle",
+                      "$main_mod_toggle_default_state": "$chunk_border_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        1,
+                        6
+                      ]
+                    }
+                  },
+                  {
+                    "framex@mod_menu_toggles.mod_menu_mod_toggle": {
+                      "$icon": "framex",
+                      "$mod_name": "FrameX",
+                      "$requires_config_saving": true,
+                      "$is_new_mod": true,
+                      "$settings_binding_name": "framex_toggle",
+                      "$settings_toggle_name": "framex_settings",
+                      "$toggle_group_forced_index": 0,
+                      "$mods_toggle_view_binding_name": "framex_main_toggle",
+                      "$main_mod_toggle_default_state": "$framex_main_toggle",
+                      "size": [
+                        78.3,
+                        76.3
+                      ],
+                      "grid_position": [
+                        2,
+                        6
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

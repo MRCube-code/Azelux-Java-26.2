@@ -1,0 +1,277 @@
+{
+  "namespace": "azelux_client_shields",
+
+  "shields_menu": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [
+      "12%",
+      "4%"
+    ],
+    "controls": [
+      {
+        "button_list_row_1@azelux_client_shields.button_list_row_1": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "button_list_row_2@azelux_client_shields.button_list_row_2": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [0,30]
+        }
+      },
+      {
+        "button_list_row_3@azelux_client_shields.button_list_row_3": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [0,60]
+        }
+      }
+    ]
+  },
+
+  "button_list_row_1": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      30
+    ],
+    "controls": [
+      {
+        "shields_1@mod_menu_toggles.cosmetics_shields_mod_toggle": {
+          "$toggle_group_forced_index": 1,
+          "size": [
+            30,
+            30
+          ],
+          "$custom_size": ["80%","80%"],
+          "$shields": "clear",
+          "$shield_uv_size": [
+            256,
+            256
+          ],
+          "$toggle_group_default_selected": "$shields_default_selected",
+          "$toggle_view_binding_name": "shields_selected_1"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "shields_2@mod_menu_toggles.cosmetics_shields_mod_toggle": {
+          "$toggle_group_forced_index": 2,
+          "size": [
+            30,
+            30
+          ],
+          "$shields": "2",
+          "$toggle_group_default_selected": "$shields_default_selected",
+          "$toggle_view_binding_name": "shields_selected_2"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "shields_3@mod_menu_toggles.cosmetics_shields_mod_toggle": {
+          "$toggle_group_forced_index": 3,
+          "size": [
+            30,
+            30
+          ],
+          "$shields": "3",
+          "$toggle_group_default_selected": "$shields_default_selected",
+          "$toggle_view_binding_name": "shields_selected_3"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "shields_4@mod_menu_toggles.cosmetics_shields_mod_toggle": {
+          "$toggle_group_forced_index": 4,
+          "size": [
+            30,
+            30
+          ],
+          "$shields": "4",
+          "$toggle_group_default_selected": "$shields_default_selected",
+          "$toggle_view_binding_name": "shields_selected_4"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "shields_5@mod_menu_toggles.cosmetics_shields_mod_toggle": {
+          "$toggle_group_forced_index": 5,
+          "size": [
+            30,
+            30
+          ],
+          "$shields": "5",
+          "$toggle_group_default_selected": "$shields_default_selected",
+          "$toggle_view_binding_name": "shields_selected_5"
+        }
+      }
+    ]
+  },
+
+  "button_list_row_2": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      30
+    ],
+    "controls": [
+      {
+        "shields_6@mod_menu_toggles.cosmetics_shields_mod_toggle": {
+          "$toggle_group_forced_index": 6,
+          "size": [
+            30,
+            30
+          ],
+          "$shields": "6",
+          "$toggle_group_default_selected": "$shields_default_selected",
+          "$toggle_view_binding_name": "shields_selected_6"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "shields_7@mod_menu_toggles.cosmetics_shields_mod_toggle": {
+          "$toggle_group_forced_index": 7,
+          "size": [
+            30,
+            30
+          ],
+          "$shields": "7",
+          "$toggle_group_default_selected": "$shields_default_selected",
+          "$toggle_view_binding_name": "shields_selected_7"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "shields_8@mod_menu_toggles.cosmetics_shields_mod_toggle": {
+          "$toggle_group_forced_index": 8,
+          "size": [
+            30,
+            30
+          ],
+          "$shields": "8",
+          "$toggle_group_default_selected": "$shields_default_selected",
+          "$toggle_view_binding_name": "shields_selected_8"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "shields_9@mod_menu_toggles.cosmetics_shields_mod_toggle": {
+          "$toggle_group_forced_index": 9,
+          "size": [
+            30,
+            30
+          ],
+          "$shields": "9",
+          "$toggle_group_default_selected": "$shields_default_selected",
+          "$toggle_view_binding_name": "shields_selected_9"
+        }
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "shields_10@mod_menu_toggles.cosmetics_shields_mod_toggle": {
+          "$toggle_group_forced_index": 10,
+          "size": [
+            30,
+            30
+          ],
+          "$shields": "10",
+          "$toggle_group_default_selected": "$shields_default_selected",
+          "$toggle_view_binding_name": "shields_selected_10"
+        }
+      }
+    ]
+  },
+
+  "button_list_row_3": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      30
+    ],
+    "controls": [
+      {
+        "shields_11@mod_menu_toggles.cosmetics_shields_mod_toggle": {
+          "$toggle_group_forced_index": 11,
+          "size": [
+            30,
+            30
+          ],
+          "$shields": "11",
+          "$toggle_group_default_selected": "$shields_default_selected",
+          "$toggle_view_binding_name": "shields_selected_11"
+        }
+      }
+    ]
+  }
+}

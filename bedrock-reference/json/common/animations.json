@@ -1,0 +1,332 @@
+{
+	"namespace": "animations",
+
+	"fade_in_after_one_instant": {
+		"anim_type": "alpha",
+		"duration": 0.0001,
+		"from": 1,
+		"to": 0,
+		"next": "@animations.fade_in_after_one2"
+	},
+	"fade_in_after_two_instant": {
+		"anim_type": "alpha",
+		"duration": 0.0001,
+		"from": 1,
+		"to": 0,
+		"next": "@animations.fade_in_after_two2"
+	},
+	"fade_in_after_three_instant": {
+		"anim_type": "alpha",
+		"duration": 0.0001,
+		"from": 1,
+		"to": 0,
+		"next": "@animations.fade_in_after_three2"
+	},
+	"fade_in_after_four_instant": {
+		"anim_type": "alpha",
+		"duration": 0.0001,
+		"from": 1,
+		"to": 0,
+		"next": "@animations.fade_in_after_four2"
+	},
+	"fade_in_after_five_instant": {
+		"anim_type": "alpha",
+		"duration": 0.0001,
+		"from": 1,
+		"to": 0,
+		"next": "@animations.fade_in_after_five2"
+	},
+	"fade_in_after_six_instant": {
+		"anim_type": "alpha",
+		"duration": 0.0001,
+		"from": 1,
+		"to": 0,
+		"next": "@animations.fade_in_after_six2"
+	},
+	"fade_in_after_seven_instant": {
+		"anim_type": "alpha",
+		"duration": 0.0001,
+		"from": 1,
+		"to": 0,
+		"next": "@animations.fade_in_after_seven2"
+	},
+	"fade_in_after_eight_instant": {
+		"anim_type": "alpha",
+		"duration": 0.0001,
+		"from": 1,
+		"to": 0,
+		"next": "@animations.fade_in_after_eight2"
+	},
+
+	"fade_in_after_one2": {
+		"anim_type": "wait",
+		"duration": 1,
+		"next": "@animations.fade_in_custom"
+	},
+	"fade_in_after_two2": {
+		"anim_type": "wait",
+		"duration": 2,
+		"next": "@animations.fade_in_custom"
+	},
+	"fade_in_after_three2": {
+		"anim_type": "wait",
+		"duration": 3,
+		"next": "@animations.fade_in_custom"
+	},
+	"fade_in_after_four2": {
+		"anim_type": "wait",
+		"duration": 4,
+		"next": "@animations.fade_in_custom"
+	},
+	"fade_in_after_five2": {
+		"anim_type": "wait",
+		"duration": 5,
+		"next": "@animations.fade_in_custom"
+	},
+	"fade_in_after_six2": {
+		"anim_type": "wait",
+		"duration": 6,
+		"next": "@animations.fade_in_custom"
+	},
+	"fade_in_after_seven2": {
+		"anim_type": "wait",
+		"duration": 7,
+		"next": "@animations.fade_in_custom"
+	},
+	"fade_in_after_eight2": {
+		"anim_type": "wait",
+		"duration": 8,
+		"next": "@animations.fade_in_custom"
+	},
+
+	"fade_in_custom": {
+		"anim_type": "alpha",
+		"from": 0,
+		"to": 1,
+		"duration": 3,
+		"next": "@animations.fade_in_custom2"
+	},
+	"fade_in_custom2": {
+		"anim_type": "alpha",
+		"from": 1,
+		"to": 0,
+		"duration": 0.00001,
+		"next": "@animations.fade_in_after_eight2"
+	},
+
+	"circle_flicker": {
+		"anim_type": "color",
+		"duration": 0.5,
+		"from": [1,0.5,0],
+		"to": [1,0.7,0.2],
+		"next": "@animations.circle_flicker2"
+	},
+
+	"circle_flicker2": {
+		"anim_type": "color",
+		"duration": 0.5,
+		"from": [1,0.7,0.2],
+		"to": [1,0.5,0],
+		"next": "@animations.circle_flicker"
+	},
+
+	"injection_background_start": {
+		"anim_type": "wait",
+		"duration": 6,
+		"next": "@animations.injection_background_fade"
+	},
+
+	"injection_background_start_black": {
+		"anim_type": "wait",
+		"duration": 6,
+		"next": "@animations.injection_background_fade"
+	},
+
+	"injection_background_fade": {
+		"anim_type": "alpha",
+		"duration": 0.2,
+		"from": 1.0,
+		"to": 0
+	},
+
+	"injection_background3_start": {
+		"anim_type": "wait",
+		"duration": 0.3,
+		"next": "@animations.injection_background3_start2"
+	},
+
+	"injection_background3_start2": {
+		"anim_type": "alpha",
+		"duration": 1,
+		"from": 1.0,
+		"to": 0
+	},
+
+	"injection_background2_start": {
+		"anim_type": "alpha",
+		"duration": 0.0,
+		"from": 1.0,
+		"to": 0,
+		"next": "@animations.injection_background2_start2"
+	},
+
+	"injection_background2_start2": {
+		"anim_type": "wait",
+		"duration": 5,
+		"next": "@animations.injection_background2_fade"
+	},
+
+	"injection_background2_fade": {
+		"anim_type": "alpha",
+		"duration": 0.2,
+		"from": 0.0,
+		"to": 1,
+		"next": "@animations.injection_background2_wait"
+	},
+
+	"injection_background2_wait": {
+		"anim_type": "wait",
+		"duration": 1,
+		"next": "@animations.injection_background2_fade2"
+	},
+
+	"injection_background2_fade2": {
+		"anim_type": "alpha",
+		"duration": 0.5,
+		"from": 1.0,
+		"to": 0
+	},
+
+	"injection_loading_start": {
+		"anim_type": "wait",
+		"duration": 5.0,
+		"next": "@animations.injection_loading_fade"
+	},
+
+	"injection_loading_fade": {
+		"anim_type": "alpha",
+		"duration": 0.30,
+		"from": 1.0,
+		"to": 0
+	},
+
+	"injection_loading_move": {
+		"anim_type": "offset",
+		"easing": "linear",
+		"duration": 6.00,
+		"from": [
+			-900,
+			30
+		],
+		"to": [
+			100,
+			30
+		]
+	},
+
+	"injection_logo_start": {
+		"anim_type": "alpha",
+		"duration": 0.0001,
+		"from": 1.0,
+		"to": 0,
+		"next": "@animations.injection_logo_start2"
+	},
+
+	"injection_logo_start2": {
+		"anim_type": "wait",
+		"duration": 0.50,
+		"next": "@animations.injection_logo_fade"
+	},
+
+	"injection_logo_fade": {
+		"anim_type": "alpha",
+		"duration": 0.50,
+		"from": 0.0,
+		"to": 1,
+		"next": "@animations.injection_logo_wait"
+	},
+
+	"injection_logo_wait": {
+		"anim_type": "wait",
+		"duration": 4.0,
+		"next": "@animations.injection_logo_fade2"
+	},
+
+	"injection_logo_fade2": {
+		"anim_type": "alpha",
+		"duration": 0.30,
+		"from": 1.0,
+		"to": 0
+	},
+
+	"injection_logo_move": {
+		"anim_type": "offset",
+		"easing": "linear",
+		"duration": 1.00,
+		"from": [
+			0,
+			10
+		],
+		"to": [
+			0,
+			-10
+		]
+	},
+
+	"injection_text_start": {
+		"anim_type": "alpha",
+		"duration": 0.0001,
+		"from": 1.0,
+		"to": 0,
+		"next": "@animations.injection_text_start2"
+	},
+
+	"injection_text_start2": {
+		"anim_type": "wait",
+		"duration": 1.00,
+		"next": "@animations.injection_text_fade"
+	},
+
+	"injection_text_fade": {
+		"anim_type": "alpha",
+		"duration": 0.50,
+		"from": 0.0,
+		"to": 1,
+		"next": "@animations.injection_text_wait"
+	},
+
+	"injection_text_wait": {
+		"anim_type": "wait",
+		"duration": 0.70,
+		"next": "@animations.injection_text_fade3"
+	},
+
+	"injection_text_fade3": {
+		"anim_type": "alpha",
+		"duration": 1.10,
+		"from": 1.0,
+		"to": 0.4,
+		"next": "@animations.injection_text_wait2"
+	},
+
+	"injection_text_wait2": {
+		"anim_type": "wait",
+		"duration": 0.05,
+		"next": "@animations.injection_text_fade4"
+	},
+
+	"injection_text_fade4": {
+		"anim_type": "alpha",
+		"duration": 1.10,
+		"from": 0.4,
+		"to": 1.0,
+		"next": "@animations.injection_text_fade2"
+	},
+
+	"injection_text_fade2": {
+		"anim_type": "alpha",
+		"duration": 0.50,
+		"from": 1.0,
+		"to": 0
+	}
+}

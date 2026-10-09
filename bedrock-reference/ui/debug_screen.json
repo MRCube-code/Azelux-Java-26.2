@@ -1,0 +1,27 @@
+{
+  "namespace": "debug_screen",
+  "content_panel": {
+    "modifications": [
+      {
+        "control_name": "access_button",
+        "operation": "insert_before",
+        "value": [
+          {
+            "1@debug_screen.dev_text": {}
+          }
+        ]
+      }
+    ]
+  },
+  "dev_text": {
+    "type": "label",
+    "text": "This is a development build of Azelux Client.\nNothing seen here is final and may change at any time.\nAlso likely not released to public yet.",
+    "font_type": "smooth",
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "visible": "$azelux_is_dev",
+    "text_alignment": "center",
+    "alpha": 0.7,
+    "offset": [ 0, -20 ]
+  }
+}

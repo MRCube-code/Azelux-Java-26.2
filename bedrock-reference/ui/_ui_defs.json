@@ -1,0 +1,59 @@
+{
+  "ui_defs": [
+    "azelux/json/logic/user_list.json",
+    "azelux/json/common/buttons.json",
+    "azelux/json/common/toggles.json",
+    "azelux/json/common/animations.json",
+    "azelux/json/common/mod_menu_toggle.json",
+    "azelux/json/common/sliders.json",
+    "azelux/json/common/mods_rgb_animation.json",
+    "azelux/json/common/slider_labels.json",
+    "azelux/json/common/scrolling_panels.json",
+
+    "azelux/json/menu/cosmetics_menu/cosmetics_menu.json",
+    "azelux/json/menu/cosmetics_menu/capes.json",
+    "azelux/json/menu/cosmetics_menu/wings.json",
+    "azelux/json/menu/cosmetics_menu/halos.json",
+    "azelux/json/menu/cosmetics_menu/hats.json",
+    "azelux/json/menu/cosmetics_menu/players.json",
+    "azelux/json/menu/cosmetics_menu/shields.json",
+    "azelux/json/menu/cosmetics_menu/azelux_cosmetics_selection.json",
+
+    "azelux/json/menu/mod_menu/azelux_client_mod_menu.json",
+    "azelux/json/menu/mod_menu/modules_page.json",
+    "azelux/json/menu/mod_menu/settings_page.json",
+    "azelux/json/menu/mod_menu/themes_page.json",
+    "azelux/json/menu/mod_menu/module_options.json",
+    "azelux/json/menu/mod_menu/modules_list.json",
+
+    "azelux/json/menu/mod_menu/start_screen_modules.json",
+
+    "azelux/json/menu/settings_screen/custom_section.json",
+    "azelux/json/menu/start_screen/screen.json",
+    "azelux/json/menu/start_screen/injection_screen.json",
+    "azelux/json/menu/start_screen/introduction_screen.json",
+
+    "azelux/json/logic/config_code/config_generator.json",
+
+    "azelux/json/logic/modules/custom_crosshair.json",
+    "azelux/json/logic/modules/armor_hud.json",
+    "azelux/json/logic/modules/chunk_map.json",
+    "azelux/json/logic/modules/f8_screen.json",
+    "azelux/json/logic/modules/chat.json",
+    "azelux/json/logic/modules/inventory_hud.json",
+    "azelux/json/logic/modules/offhand.json",
+    "azelux/json/logic/modules/potion_counter.json",
+    "azelux/json/logic/modules/mods_list.json",
+    "azelux/json/logic/modules/player_list.json",
+    "azelux/json/logic/modules/server_address.json",
+    "azelux/json/logic/modules/direction_hud.json",
+    "azelux/json/logic/modules/moving_status.json",
+    "azelux/json/logic/modules/fullbright.json",
+    "azelux/json/logic/modules/offhand_hud.json",
+    "azelux/json/logic/modules/durability_viewer.json",
+
+    "azelux/json/logic/templates/cosmetic_preview.json",
+    "azelux/json/logic/templates/player_list_extras.json",
+    "azelux/json/logic/templates/special_names_list.json"
+  ]
+}

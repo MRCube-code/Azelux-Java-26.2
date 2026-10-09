@@ -1,0 +1,166 @@
+{
+  "namespace": "azelux_cosmetics_selection",
+
+  "code_panel": {
+    "type": "panel"
+  },
+
+  "code_text": {
+    "type": "label",
+    "font_type": "Roboto-Black",
+    "font_scale_factor": 1,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$selection",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "code": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "code_stack_panel@code_stack_panel": {
+        }
+      }
+    ]
+  },
+
+  "code_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "controls": [
+      // Capes
+      {
+        "cape1@code_text": {
+          "text": "a",
+          "$selection": "cape_selected_1"
+        }
+      },
+      {
+        "cape2@code_text": {
+          "text": "b",
+          "$selection": "cape_selected_2"
+        }
+      },
+      {
+        "cape3@code_text": {
+          "text": "c",
+          "$selection": "cape_selected_3"
+        }
+      },
+      {
+        "cape4@code_text": {
+          "text": "d",
+          "$selection": "cape_selected_4"
+        }
+      },
+      {
+        "cape5@code_text": {
+          "text": "e",
+          "$selection": "cape_selected_5"
+        }
+      },
+      // Wings
+      {
+        "wing1@code_text": {
+          "text": "a",
+          "$selection": "wings_selected_1"
+        }
+      },
+      {
+        "wing2@code_text": {
+          "text": "b",
+          "$selection": "wings_selected_2"
+        }
+      },
+      {
+        "wing3@code_text": {
+          "text": "c",
+          "$selection": "wings_selected_3"
+        }
+      },
+      {
+        "wing4@code_text": {
+          "text": "d",
+          "$selection": "wings_selected_4"
+        }
+      },
+      {
+        "wing5@code_text": {
+          "text": "e",
+          "$selection": "wings_selected_5"
+        }
+      },
+      // Bandanas
+      {
+        "bandana1@code_text": {
+          "text": "a",
+          "$selection": "hats_selected_1"
+        }
+      },
+      {
+        "bandana2@code_text": {
+          "text": "b",
+          "$selection": "hats_selected_2"
+        }
+      },
+      {
+        "bandana3@code_text": {
+          "text": "c",
+          "$selection": "hats_selected_3"
+        }
+      },
+      // Halos
+      {
+        "halo1@code_text": {
+          "text": "a",
+          "$selection": "halo_selected_1"
+        }
+      },
+      {
+        "halo2@code_text": {
+          "text": "b",
+          "$selection": "halo_selected_2"
+        }
+      },
+      // Halos
+      {
+        "shields1@code_text": {
+          "text": "a",
+          "$selection": "shields_selected_1"
+        }
+      },
+      {
+        "shields2@code_text": {
+          "text": "b",
+          "$selection": "shields_selected_2"
+        }
+      },
+      // Players
+      {
+        "players1@code_text": {
+          "text": "a",
+          "$selection": "players_selected_1"
+        }
+      },
+      {
+        "players2@code_text": {
+          "text": "b",
+          "$selection": "players_selected_2"
+        }
+      },
+      {
+        "players3@code_text": {
+          "text": "c",
+          "$selection": "players_selected_3"
+        }
+      }
+    ]
+  }
+}

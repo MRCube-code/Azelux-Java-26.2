@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.azeluxwings": {
+      "geometry": "geometry.wings",
+      "materials": [ 
+        { 
+          "*": "Material.default" 
+        } 
+      ],
+      "textures": [ 
+        "texture.wings" 
+      ],
+      "is_hurt_color": {},
+      "on_fire_color": {}
+    }
+  }
+}

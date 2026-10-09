@@ -1,0 +1,706 @@
+{
+	"namespace":"cb_buttons",
+
+	"new_ui_binding_button_label_cb": {
+		"type":"label",
+		"layer":2,
+		"text":"$button_text",
+		"color":"$text_color",
+		"$font_type|default":"default",
+		"font_type":"$button_font",
+		"font_size":"$button_font_size",
+		"$button_font": "Roboto-Black",
+		"$button_font_scale_factor|default":0.6,
+		"font_scale_factor":"$button_font_scale_factor",
+		"$button_font_size|default":"normal",
+		"$new_ui_label_offset|default":[0, -1],
+		"offset":"$new_ui_label_offset",
+		"$anchor|default":"center",
+		"anchor_from":"$anchor",
+		"anchor_to":"$anchor",
+		"shadow":true,
+		"$button_text_size|default":[
+			"default",
+			"default"
+		],
+		"size":"$button_text_size",
+		"$button_text_max_size|default":[
+			"100%",
+			10
+		],//Perdesignbuttonsaresinglelinetextonly
+		"max_size":"$button_text_max_size",
+		"$text_alignment|default":"center",
+		"text_alignment":"$text_alignment",
+		"bindings":[{
+			"binding_type":"$button_text_binding_type",
+			"binding_condition":"$button_binding_condition",
+			"binding_collection_name":"$button_text_grid_collection_name",
+			"binding_name":"$button_text",
+			"binding_name_override":"$button_text"
+		}]
+	},
+	"custom_button_panel": {
+		"type":"panel",
+		"$button_alpha|default":1,
+		"layer":1,
+		"$button_size_override|default":[
+			"100%",
+			"100%"
+		],
+		"size":"$button_size_override",
+		"$content_alpha|default":1,
+		"$button_image|default":"common_buttons.button_image",
+		"$button_image_visible|default":true,
+		"$button_image_size|default":[
+			"100%-2px",
+			"100%-2px"
+		],
+		"$image_anchor|default":"center",
+		"$image_offset|default":[
+			0,
+			0
+		],
+		"$border_visible|default":true,
+		"$border_alpha|default":1,
+		"controls":[
+		{
+		"hover_texts_testssss": {
+			"type": "panel",
+			"controls": [
+		{
+			"hover_text_test": {
+				"type": "label",
+				"text": "$hover_text_text",
+				"color": [0.75, 0.78, 0.78],
+				"layer": 20,
+				"offset": "$hover_text_offset",
+				"shadow": false,
+				"font_type": "STD",
+				"font_scale_factor": 0.4,
+				"alpha": 1,
+				"anchor_from": "center",
+				"anchor_to": "center",
+				"scale": [100,50]
+			}
+		},
+		{
+			"label_background": {
+				"type": "image",
+				"texture": "azelux/assets/buttons/background_text",
+				"anchor_from": "center",
+				"anchor_to": "center",
+				"offset": "$rizzoffset",
+				"alpha": 1,
+				"size": "$skibidisize",
+				"layer": 1
+			}
+		}
+		]
+		}
+		},
+		{
+			"$button_image@$button_image": {
+				"ignored":"(not$button_image_visible)",
+				"size":"$button_image_size",
+				"offset":"$image_offset",
+				"anchor_from":"$image_anchor",
+				"anchor_to":"$image_anchor",
+				"layer":1
+			}
+		},
+			{
+				"button_content": {
+					"type":"panel",
+					"$button_content_size|default":[
+						"100%-6px",
+						"100%-6px"
+					],
+					"size":"$button_content_size",
+					"controls":[{
+						"$button_type_panel@$button_type_panel": {
+							"layer":3
+						}
+					}]
+				}
+			}]
+	},
+	"custom_button_assets_white@common.button": {
+		"$default_button_texture|default":"",
+		"$default_content_alpha|default":1.0,
+		"$hover_button_texture|default":"",
+		"$hover_content_alpha|default":1.0,
+		"$pressed_button_texture|default":"",
+		"$pressed_alpha|default":1.0,
+		"$locked_button_texture|default":"",
+		"$pressed_no_hover_texture|default":"",
+		"locked_control":"locked",
+		"$locked_alpha":0.7,
+		"$default_font|default":"default",
+		"$font_type":"smooth"
+	},
+	"custom_button_assets@common.button": {
+		"$default_button_texture|default":"",
+		"$default_content_alpha|default":1.0,
+		"$hover_button_texture|default":"",
+		"$hover_content_alpha|default":1.0,
+		"$pressed_button_texture|default":"",
+		"$pressed_alpha|default":1.0,
+		"$locked_button_texture|default":"",
+		"$pressed_no_hover_texture|default":"",
+		"locked_control":"locked",
+		"$locked_alpha":1.0,
+		"$default_font|default":"default",
+		"$font_type":"smooth"
+	},
+	"custom_text_button@cb_buttons.custom_button_assets": {
+		"layer": "$button_layer",
+		"$button_layer|default": 1,
+		"$hover_text_text": "",
+		"$skibidisize": [ "100%sm", "100%sm" ],
+		"$button_offset|default":[
+			0,
+			0
+		],
+		"$button_pressed_offset|default":[
+			0,
+			0
+		],
+		"$button_text|default":"",
+		"$default_button_alpha|default":1,
+		"$default_hover_alpha|default":1,
+		"$default_pressed_alpha|default":1,
+		"$default_button_pressed_offset|default":[
+			0,
+			0
+		],
+		"$default_text_color|default":[
+			0.75,
+			0.78,
+			0.78
+		],
+		"$hover_text_color|default":[
+			1.0,
+			1.0,
+			1.0
+		],
+		"$pressed_text_color|default":[
+			1.0,
+			1.0,
+			1.0
+		],
+		"$locked_text_color|default":[
+			1.0,
+			1.0,
+			1.0
+		],
+		"$button_text_binding_type|default":"none",
+		"$button_binding_condition|default":"none",
+		"$button_text_grid_collection_name|default":"",
+		"$button_type_panel":"cb_buttons.new_ui_binding_button_label_cb",
+		"$button_state_panel|default":"cb_buttons.custom_button_panel",
+		"$default_state|default":false,
+		"$hover_state|default":false,
+		"$pressed_state|default":false,
+		"$locked_state|default":false,
+		"controls":[
+		{
+			"basic_text": {
+				"type": "label",
+				"color": [0.75, 0.78, 0.78],
+				"layer": 20,
+				"offset": [0,-1.25],
+				"text": "$sigma",
+				"shadow": false,
+				"font_type": "STD",
+				"font_scale_factor": 0.52,
+				"alpha": 1,
+				"anchor_from": "center",
+				"anchor_to": "center",
+				"scale": [100,50]
+			}
+		},
+		{
+			"basic_text_shadow": {
+				"type": "label",
+				"color": [0.0, 0.0, 0.0],
+				"layer": 19,
+				"offset": [0,-0.9],
+				"text": "$sigma",
+				"shadow": false,
+				"font_type": "STD",
+				"font_scale_factor": 0.52,
+				"alpha": 0.4,
+				"anchor_from": "center",
+				"anchor_to": "center",
+				"scale": [100,15]
+			}
+		},
+		{
+			"default@$button_state_panel": {
+				"$new_ui_button_texture":"$default_button_texture",
+				"$text_color":"$default_text_color",
+				"$secondary_text_color":"$light_button_secondary_default_text_color",
+				"$content_alpha":"$default_content_alpha",
+				"$border_color":"$light_border_default_color",
+				"$border_layer":2,
+				"$default_state":true,
+				"$button_alpha":"$default_button_alpha",
+				"layer":1
+			}
+		},
+			{
+				"hover@$button_state_panel": {
+					"$new_ui_button_texture":"$hover_button_texture",
+					"$text_color":"$hover_text_color",
+					"$secondary_text_color":"$light_button_secondary_hover_text_color",
+					"$content_alpha":1,
+					"$border_color":"$light_border_hover_color",
+					"$border_layer":4,
+					"$hover_state":true,
+					"$button_alpha":"$default_hover_alpha",
+					"layer":4
+				}
+			},
+			{
+				"pressed@$button_state_panel": {
+					"$new_ui_button_texture":"$pressed_button_texture",
+					"$text_color":"$pressed_text_color",
+					"$secondary_text_color":"$light_button_secondary_pressed_text_color",
+					"$button_offset|default":"$button_pressed_offset",
+					"$content_alpha":"$pressed_alpha",
+					"$border_color":"$light_border_pressed_color",
+					"$border_layer":5,
+					"$pressed_state":true,
+					"$button_alpha":"$default_pressed_alpha",
+					"layer":5
+				}
+			},
+			{
+				"locked@$button_state_panel": {
+					"$new_ui_button_texture":"$locked_button_texture",
+					"$text_color":"$locked_text_color",
+					"$secondary_text_color":"$light_button_secondary_locked_text_color",
+					"$content_alpha":"$locked_alpha",
+					"$border_color":"$light_border_locked_color",
+					"$button_image":"common_buttons.locked_button_image",
+					"$border_layer":1,
+					"$locked_state":true,
+					"layer":1
+				}
+			}]
+	},
+	"custom_content_button@cb_buttons.custom_button_assets_white": {
+		"$hover_text_text": "",
+		"$skibidisize": [ "100%sm", "100%sm" ],
+		"$button_offset|default":[
+			0,
+			0
+		],
+		"$button_pressed_offset|default":[
+			0,
+			1
+		],
+		"$pressed_alpha|default":1,
+		"$button_type_panel|default":"common_buttons.button_content_panel",
+		"$button_content|default":"common.empty_panel",
+		"$button_state_panel|default":"common_buttons.new_ui_button_panel",
+		"$default_button_alpha|default":1,
+		"$default_hover_alpha|default":1,
+		"$default_pressed_alpha|default":1,
+		"$border_default_alpha|default":1,
+		"$default_state|default":false,
+		"$hover_state|default":false,
+		"$pressed_state|default":false,
+		"$locked_state|default":false,
+		"$default_state_border_visible|default":true,
+		"$hover_state_border_visible|default":true,
+		"$pressed_state_border_visible|default":true,
+		"$locked_state_border_visible|default":true,
+		"controls":[{
+			"default@$button_state_panel": {
+				"$new_ui_button_texture":"$default_button_texture",
+				"$text_color":"$light_button_default_text_color",
+				"font_type":"smooth",
+				"$content_alpha":"$default_content_alpha",
+				"$secondary_text_color":"$light_button_secondary_default_text_color",
+				"$glyph_color":"$light_glyph_default_color",
+				"$border_color":"$light_border_default_color",
+				"$button_alpha":"$default_button_alpha",
+				"$border_visible":"$default_state_border_visible",
+				"$border_layer":2,
+				"$default_state":true,
+				"$border_alpha":"$border_default_alpha",
+				"layer":1
+			}
+		},
+			{
+				"hover@$button_state_panel": {
+					"$new_ui_button_texture":"$hover_button_texture",
+					"$text_color":"$light_button_hover_text_color",
+					"font_type":"smooth",
+					"$secondary_text_color":"$light_button_secondary_hover_text_color",
+					"$glyph_color":"$light_glyph_hover_color",
+					"$content_alpha":"$hover_content_alpha",
+					"$border_color":"$light_border_hover_color",
+					"$border_visible":"$hover_state_border_visible",
+					"$border_layer":3,
+					"$hover_state":true,
+					"$button_alpha":"$default_hover_alpha",
+					"layer":2
+				}
+			},
+			{
+				"pressed@$button_state_panel": {
+					"$new_ui_button_texture":"$pressed_button_texture",
+					"$text_color":"$light_button_pressed_text_color",
+					"font_type":"smooth",
+					"$secondary_text_color":"$light_button_secondary_pressed_text_color",
+					"$glyph_color":"$light_glyph_pressed_color",
+					"$content_alpha":"$pressed_alpha",
+					"$button_offset":"$button_pressed_offset",
+					"$border_color":"$light_border_pressed_color",
+					"$border_visible":"$pressed_state_border_visible",
+					"$border_layer":3,
+					"$button_alpha":"$default_pressed_alpha",
+					"$pressed_state":true,
+					"layer":3
+				}
+			},
+			{
+				"locked@$button_state_panel": {
+					"$new_ui_button_texture":"$locked_button_texture",
+					"$text_color":"$light_button_locked_text_color",
+					"font_type":"smooth",
+					"$secondary_text_color":"$light_button_secondary_locked_text_color",
+					"$glyph_color":"$light_glyph_locked_color",
+					"$content_alpha":"$locked_alpha",
+					"$border_color":"$light_border_locked_color",
+					"$button_image":"common_buttons.locked_button_image",
+					"$border_visible":"$locked_state_border_visible",
+					"$border_layer":1,
+					"$locked_state":true,
+					"layer":1
+				}
+			}
+		]
+	},
+	
+	"custom_text_button_white@cb_buttons.custom_button_assets_white": {
+		"$skibidisize": [ "100%sm", "100%sm" ],
+		"$button_offset|default":[
+			0,
+			0
+		],
+		"$button_pressed_offset|default":[
+			0,
+			1
+		],
+		"$button_text|default":"",
+		"$button_font_size|default":"small",
+		"$default_button_alpha|default":1,
+		"$default_hover_alpha|default":1,
+		"$default_pressed_alpha|default":1,
+		"$default_button_pressed_offset|default":[
+			0,
+			1
+		],
+		"$default_text_color|default":[
+			0.75,
+			0.78,
+			0.78
+		],
+		"$hover_text_color|default":[
+			1.0,
+			1.0,
+			1.90
+		],
+		"$pressed_text_color|default":[
+			1.0,
+			1.0,
+			1.0
+		],
+		"$locked_text_color|default":[
+			1.0,
+			1.0,
+			1.0
+		],
+		"$button_text_binding_type|default":"none",
+		"$button_binding_condition|default":"none",
+		"$button_text_grid_collection_name|default":"",
+		"$button_type_panel":"cb_buttons.new_ui_binding_button_label_cb",
+		"$button_state_panel|default":"cb_buttons.custom_button_panel",
+		"$default_state|default":false,
+		"$hover_state|default":false,
+		"$pressed_state|default":false,
+		"$locked_state|default":false,
+		"controls":[{
+			"default@$button_state_panel": {
+				"$new_ui_button_texture":"$default_button_texture",
+				"$text_color":"$default_text_color",
+				"$secondary_text_color":"$light_button_secondary_default_text_color",
+				"$content_alpha":"$default_content_alpha",
+				"$border_color":"$light_border_default_color",
+				"$border_layer":2,
+				"$default_state":true,
+				"$button_alpha":"$default_button_alpha",
+				"layer":1
+			}
+		},
+			{
+				"hover@$button_state_panel": {
+					"$new_ui_button_texture":"$hover_button_texture",
+					"$text_color":"$hover_text_color",
+					"$secondary_text_color":"$light_button_secondary_hover_text_color",
+					"$content_alpha":1,
+					"$border_color":"$light_border_hover_color",
+					"$border_layer":4,
+					"$hover_state":true,
+					"$button_alpha":"$default_hover_alpha",
+					"layer":4
+				}
+			},
+			{
+				"pressed@$button_state_panel": {
+					"$new_ui_button_texture":"$pressed_button_texture",
+					"$text_color":"$pressed_text_color",
+					"$secondary_text_color":"$light_button_secondary_pressed_text_color",
+					"$button_offset|default":"$button_pressed_offset",
+					"$content_alpha":"$pressed_alpha",
+					"$border_color":"$light_border_pressed_color",
+					"$border_layer":5,
+					"$pressed_state":true,
+					"$button_alpha":"$default_pressed_alpha",
+					"layer":5
+				}
+			},
+			{
+				"locked@$button_state_panel": {
+					"$new_ui_button_texture":"$locked_button_texture",
+					"$text_color":"$locked_text_color",
+					"$secondary_text_color":"$light_button_secondary_locked_text_color",
+					"$content_alpha":"$locked_alpha",
+					"$border_color":"$light_border_locked_color",
+					"$button_image":"common_buttons.locked_button_image",
+					"$border_layer":1,
+					"$locked_state":true,
+					"layer":1
+				}
+			}]
+	},
+	"custom_content_button_white@cb_buttons.custom_button_assets_white": {
+		"$button_offset|default":[
+			0,
+			0
+		],
+		"$button_pressed_offset|default":[
+			0,
+			1
+		],
+		"$pressed_alpha|default":1,
+		"$button_type_panel|default":"common_buttons.button_content_panel",
+		"$button_content|default":"common.empty_panel",
+		"$button_state_panel|default":"cb_buttons.custom_button_panel",
+		"$default_button_alpha|default":1,
+		"$default_hover_alpha|default":1,
+		"$default_pressed_alpha|default":1,
+		"$border_default_alpha|default":1,
+		"$default_state|default":false,
+		"$hover_state|default":false,
+		"$pressed_state|default":false,
+		"$locked_state|default":false,
+		"$default_state_border_visible|default":true,
+		"$hover_state_border_visible|default":true,
+		"$pressed_state_border_visible|default":true,
+		"$locked_state_border_visible|default":true,
+		"controls":[
+		{
+			"Icon": {
+				"type": "image",
+				"anchor_from": "center",
+				"anchor_to": "center",
+				"offset": [0,0],
+				"size": [6.0,6.0],
+				"alpha": 0.7,
+				"texture":"$icon",
+				"layer": 999
+			}
+		},
+		{
+			"default@$button_state_panel": {
+				"$new_ui_button_texture":"$default_button_texture",
+				"$text_color":"$light_button_default_text_color",
+				"font_type":"smooth",
+				"$content_alpha":"$default_content_alpha",
+				"$secondary_text_color":"$light_button_secondary_default_text_color",
+				"$glyph_color":"$light_glyph_default_color",
+				"$border_color":"$light_border_default_color",
+				"$button_alpha":"$default_button_alpha",
+				"$border_visible":"$default_state_border_visible",
+				"$border_layer":2,
+				"$default_state":true,
+				"$border_alpha":"$border_default_alpha",
+				"$hover_text_text": "",
+				"$skibidisize": [ "100%sm", "100%sm" ],
+				"layer":1
+			}
+		},
+			{
+				"hover@$button_state_panel": {
+					"$new_ui_button_texture":"$hover_button_texture",
+					"$text_color":"$light_button_hover_text_color",
+					"font_type":"smooth",
+					"$secondary_text_color":"$light_button_secondary_hover_text_color",
+					"$glyph_color":"$light_glyph_hover_color",
+					"$content_alpha":"$hover_content_alpha",
+					"$border_color":"$light_border_hover_color",
+					"$border_visible":"$hover_state_border_visible",
+					"$border_layer":3,
+					"$hover_state":true,
+					"$button_alpha":"$default_hover_alpha",
+					"$hover_text_text": "$sigmahovertext",
+					"$skibidisize": [ "100%sm + 6px", "100%sm + 3.65px" ],
+					"layer":2
+				}
+			},
+			{
+				"pressed@$button_state_panel": {
+					"$new_ui_button_texture":"$pressed_button_texture",
+					"$text_color":"$light_button_pressed_text_color",
+					"font_type":"smooth",
+					"$secondary_text_color":"$light_button_secondary_pressed_text_color",
+					"$glyph_color":"$light_glyph_pressed_color",
+					"$content_alpha":"$pressed_alpha",
+					"$button_offset":"$button_pressed_offset",
+					"$border_color":"$light_border_pressed_color",
+					"$border_visible":"$pressed_state_border_visible",
+					"$border_layer":3,
+					"$button_alpha":"$default_pressed_alpha",
+					"$pressed_state":true,
+					"$skibidisize": [ "100%sm", "100%sm" ],
+					"layer":3,
+					"$hover_text_text": ""
+				}
+			},
+			{
+				"locked@$button_state_panel": {
+					"$new_ui_button_texture":"$locked_button_texture",
+					"$text_color":"$light_button_locked_text_color",
+					"font_type":"smooth",
+					"$secondary_text_color":"$light_button_secondary_locked_text_color",
+					"$glyph_color":"$light_glyph_locked_color",
+					"$content_alpha":"$locked_alpha",
+					"$border_color":"$light_border_locked_color",
+					"$button_image":"common_buttons.locked_button_image",
+					"$border_visible":"$locked_state_border_visible",
+					"$border_layer":1,
+					"$locked_state":true,
+					"$skibidisize": [ "100%sm", "100%sm" ],
+					"layer":1,
+					"$hover_text_text": ""
+				}
+			}
+		]
+	},
+		"clear_content_button@cb_buttons.custom_button_assets_white": {
+		"$button_offset|default":[
+			0,
+			0
+		],
+		"$button_pressed_offset|default":[
+			0,
+			1
+		],
+		"$pressed_alpha|default":1,
+		"$button_type_panel|default":"common_buttons.button_content_panel",
+		"$button_content|default":"common.empty_panel",
+		"$button_state_panel|default":"cb_buttons.custom_button_panel",
+		"$default_button_alpha|default":1,
+		"$default_hover_alpha|default":1,
+		"$default_pressed_alpha|default":1,
+		"$border_default_alpha|default":1,
+		"$default_state|default":false,
+		"$hover_state|default":false,
+		"$pressed_state|default":false,
+		"$locked_state|default":false,
+		"$default_state_border_visible|default":true,
+		"$hover_state_border_visible|default":true,
+		"$pressed_state_border_visible|default":true,
+		"$locked_state_border_visible|default":true,
+		"controls":[
+		{
+			"default@$button_state_panel": {
+				"$new_ui_button_texture":"$default_button_texture",
+				"$text_color":"$light_button_default_text_color",
+				"font_type":"smooth",
+				"$content_alpha":"$default_content_alpha",
+				"$secondary_text_color":"$light_button_secondary_default_text_color",
+				"$glyph_color":"$light_glyph_default_color",
+				"$border_color":"$light_border_default_color",
+				"$button_alpha":"$default_button_alpha",
+				"$border_visible":"$default_state_border_visible",
+				"$border_layer":2,
+				"$default_state":true,
+				"$border_alpha":"$border_default_alpha",
+				"$hover_text_text": "",
+				"$skibidisize": [ "100%sm", "100%sm" ],
+				"layer":1
+			}
+		},
+			{
+				"hover@$button_state_panel": {
+					"$new_ui_button_texture":"$hover_button_texture",
+					"$text_color":"$light_button_hover_text_color",
+					"font_type":"smooth",
+					"$secondary_text_color":"$light_button_secondary_hover_text_color",
+					"$glyph_color":"$light_glyph_hover_color",
+					"$content_alpha":"$hover_content_alpha",
+					"$border_color":"$light_border_hover_color",
+					"$border_visible":"$hover_state_border_visible",
+					"$border_layer":3,
+					"$hover_state":true,
+					"$button_alpha":"$default_hover_alpha",
+					"$hover_text_text": "$sigmahovertext",
+					"$skibidisize": [ "100%sm + 6px", "100%sm + 3.65px" ],
+					"layer":2
+				}
+			},
+			{
+				"pressed@$button_state_panel": {
+					"$new_ui_button_texture":"$pressed_button_texture",
+					"$text_color":"$light_button_pressed_text_color",
+					"font_type":"smooth",
+					"$secondary_text_color":"$light_button_secondary_pressed_text_color",
+					"$glyph_color":"$light_glyph_pressed_color",
+					"$content_alpha":"$pressed_alpha",
+					"$button_offset":"$button_pressed_offset",
+					"$border_color":"$light_border_pressed_color",
+					"$border_visible":"$pressed_state_border_visible",
+					"$border_layer":3,
+					"$button_alpha":"$default_pressed_alpha",
+					"$pressed_state":true,
+					"$skibidisize": [ "100%sm", "100%sm" ],
+					"layer":3,
+					"$hover_text_text": ""
+				}
+			},
+			{
+				"locked@$button_state_panel": {
+					"$new_ui_button_texture":"$locked_button_texture",
+					"$text_color":"$light_button_locked_text_color",
+					"font_type":"smooth",
+					"$secondary_text_color":"$light_button_secondary_locked_text_color",
+					"$glyph_color":"$light_glyph_locked_color",
+					"$content_alpha":"$locked_alpha",
+					"$border_color":"$light_border_locked_color",
+					"$button_image":"common_buttons.locked_button_image",
+					"$border_visible":"$locked_state_border_visible",
+					"$border_layer":1,
+					"$locked_state":true,
+					"$skibidisize": [ "100%sm", "100%sm" ],
+					"layer":1,
+					"$hover_text_text": ""
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,651 @@
+{
+  "namespace": "azelux_chunkmap",
+  "contents": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "chunkmap_main_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "chunk_player_position@azelux_chunkmap.chunk_player_position": {}
+      },
+      {
+        "content": {
+          "type": "panel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "controls": [
+            {
+              "chunk_player_position@azelux_chunkmap.chunk_player_position": {}
+            },
+            {
+              "9@mod_menu_sliders.movable_mod": {
+                "$x_slider": "chunkmap_position_x",
+                "$y_slider": "chunkmap_position_y",
+                "$custom_controls": [
+                  {
+                    "chunkmap_main_panel@azelux_chunkmap.chunkmap_main_panel": {}
+                  },
+                  {
+                    "chunk_player_position@azelux_chunkmap.chunk_player_position": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "chunkmap_main_panel": {
+    "type": "stack_panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [
+      60,
+      60
+    ],
+    "controls": [
+      {
+        "chunkmap_panel": {
+          "type": "panel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [
+            60,
+            60
+          ],
+          "bindings": [
+            {
+              "binding_name": "#player_position_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "always",
+              "binding_type": "global"
+            }
+          ],
+          "controls": [
+            {
+              "chunkmap_background": {
+                "type": "image",
+                "texture": "textures/ui/Black",
+                "layer": 5,
+                "size": [
+                  60,
+                  60
+                ],
+                "alpha": 0.35,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "chunkmap_background_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "chunk_direction_text": {
+                "type": "panel",
+                "size": [
+                  "100% - 25px",
+                  "100% - 25px"
+                ],
+                "layer": 6,
+                "controls": [
+                  {
+                    "chunk_direction_text_panel@azelux_chunkmap.chunk_direction_text_panel": {}
+                  }
+                ]
+              }
+            },
+            {
+              "chunkborder": {
+                "type": "image",
+                "texture": "textures/ui/Black",
+                "layer": 5,
+                "size": [
+                  50,
+                  50
+                ],
+                "alpha": 0.35,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "chunkmap_opacity",
+                    "source_property_name": "(#slider_value / 10)",
+                    "target_property_name": "#alpha"
+                  }
+                ],
+                "clips_children": true,
+                "controls": [
+                  {
+                    "chunkborder_panel@azelux_chunkmap.chunkborder_panel": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_0": {
+          "type": "panel",
+          "size": [
+            2,
+            2
+          ],
+          "bindings": [
+            {
+              "binding_name": "#player_position_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "always",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "chunk_position_panel@azelux_chunkmap.chunk_position_panel": {}
+      },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [
+            2,
+            2
+          ],
+          "bindings": [
+            {
+              "binding_name": "#player_position_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "always",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "error_chunk_map": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "layer": 5,
+          "size": [
+            "100%c + 5px",
+            "100%c + 5px"
+          ],
+          "alpha": 0.65,
+          "bindings": [
+            {
+              "binding_name": "(not #player_position_visible)",
+              "binding_name_override": "#visible",
+              "binding_condition": "always",
+              "binding_type": "global"
+            }
+          ],
+          "controls": [
+            {
+              "chunkmap_error_panel": {
+                "type": "stack_panel",
+                "size": [
+                  135,
+                  12
+                ],
+                "offset": [
+                  2,
+                  0
+                ],
+                "controls": [
+                  {
+                    "chunkmap_error_text": {
+                      "type": "label",
+                      "text_alignment": "center",
+                      "text": "Please enable coordinates for chunkmap."
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "chunkborder_panel": {
+    "type": "panel",
+    "size": [
+      1,
+      1
+    ],
+    "layer": 3,
+    "controls": [
+      {
+        "chunkborder@azelux_chunkmap.chunkborder": {}
+      },
+      {
+        "slime_chunk@azelux_chunkmap.slime_chunk": {}
+      },
+      {
+        "player_icon": {
+          "type": "image",
+          "texture": "azelux/assets/modules/chunkmap/player_indicator",
+          "size": [
+            3,
+            3
+          ],
+          "layer": 20
+        }
+      }
+    ]
+  },
+  "chunkborder": {
+    "type": "image",
+    "texture": "azelux/assets/modules/chunkmap/chunk_border",
+    "alpha": 0.5,
+    "tiled": true,
+    "size": [
+      80,
+      80
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "use_anchored_offset": true,
+    "property_bag": {
+      "#anchored_offset_value_x": 0.0,
+      "#anchored_offset_value_y": 0.0
+    },
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "chunk_player_position",
+        "source_property_name": "#pos_chunk_x",
+        "target_property_name": "#pos_chunk_x"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "chunk_player_position",
+        "source_property_name": "#pos_chunk_z",
+        "target_property_name": "#pos_chunk_z"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#pos_chunk_x * -1 - 32)",
+        "target_property_name": "#anchored_offset_value_x"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#pos_chunk_z * -1 - 32)",
+        "target_property_name": "#anchored_offset_value_y"
+      }
+    ]
+  },
+  "slime_chunk_area_temp": {
+    "type": "image",
+    "texture": "('azelux/assets/modules/chunkmap/slime_chunks/' + $slime_chunk_area)",
+    "size": [
+      4096,
+      4096
+    ],
+    "color": [
+      0,
+      1,
+      0
+    ],
+    "alpha": 0.2,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left"
+  },
+  "slime_chunk": {
+    "type": "panel",
+    "size": [
+      0,
+      0
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "use_anchored_offset": true,
+    "layer": 1,
+    "property_bag": {
+      "#anchored_offset_value_x": 0.0,
+      "#anchored_offset_value_y": 0.0
+    },
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "slime_chunk_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "chunk_player_position",
+        "source_property_name": "#pos_x",
+        "target_property_name": "#pos_x"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "chunk_player_position",
+        "source_property_name": "#pos_z",
+        "target_property_name": "#pos_z"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#pos_x * -1)",
+        "target_property_name": "#anchored_offset_value_x"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#pos_z * -1)",
+        "target_property_name": "#anchored_offset_value_y"
+      }
+    ],
+    "controls": [
+      {
+        "chunk_map_nw@azelux_chunkmap.slime_chunk_area_temp": {
+          "offset": [
+            -4096,
+            -4096
+          ],
+          "$slime_chunk_area": "chunk_map_nw"
+        }
+      },
+      {
+        "chunk_map_ne@azelux_chunkmap.slime_chunk_area_temp": {
+          "offset": [
+            0,
+            -4096
+          ],
+          "$slime_chunk_area": "chunk_map_ne"
+        }
+      },
+      {
+        "chunk_map_sw@azelux_chunkmap.slime_chunk_area_temp": {
+          "offset": [
+            -4096,
+            0
+          ],
+          "$slime_chunk_area": "chunk_map_sw"
+        }
+      },
+      {
+        "chunk_map_se@azelux_chunkmap.slime_chunk_area_temp": {
+          "offset": [
+            0,
+            0
+          ],
+          "$slime_chunk_area": "chunk_map_se"
+        }
+      }
+    ]
+  },
+  "chunk_position_panel": {
+    "type": "image",
+    "texture": "textures/ui/Black",
+    "size": [
+      "100%cm + 8px",
+      "100%cm + 8px"
+    ],
+    "alpha": 0.65,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "chunk_position_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#condition2"
+      },
+      {
+        "binding_name": "#player_position_visible",
+        "binding_name_override": "#condition1",
+        "binding_condition": "always",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#condition1 and #condition2)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "none": {
+          "type": "label",
+          "text": "Chunk None",
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "chunk_middle",
+              "source_property_name": "(not #visible)",
+              "target_property_name": "#chunk_middle"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "chunk_edge",
+              "source_property_name": "(not #visible)",
+              "target_property_name": "#chunk_edge"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "chunk_corner",
+              "source_property_name": "(not #visible)",
+              "target_property_name": "#chunk_corner"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#chunk_middle and #chunk_edge and #chunk_corner)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "chunk_middle": {
+          "type": "label",
+          "text": "Chunk Middle",
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "chunk_player_position",
+              "source_property_name": "(((#pos_chunk_x = 7) or (#pos_chunk_x = 8)) and ((#pos_chunk_z = 7) or (#pos_chunk_z = 8)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "chunk_edge": {
+          "type": "label",
+          "text": "Chunk Edge",
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "chunk_player_position",
+              "source_property_name": "(((#pos_chunk_x > 0) and (#pos_chunk_x < 15)) and ((#pos_chunk_z > 0) and (#pos_chunk_z < 15)))",
+              "target_property_name": "#edge"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "chunk_corner",
+              "source_property_name": "(not #visible)",
+              "target_property_name": "#not_corner"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not #edge and #not_corner)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "chunk_corner": {
+          "type": "label",
+          "text": "Chunk Corner",
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "chunk_player_position",
+              "source_property_name": "(((#pos_chunk_x = 0) or (#pos_chunk_x = 15)) and ((#pos_chunk_z = 0) or (#pos_chunk_z = 15)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "chunk_direction_label": {
+    "type": "label",
+    "text_alignment": "center",
+    "allow_clipping": false
+  },
+  "chunk_direction_text_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "east@azelux_chunkmap.chunk_direction_label": {
+          "text": "E",
+          "anchor_from": "right_middle",
+          "anchor_to": "center",
+          "offset": [
+            2,
+            0
+          ]
+        }
+      },
+      {
+        "south@azelux_chunkmap.chunk_direction_label": {
+          "text": "S",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            2
+          ]
+        }
+      },
+      {
+        "west@azelux_chunkmap.chunk_direction_label": {
+          "text": "W",
+          "anchor_from": "left_middle",
+          "anchor_to": "center",
+          "offset": [
+            -2,
+            0
+          ]
+        }
+      },
+      {
+        "north@azelux_chunkmap.chunk_direction_label": {
+          "text": "N",
+          "anchor_from": "top_middle",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            -2
+          ]
+        }
+      }
+    ]
+  },
+  "chunk_player_position": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "player_position_text",
+        "source_property_name": "#text",
+        "target_property_name": "#player_position_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#player_position_text - '-1' - '-2' - '-3' - '-4' - '-5' - '-6' - '-7' - '-8' - '-9')",
+        "target_property_name": "#rpt_2"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#rpt_2 - '1' - '2' - '3' - '4' - '5' - '6' - '7' - '8' - '9' - '0')",
+        "target_property_name": "#rpt"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#player_position_text - ' ') - (#rpt - ' ' - ':' - ','))",
+        "target_property_name": "#rpn"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#rpn - ':')",
+        "target_property_name": "#pos_x"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#rpn - (':' + #pos_x + ','))",
+        "target_property_name": "#pos_y"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#rpn - (':' + #pos_x + ',' + #pos_y + ','))",
+        "target_property_name": "#pos_z"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#pos_x - (#pos_x < 0) * 15) / 16)",
+        "target_property_name": "#chunk_x"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#pos_y - (#pos_y < 0) * 15) / 16)",
+        "target_property_name": "#chunk_y"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#pos_z - (#pos_z < 0) * 15) / 16)",
+        "target_property_name": "#chunk_z"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#pos_x - (#chunk_x * 16))",
+        "target_property_name": "#pos_chunk_x"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#pos_y - (#chunk_y * 16))",
+        "target_property_name": "#pos_chunk_y"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#pos_z - (#chunk_z * 16))",
+        "target_property_name": "#pos_chunk_z"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#chunk_x * -1)",
+        "target_property_name": "#reverse_chunk_x"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#chunk_z * -1)",
+        "target_property_name": "#reverse_chunk_z"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#pos_chunk_x * -1)",
+        "target_property_name": "#reverse_in_chunk_x"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#pos_chunk_z * -1)",
+        "target_property_name": "#reverse_in_chunk_z"
+      }
+    ]
+  }
+}

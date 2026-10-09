@@ -1,0 +1,576 @@
+{
+  "namespace": "azelux_client_mod_menu",
+
+  "azelux_mod_menu_button@azelux_toggles.light_text_toggle_radio_sus": {
+    "size": [
+      16,
+      16
+    ],
+    "layer": 5,
+    "offset": [
+      5,
+      5
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$toggle_default_state": false,
+    "$icon": "azelux/assets/icons/azelux_mods",
+    "$toggle_group_forced_index": 0,
+    "$toggle_name": "mods_toggle_state",
+    "$hover_text_text": "AZELUX SETTINGS",
+    "$hover_text_offset": [
+      0,
+      -14
+    ],
+    "$rizzoffset": [
+      0,
+      -13
+    ],
+    // Required but has no effect unless a hardcoded toggle name is used.
+    "$toggle_view_binding_name": "mods_toggle_state"
+  },
+
+  "start_mod_menu": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "mods_toggle_state",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "layer": 10000,
+    "controls": [
+      {
+        "config_saving_panel": {
+          "ignored": "$config_button_ignored",
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "config_saving_tab",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "leave_button@azelux_toggles.light_text_toggle_radio_sus": {
+                "size": [16, 16],
+                "$icon_size": [6, 6],
+                "layer": 5,
+                "offset": [1000, -5],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "$show_text": false,
+                "$toggle_default_state": true,
+                "$icon": "azelux/assets/icons/exit1",
+                "$toggle_group_forced_index": 1,
+                "$toggle_view_binding_name": "mods_toggle_state",
+                "$toggle_name": "mods_toggle_state",
+                "$button_mappings": [{"from_button_id": "button.menu_cancel", "to_button_id": "button.menu_select", "mapping_type": "global"}]
+              }
+            },
+            {
+              "top_label": {
+                "type": "label",
+                "font_type": "Roboto-Regular",
+                "font_scale_factor": 0.7,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "layer": 1000,
+                "text": "To save your config, please take a screenshot of the everything below and upload it to https://azelux-client.github.io",
+                "offset": [0,135]
+              }
+            },
+            {
+              "codeshit": {
+                "type": "panel",
+                "layer": 101,
+                "offset": [
+                  0,
+                  153
+                ],
+                "controls": [
+                  {
+                    "mods_selected@mods_selection_code.mods_options_stack_panel": {
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "mod_menu_tabs_group_lol@mod_menu_toggles.mod_menu_tab": {
+                "$azelux_mod_menu_tab": "config_saving_tab",
+                "$toggle_group_forced_index": 1,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$toggle_name": "config_saving_tab",
+                "$toggle_default_state": false,
+                "layer": 1000,
+                "$toggle_group_default_selected": 1,
+                "$mod_toggle_text": "U N D E R S T O O D",
+                "size": [56,12],
+                "offset": [
+                  0,
+                  205
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "mod_menu_panel": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "config_saving_tab",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "background": {
+                "type": "image",
+                "texture": "azelux/assets/mod_menu/background",
+                "size": [ 359, 202 ],
+                "controls": [
+                  {
+                    "start_mod_menu": {
+                      "type": "panel",
+                      "controls": [
+                        {
+                          "sidebar": {
+                            "type": "image",
+                            "texture": "azelux/assets/mod_menu/side_bar",
+                            "size": ["100%","100%"],
+                            "offset": [-128,0],
+                            "controls": [
+                              {
+                                "requires_cs_panel": {
+                                  "type": "panel",
+                                  "offset": [0,50],
+                                  "controls": [
+                                    {
+                                      "row1": {
+                                        "type": "stack_panel",
+                                        "orientation": "horizontal",
+                                        "controls":[
+                                          {
+                                            "profile_text": {
+                                              "type": "label",
+                                              "text": "Mods that are marked",
+                                              "font_scale_factor": 0.5,
+                                              "font_type": "Roboto-Regular",
+                                              "alpha": 0.7,
+                                              "text_alignment": "left",
+                                              "offset": [-15,30],
+                                              "anchor_from": "top_middle",
+                                              "anchor_to": "top_middle"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "row2": {
+                                        "type": "stack_panel",
+                                        "orientation": "horizontal",
+                                        "offset": [0,6],
+                                        "controls":[
+                                          {
+                                            "profile_text": {
+                                              "type": "label",
+                                              "text": "with  ",
+                                              "font_scale_factor": 0.5,
+                                              "font_type": "Roboto-Regular",
+                                              "alpha": 0.7,
+                                              "text_alignment": "left",
+                                              "anchor_from": "top_middle",
+                                              "anchor_to": "top_middle"
+                                            }
+                                          },
+                                          {
+                                            "panel":{
+                                              "type": "panel",
+                                              "size": [5,5],
+                                              "controls": [
+                                                {
+                                                  "circle": {
+                                                    "type": "image",
+                                                    "texture": "azelux/assets/common/circle",
+                                                    "color": [1,0.5,0],
+                                                    "alpha": "@animations.circle_flicker",
+                                                    "anchor_from": "top_right",
+                                                    "anchor_to": "top_right",
+                                                    "size": [5,5],
+                                                    "offset": [0,1.4]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "profile_text": {
+                                              "type": "label",
+                                              "text": "  require you to",
+                                              "font_scale_factor": 0.5,
+                                              "font_type": "Roboto-Regular",
+                                              "alpha": 0.7,
+                                              "text_alignment": "left",
+                                              "anchor_from": "top_middle",
+                                              "anchor_to": "top_middle"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "row3": {
+                                        "type": "stack_panel",
+                                        "orientation": "horizontal",
+                                        "offset": [0,12],
+                                        "controls":[
+                                          {
+                                            "profile_text": {
+                                              "type": "label",
+                                              "text": "save your config, to",
+                                              "font_scale_factor": 0.5,
+                                              "font_type": "Roboto-Regular",
+                                              "alpha": 0.7,
+                                              "text_alignment": "left",
+                                              "anchor_from": "top_middle",
+                                              "anchor_to": "top_middle"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "row3": {
+                                        "type": "stack_panel",
+                                        "orientation": "horizontal",
+                                        "offset": [0,18],
+                                        "controls":[
+                                          {
+                                            "profile_text": {
+                                              "type": "label",
+                                              "text": "make them work.",
+                                              "font_scale_factor": 0.5,
+                                              "font_type": "Roboto-Regular",
+                                              "alpha": 0.7,
+                                              "text_alignment": "left",
+                                              "anchor_from": "top_middle",
+                                              "anchor_to": "top_middle"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "config_text_panel": {
+                                  "type": "panel",
+                                  "anchor_from": "top_middle",
+                                  "anchor_to": "top_middle",
+                                  "size": ["20%","5%"],
+                                  "offset": ["0%","14.2%"],
+                                  "controls": [
+                                    {
+                                      "profile_text": {
+                                        "type": "label",
+                                        "text": "($username + 's Config')",
+                                        "font_scale_factor": 0.5,
+                                        "font_type": "STD",
+                                        "alpha": 0.7,
+                                        "text_alignment": "left",
+                                        "visible": "$azelux_config_save_state",
+                                        "offset": [
+                                          2,
+                                          1
+                                        ],
+                                        "size": [
+                                          "100%",
+                                          "100%"
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "profile_text": {
+                                        "type": "label",
+                                        "text": "§cU n s a v e d",
+                                        "font_scale_factor": 0.5,
+                                        "font_type": "STD",
+                                        "alpha": 0.7,
+                                        "text_alignment": "left",
+                                        "visible": "(not $azelux_config_save_state)",
+                                        "ignored": "$introduction_menu",
+                                        "offset": [
+                                          2,
+                                          1
+                                        ],
+                                        "size": [
+                                          "100%",
+                                          "100%"
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "profile_text": {
+                                  "type": "label",
+                                  "text": "D e f a u l t",
+                                  "font_scale_factor": 0.5,
+                                  "font_type": "STD",
+                                  "alpha": 0.7,
+                                  "text_alignment": "left",
+                                  "offset": [-15,30],
+                                  "anchor_from": "top_middle",
+                                  "anchor_to": "top_middle",
+                                  "visible": "$introduction_menu"
+                                }
+                              },
+                              {
+                                "mod_menu_tabs_group_lol@mod_menu_toggles.mod_menu_tab2": {
+                                  "$font_size_lol": 0.37,
+                                  "$azelux_mod_menu_tab": "config_saving_tab",
+                                  "$toggle_group_forced_index": 0,
+                                  "$toggle_name": "config_saving_tab",
+                                  "$toggle_group_default_selected": 1,
+                                  "ignored": "$config_button_ignored",
+                                  "$mod_toggle_text": "S A V E   A S   N E W   C O N F I G",
+                                  "anchor_from": "bottom_middle",
+                                  "anchor_to": "bottom_middle",
+                                  "size": [65,12],
+                                  "offset": [0,-1.1]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "start_mod_menu": {
+                      "type": "panel",
+                      "controls": [
+                        {
+                          "leave_button2@azelux_toggles.light_text_toggle_radio_sus": {
+                            "size": [
+                              16,
+                              16
+                            ],
+                            "$icon_size": [
+                              6,
+                              6
+                            ],
+                            "layer": 5,
+                            "offset": [
+                              -18,
+                              3
+                            ],
+                            "anchor_from": "top_right",
+                            "anchor_to": "top_right",
+                            "$show_text": false,
+                            "$toggle_default_state": true,
+                            "ignored": "$exit_button_ignored",
+                            "$icon": "azelux/assets/icons/exit1",
+                            "$toggle_group_forced_index": 1,
+                            "$toggle_view_binding_name": "mods_toggle_state",
+                            "$toggle_name": "mods_toggle_state"
+                          }
+                        },
+                        {
+                          "leave_button@azelux_toggles.light_text_toggle_radio_sus": {
+                            "size": [
+                              16,
+                              16
+                            ],
+                            "$icon_size": [
+                              6,
+                              6
+                            ],
+                            "layer": 5,
+                            "offset": [
+                              1000,
+                              3
+                            ],
+                            "anchor_from": "top_right",
+                            "anchor_to": "top_right",
+                            "$show_text": false,
+                            "ignored": "$exit_button_ignored",
+                            "$toggle_default_state": true,
+                            "$icon": "azelux/assets/icons/exit1",
+                            "$toggle_group_forced_index": 1,
+                            // Required but has no effect unless a hardcoded toggle name is used.
+                            "$toggle_view_binding_name": "mods_toggle_state",
+                            // The toggle name that allows us to retrieve data.
+                            "$toggle_name": "mods_toggle_state",
+                            "$button_mappings": [
+                              {
+                                "from_button_id": "button.menu_cancel",
+                                "to_button_id": "button.menu_select",
+                                "mapping_type": "global"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "mods_page@azelux_client_mod_menu.mods_page": {
+                          }
+                        },
+                        {
+                          "settings_page@azelux_client_mod_menu.settings_page": {
+                          }
+                        },
+                        {
+                          "themes_page@azelux_client_mod_menu.themes_page": {
+                          }
+                        },
+                        {
+                          "tab_list@azelux_client_mod_menu.tab_list": {}
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "mods_page": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "modules_page_tab",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "modules_page@azelux_client_modules_page.modules_page": {
+        }
+      }
+    ]
+  },
+
+  "settings_page": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "settings_page_tab",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "themes_page@azelux_client_settings_page.settings_page": {
+        }
+      }
+    ]
+  },
+
+  "themes_page": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "themes_page_tab",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "themes_page@azelux_client_themes_page.themes_page": {
+        }
+      }
+    ]
+  },
+
+  "tab_list": {
+    "type": "panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0,5],
+    "controls": [
+      {
+        "tab_list_2": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "mod_menu_tabs_group_lol@mod_menu_toggles.mod_menu_tab": {
+                "$azelux_mod_menu_tab": "modules_page_tab",
+                "$toggle_group_forced_index": 1,
+                "$toggle_name": "mod_menu_tabs_group",
+                "$mod_toggle_text": "M O D S",
+                "$toggle_group_default_selected": 1,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "size": [30,12]
+              }
+            },
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [3,3]
+              }
+            },
+            {
+              "mod_menu_tabs_group_lol@mod_menu_toggles.mod_menu_tab": {
+                "$azelux_mod_menu_tab": "settings_page_tab",
+                "$toggle_group_forced_index": 2,
+                "$toggle_name": "mod_menu_tabs_group",
+                "$toggle_group_default_selected": 1,
+                "$mod_toggle_text": "S E T T I N G S",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "size": [44,12]
+              }
+            },
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [3,3]
+              }
+            },
+            {
+              "mod_menu_tabs_group_lol@mod_menu_toggles.mod_menu_tab": {
+                "$azelux_mod_menu_tab": "themes_page_tab",
+                "$toggle_group_forced_index": 3,
+                "$toggle_group_default_selected": 1,
+                "$toggle_name": "mod_menu_tabs_group",
+                "$mod_toggle_text": "E M O T E S",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "size": [36,12]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "namespace": "azelux_player_list_extras",
+  "icon_template": {
+    "type": "image",
+    "texture": "azelux/assets/common/logo_512",
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "layer": "$custom_layer",
+    "$custom_layer|default": 5,
+    "size": [
+      8,
+      8
+    ],
+    "color": "$own_color",
+    "offset": [
+      -2,
+      0
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_property_name": "(#gamertag=$username)",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_name": "#gamertag",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection"
+      }
+    ]
+  },
+  "tag_template": {
+    "type": "label",
+    "text": "('§8[§r' + $tag_text + '§r§8]§r')",
+    "font_type": "normal",
+    "font_scale_factor": 0.66,
+    "max_size": [
+      40,
+      10
+    ],
+    "size": [
+      "default",
+      10
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_property_name": "(#gamertag=$tag_username)",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_name": "#gamertag",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection"
+      }
+    ]
+  }
+}

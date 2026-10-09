@@ -1,0 +1,883 @@
+{
+  "namespace": "azelux_start_screen_modules",
+  "content": {
+    "type": "panel",
+    "size": ["100%","100%"],
+    "controls": [
+      {
+        "hotbar": {
+          "type": "image",
+          "texture": "azelux/assets/modules/preview/hotbar",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size": [183,40.333333],
+          "offset": [0,0],
+          "alpha": "$hotbar_alpha",
+          "$hotbar_alpha|default": 0.5
+        }
+      },
+      {
+        "armor_hud": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "armor_hud_main_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "boots@mod_menu_sliders.movable_mod": {
+                "$x_slider": "armor_hud_boots_position_x",
+                "$y_slider": "armor_hud_boots_position_y",
+                "$custom_controls": [
+                  {
+                    "boots": {
+                      "type": "image",
+                      "texture": "textures/items/diamond_boots",
+                      "size": [
+                        18,
+                        18
+                      ],
+                      "offset": [-1,-3]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "chestplate@mod_menu_sliders.movable_mod": {
+                "$x_slider": "armor_hud_chestplate_position_x",
+                "$y_slider": "armor_hud_chestplate_position_y",
+                "$custom_controls": [
+                  {
+                    "chestplate": {
+                      "type": "image",
+                      "texture": "textures/items/diamond_chestplate",
+                      "size": [
+                        18,
+                        18
+                      ],
+                      "offset": [-1,-3]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "leggings@mod_menu_sliders.movable_mod": {
+                "$x_slider": "armor_hud_leggings_position_x",
+                "$y_slider": "armor_hud_leggings_position_y",
+                "$custom_controls": [
+                  {
+                    "leggings": {
+                      "type": "image",
+                      "texture": "textures/items/diamond_leggings",
+                      "size": [
+                        18,
+                        18
+                      ],
+                      "offset": [-1,-3]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "helmet@mod_menu_sliders.movable_mod": {
+                "$x_slider": "armor_hud_helmet_position_x",
+                "$y_slider": "armor_hud_helmet_position_y",
+                "$custom_controls": [
+                  {
+                    "helmet": {
+                      "type": "image",
+                      "texture": "textures/items/diamond_helmet",
+                      "size": [
+                        18,
+                        18
+                      ],
+                      "offset": [-1,-3]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "direction_hud": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "direction_hud_main_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "badlion@mod_menu_sliders.movable_mod": {
+                "$x_slider": "direction_hud_position_x",
+                "$y_slider": "direction_hud_position_y",
+                "$custom_controls": [
+                  {
+                    "badlion": {
+                      "type": "image",
+                      "texture": "azelux/assets/modules/preview/direction_hud_blc",
+                      "size": [150,46],
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "direction_hud_legacy_toggle",
+                          "source_property_name": "(not #toggle_state)",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "legacy@mod_menu_sliders.movable_mod": {
+                "$x_slider": "direction_hud_legacy_position_x",
+                "$y_slider": "direction_hud_legacy_position_y",
+                "$custom_controls": [
+                  {
+                    "legacy": {
+                      "type": "image",
+                      "size": [72,12],
+                      "texture": "azelux/assets/modules/preview/direction_hud_legacy",
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "direction_hud_legacy_toggle",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "moving_status": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "moving_status_main_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "moving_status@mod_menu_sliders.movable_mod": {
+                "$x_slider": "moving_status_position_x",
+                "$y_slider": "moving_status_position_y",
+                "$custom_controls": [
+                  {
+                    "no_background": {
+                      "type": "image",
+                      "texture": "textures/ui/Black",
+                      "size": [53,16],
+                      "alpha": 0,
+                      "controls": [
+                        {
+                          "moving": {
+                            "type": "image",
+                            "texture": "azelux/assets/modules/preview/moving_status"
+                          }
+                        }
+                      ],
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "moving_status_background",
+                          "source_property_name": "(not #toggle_state)",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "background": {
+                      "type": "image",
+                      "texture": "textures/ui/Black",
+                      "size": [53,16],
+                      "alpha": 0.35,
+                      "controls": [
+                        {
+                          "moving": {
+                            "type": "image",
+                            "texture": "azelux/assets/modules/preview/moving_status"
+                          }
+                        }
+                      ],
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "moving_status_background",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "custom_crosshair": {
+          "type": "panel",
+          "controls": [
+            {
+              "cursor_renderer": {
+                "type": "custom",
+                "size": [ 16, 16 ],
+                "offset": [100,0],
+                "renderer": "cursor_renderer",
+                "layer": 4,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "custom_crosshair_main_toggle",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "custom_crosshair_custom_panel": {
+                "type": "panel",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "custom_crosshair_main_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "cursor_renderer": {
+                      "type": "custom",
+                      "size": [ 16, 16 ],
+                      "renderer": "cursor_renderer",
+                      "layer": 4,
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "custom_crosshair_default_color",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "custom_crosshair_panel2": {
+                      "type": "panel",
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "custom_crosshair_default_color",
+                          "source_property_name": "(not #toggle_state)",
+                          "target_property_name": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {"1@custom_crosshair_mod.all_crosshairs":{"$crosshair_color": "$custom_color_red","$c": 1}},
+                        {"2@custom_crosshair_mod.all_crosshairs":{"$crosshair_color": "$custom_color_orange","$c": 2}},
+                        {"3@custom_crosshair_mod.all_crosshairs":{"$crosshair_color": "$custom_color_yellow","$c": 3}},
+                        {"4@custom_crosshair_mod.all_crosshairs":{"$crosshair_color": "$custom_color_green","$c": 4}},
+                        {"5@custom_crosshair_mod.all_crosshairs":{"$crosshair_color": "$custom_color_light_blue","$c": 5}},
+                        {"6@custom_crosshair_mod.all_crosshairs":{"$crosshair_color": "$custom_color_blue","$c": 6}},
+                        {"7@custom_crosshair_mod.all_crosshairs":{"$crosshair_color": "$custom_color_magenta","$c": 7}},
+                        {"8@custom_crosshair_mod.all_crosshairs":{"$crosshair_color": "$custom_color_white","$c": 8}}
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "tab_list": {
+          "type": "panel",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [0,15],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "tab_list_main_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "player_list_background": {
+                "type": "image",
+                "size": [384,32],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "texture": "azelux/assets/modules/preview/player_list_background",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "player_list_background_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "player_list": {
+                "type": "image",
+                "size": [384,32],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "texture": "azelux/assets/modules/preview/player_list"
+              }
+            },
+            {
+              "player_list_icons": {
+                "type": "image",
+                "size": [384,32],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "texture": "azelux/assets/modules/preview/player_list_icons",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "player_list_icon_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "server_address@mod_menu_sliders.movable_mod": {
+          "$x_slider": "server_address_position_x",
+          "$y_slider": "server_address_position_y",
+          "$custom_controls": [
+            {
+              "server_address": {
+                "type": "panel",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "server_address_main_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "server_address_mod_template_bg": {
+                      "type": "image",
+                      "texture": "textures/ui/Black",
+                      "size": [
+                        "100%c",
+                        16
+                      ],
+                      "alpha": 0.35,
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "server_address_background_toggle",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "stack_panel": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "layer": 10,
+                            "controls": [
+                              {
+                                "singleplayer_icon": {
+                                  "type": "image",
+                                  "size": [
+                                    16,
+                                    16
+                                  ],
+                                  "bindings": [
+                                    {
+                                      "binding_type": "view",
+                                      "source_control_name": "server_address_icon_toggle",
+                                      "source_property_name": "#toggle_state",
+                                      "target_property_name": "#visible"
+                                    }
+                                  ],
+                                  "texture": "azelux/assets/modules/preview/pack_icon"
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [
+                                    3,
+                                    3
+                                  ]
+                                }
+                              },
+                              {
+                                "labellmao": {
+                                  "type": "panel",
+                                  "size": [
+                                    "100%c+3px",
+                                    16
+                                  ],
+                                  "layer": 500,
+                                  "controls": [
+                                    {
+                                      "label": {
+                                        "layer": 500,
+                                        "type": "label",
+                                        "shadow": true,
+                                        "text": "dsc.gg/azelux",
+                                        "text_alignment": "left",
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "server_address_mod_template_no_bg": {
+                      "type": "image",
+                      "texture": "textures/ui/Black",
+                      "size": [
+                        "100%c",
+                        16
+                      ],
+                      "alpha": 0.0,
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "server_address_background_toggle",
+                          "source_property_name": "(not #toggle_state)",
+                          "target_property_name": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "stack_panel": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "layer": 10,
+                            "controls": [
+                              {
+                                "singleplayer_icon": {
+                                  "type": "image",
+                                  "size": [
+                                    16,
+                                    16
+                                  ],
+                                  "bindings": [
+                                    {
+                                      "binding_type": "view",
+                                      "source_control_name": "server_address_icon_toggle",
+                                      "source_property_name": "#toggle_state",
+                                      "target_property_name": "#visible"
+                                    }
+                                  ],
+                                  "texture": "azelux/assets/modules/server_address/hive"
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [
+                                    3,
+                                    3
+                                  ]
+                                }
+                              },
+                              {
+                                "labellmao": {
+                                  "type": "panel",
+                                  "size": [
+                                    "100%c+3px",
+                                    16
+                                  ],
+                                  "layer": 500,
+                                  "controls": [
+                                    {
+                                      "label": {
+                                        "layer": 500,
+                                        "type": "label",
+                                        "shadow": true,
+                                        "text": "dsc.gg/azelux",
+                                        "text_alignment": "left",
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chunkmap": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "chunkmap_main_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "chunkmap@mod_menu_sliders.movable_mod": {
+                "$x_slider": "chunkmap_position_x",
+                "$y_slider": "chunkmap_position_y",
+                "$custom_controls": [
+                  {
+                    "chunkmap_background": {
+                      "type": "image",
+                      "size": [60,60],
+                      "texture": "azelux/assets/modules/preview/chunkmap_background",
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "chunkmap_background_toggle",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "chunkmap": {
+                      "type": "image",
+                      "size": [60,60],
+                      "texture": "azelux/assets/modules/preview/chunkmap",
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "chunkmap_background_toggle",
+                          "source_property_name": "(not #toggle_state)",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chat": {
+          "type": "panel",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "controls": [
+            {
+              "chat_default": {
+                "type": "image",
+                "texture": "textures/ui/Black",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "alpha": 0.5,
+                "size": [
+                  "35%",
+                  10
+                ],
+                "offset": [
+                  0,
+                  "-20%"
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "chat_main_toggle",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "label": {
+                      "type": "label",
+                      "text": "<Team> Tysm for using Azelux <3",
+                      "text_alignment": "left",
+                      "shadow": true,
+                      "size": [
+                        "100%",
+                        "95%"
+                      ],
+                      "offset": [
+                        2,
+                        0
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "chat": {
+                "type": "panel",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "chat_main_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "chat": {
+                      "type": "panel",
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "hide_chat_toggle",
+                          "source_property_name": "(not #toggle_state)",
+                          "target_property_name": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "chat_default": {
+                            "type": "panel",
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "size": [
+                              "35%",
+                              10
+                            ],
+                            "offset": [
+                              0,
+                              "30%"
+                            ],
+                            "controls": [
+                              {
+                                "background": {
+                                  "type": "image",
+                                  "texture": "textures/ui/Black",
+                                  "alpha": 0.5,
+                                  "size": [
+                                    "100%",
+                                    "100%"
+                                  ],
+                                  "bindings": [
+                                    {
+                                      "binding_type": "view",
+                                      "source_control_name": "chat_mod_background_toggle",
+                                      "source_property_name": "#toggle_state",
+                                      "target_property_name": "#visible"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "label": {
+                                  "type": "label",
+                                  "text": "<Team> Tysm for using Azelux <3",
+                                  "text_alignment": "left",
+                                  "shadow": true,
+                                  "size": [
+                                    "100%",
+                                    "95%"
+                                  ],
+                                  "offset": [
+                                    2,
+                                    0
+                                  ]
+                                }
+                              }
+                            ],
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "chat_background_toggle",
+                                "source_property_name": "#toggle_state",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "custom_mods_list@mods_list_mod.mods_list": {}
+            },
+            {
+              "inventory_hud": {
+                "type": "panel",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "inventory_hud_main_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "inventory_hud@mod_menu_sliders.movable_mod": {
+                      "$x_slider": "inventory_hud_position_x",
+                      "$y_slider": "inventory_hud_position_y",
+                      "$custom_controls": [
+                        {
+                          "image": {
+                            "type": "image",
+                            "texture": "azelux/assets/modules/preview/inventory_hud",
+                            "size": [134,44]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "durability_viewer": {
+                "type": "panel",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "durability_viewer_main_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "durability_viewer@mod_menu_sliders.movable_mod": {
+                      "$x_slider": "durability_viewer_position_x",
+                      "$y_slider": "durability_viewer_position_y",
+                      "$custom_controls": [
+                        {
+                          "background": {
+                            "type": "image",
+                            "texture": "azelux/assets/modules/preview/durability_viewer",
+                            "size": [63,15],
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "durability_viewer_background_toggle",
+                                "source_property_name": "(not #toggle_state)",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "background": {
+                            "type": "image",
+                            "texture": "azelux/assets/modules/preview/durability_viewer_background",
+                            "size": [63,15],
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "durability_viewer_background_toggle",
+                                "source_property_name": "#toggle_state",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "offhand_hud": {
+                "type": "panel",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "offhand_hud_main_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "offhand_hud@mod_menu_sliders.movable_mod": {
+                      "$x_slider": "offhand_hud_position_x",
+                      "$y_slider": "offhand_hud_position_y",
+                      "$custom_controls": [
+                        {
+                          "background": {
+                            "type": "image",
+                            "texture": "azelux/assets/modules/preview/offhand_hud",
+                            "size": [20,20]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.azelux.halo": {
+            "loop": true,
+            "bones": {
+                "halo": {
+                    "rotation": [
+                        "((math.sin(query.anim_time * math.pi * 2 * 20) + 1) / 2) * -4",
+                        0,
+                        0
+                    ],
+                    "position": [
+                        0,
+                        "((math.sin(query.anim_time * math.pi * 2 * 20) + 1) / 2) * 1",
+                        0
+                    ]
+                }
+            }
+        }
+    }
+}

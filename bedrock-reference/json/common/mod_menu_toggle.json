@@ -1,0 +1,2479 @@
+{
+  "namespace": "mod_menu_toggles",
+  "mod_menu_mod_toggle": {
+    "type": "panel",
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "azelux/assets/mod_menu/mod_background",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [ 78.3, 76.3 ],
+          "controls": [
+            {
+              "circle": {
+                "type": "image",
+                "texture": "azelux/assets/common/circle",
+                "color": [1,0.5,0],
+                "alpha": "@animations.circle_flicker",
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "size": [5,5],
+                "offset": [1.5,-1.5],
+                "ignored": "(not $requires_config_saving)"
+              }
+            },
+            {
+              "icon": {
+                "type": "image",
+                "texture": "('azelux/assets/mod_menu/icons/' + $icon)",
+                "size": "$icon_size",
+                "$icon_size|default": [17,17],
+                "offset": "$icon_offset",
+                "$icon_offset|default": [0,-17],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "layer": 2
+              }
+            },
+            {
+              "new_label": {
+                "type": "panel",
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [4,32],
+                "controls": [
+                  {
+                    "text": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "offset": [0,1.4],
+                      "controls": [
+                        {
+                          "text": {
+                            "type": "label",
+                            "color": [0.494, 0.490, 0.490],
+                            "layer": 3,
+                            "text": "$mod_name",
+                            "shadow": false,
+                            "font_type": "Roboto-Regular",
+                            "font_scale_factor": 0.75,
+                            "alpha": 1
+                          }
+                        },
+                        {
+                          "new_label": {
+                            "type": "panel",
+                            "size": [8,4],
+                            "controls": [
+                              {
+                                "new": {
+                                  "type": "label",
+                                  "color": [1,0.1,0],
+                                  "offset": [-1.5,-2],
+                                  "layer": 3,
+                                  "text": "NEW",
+                                  "shadow": false,
+                                  "ignored": "(not $is_new_mod)",
+                                  "font_type": "Roboto-Regular",
+                                  "font_scale_factor": 0.45,
+                                  "alpha": 1
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "mod_menu_mod_toggle": {
+                "type": "panel",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "offset": [
+                  0,"33%"
+                ],
+                "controls": [
+                  {
+                    "toggles_stack_panel": {
+                      "type": "stack_panel",
+                      "orientation": "vertical",
+                      "controls": [
+                        {
+                          "settings_toggle@mod_menu_toggles.settings_mod_toggle": {
+                            "offset": [-0.3,0.3],
+                            "size":["100%",13.61],
+                            "$toggle_group_forced_index": 0
+                          }
+                        },
+                        {
+                          "toggle@mod_menu_toggles.mod_toggle": {
+                            "offset": [-0.3,0],
+                            "size":["100%",14.3],
+                            "layer": 100
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "mod_toggle@common_toggles.light_ui_toggle": {
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "$toggle_name": "$mods_toggle_name",
+    "$toggle_view_binding_name": "$mods_toggle_view_binding_name",
+    "$unchecked_control": "mod_menu_toggles.toggle_unchecked",
+    "$checked_control": "mod_menu_toggles.toggle_checked",
+    "$unchecked_hover_control": "mod_menu_toggles.toggle_unchecked_hover",
+    "$checked_hover_control": "mod_menu_toggles.toggle_checked_hover",
+    "$toggle_default_state": "$main_mod_toggle_default_state",
+    "controls": [
+      {
+        "$toggle_view_binding_name@$template_toggle": {
+          "controls": [
+            { "unchecked@$unchecked_control": {} },
+            { "checked@$checked_control": {} },
+            { "unchecked_hover@$unchecked_hover_control": {} },
+            { "checked_hover@$checked_hover_control": {} },
+            { "unchecked_locked@$unchecked_locked_control": {} },
+            { "checked_locked@$checked_locked_control": {} },
+            { "unchecked_locked_hover@$unchecked_locked_hover_control": {} },
+            { "checked_locked_hover@$checked_locked_hover_control": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*"mod_toggle@common.toggle": {
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "$radio_toggle_group": false,
+    "$toggle_name": "$mods_toggle_name",
+    "$toggle_view_binding_name": "$mods_toggle_view_binding_name",
+    "$unchecked_locked_control|default": "mod_menu_toggles.toggle_unchecked",
+    "$unchecked_locked_hover_control|default": "mod_menu_toggles.toggle_checked",
+    "$checked_locked_control|default": "mod_menu_toggles.toggle_checked",
+    "$checked_locked_hover_control|default": "mod_menu_toggles.toggle_checked",
+    "$unchecked_control|default": "mod_menu_toggles.toggle_unchecked",
+    "$checked_control|default": "mod_menu_toggles.toggle_checked",
+    "$unchecked_hover_control|default": "mod_menu_toggles.toggle_unchecked_hover",
+    "$checked_hover_control|default": "mod_menu_toggles.toggle_checked_hover"
+  },*/
+
+  "toggle_unchecked@mod_menu_toggles.toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/disabled_mod",
+    "$toggle_unchecked": true,
+    "$default_state": true,
+    "layer": 2,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.mod_toggle_text": {
+          "$mod_toggle_text": "D I S A B L E D",
+          "layer": 3
+        }
+      }
+    ]
+  },
+  "toggle_unchecked_hover@mod_menu_toggles.toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/disabled_mod_hover",
+    "layer": 2,
+    "$toggle_unchecked_hover": true,
+    "$hover_state": true,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.mod_toggle_text": {
+          "$mod_toggle_text": "D I S A B L E D",
+          "layer": 3
+        }
+      }
+    ]
+  },
+  "toggle_checked@mod_menu_toggles.toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/enabled_mod",
+    "layer": 2,
+    "$toggle_checked": true,
+    "$pressed_state": true,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.mod_toggle_text": {
+          "$mod_toggle_text": "E N A B L E D",
+          "layer": 3
+        }
+      }
+    ]
+  },
+  "toggle_checked_hover@mod_menu_toggles.toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/enabled_mod_hover",
+    "layer": 2,
+    "$toggle_checked_hover": true,
+    "$pressed_state": true,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.mod_toggle_text": {
+          "$mod_toggle_text": "E N A B L E D",
+          "layer": 3
+        }
+      }
+    ]
+  },
+
+  "toggle_content": {
+    "type": "panel",
+    "$default|default": false,
+    "$hover|default": false,
+    "$pressed|default": false,
+    "layer": 30,
+    "size": [
+      "100%",
+      "100%"
+    ]
+  },
+
+  "mod_toggle_text": {
+    "type": "label",
+    "font_type": "STD",
+    "font_scale_factor": 0.52,
+    "offset": [0,-1],
+    "text": "$mod_toggle_text"
+  },
+
+  "settings_mod_toggle@common.toggle": {
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 0,
+    "$toggle_name": "$settings_toggle_name",
+    "$toggle_view_binding_name": "$settings_binding_name",
+    "$unchecked_locked_control|default": "mod_menu_toggles.settings_toggle_unchecked",
+    "$unchecked_locked_hover_control|default": "mod_menu_toggles.settings_toggle_checked",
+    "$checked_locked_control|default": "mod_menu_toggles.settings_toggle_checked",
+    "$checked_locked_hover_control|default": "mod_menu_toggles.settings_toggle_checked",
+    "$unchecked_control|default": "mod_menu_toggles.settings_toggle_unchecked",
+    "$checked_control|default": "mod_menu_toggles.settings_toggle_checked",
+    "$unchecked_hover_control|default": "mod_menu_toggles.settings_toggle_unchecked_hover",
+    "$checked_hover_control|default": "mod_menu_toggles.settings_toggle_checked_hover"
+  },
+  "settings_toggle_unchecked@mod_menu_toggles.settings_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/mod_settings",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "offset": [0,0.3],
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.settings_mod_toggle_text": {
+        }
+      }
+    ]
+  },
+  "settings_toggle_unchecked_hover@mod_menu_toggles.settings_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/mod_settings_hover",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "offset": [0,0.3],
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.settings_mod_toggle_text": {
+        }
+      }
+    ]
+  },
+  "settings_toggle_checked@mod_menu_toggles.settings_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/mod_settings",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "offset": [0,0.3],
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.settings_mod_toggle_text": {
+        }
+      }
+    ]
+  },
+  "settings_toggle_checked_hover@mod_menu_toggles.settings_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/mod_settings_hover",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "offset": [0,0.3],
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.settings_mod_toggle_text": {
+        }
+      }
+    ]
+  },
+  "settings_toggle_content": {
+    "type": "panel",
+    "$default|default": false,
+    "$hover|default": false,
+    "$pressed|default": false,
+    "layer": 30,
+    "size": [
+      "100%",
+      "100%"
+    ]
+  },
+
+  "settings_mod_toggle_text": {
+    "type": "label",
+    "font_type": "STD",
+    "font_scale_factor": 0.52,
+    "offset": [-6,-1],
+    "text": "O P T I O N S"
+  },
+
+  "mod_menu_tab": {
+    "type": "panel",
+    "layer": 3,
+    "$template_toggle|default": "azelux_toggles.light_ui_toggle_3",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 1,
+    "$toggle_name": "categories_toggle",
+    "$toggle_tab_focus_binding_name": "#categories_focus_precedence",
+    "$toggle_tab_focus_binding_type": "global",
+    "$toggle_on_hover_binding_type": "global",
+    "$toggle_on_hover_binding_name": "#toggle_on_hover",
+    "controls": [
+      {
+        "$toggle_view_binding_name@$template_toggle": {}
+      }
+    ]
+  },
+
+  "mod_menu_tab2": {
+    "type": "panel",
+    "layer": 3,
+    "$template_toggle|default": "azelux_toggles.light_ui_toggle_4",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 1,
+    "$toggle_tab_focus_binding_name": "#categories_focus_precedence",
+    "$toggle_tab_focus_binding_type": "global",
+    "$toggle_on_hover_binding_type": "global",
+    "$toggle_on_hover_binding_name": "#toggle_on_hover",
+    "controls": [
+      {
+        "$toggle_view_binding_name@$template_toggle": {}
+      }
+    ]
+  },
+
+  "mod_menu_tab5": {
+    "type": "panel",
+    "layer": 3,
+    "$template_toggle|default": "mod_menu_toggles.mod_menu_tab_5_toggle_2",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 1,
+    "$toggle_name": "color_picker",
+    "$toggle_tab_focus_binding_name": "#categories_focus_precedence",
+    "$toggle_tab_focus_binding_type": "global",
+    "$toggle_on_hover_binding_type": "global",
+    "$toggle_on_hover_binding_name": "#toggle_on_hover",
+    "controls": [
+      {
+        "$toggle_view_binding_name@$template_toggle": {}
+      },
+      {
+        "color": {
+          "type": "image",
+          "texture": "azelux/assets/common/square",
+          "size": [7,7],
+          "color": "$custom_color"
+        }
+      }
+    ]
+  },
+
+  "mod_menu_tab_5_toggle_2@common.toggle": {
+    "$unchecked_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_unchecked3",
+    "$checked_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_checked3",
+    "$unchecked_hover_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_unchecked_hover3",
+    "$checked_hover_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_checked_hover3",
+    "$unchecked_locked_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_unchecked3",
+    "$checked_locked_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_checked3",
+    "$unchecked_locked_hover_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_unchecked_hover3",
+    "$checked_locked_hover_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_checked_hover3",
+    "button_mappings": "$button_mappings",
+    "toggle_default_state": "$toggle_tags",
+    "$is_back_button|default": false,
+    "$enable_focus_enabled_bind|default": false,
+    "$enable_focus_id_bind|default": false,
+    "$enable_hover_event_mapping|default": false,
+    "$focus_enabled_binding_name|default": "",
+    "$focus_id_binding_name|default": "",
+    "focus_magnet_enabled": "$toggle_focus_magnet_enabled",
+    "focus_wrap_enabled": "$toggle_focus_wrap_enabled",
+    "$toggle_binding_type|default": "none",
+    "$toggle_checked_hover|default": false,
+    "$toggle_checked|default": false,
+    "$toggle_enabled_binding_type|default": "none",
+    "$toggle_focus_magnet_enabled|default": true,
+    "$toggle_focus_wrap_enabled|default": true,
+    "$toggle_hover_event_mapping|default": "",
+    "$toggle_on_hover_binding_name|default": "",
+    "$toggle_on_hover_binding_type|default": "none",
+    "$toggle_parent_collection_details_name|default": "",
+    "$toggle_parent_collection_details_prefix|default": "",
+    "$toggle_parent_collection_details|default": "none",
+    "$toggle_property_bag_binding_condition|default": "visible",
+    "$toggle_property_bag_binding_name|default": "#fill_toggle_property_bag",
+    "$toggle_property_bag_binding_type|default": "none",
+    "$toggle_tab_focus_binding_name|default": "",
+    "$toggle_tab_focus_binding_type|default": "none",
+    "$toggle_tab_focus_id_binding_name|default": "",
+    "$toggle_tab_focus_id_binding_type|default": "none",
+    "$toggle_tab_focus_override_down_binding_type|default": "none",
+    "$toggle_tab_focus_override_down|default": "#focus_override_down",
+    "$toggle_tab_focus_override_left_binding_type|default": "none",
+    "$toggle_tab_focus_override_left|default": "#focus_override_left",
+    "$toggle_tab_focus_override_right_binding_type|default": "none",
+    "$toggle_tab_focus_override_right|default": "#focus_override_right",
+    "$toggle_tab_focus_override_up_binding_type|default": "none",
+    "$toggle_tab_focus_override_up|default": "#focus_override_up",
+    "$toggle_tts_header_binding_collection_name|default": "",
+    "$toggle_tts_header_binding_condition|default": "visible",
+    "$toggle_tts_header_binding_type|default": "none",
+    "$toggle_tts_header|default": "",
+    "$toggle_unchecked_hover|default": false,
+    "$toggle_unchecked|default": false,
+    "$custom_toggle_binding_condition|default": "visible",
+    "$custom_toggle_binding_type|default": "none",
+    "$custom_toggle_state_binding_name_override|default": "",
+    "$custom_toggle_state_binding_name|default": "",
+    "$default_border_visible|default": false,
+    "$default_checked_texture_alpha|default": 1,
+    "$default_checked_texture_color|default": "$f_color_format",
+    "$default_state|default": false,
+    "$default_texture_alpha|default": 1,
+    "$toggle_focus_enabled": true,
+    "$binding_type": "global",
+    "$binding_condition": "t",
+    "$is_custom_button|default": true,
+    "$custom_from_button_id|default": "",
+    "$custom_to_button_id|default": "",
+    "$custom_mapping_type|default": "global",
+    "$custom_scope|default": "",
+    "$button_mappings|default": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_off_button"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_on_button"
+      },
+      {
+        "ignored": "(not $enable_hover_event_mapping)",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_hover_event_mapping"
+      },
+      {
+        "ignored": "(not $is_back_button)",
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "global"
+      }
+    ]
+  },
+
+  "mod_menu_color_picker": {
+    "type": "panel",
+    "layer": 3,
+    "$template_toggle|default": "mod_menu_toggles.mod_menu_color_picker_2",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 1,
+    "$toggle_name": "color_selector",
+    "$toggle_tab_focus_binding_name": "#categories_focus_precedence",
+    "$toggle_tab_focus_binding_type": "global",
+    "$toggle_on_hover_binding_type": "global",
+    "$toggle_on_hover_binding_name": "#toggle_on_hover",
+    "controls": [
+      {
+        "$toggle_view_binding_name@$template_toggle": {}
+      },
+      {
+        "color": {
+          "type": "image",
+          "texture": "azelux/assets/common/square",
+          "size": [7,7],
+          "color": "$custom_color"
+        }
+      }
+    ]
+  },
+
+  "mod_menu_color_picker_2@common.toggle": {
+    "$unchecked_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_unchecked3",
+    "$checked_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_checked3",
+    "$unchecked_hover_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_unchecked_hover3",
+    "$checked_hover_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_checked_hover3",
+    "$unchecked_locked_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_unchecked3",
+    "$checked_locked_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_checked3",
+    "$unchecked_locked_hover_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_unchecked_hover3",
+    "$checked_locked_hover_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_checked_hover3",
+    "button_mappings": "$button_mappings",
+    "toggle_default_state": "$toggle_tags",
+    "$is_back_button|default": false,
+    "$enable_focus_enabled_bind|default": false,
+    "$enable_focus_id_bind|default": false,
+    "$enable_hover_event_mapping|default": false,
+    "$focus_enabled_binding_name|default": "",
+    "$focus_id_binding_name|default": "",
+    "focus_magnet_enabled": "$toggle_focus_magnet_enabled",
+    "focus_wrap_enabled": "$toggle_focus_wrap_enabled",
+    "$toggle_binding_type|default": "none",
+    "$toggle_checked_hover|default": false,
+    "$toggle_checked|default": false,
+    "$toggle_enabled_binding_type|default": "none",
+    "$toggle_focus_magnet_enabled|default": true,
+    "$toggle_focus_wrap_enabled|default": true,
+    "$toggle_hover_event_mapping|default": "",
+    "$toggle_on_hover_binding_name|default": "",
+    "$toggle_on_hover_binding_type|default": "none",
+    "$toggle_parent_collection_details_name|default": "",
+    "$toggle_parent_collection_details_prefix|default": "",
+    "$toggle_parent_collection_details|default": "none",
+    "$toggle_property_bag_binding_condition|default": "visible",
+    "$toggle_property_bag_binding_name|default": "#fill_toggle_property_bag",
+    "$toggle_property_bag_binding_type|default": "none",
+    "$toggle_tab_focus_binding_name|default": "",
+    "$toggle_tab_focus_binding_type|default": "none",
+    "$toggle_tab_focus_id_binding_name|default": "",
+    "$toggle_tab_focus_id_binding_type|default": "none",
+    "$toggle_tab_focus_override_down_binding_type|default": "none",
+    "$toggle_tab_focus_override_down|default": "#focus_override_down",
+    "$toggle_tab_focus_override_left_binding_type|default": "none",
+    "$toggle_tab_focus_override_left|default": "#focus_override_left",
+    "$toggle_tab_focus_override_right_binding_type|default": "none",
+    "$toggle_tab_focus_override_right|default": "#focus_override_right",
+    "$toggle_tab_focus_override_up_binding_type|default": "none",
+    "$toggle_tab_focus_override_up|default": "#focus_override_up",
+    "$toggle_tts_header_binding_collection_name|default": "",
+    "$toggle_tts_header_binding_condition|default": "visible",
+    "$toggle_tts_header_binding_type|default": "none",
+    "$toggle_tts_header|default": "",
+    "$toggle_unchecked_hover|default": false,
+    "$toggle_unchecked|default": false,
+    "$custom_toggle_binding_condition|default": "visible",
+    "$custom_toggle_binding_type|default": "none",
+    "$custom_toggle_state_binding_name_override|default": "",
+    "$custom_toggle_state_binding_name|default": "",
+    "$default_border_visible|default": false,
+    "$default_checked_texture_alpha|default": 1,
+    "$default_checked_texture_color|default": "$f_color_format",
+    "$default_state|default": false,
+    "$default_texture_alpha|default": 1,
+    "$toggle_focus_enabled": true,
+    "$binding_type": "global",
+    "$binding_condition": "t",
+    "$is_custom_button|default": true,
+    "$custom_from_button_id|default": "",
+    "$custom_to_button_id|default": "",
+    "$custom_mapping_type|default": "global",
+    "$custom_scope|default": "",
+    "$button_mappings|default": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_off_button"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_on_button"
+      },
+      {
+        "ignored": "(not $enable_hover_event_mapping)",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_hover_event_mapping"
+      },
+      {
+        "ignored": "(not $is_back_button)",
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "global"
+      }
+    ]
+  },
+
+  "mod_menu_crosshair_picker": {
+    "type": "panel",
+    "layer": 3,
+    "$template_toggle|default": "mod_menu_toggles.mod_menu_crosshair_picker_2",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 1,
+    "$toggle_name": "color_selector",
+    "$toggle_tab_focus_binding_name": "#categories_focus_precedence",
+    "$toggle_tab_focus_binding_type": "global",
+    "$toggle_on_hover_binding_type": "global",
+    "$toggle_on_hover_binding_name": "#toggle_on_hover",
+    "controls": [
+      {
+        "$toggle_view_binding_name@$template_toggle": {}
+      },
+      {
+        "crosshair": {
+          "type": "image",
+          "texture": "('azelux/assets/modules/crosshair/' + $crosshair_id)",
+          "size": [12,12],
+          "offset": [0.2,0.2]
+        }
+      }
+    ]
+  },
+
+  "mod_menu_crosshair_picker_2@common.toggle": {
+    "$unchecked_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_unchecked3",
+    "$checked_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_checked3",
+    "$unchecked_hover_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_unchecked_hover3",
+    "$checked_hover_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_checked_hover3",
+    "$unchecked_locked_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_unchecked3",
+    "$checked_locked_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_checked3",
+    "$unchecked_locked_hover_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_unchecked_hover3",
+    "$checked_locked_hover_control|default": "mod_menu_toggles.mod_menu_tabs_toggle_checked_hover3",
+    "button_mappings": "$button_mappings",
+    "toggle_default_state": "$toggle_tags",
+    "$is_back_button|default": false,
+    "$enable_focus_enabled_bind|default": false,
+    "$enable_focus_id_bind|default": false,
+    "$enable_hover_event_mapping|default": false,
+    "$focus_enabled_binding_name|default": "",
+    "$focus_id_binding_name|default": "",
+    "focus_magnet_enabled": "$toggle_focus_magnet_enabled",
+    "focus_wrap_enabled": "$toggle_focus_wrap_enabled",
+    "$toggle_binding_type|default": "none",
+    "$toggle_checked_hover|default": false,
+    "$toggle_checked|default": false,
+    "$toggle_enabled_binding_type|default": "none",
+    "$toggle_focus_magnet_enabled|default": true,
+    "$toggle_focus_wrap_enabled|default": true,
+    "$toggle_hover_event_mapping|default": "",
+    "$toggle_on_hover_binding_name|default": "",
+    "$toggle_on_hover_binding_type|default": "none",
+    "$toggle_parent_collection_details_name|default": "",
+    "$toggle_parent_collection_details_prefix|default": "",
+    "$toggle_parent_collection_details|default": "none",
+    "$toggle_property_bag_binding_condition|default": "visible",
+    "$toggle_property_bag_binding_name|default": "#fill_toggle_property_bag",
+    "$toggle_property_bag_binding_type|default": "none",
+    "$toggle_tab_focus_binding_name|default": "",
+    "$toggle_tab_focus_binding_type|default": "none",
+    "$toggle_tab_focus_id_binding_name|default": "",
+    "$toggle_tab_focus_id_binding_type|default": "none",
+    "$toggle_tab_focus_override_down_binding_type|default": "none",
+    "$toggle_tab_focus_override_down|default": "#focus_override_down",
+    "$toggle_tab_focus_override_left_binding_type|default": "none",
+    "$toggle_tab_focus_override_left|default": "#focus_override_left",
+    "$toggle_tab_focus_override_right_binding_type|default": "none",
+    "$toggle_tab_focus_override_right|default": "#focus_override_right",
+    "$toggle_tab_focus_override_up_binding_type|default": "none",
+    "$toggle_tab_focus_override_up|default": "#focus_override_up",
+    "$toggle_tts_header_binding_collection_name|default": "",
+    "$toggle_tts_header_binding_condition|default": "visible",
+    "$toggle_tts_header_binding_type|default": "none",
+    "$toggle_tts_header|default": "",
+    "$toggle_unchecked_hover|default": false,
+    "$toggle_unchecked|default": false,
+    "$custom_toggle_binding_condition|default": "visible",
+    "$custom_toggle_binding_type|default": "none",
+    "$custom_toggle_state_binding_name_override|default": "",
+    "$custom_toggle_state_binding_name|default": "",
+    "$default_border_visible|default": false,
+    "$default_checked_texture_alpha|default": 1,
+    "$default_checked_texture_color|default": "$f_color_format",
+    "$default_state|default": false,
+    "$default_texture_alpha|default": 1,
+    "$toggle_focus_enabled": true,
+    "$binding_type": "global",
+    "$binding_condition": "t",
+    "$is_custom_button|default": true,
+    "$custom_from_button_id|default": "",
+    "$custom_to_button_id|default": "",
+    "$custom_mapping_type|default": "global",
+    "$custom_scope|default": "",
+    "$button_mappings|default": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_off_button"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_on_button"
+      },
+      {
+        "ignored": "(not $enable_hover_event_mapping)",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_hover_event_mapping"
+      },
+      {
+        "ignored": "(not $is_back_button)",
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "global"
+      }
+    ]
+  },
+
+  "mod_menu_tab_crosshair": {
+    "type": "panel",
+    "layer": 3,
+    "$template_toggle|default": "azelux_toggles.light_ui_toggle_5",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 1,
+    "$toggle_name": "categories_toggle",
+    "$toggle_tab_focus_binding_name": "#categories_focus_precedence",
+    "$toggle_tab_focus_binding_type": "global",
+    "$toggle_on_hover_binding_type": "global",
+    "$toggle_on_hover_binding_name": "#toggle_on_hover",
+    "controls": [
+      {
+        "$toggle_view_binding_name@$template_toggle": {}
+      },
+      {
+        "crosshair": {
+          "type": "image",
+          "texture": "('azelux/assets/modules/crosshair/' + $crosshair_id)",
+          "size": [12,12],
+          "offset": [0.2,0.2]
+        }
+      }
+    ]
+  },
+
+  "mod_menu_tabs_toggle_unchecked@mod_menu_toggles.settings_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/buttons/button_less",
+    "layer": 1,
+    "size": [
+      "100%c+ 12px",
+      13
+    ],
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.tab_mod_toggle_text": {
+          "$text_color": [0.6,0.6,0.6]
+        }
+      }
+    ]
+  },
+
+  "mod_menu_tabs_toggle_unchecked_hover@mod_menu_toggles.settings_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/buttons/button_default",
+    "layer": 1,
+    "size": [
+      "100%c+ 12px",
+      13
+    ],
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.tab_mod_toggle_text": {
+          "$text_color": [0.8,0.8,0.8]
+        }
+      }
+    ]
+  },
+
+  "mod_menu_tabs_toggle_checked@mod_menu_toggles.settings_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/buttons/button_default",
+    "layer": 1,
+    "size": [
+      "100%c+ 12px",
+      13
+    ],
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.tab_mod_toggle_text": {
+          "$text_color": [0.6,0.6,0.6]
+        }
+      }
+    ]
+  },
+
+  "mod_menu_tabs_toggle_checked_hover@mod_menu_toggles.settings_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/buttons/button_default",
+    "layer": 1,
+    "size": [
+      "100%c+ 12px",
+      13
+    ],
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.tab_mod_toggle_text": {
+          "$text_color": [0.8,0.8,0.8]
+        }
+      }
+    ]
+  },
+
+  "mod_menu_tabs_toggle_unchecked3@mod_menu_toggles.settings_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/buttons/button_less",
+    "layer": 1,
+    "size": "$button_size",
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.tab_mod_toggle_text": {
+          "$text_color": [0.6,0.6,0.6]
+        }
+      }
+    ]
+  },
+
+  "mod_menu_tabs_toggle_unchecked_hover3@mod_menu_toggles.settings_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/buttons/button_default",
+    "layer": 1,
+    "size": "$button_size",
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.tab_mod_toggle_text": {
+          "$text_color": [0.8,0.8,0.8]
+        }
+      }
+    ]
+  },
+
+  "mod_menu_tabs_toggle_checked3@mod_menu_toggles.settings_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/buttons/button_default",
+    "layer": 1,
+    "size": "$button_size",
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.tab_mod_toggle_text": {
+          "$text_color": [0.6,0.6,0.6]
+        }
+      }
+    ]
+  },
+
+  "mod_menu_tabs_toggle_checked_hover3@mod_menu_toggles.settings_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/buttons/button_default",
+    "layer": 1,
+    "size": "$button_size",
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.tab_mod_toggle_text": {
+          "$text_color": [0.8,0.8,0.8]
+        }
+      }
+    ]
+  },
+
+  "mod_menu_tabs_toggle_unchecked2@mod_menu_toggles.settings_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/buttons/button_less",
+    "size": "$button_size",
+    "layer": 1,
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.tab_mod_toggle_text": {
+          "$text_color": [0.6,0.6,0.6],
+          "font_scale_factor": "$font_size_lol"
+        }
+      }
+    ]
+  },
+
+  "mod_menu_tabs_toggle_unchecked_hover2@mod_menu_toggles.settings_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/buttons/button_default",
+    "size": "$button_size",
+    "layer": 1,
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.tab_mod_toggle_text": {
+          "$text_color": [0.8,0.8,0.8],
+          "font_scale_factor": "$font_size_lol"
+        }
+      }
+    ]
+  },
+
+  "mod_menu_tabs_toggle_checked2@mod_menu_toggles.settings_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/buttons/button_default",
+    "size": "$button_size",
+    "layer": 1,
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.tab_mod_toggle_text": {
+          "$text_color": [0.6,0.6,0.6],
+          "font_scale_factor": "$font_size_lol"
+        }
+      }
+    ]
+  },
+
+  "mod_menu_tabs_toggle_checked_hover2@mod_menu_toggles.settings_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/buttons/button_default",
+    "size": "$button_size",
+    "layer": 1,
+    "controls": [
+      {
+        "mod_toggle_text@mod_menu_toggles.tab_mod_toggle_text": {
+          "$text_color": [0.8,0.8,0.8],
+          "font_scale_factor": "$font_size_lol"
+        }
+      }
+    ]
+  },
+
+  "tab_mod_toggle_text": {
+    "type": "label",
+    "font_type": "STD",
+    "font_scale_factor": 0.52,
+    "offset": [0,-1],
+    "color": "$text_color",
+    "text": "$mod_toggle_text",
+    "layer": 100
+  },
+
+  "tab_cosmetics_mod_toggle": {
+    "type": "panel",
+    "layer": 3,
+    "$template_toggle|default": "mod_menu_toggles.tab_cosmetics_mod_toggle_2",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 0,
+    "$toggle_name": "cosmetic_tab_selector",
+    "$toggle_tab_focus_binding_name": "#categories_focus_precedence",
+    "$toggle_tab_focus_binding_type": "global",
+    "$toggle_on_hover_binding_type": "global",
+    "$toggle_on_hover_binding_name": "#toggle_on_hover",
+    "controls": [
+      {
+        "$toggle_view_binding_name@$template_toggle": {}
+      }
+    ]
+  },
+
+  "tab_cosmetics_mod_toggle_2@common.toggle": {
+    "$unchecked_locked_control|default": "mod_menu_toggles.tab_cosmetics_toggle_unchecked",
+    "$unchecked_locked_hover_control|default": "mod_menu_toggles.tab_cosmetics_toggle_checked",
+    "$checked_locked_control|default": "mod_menu_toggles.tab_cosmetics_toggle_checked",
+    "$checked_locked_hover_control|default": "mod_menu_toggles.tab_cosmetics_toggle_checked",
+    "$unchecked_control|default": "mod_menu_toggles.tab_cosmetics_toggle_unchecked",
+    "$checked_control|default": "mod_menu_toggles.tab_cosmetics_toggle_checked",
+    "$unchecked_hover_control|default": "mod_menu_toggles.tab_cosmetics_toggle_unchecked_hover",
+    "$checked_hover_control|default": "mod_menu_toggles.tab_cosmetics_toggle_checked_hover",
+    "button_mappings": "$button_mappings",
+    "toggle_default_state": "$toggle_tags",
+    "$is_back_button|default": false,
+    "$enable_focus_enabled_bind|default": false,
+    "$enable_focus_id_bind|default": false,
+    "$enable_hover_event_mapping|default": false,
+    "$focus_enabled_binding_name|default": "",
+    "$focus_id_binding_name|default": "",
+    "focus_magnet_enabled": "$toggle_focus_magnet_enabled",
+    "focus_wrap_enabled": "$toggle_focus_wrap_enabled",
+    "$toggle_binding_type|default": "none",
+    "$toggle_checked_hover|default": false,
+    "$toggle_checked|default": false,
+    "$toggle_enabled_binding_type|default": "none",
+    "$toggle_focus_magnet_enabled|default": true,
+    "$toggle_focus_wrap_enabled|default": true,
+    "$toggle_hover_event_mapping|default": "",
+    "$toggle_on_hover_binding_name|default": "",
+    "$toggle_on_hover_binding_type|default": "none",
+    "$toggle_parent_collection_details_name|default": "",
+    "$toggle_parent_collection_details_prefix|default": "",
+    "$toggle_parent_collection_details|default": "none",
+    "$toggle_property_bag_binding_condition|default": "visible",
+    "$toggle_property_bag_binding_name|default": "#fill_toggle_property_bag",
+    "$toggle_property_bag_binding_type|default": "none",
+    "$toggle_tab_focus_binding_name|default": "",
+    "$toggle_tab_focus_binding_type|default": "none",
+    "$toggle_tab_focus_id_binding_name|default": "",
+    "$toggle_tab_focus_id_binding_type|default": "none",
+    "$toggle_tab_focus_override_down_binding_type|default": "none",
+    "$toggle_tab_focus_override_down|default": "#focus_override_down",
+    "$toggle_tab_focus_override_left_binding_type|default": "none",
+    "$toggle_tab_focus_override_left|default": "#focus_override_left",
+    "$toggle_tab_focus_override_right_binding_type|default": "none",
+    "$toggle_tab_focus_override_right|default": "#focus_override_right",
+    "$toggle_tab_focus_override_up_binding_type|default": "none",
+    "$toggle_tab_focus_override_up|default": "#focus_override_up",
+    "$toggle_tts_header_binding_collection_name|default": "",
+    "$toggle_tts_header_binding_condition|default": "visible",
+    "$toggle_tts_header_binding_type|default": "none",
+    "$toggle_tts_header|default": "",
+    "$toggle_unchecked_hover|default": false,
+    "$toggle_unchecked|default": false,
+    "$custom_toggle_binding_condition|default": "visible",
+    "$custom_toggle_binding_type|default": "none",
+    "$custom_toggle_state_binding_name_override|default": "",
+    "$custom_toggle_state_binding_name|default": "",
+    "$default_border_visible|default": false,
+    "$default_checked_texture_alpha|default": 1,
+    "$default_checked_texture_color|default": "$f_color_format",
+    "$default_state|default": false,
+    "$default_texture_alpha|default": 1,
+    "$toggle_focus_enabled": true,
+    "$binding_type": "global",
+    "$binding_condition": "t",
+    "$is_custom_button|default": true,
+    "$custom_from_button_id|default": "",
+    "$custom_to_button_id|default": "",
+    "$custom_mapping_type|default": "global",
+    "$custom_scope|default": "",
+    "$button_mappings|default": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_off_button"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_on_button"
+      },
+      {
+        "ignored": "(not $enable_hover_event_mapping)",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_hover_event_mapping"
+      },
+      {
+        "ignored": "(not $is_back_button)",
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "global"
+      }
+    ]
+  },
+  "tab_cosmetics_toggle_unchecked@mod_menu_toggles.tab_cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "('azelux/assets/mod_menu/cosmetics/icons/' + $tab_icon)",
+    "alpha": 0.4,
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "tab_cosmetic_cape_preview@mod_menu_toggles.tab_cosmetic_preview": {
+        }
+      }
+    ]
+  },
+  "tab_cosmetics_toggle_unchecked_hover@mod_menu_toggles.tab_cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "('azelux/assets/mod_menu/cosmetics/icons/' + $tab_icon)",
+    "alpha": 0.7,
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "tab_cosmetic_cape_preview@mod_menu_toggles.tab_cosmetic_preview": {
+        }
+      }
+    ]
+  },
+  "tab_cosmetics_toggle_checked@mod_menu_toggles.tab_cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "('azelux/assets/mod_menu/cosmetics/icons/' + $tab_icon)",
+    "alpha": 0.75,
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "tab_cosmetic_cape_preview@mod_menu_toggles.tab_cosmetic_preview": {
+        }
+      }
+    ]
+  },
+  "tab_cosmetics_toggle_checked_hover@mod_menu_toggles.tab_cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "('azelux/assets/mod_menu/cosmetics/icons/' + $tab_icon)",
+    "alpha": 0.85,
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "tab_cosmetic_cape_preview@mod_menu_toggles.tab_cosmetic_preview": {
+        }
+      }
+    ]
+  },
+
+  "tab_cosmetic_preview": {
+    "type": "image",
+    "texture": "azelux/assets/common/clear",
+    "size": [ "80%", "80%" ],
+    "layer": 2000
+  },
+
+  "cosmetics_cape_mod_toggle": {
+    "type": "panel",
+    "layer": 3,
+    "$template_toggle|default": "mod_menu_toggles.cosmetics_cape_mod_toggle_2",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 1,
+    "$toggle_name": "cape_selector",
+    "$toggle_tab_focus_binding_name": "#categories_focus_precedence",
+    "$toggle_tab_focus_binding_type": "global",
+    "$toggle_on_hover_binding_type": "global",
+    "$toggle_on_hover_binding_name": "#toggle_on_hover",
+    "controls": [
+      {
+        "$toggle_view_binding_name@$template_toggle": {}
+      }
+    ]
+  },
+
+  "cosmetics_cape_mod_toggle_2@common.toggle": {
+    "$unchecked_locked_control|default": "mod_menu_toggles.cosmetics_cape_toggle_unchecked",
+    "$unchecked_locked_hover_control|default": "mod_menu_toggles.cosmetics_cape_toggle_checked",
+    "$checked_locked_control|default": "mod_menu_toggles.cosmetics_cape_toggle_checked",
+    "$checked_locked_hover_control|default": "mod_menu_toggles.cosmetics_cape_toggle_checked",
+    "$unchecked_control|default": "mod_menu_toggles.cosmetics_cape_toggle_unchecked",
+    "$checked_control|default": "mod_menu_toggles.cosmetics_cape_toggle_checked",
+    "$unchecked_hover_control|default": "mod_menu_toggles.cosmetics_cape_toggle_unchecked_hover",
+    "$checked_hover_control|default": "mod_menu_toggles.cosmetics_cape_toggle_checked_hover",
+    "button_mappings": "$button_mappings",
+    "toggle_default_state": "$toggle_tags",
+    "$is_back_button|default": false,
+    "$enable_focus_enabled_bind|default": false,
+    "$enable_focus_id_bind|default": false,
+    "$enable_hover_event_mapping|default": false,
+    "$focus_enabled_binding_name|default": "",
+    "$focus_id_binding_name|default": "",
+    "focus_magnet_enabled": "$toggle_focus_magnet_enabled",
+    "focus_wrap_enabled": "$toggle_focus_wrap_enabled",
+    "$toggle_binding_type|default": "none",
+    "$toggle_checked_hover|default": false,
+    "$toggle_checked|default": false,
+    "$toggle_enabled_binding_type|default": "none",
+    "$toggle_focus_magnet_enabled|default": true,
+    "$toggle_focus_wrap_enabled|default": true,
+    "$toggle_hover_event_mapping|default": "",
+    "$toggle_on_hover_binding_name|default": "",
+    "$toggle_on_hover_binding_type|default": "none",
+    "$toggle_parent_collection_details_name|default": "",
+    "$toggle_parent_collection_details_prefix|default": "",
+    "$toggle_parent_collection_details|default": "none",
+    "$toggle_property_bag_binding_condition|default": "visible",
+    "$toggle_property_bag_binding_name|default": "#fill_toggle_property_bag",
+    "$toggle_property_bag_binding_type|default": "none",
+    "$toggle_tab_focus_binding_name|default": "",
+    "$toggle_tab_focus_binding_type|default": "none",
+    "$toggle_tab_focus_id_binding_name|default": "",
+    "$toggle_tab_focus_id_binding_type|default": "none",
+    "$toggle_tab_focus_override_down_binding_type|default": "none",
+    "$toggle_tab_focus_override_down|default": "#focus_override_down",
+    "$toggle_tab_focus_override_left_binding_type|default": "none",
+    "$toggle_tab_focus_override_left|default": "#focus_override_left",
+    "$toggle_tab_focus_override_right_binding_type|default": "none",
+    "$toggle_tab_focus_override_right|default": "#focus_override_right",
+    "$toggle_tab_focus_override_up_binding_type|default": "none",
+    "$toggle_tab_focus_override_up|default": "#focus_override_up",
+    "$toggle_tts_header_binding_collection_name|default": "",
+    "$toggle_tts_header_binding_condition|default": "visible",
+    "$toggle_tts_header_binding_type|default": "none",
+    "$toggle_tts_header|default": "",
+    "$toggle_unchecked_hover|default": false,
+    "$toggle_unchecked|default": false,
+    "$custom_toggle_binding_condition|default": "visible",
+    "$custom_toggle_binding_type|default": "none",
+    "$custom_toggle_state_binding_name_override|default": "",
+    "$custom_toggle_state_binding_name|default": "",
+    "$default_border_visible|default": false,
+    "$default_checked_texture_alpha|default": 1,
+    "$default_checked_texture_color|default": "$f_color_format",
+    "$default_state|default": false,
+    "$default_texture_alpha|default": 1,
+    "$toggle_focus_enabled": true,
+    "$binding_type": "global",
+    "$binding_condition": "t",
+    "$is_custom_button|default": true,
+    "$custom_from_button_id|default": "",
+    "$custom_to_button_id|default": "",
+    "$custom_mapping_type|default": "global",
+    "$custom_scope|default": "",
+    "$button_mappings|default": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_off_button"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_on_button"
+      },
+      {
+        "ignored": "(not $enable_hover_event_mapping)",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_hover_event_mapping"
+      },
+      {
+        "ignored": "(not $is_back_button)",
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "global"
+      }
+    ]
+  },
+  "cosmetics_cape_toggle_unchecked@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_off",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_cape_preview@mod_menu_toggles.cosmetic_cape_preview": {
+          "$cape_uv|default": [1,1],
+          "$cape_uv_size|default": [10,16],
+          "ignored": "$is_hd_cape,$is_lunar_cape",
+          "$is_hd_cape|default": false
+        }
+      },
+      {
+        "cosmetic_cape_preview_hd@mod_menu_toggles.cosmetic_cape_preview": {
+          "$cape_uv|default": [34,33],
+          "$cape_uv_size|default": [347,555],
+          "visible": "$is_hd_cape",
+          "$is_hd_cape|default": false
+        }
+      },
+      {
+        "cosmetic_cape_preview_lunar@mod_menu_toggles.cosmetic_cape_preview": {
+          "$cape_uv|default": [4,4],
+          "$cape_uv_size|default": [40,64],
+          "texture": "('azelux/assets/cosmetics/capes/lunar_capes/cape' + $cape_id)",
+          "visible": "$is_lunar_cape",
+          "$is_lunar_cape|default": false
+        }
+      }
+    ]
+  },
+  "cosmetics_cape_toggle_unchecked_hover@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_off_hover",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_cape_preview@mod_menu_toggles.cosmetic_cape_preview": {
+          "$cape_uv|default": [1,1],
+          "$cape_uv_size|default": [10,16],
+          "ignored": "$is_hd_cape,$is_lunar_cape",
+          "$is_hd_cape|default": false
+        }
+      },
+      {
+        "cosmetic_cape_preview_hd@mod_menu_toggles.cosmetic_cape_preview": {
+          "$cape_uv|default": [34,33],
+          "$cape_uv_size|default": [347,555],
+          "visible": "$is_hd_cape",
+          "$is_hd_cape|default": false
+        }
+      },
+      {
+        "cosmetic_cape_preview_lunar@mod_menu_toggles.cosmetic_cape_preview": {
+          "$cape_uv|default": [4,4],
+          "$cape_uv_size|default": [40,64],
+          "texture": "('azelux/assets/cosmetics/capes/lunar_capes/cape' + $cape_id)",
+          "visible": "$is_lunar_cape",
+          "$is_lunar_cape|default": false
+        }
+      }
+    ]
+  },
+  "cosmetics_cape_toggle_checked@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_on",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_cape_preview@mod_menu_toggles.cosmetic_cape_preview": {
+          "$cape_uv|default": [1,1],
+          "$cape_uv_size|default": [10,16],
+          "ignored": "$is_hd_cape,$is_lunar_cape",
+          "$is_hd_cape|default": false
+        }
+      },
+      {
+        "cosmetic_cape_preview_hd@mod_menu_toggles.cosmetic_cape_preview": {
+          "$cape_uv|default": [34,33],
+          "$cape_uv_size|default": [347,555],
+          "visible": "$is_hd_cape",
+          "$is_hd_cape|default": false
+        }
+      },
+      {
+        "cosmetic_cape_preview_lunar@mod_menu_toggles.cosmetic_cape_preview": {
+          "$cape_uv|default": [4,4],
+          "$cape_uv_size|default": [40,64],
+          "texture": "('azelux/assets/cosmetics/capes/lunar_capes/cape' + $cape_id)",
+          "visible": "$is_lunar_cape",
+          "$is_lunar_cape|default": false
+        }
+      }
+    ]
+  },
+  "cosmetics_cape_toggle_checked_hover@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_on_hover",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_cape_preview@mod_menu_toggles.cosmetic_cape_preview": {
+          "$cape_uv|default": [1,1],
+          "$cape_uv_size|default": [10,16],
+          "ignored": "$is_hd_cape,$is_lunar_cape",
+          "$is_hd_cape|default": false,
+          "$is_lunar_cape|default": false
+        }
+      },
+      {
+        "cosmetic_cape_preview_hd@mod_menu_toggles.cosmetic_cape_preview": {
+          "$cape_uv|default": [34,33],
+          "$cape_uv_size|default": [347,555],
+          "visible": "$is_hd_cape",
+          "$is_hd_cape|default": false
+        }
+      },
+      {
+        "cosmetic_cape_preview_lunar@mod_menu_toggles.cosmetic_cape_preview": {
+          "$cape_uv|default": [4,4],
+          "$cape_uv_size|default": [40,64],
+          "texture": "('azelux/assets/cosmetics/capes/lunar_capes/cape' + $cape_id)",
+          "visible": "$is_lunar_cape",
+          "$is_lunar_cape|default": false
+        }
+      }
+    ]
+  },
+
+  "cosmetic_cape_preview": {
+    "type": "image",
+    "texture": "('azelux/assets/cosmetics/capes/cape' + $cape_id)",
+    "size": [ "80%", "80%" ],
+    "uv": "$cape_uv", 
+    "uv_size": "$cape_uv_size",
+    "layer": 10
+  },
+
+  "cosmetics_wings_mod_toggle": {
+    "type": "panel",
+    "layer": 3,
+    "$template_toggle|default": "mod_menu_toggles.cosmetics_wings_mod_toggle_2",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 1,
+    "$toggle_name": "wings_selector",
+    "$toggle_tab_focus_binding_name": "#categories_focus_precedence",
+    "$toggle_tab_focus_binding_type": "global",
+    "$toggle_on_hover_binding_type": "global",
+    "$toggle_on_hover_binding_name": "#toggle_on_hover",
+    "controls": [
+      {
+        "$toggle_view_binding_name@$template_toggle": {}
+      }
+    ]
+  },
+
+  "cosmetics_wings_mod_toggle_2@common.toggle": {
+    "$unchecked_locked_control|default": "mod_menu_toggles.cosmetics_wings_toggle_unchecked",
+    "$unchecked_locked_hover_control|default": "mod_menu_toggles.cosmetics_wings_toggle_checked",
+    "$checked_locked_control|default": "mod_menu_toggles.cosmetics_wings_toggle_checked",
+    "$checked_locked_hover_control|default": "mod_menu_toggles.cosmetics_wings_toggle_checked",
+    "$unchecked_control|default": "mod_menu_toggles.cosmetics_wings_toggle_unchecked",
+    "$checked_control|default": "mod_menu_toggles.cosmetics_wings_toggle_checked",
+    "$unchecked_hover_control|default": "mod_menu_toggles.cosmetics_wings_toggle_unchecked_hover",
+    "$checked_hover_control|default": "mod_menu_toggles.cosmetics_wings_toggle_checked_hover",
+    "button_mappings": "$button_mappings",
+    "toggle_default_state": "$toggle_tags",
+    "$is_back_button|default": false,
+    "$enable_focus_enabled_bind|default": false,
+    "$enable_focus_id_bind|default": false,
+    "$enable_hover_event_mapping|default": false,
+    "$focus_enabled_binding_name|default": "",
+    "$focus_id_binding_name|default": "",
+    "focus_magnet_enabled": "$toggle_focus_magnet_enabled",
+    "focus_wrap_enabled": "$toggle_focus_wrap_enabled",
+    "$toggle_binding_type|default": "none",
+    "$toggle_checked_hover|default": false,
+    "$toggle_checked|default": false,
+    "$toggle_enabled_binding_type|default": "none",
+    "$toggle_focus_magnet_enabled|default": true,
+    "$toggle_focus_wrap_enabled|default": true,
+    "$toggle_hover_event_mapping|default": "",
+    "$toggle_on_hover_binding_name|default": "",
+    "$toggle_on_hover_binding_type|default": "none",
+    "$toggle_parent_collection_details_name|default": "",
+    "$toggle_parent_collection_details_prefix|default": "",
+    "$toggle_parent_collection_details|default": "none",
+    "$toggle_property_bag_binding_condition|default": "visible",
+    "$toggle_property_bag_binding_name|default": "#fill_toggle_property_bag",
+    "$toggle_property_bag_binding_type|default": "none",
+    "$toggle_tab_focus_binding_name|default": "",
+    "$toggle_tab_focus_binding_type|default": "none",
+    "$toggle_tab_focus_id_binding_name|default": "",
+    "$toggle_tab_focus_id_binding_type|default": "none",
+    "$toggle_tab_focus_override_down_binding_type|default": "none",
+    "$toggle_tab_focus_override_down|default": "#focus_override_down",
+    "$toggle_tab_focus_override_left_binding_type|default": "none",
+    "$toggle_tab_focus_override_left|default": "#focus_override_left",
+    "$toggle_tab_focus_override_right_binding_type|default": "none",
+    "$toggle_tab_focus_override_right|default": "#focus_override_right",
+    "$toggle_tab_focus_override_up_binding_type|default": "none",
+    "$toggle_tab_focus_override_up|default": "#focus_override_up",
+    "$toggle_tts_header_binding_collection_name|default": "",
+    "$toggle_tts_header_binding_condition|default": "visible",
+    "$toggle_tts_header_binding_type|default": "none",
+    "$toggle_tts_header|default": "",
+    "$toggle_unchecked_hover|default": false,
+    "$toggle_unchecked|default": false,
+    "$custom_toggle_binding_condition|default": "visible",
+    "$custom_toggle_binding_type|default": "none",
+    "$custom_toggle_state_binding_name_override|default": "",
+    "$custom_toggle_state_binding_name|default": "",
+    "$default_border_visible|default": false,
+    "$default_checked_texture_alpha|default": 1,
+    "$default_checked_texture_color|default": "$f_color_format",
+    "$default_state|default": false,
+    "$default_texture_alpha|default": 1,
+    "$toggle_focus_enabled": true,
+    "$binding_type": "global",
+    "$binding_condition": "t",
+    "$is_custom_button|default": true,
+    "$custom_from_button_id|default": "",
+    "$custom_to_button_id|default": "",
+    "$custom_mapping_type|default": "global",
+    "$custom_scope|default": "",
+    "$button_mappings|default": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_off_button"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_on_button"
+      },
+      {
+        "ignored": "(not $enable_hover_event_mapping)",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_hover_event_mapping"
+      },
+      {
+        "ignored": "(not $is_back_button)",
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "global"
+      }
+    ]
+  },
+  "cosmetics_wings_toggle_unchecked@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_off",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_wings_preview@mod_menu_toggles.cosmetic_wings_preview": {
+        }
+      }
+    ]
+  },
+  "cosmetics_wings_toggle_unchecked_hover@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_off_hover",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_wings_preview@mod_menu_toggles.cosmetic_wings_preview": {
+        }
+      }
+    ]
+  },
+  "cosmetics_wings_toggle_checked@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_on",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_wings_preview@mod_menu_toggles.cosmetic_wings_preview": {
+        }
+      }
+    ]
+  },
+  "cosmetics_wings_toggle_checked_hover@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_on_hover",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_wings_preview@mod_menu_toggles.cosmetic_wings_preview": {
+        }
+      }
+    ]
+  },
+
+  "cosmetic_wings_preview": {
+    "type": "image",
+    "texture": "('azelux/assets/cosmetics/wings/' + $wings)",
+    "size": [ "70%", "70%" ],
+    "uv": [0,0],
+    "uv_size": "$wings_uv_size",
+    "$wings_uv_size|default": [56,56],
+    "layer": 2000
+  },
+
+  "cosmetics_halos_mod_toggle": {
+    "type": "panel",
+    "layer": 3,
+    "$template_toggle|default": "mod_menu_toggles.cosmetics_halos_mod_toggle_2",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 1,
+    "$toggle_name": "halos_selector",
+    "$toggle_tab_focus_binding_name": "#categories_focus_precedence",
+    "$toggle_tab_focus_binding_type": "global",
+    "$toggle_on_hover_binding_type": "global",
+    "$toggle_on_hover_binding_name": "#toggle_on_hover",
+    "controls": [
+      {
+        "$toggle_view_binding_name@$template_toggle": {}
+      }
+    ]
+  },
+
+  "cosmetics_halos_mod_toggle_2@common.toggle": {
+    "$unchecked_locked_control|default": "mod_menu_toggles.cosmetics_halos_toggle_unchecked",
+    "$unchecked_locked_hover_control|default": "mod_menu_toggles.cosmetics_halos_toggle_checked",
+    "$checked_locked_control|default": "mod_menu_toggles.cosmetics_halos_toggle_checked",
+    "$checked_locked_hover_control|default": "mod_menu_toggles.cosmetics_halos_toggle_checked",
+    "$unchecked_control|default": "mod_menu_toggles.cosmetics_halos_toggle_unchecked",
+    "$checked_control|default": "mod_menu_toggles.cosmetics_halos_toggle_checked",
+    "$unchecked_hover_control|default": "mod_menu_toggles.cosmetics_halos_toggle_unchecked_hover",
+    "$checked_hover_control|default": "mod_menu_toggles.cosmetics_halos_toggle_checked_hover",
+    "button_mappings": "$button_mappings",
+    "toggle_default_state": "$toggle_tags",
+    "$is_back_button|default": false,
+    "$enable_focus_enabled_bind|default": false,
+    "$enable_focus_id_bind|default": false,
+    "$enable_hover_event_mapping|default": false,
+    "$focus_enabled_binding_name|default": "",
+    "$focus_id_binding_name|default": "",
+    "focus_magnet_enabled": "$toggle_focus_magnet_enabled",
+    "focus_wrap_enabled": "$toggle_focus_wrap_enabled",
+    "$toggle_binding_type|default": "none",
+    "$toggle_checked_hover|default": false,
+    "$toggle_checked|default": false,
+    "$toggle_enabled_binding_type|default": "none",
+    "$toggle_focus_magnet_enabled|default": true,
+    "$toggle_focus_wrap_enabled|default": true,
+    "$toggle_hover_event_mapping|default": "",
+    "$toggle_on_hover_binding_name|default": "",
+    "$toggle_on_hover_binding_type|default": "none",
+    "$toggle_parent_collection_details_name|default": "",
+    "$toggle_parent_collection_details_prefix|default": "",
+    "$toggle_parent_collection_details|default": "none",
+    "$toggle_property_bag_binding_condition|default": "visible",
+    "$toggle_property_bag_binding_name|default": "#fill_toggle_property_bag",
+    "$toggle_property_bag_binding_type|default": "none",
+    "$toggle_tab_focus_binding_name|default": "",
+    "$toggle_tab_focus_binding_type|default": "none",
+    "$toggle_tab_focus_id_binding_name|default": "",
+    "$toggle_tab_focus_id_binding_type|default": "none",
+    "$toggle_tab_focus_override_down_binding_type|default": "none",
+    "$toggle_tab_focus_override_down|default": "#focus_override_down",
+    "$toggle_tab_focus_override_left_binding_type|default": "none",
+    "$toggle_tab_focus_override_left|default": "#focus_override_left",
+    "$toggle_tab_focus_override_right_binding_type|default": "none",
+    "$toggle_tab_focus_override_right|default": "#focus_override_right",
+    "$toggle_tab_focus_override_up_binding_type|default": "none",
+    "$toggle_tab_focus_override_up|default": "#focus_override_up",
+    "$toggle_tts_header_binding_collection_name|default": "",
+    "$toggle_tts_header_binding_condition|default": "visible",
+    "$toggle_tts_header_binding_type|default": "none",
+    "$toggle_tts_header|default": "",
+    "$toggle_unchecked_hover|default": false,
+    "$toggle_unchecked|default": false,
+    "$custom_toggle_binding_condition|default": "visible",
+    "$custom_toggle_binding_type|default": "none",
+    "$custom_toggle_state_binding_name_override|default": "",
+    "$custom_toggle_state_binding_name|default": "",
+    "$default_border_visible|default": false,
+    "$default_checked_texture_alpha|default": 1,
+    "$default_checked_texture_color|default": "$f_color_format",
+    "$default_state|default": false,
+    "$default_texture_alpha|default": 1,
+    "$toggle_focus_enabled": true,
+    "$binding_type": "global",
+    "$binding_condition": "t",
+    "$is_custom_button|default": true,
+    "$custom_from_button_id|default": "",
+    "$custom_to_button_id|default": "",
+    "$custom_mapping_type|default": "global",
+    "$custom_scope|default": "",
+    "$button_mappings|default": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_off_button"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_on_button"
+      },
+      {
+        "ignored": "(not $enable_hover_event_mapping)",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_hover_event_mapping"
+      },
+      {
+        "ignored": "(not $is_back_button)",
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "global"
+      }
+    ]
+  },
+  "cosmetics_halos_toggle_unchecked@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_square_off",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_halos_preview@mod_menu_toggles.cosmetic_halos_preview": {
+        }
+      }
+    ]
+  },
+  "cosmetics_halos_toggle_unchecked_hover@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_square_off_hover",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_halos_preview@mod_menu_toggles.cosmetic_halos_preview": {
+        }
+      }
+    ]
+  },
+  "cosmetics_halos_toggle_checked@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_square_on",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_halos_preview@mod_menu_toggles.cosmetic_halos_preview": {
+        }
+      }
+    ]
+  },
+  "cosmetics_halos_toggle_checked_hover@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_square_on_hover",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_halos_preview@mod_menu_toggles.cosmetic_halos_preview": {
+        }
+      }
+    ]
+  },
+
+  "cosmetic_halos_preview": {
+    "type": "image",
+    "texture": "('azelux/assets/mod_menu/cosmetics/halos/' + $halos)",
+    "size": [ "80%", "80%" ],
+    "layer": 2000
+  },
+
+  "cosmetics_hats_mod_toggle": {
+    "type": "panel",
+    "layer": 3,
+    "$template_toggle|default": "mod_menu_toggles.cosmetics_hats_mod_toggle_2",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 1,
+    "$toggle_name": "hats_selector",
+    "$toggle_tab_focus_binding_name": "#categories_focus_precedence",
+    "$toggle_tab_focus_binding_type": "global",
+    "$toggle_on_hover_binding_type": "global",
+    "$toggle_on_hover_binding_name": "#toggle_on_hover",
+    "controls": [
+      {
+        "$toggle_view_binding_name@$template_toggle": {}
+      }
+    ]
+  },
+
+  "cosmetics_hats_mod_toggle_2@common.toggle": {
+    "$unchecked_locked_control|default": "mod_menu_toggles.cosmetics_hats_toggle_unchecked",
+    "$unchecked_locked_hover_control|default": "mod_menu_toggles.cosmetics_hats_toggle_checked",
+    "$checked_locked_control|default": "mod_menu_toggles.cosmetics_hats_toggle_checked",
+    "$checked_locked_hover_control|default": "mod_menu_toggles.cosmetics_hats_toggle_checked",
+    "$unchecked_control|default": "mod_menu_toggles.cosmetics_hats_toggle_unchecked",
+    "$checked_control|default": "mod_menu_toggles.cosmetics_hats_toggle_checked",
+    "$unchecked_hover_control|default": "mod_menu_toggles.cosmetics_hats_toggle_unchecked_hover",
+    "$checked_hover_control|default": "mod_menu_toggles.cosmetics_hats_toggle_checked_hover",
+    "button_mappings": "$button_mappings",
+    "toggle_default_state": "$toggle_tags",
+    "$is_back_button|default": false,
+    "$enable_focus_enabled_bind|default": false,
+    "$enable_focus_id_bind|default": false,
+    "$enable_hover_event_mapping|default": false,
+    "$focus_enabled_binding_name|default": "",
+    "$focus_id_binding_name|default": "",
+    "focus_magnet_enabled": "$toggle_focus_magnet_enabled",
+    "focus_wrap_enabled": "$toggle_focus_wrap_enabled",
+    "$toggle_binding_type|default": "none",
+    "$toggle_checked_hover|default": false,
+    "$toggle_checked|default": false,
+    "$toggle_enabled_binding_type|default": "none",
+    "$toggle_focus_magnet_enabled|default": true,
+    "$toggle_focus_wrap_enabled|default": true,
+    "$toggle_hover_event_mapping|default": "",
+    "$toggle_on_hover_binding_name|default": "",
+    "$toggle_on_hover_binding_type|default": "none",
+    "$toggle_parent_collection_details_name|default": "",
+    "$toggle_parent_collection_details_prefix|default": "",
+    "$toggle_parent_collection_details|default": "none",
+    "$toggle_property_bag_binding_condition|default": "visible",
+    "$toggle_property_bag_binding_name|default": "#fill_toggle_property_bag",
+    "$toggle_property_bag_binding_type|default": "none",
+    "$toggle_tab_focus_binding_name|default": "",
+    "$toggle_tab_focus_binding_type|default": "none",
+    "$toggle_tab_focus_id_binding_name|default": "",
+    "$toggle_tab_focus_id_binding_type|default": "none",
+    "$toggle_tab_focus_override_down_binding_type|default": "none",
+    "$toggle_tab_focus_override_down|default": "#focus_override_down",
+    "$toggle_tab_focus_override_left_binding_type|default": "none",
+    "$toggle_tab_focus_override_left|default": "#focus_override_left",
+    "$toggle_tab_focus_override_right_binding_type|default": "none",
+    "$toggle_tab_focus_override_right|default": "#focus_override_right",
+    "$toggle_tab_focus_override_up_binding_type|default": "none",
+    "$toggle_tab_focus_override_up|default": "#focus_override_up",
+    "$toggle_tts_header_binding_collection_name|default": "",
+    "$toggle_tts_header_binding_condition|default": "visible",
+    "$toggle_tts_header_binding_type|default": "none",
+    "$toggle_tts_header|default": "",
+    "$toggle_unchecked_hover|default": false,
+    "$toggle_unchecked|default": false,
+    "$custom_toggle_binding_condition|default": "visible",
+    "$custom_toggle_binding_type|default": "none",
+    "$custom_toggle_state_binding_name_override|default": "",
+    "$custom_toggle_state_binding_name|default": "",
+    "$default_border_visible|default": false,
+    "$default_checked_texture_alpha|default": 1,
+    "$default_checked_texture_color|default": "$f_color_format",
+    "$default_state|default": false,
+    "$default_texture_alpha|default": 1,
+    "$toggle_focus_enabled": true,
+    "$binding_type": "global",
+    "$binding_condition": "t",
+    "$is_custom_button|default": true,
+    "$custom_from_button_id|default": "",
+    "$custom_to_button_id|default": "",
+    "$custom_mapping_type|default": "global",
+    "$custom_scope|default": "",
+    "$button_mappings|default": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_off_button"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_on_button"
+      },
+      {
+        "ignored": "(not $enable_hover_event_mapping)",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_hover_event_mapping"
+      },
+      {
+        "ignored": "(not $is_back_button)",
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "global"
+      }
+    ]
+  },
+  "cosmetics_hats_toggle_unchecked@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_square_off",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_hats_preview@mod_menu_toggles.cosmetic_hats_preview": {
+        }
+      }
+    ]
+  },
+  "cosmetics_hats_toggle_unchecked_hover@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_square_off_hover",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_hats_preview@mod_menu_toggles.cosmetic_hats_preview": {
+        }
+      }
+    ]
+  },
+  "cosmetics_hats_toggle_checked@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_square_on",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_hats_preview@mod_menu_toggles.cosmetic_hats_preview": {
+        }
+      }
+    ]
+  },
+  "cosmetics_hats_toggle_checked_hover@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_square_on_hover",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_hats_preview@mod_menu_toggles.cosmetic_hats_preview": {
+        }
+      }
+    ]
+  },
+
+  "cosmetic_hats_preview": {
+    "type": "image",
+    "texture": "('azelux/assets/mod_menu/cosmetics/hats/' + $hats)",
+    "size": [ "80%", "80%" ],
+    "layer": 2000
+  },
+
+  "cosmetics_shields_mod_toggle": {
+    "type": "panel",
+    "layer": 3,
+    "$template_toggle|default": "mod_menu_toggles.cosmetics_shields_mod_toggle_2",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 1,
+    "$toggle_name": "shields_selector",
+    "$toggle_tab_focus_binding_name": "#categories_focus_precedence",
+    "$toggle_tab_focus_binding_type": "global",
+    "$toggle_on_hover_binding_type": "global",
+    "$toggle_on_hover_binding_name": "#toggle_on_hover",
+    "controls": [
+      {
+        "$toggle_view_binding_name@$template_toggle": {}
+      }
+    ]
+  },
+
+  "cosmetics_shields_mod_toggle_2@common.toggle": {
+    "$unchecked_locked_control|default": "mod_menu_toggles.cosmetics_shields_toggle_unchecked",
+    "$unchecked_locked_hover_control|default": "mod_menu_toggles.cosmetics_shields_toggle_checked",
+    "$checked_locked_control|default": "mod_menu_toggles.cosmetics_shields_toggle_checked",
+    "$checked_locked_hover_control|default": "mod_menu_toggles.cosmetics_shields_toggle_checked",
+    "$unchecked_control|default": "mod_menu_toggles.cosmetics_shields_toggle_unchecked",
+    "$checked_control|default": "mod_menu_toggles.cosmetics_shields_toggle_checked",
+    "$unchecked_hover_control|default": "mod_menu_toggles.cosmetics_shields_toggle_unchecked_hover",
+    "$checked_hover_control|default": "mod_menu_toggles.cosmetics_shields_toggle_checked_hover",
+    "button_mappings": "$button_mappings",
+    "toggle_default_state": "$toggle_tags",
+    "$is_back_button|default": false,
+    "$enable_focus_enabled_bind|default": false,
+    "$enable_focus_id_bind|default": false,
+    "$enable_hover_event_mapping|default": false,
+    "$focus_enabled_binding_name|default": "",
+    "$focus_id_binding_name|default": "",
+    "focus_magnet_enabled": "$toggle_focus_magnet_enabled",
+    "focus_wrap_enabled": "$toggle_focus_wrap_enabled",
+    "$toggle_binding_type|default": "none",
+    "$toggle_checked_hover|default": false,
+    "$toggle_checked|default": false,
+    "$toggle_enabled_binding_type|default": "none",
+    "$toggle_focus_magnet_enabled|default": true,
+    "$toggle_focus_wrap_enabled|default": true,
+    "$toggle_hover_event_mapping|default": "",
+    "$toggle_on_hover_binding_name|default": "",
+    "$toggle_on_hover_binding_type|default": "none",
+    "$toggle_parent_collection_details_name|default": "",
+    "$toggle_parent_collection_details_prefix|default": "",
+    "$toggle_parent_collection_details|default": "none",
+    "$toggle_property_bag_binding_condition|default": "visible",
+    "$toggle_property_bag_binding_name|default": "#fill_toggle_property_bag",
+    "$toggle_property_bag_binding_type|default": "none",
+    "$toggle_tab_focus_binding_name|default": "",
+    "$toggle_tab_focus_binding_type|default": "none",
+    "$toggle_tab_focus_id_binding_name|default": "",
+    "$toggle_tab_focus_id_binding_type|default": "none",
+    "$toggle_tab_focus_override_down_binding_type|default": "none",
+    "$toggle_tab_focus_override_down|default": "#focus_override_down",
+    "$toggle_tab_focus_override_left_binding_type|default": "none",
+    "$toggle_tab_focus_override_left|default": "#focus_override_left",
+    "$toggle_tab_focus_override_right_binding_type|default": "none",
+    "$toggle_tab_focus_override_right|default": "#focus_override_right",
+    "$toggle_tab_focus_override_up_binding_type|default": "none",
+    "$toggle_tab_focus_override_up|default": "#focus_override_up",
+    "$toggle_tts_header_binding_collection_name|default": "",
+    "$toggle_tts_header_binding_condition|default": "visible",
+    "$toggle_tts_header_binding_type|default": "none",
+    "$toggle_tts_header|default": "",
+    "$toggle_unchecked_hover|default": false,
+    "$toggle_unchecked|default": false,
+    "$custom_toggle_binding_condition|default": "visible",
+    "$custom_toggle_binding_type|default": "none",
+    "$custom_toggle_state_binding_name_override|default": "",
+    "$custom_toggle_state_binding_name|default": "",
+    "$default_border_visible|default": false,
+    "$default_checked_texture_alpha|default": 1,
+    "$default_checked_texture_color|default": "$f_color_format",
+    "$default_state|default": false,
+    "$default_texture_alpha|default": 1,
+    "$toggle_focus_enabled": true,
+    "$binding_type": "global",
+    "$binding_condition": "t",
+    "$is_custom_button|default": true,
+    "$custom_from_button_id|default": "",
+    "$custom_to_button_id|default": "",
+    "$custom_mapping_type|default": "global",
+    "$custom_scope|default": "",
+    "$button_mappings|default": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_off_button"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_on_button"
+      },
+      {
+        "ignored": "(not $enable_hover_event_mapping)",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_hover_event_mapping"
+      },
+      {
+        "ignored": "(not $is_back_button)",
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "global"
+      }
+    ]
+  },
+  "cosmetics_shields_toggle_unchecked@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_square_off",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_shields_preview@mod_menu_toggles.cosmetic_shields_preview": {
+        }
+      }
+    ]
+  },
+  "cosmetics_shields_toggle_unchecked_hover@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_square_off_hover",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_shields_preview@mod_menu_toggles.cosmetic_shields_preview": {
+        }
+      }
+    ]
+  },
+  "cosmetics_shields_toggle_checked@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_square_on",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_shields_preview@mod_menu_toggles.cosmetic_shields_preview": {
+        }
+      }
+    ]
+  },
+  "cosmetics_shields_toggle_checked_hover@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_square_on_hover",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_shields_preview@mod_menu_toggles.cosmetic_shields_preview": {
+        }
+      }
+    ]
+  },
+
+  "cosmetic_shields_preview": {
+    "type": "image",
+    "texture": "('azelux/assets/cosmetics/shields/shield' + $shields)",
+    "size": "$custom_size",
+    "$custom_size": [ "67%", "67%" ],
+    "layer": 2000,
+    "uv": [0,0],
+    "uv_size": "$shield_uv_size",
+    "$shield_uv_size|default": [1024,1024]
+  },
+
+  "cosmetics_players_mod_toggle": {
+    "type": "panel",
+    "layer": 3,
+    "$template_toggle|default": "mod_menu_toggles.cosmetics_players_mod_toggle_2",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 1,
+    "$toggle_name": "players_selector",
+    "$toggle_tab_focus_binding_name": "#categories_focus_precedence",
+    "$toggle_tab_focus_binding_type": "global",
+    "$toggle_on_hover_binding_type": "global",
+    "$toggle_on_hover_binding_name": "#toggle_on_hover",
+    "controls": [
+      {
+        "$toggle_view_binding_name@$template_toggle": {}
+      }
+    ]
+  },
+
+  "cosmetics_players_mod_toggle_2@common.toggle": {
+    "$unchecked_locked_control|default": "mod_menu_toggles.cosmetics_players_toggle_unchecked",
+    "$unchecked_locked_hover_control|default": "mod_menu_toggles.cosmetics_players_toggle_checked",
+    "$checked_locked_control|default": "mod_menu_toggles.cosmetics_players_toggle_checked",
+    "$checked_locked_hover_control|default": "mod_menu_toggles.cosmetics_players_toggle_checked",
+    "$unchecked_control|default": "mod_menu_toggles.cosmetics_players_toggle_unchecked",
+    "$checked_control|default": "mod_menu_toggles.cosmetics_players_toggle_checked",
+    "$unchecked_hover_control|default": "mod_menu_toggles.cosmetics_players_toggle_unchecked_hover",
+    "$checked_hover_control|default": "mod_menu_toggles.cosmetics_players_toggle_checked_hover",
+    "button_mappings": "$button_mappings",
+    "toggle_default_state": "$toggle_tags",
+    "$is_back_button|default": false,
+    "$enable_focus_enabled_bind|default": false,
+    "$enable_focus_id_bind|default": false,
+    "$enable_hover_event_mapping|default": false,
+    "$focus_enabled_binding_name|default": "",
+    "$focus_id_binding_name|default": "",
+    "focus_magnet_enabled": "$toggle_focus_magnet_enabled",
+    "focus_wrap_enabled": "$toggle_focus_wrap_enabled",
+    "$toggle_binding_type|default": "none",
+    "$toggle_checked_hover|default": false,
+    "$toggle_checked|default": false,
+    "$toggle_enabled_binding_type|default": "none",
+    "$toggle_focus_magnet_enabled|default": true,
+    "$toggle_focus_wrap_enabled|default": true,
+    "$toggle_hover_event_mapping|default": "",
+    "$toggle_on_hover_binding_name|default": "",
+    "$toggle_on_hover_binding_type|default": "none",
+    "$toggle_parent_collection_details_name|default": "",
+    "$toggle_parent_collection_details_prefix|default": "",
+    "$toggle_parent_collection_details|default": "none",
+    "$toggle_property_bag_binding_condition|default": "visible",
+    "$toggle_property_bag_binding_name|default": "#fill_toggle_property_bag",
+    "$toggle_property_bag_binding_type|default": "none",
+    "$toggle_tab_focus_binding_name|default": "",
+    "$toggle_tab_focus_binding_type|default": "none",
+    "$toggle_tab_focus_id_binding_name|default": "",
+    "$toggle_tab_focus_id_binding_type|default": "none",
+    "$toggle_tab_focus_override_down_binding_type|default": "none",
+    "$toggle_tab_focus_override_down|default": "#focus_override_down",
+    "$toggle_tab_focus_override_left_binding_type|default": "none",
+    "$toggle_tab_focus_override_left|default": "#focus_override_left",
+    "$toggle_tab_focus_override_right_binding_type|default": "none",
+    "$toggle_tab_focus_override_right|default": "#focus_override_right",
+    "$toggle_tab_focus_override_up_binding_type|default": "none",
+    "$toggle_tab_focus_override_up|default": "#focus_override_up",
+    "$toggle_tts_header_binding_collection_name|default": "",
+    "$toggle_tts_header_binding_condition|default": "visible",
+    "$toggle_tts_header_binding_type|default": "none",
+    "$toggle_tts_header|default": "",
+    "$toggle_unchecked_hover|default": false,
+    "$toggle_unchecked|default": false,
+    "$custom_toggle_binding_condition|default": "visible",
+    "$custom_toggle_binding_type|default": "none",
+    "$custom_toggle_state_binding_name_override|default": "",
+    "$custom_toggle_state_binding_name|default": "",
+    "$default_border_visible|default": false,
+    "$default_checked_texture_alpha|default": 1,
+    "$default_checked_texture_color|default": "$f_color_format",
+    "$default_state|default": false,
+    "$default_texture_alpha|default": 1,
+    "$toggle_focus_enabled": true,
+    "$binding_type": "global",
+    "$binding_condition": "t",
+    "$is_custom_button|default": true,
+    "$custom_from_button_id|default": "",
+    "$custom_to_button_id|default": "",
+    "$custom_mapping_type|default": "global",
+    "$custom_scope|default": "",
+    "$button_mappings|default": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_left",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_off_button"
+      },
+      {
+        "from_button_id": "button.menu_right",
+        "ignored": "(not $enable_directional_toggling)",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_on_button"
+      },
+      {
+        "ignored": "(not $enable_hover_event_mapping)",
+        "mapping_type": "pressed",
+        "to_button_id": "$toggle_hover_event_mapping"
+      },
+      {
+        "ignored": "(not $is_back_button)",
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "global"
+      }
+    ]
+  },
+  "cosmetics_players_toggle_unchecked@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_off",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_players_preview@mod_menu_toggles.cosmetic_players_preview": {
+        }
+      }
+    ]
+  },
+  "cosmetics_players_toggle_unchecked_hover@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_off_hover",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_players_preview@mod_menu_toggles.cosmetic_players_preview": {
+        }
+      }
+    ]
+  },
+  "cosmetics_players_toggle_checked@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_on",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_players_preview@mod_menu_toggles.cosmetic_players_preview": {
+        }
+      }
+    ]
+  },
+  "cosmetics_players_toggle_checked_hover@mod_menu_toggles.cosmetics_toggle_content": {
+    "type": "image",
+    "texture": "azelux/assets/mod_menu/cosmetics/selector_on_hover",
+    "layer": 1,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cosmetic_players_preview@mod_menu_toggles.cosmetic_players_preview": {
+        }
+      }
+    ]
+  },
+
+  "cosmetic_players_preview": {
+    "type": "image",
+    "texture": "('azelux/assets/mod_menu/cosmetics/players/' + $players)",
+    "size": [ "80%", "80%" ],
+    "layer": 2000
+  }
+}

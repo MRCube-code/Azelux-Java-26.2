@@ -1,0 +1,129 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.helmet": {
+      "geometry": "geometry.helmet",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": [
+        "(query.armor_texture_slot(0) == 0 ? texture.leather_helmet : (query.armor_texture_slot(0) == 1 ? texture.chainmail_helmet : (query.armor_texture_slot(0) == 2 ? texture.iron_helmet : (query.armor_texture_slot(0) == 3 ? texture.diamond_helmet : (query.armor_texture_slot(0) == 4 ? texture.gold_helmet : (query.armor_texture_slot(0) == 6 ? texture.turtle_helmet : (query.armor_texture_slot(0) == 7 ? texture.netherite_helmet : (query.armor_texture_slot(0) == 8 ? texture.copper_helmet : (q.is_item_name_any('slot.armor.head', 0, 'minecraft:carved_pumpkin') ? texture.pumpkin : texture.empty_helmet)))))))))"
+      ],
+      "is_hurt_color": {
+        "a": "q.armor_material_slot(0) == (1) ? 0.42",
+        "b": "q.armor_material_slot(0) == (1) ? 0.43",
+        "g": "q.armor_material_slot(0) == (1) ? 0.1",
+        "r": "q.armor_material_slot(0) == (1) ? 0.37"
+      },
+      "on_fire_color": {
+        "a": "q.armor_material_slot(0) == (1) ? 0.42",
+        "b": "q.armor_material_slot(0) == (1) ? 0.43",
+        "g": "q.armor_material_slot(0) == (1) ? 0.1",
+        "r": "q.armor_material_slot(0) == (1) ? 0.37"
+      },
+      "overlay_color": {
+        "r": "variable.enchanted_helmet ? 0.4 : 0.0",
+        "g": 0,
+        "b": "variable.enchanted_helmet",
+        "a": "variable.enchanted_helmet ? 0.05 * math.cos(query.life_time* 425.0) + 0.25 : 0.0"
+      },
+      "light_color_multiplier": "variable.enchanted_helmet ? 0.05 * -math.cos(query.life_time * 500.0) + 1.5 : 1",
+      "ignore_lighting": true
+    },
+    "controller.render.chestplate": {
+      "geometry": "geometry.chestplate",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": [
+        "(query.armor_texture_slot(1) == 0 ? texture.leather_chestplate : (query.armor_texture_slot(1) == 1 ? texture.chainmail_chestplate : (query.armor_texture_slot(1) == 2 ? texture.iron_chestplate : (query.armor_texture_slot(1) == 3 ? texture.diamond_chestplate : (query.armor_texture_slot(1) == 4 ? texture.gold_chestplate : (query.armor_texture_slot(1) == 5 ? texture.elytra : (query.armor_texture_slot(1) == 7 ? texture.netherite_chestplate : (query.armor_texture_slot(1) == 8 ? texture.copper_chestplate : texture.empty_chestplate))))))))"
+      ],
+      "is_hurt_color": {
+        "a": "q.armor_material_slot(0) == (1) ? 0.42",
+        "b": "q.armor_material_slot(0) == (1) ? 0.43",
+        "g": "q.armor_material_slot(0) == (1) ? 0.1",
+        "r": "q.armor_material_slot(0) == (1) ? 0.37"
+      },
+      "on_fire_color": {
+        "a": "q.armor_material_slot(0) == (1) ? 0.42",
+        "b": "q.armor_material_slot(0) == (1) ? 0.43",
+        "g": "q.armor_material_slot(0) == (1) ? 0.1",
+        "r": "q.armor_material_slot(0) == (1) ? 0.37"
+      },
+      "overlay_color": {
+        "r": "variable.enchanted_chestplate ? 0.4 : 0.0",
+        "g": 0,
+        "b": "variable.enchanted_chestplate",
+        "a": "variable.enchanted_chestplate ? 0.05 * math.cos(query.life_time* 425.0) + 0.25 : 0.0"
+      },
+      "light_color_multiplier": "variable.enchanted_chestplate ? 0.05 * -math.cos(query.life_time * 500.0) + 1.5 : 1",
+      "ignore_lighting": true
+    },
+    "controller.render.leggings": {
+      "geometry": "geometry.leggings",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": [
+        "(query.armor_texture_slot(2) == 0 ? texture.leather_leggings : (query.armor_texture_slot(2) == 1 ? texture.chainmail_leggings : (query.armor_texture_slot(2) == 2 ? texture.iron_leggings : (query.armor_texture_slot(2) == 3 ? texture.diamond_leggings : (query.armor_texture_slot(2) == 4 ? texture.gold_leggings : (query.armor_texture_slot(2) == 7 ? texture.netherite_leggings : (query.armor_texture_slot(2) == 8 ? texture.copper_leggings : texture.empty_leggings)))))))"
+      ],
+      "is_hurt_color": {
+        "a": "q.armor_material_slot(0) == (1) ? 0.42",
+        "b": "q.armor_material_slot(0) == (1) ? 0.43",
+        "g": "q.armor_material_slot(0) == (1) ? 0.1",
+        "r": "q.armor_material_slot(0) == (1) ? 0.37"
+      },
+      "on_fire_color": {
+        "a": "q.armor_material_slot(0) == (1) ? 0.42",
+        "b": "q.armor_material_slot(0) == (1) ? 0.43",
+        "g": "q.armor_material_slot(0) == (1) ? 0.1",
+        "r": "q.armor_material_slot(0) == (1) ? 0.37"
+      },
+      "overlay_color": {
+        "r": "variable.enchanted_leggings ? 0.4 : 0.0",
+        "g": 0,
+        "b": "variable.enchanted_leggings",
+        "a": "variable.enchanted_leggings ? 0.05 * math.cos(query.life_time* 425.0) + 0.25 : 0.0"
+      },
+      "light_color_multiplier": "variable.enchanted_leggings ? 0.05 * -math.cos(query.life_time * 500.0) + 1.5 : 1",
+      "ignore_lighting": true
+    },
+    "controller.render.boots": {
+      "geometry": "geometry.boots",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": [
+        "(query.armor_texture_slot(3) == 0 ? texture.leather_boots : (query.armor_texture_slot(3) == 1 ? texture.chainmail_boots : (query.armor_texture_slot(3) == 2 ? texture.iron_boots : (query.armor_texture_slot(3) == 3 ? texture.diamond_boots : (query.armor_texture_slot(3) == 4 ? texture.gold_boots : (query.armor_texture_slot(3) == 7 ? texture.netherite_boots : (query.armor_texture_slot(3) == 8 ? texture.copper_boots : texture.empty_boots)))))))"
+      ],
+      "is_hurt_color": {
+        "a": "q.armor_material_slot(0) == (1) ? 0.42",
+        "b": "q.armor_material_slot(0) == (1) ? 0.43",
+        "g": "q.armor_material_slot(0) == (1) ? 0.1",
+        "r": "q.armor_material_slot(0) == (1) ? 0.37"
+      },
+      "on_fire_color": {
+        "a": "q.armor_material_slot(0) == (1) ? 0.42",
+        "b": "q.armor_material_slot(0) == (1) ? 0.43",
+        "g": "q.armor_material_slot(0) == (1) ? 0.1",
+        "r": "q.armor_material_slot(0) == (1) ? 0.37"
+      },
+      "overlay_color": {
+        "r": "variable.enchanted_boots ? 0.4 : 0.0",
+        "g": 0,
+        "b": "variable.enchanted_boots",
+        "a": "variable.enchanted_boots ? 0.05 * math.cos(query.life_time* 425.0) + 0.25 : 0.0"
+      },
+      "light_color_multiplier": "variable.enchanted_boots ? 0.05 * -math.cos(query.life_time * 500.0) + 1.5 : 1",
+      "ignore_lighting": true
+    }
+  }
+}

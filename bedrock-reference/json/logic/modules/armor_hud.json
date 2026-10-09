@@ -1,0 +1,234 @@
+{
+  "namespace": "armor_hud_mod",
+  "armor_hud_main": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "armor_hud_main_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "boots@mod_menu_sliders.movable_mod": {
+          "$x_slider": "armor_hud_boots_position_x",
+          "$y_slider": "armor_hud_boots_position_y",
+          "$custom_controls": [
+            {
+              "boots": {
+                "type": "custom",
+                "renderer": "live_player_renderer",
+                "size": [
+                  18,
+                  18
+                ],
+                "offset": [-7,1035.5]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chestplate@mod_menu_sliders.movable_mod": {
+          "$x_slider": "armor_hud_chestplate_position_x",
+          "$y_slider": "armor_hud_chestplate_position_y",
+          "$custom_controls": [
+            {
+              "chestplate": {
+                "type": "custom",
+                "renderer": "live_player_renderer",
+                "size": [
+                  18,
+                  18
+                ],
+                "offset": [-7,2088]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "leggings@mod_menu_sliders.movable_mod": {
+          "$x_slider": "armor_hud_leggings_position_x",
+          "$y_slider": "armor_hud_leggings_position_y",
+          "$custom_controls": [
+            {
+              "leggings": {
+                "type": "custom",
+                "renderer": "live_player_renderer",
+                "size": [
+                  18,
+                  18
+                ],
+                "offset": [-7,-1076]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "helmet@mod_menu_sliders.movable_mod": {
+          "$x_slider": "armor_hud_helmet_position_x",
+          "$y_slider": "armor_hud_helmet_position_y",
+          "$custom_controls": [
+            {
+              "helmet": {
+                "type": "custom",
+                "renderer": "live_player_renderer",
+                "size": [
+                  18,
+                  18
+                ],
+                "offset": [-7,-2129.5]
+              }
+            }
+          ]
+        }
+      }
+//      {
+//        "normal_style": {
+//          "type": "panel",
+//          "bindings": [
+//            {
+//              "binding_type": "view",
+//              "source_control_name": "armor_hud_split_toggle",
+//              "source_property_name": "(not #toggle_state)",
+//              "target_property_name": "#visible"
+//            }
+//          ],
+//          "controls": [
+//            {
+//              "boots": {
+//                "layer": 2,
+//                "anchor_from": "left_middle",
+//                "anchor_to": "left_middle",
+//                "renderer": "live_player_renderer",
+//                "size": [
+//                  18,
+//                  18
+//                ],
+//                "offset": [
+//                  0,
+//                  1000
+//                ],
+//                "type": "custom"
+//              }
+//            },
+//            {
+//              "leggings": {
+//                "layer": 2,
+//                "anchor_from": "left_middle",
+//                "anchor_to": "left_middle",
+//                "renderer": "live_player_renderer",
+//                "size": [
+//                  18,
+//                  18
+//                ],
+//                "offset": [
+//                  0,
+//                  2038
+//                ],
+//                "type": "custom"
+//              }
+//            },
+//            {
+//              "chestplate": {
+//                "layer": 2,
+//                "anchor_from": "left_middle",
+//                "anchor_to": "left_middle",
+//                "renderer": "live_player_renderer",
+//                "size": [
+//                  18,
+//                  18
+//                ],
+//                "offset": [
+//                  0,
+//                  3076
+//                ],
+//                "type": "custom"
+//              }
+//            },
+//            {
+//              "helmet": {
+//                "layer": 2,
+//                "anchor_from": "left_middle",
+//                "anchor_to": "left_middle",
+//                "renderer": "live_player_renderer",
+//                "size": [
+//                  18,
+//                  18
+//                ],
+//                "offset": [
+//                  0,
+//                  4114
+//                ],
+//                "type": "custom"
+//              }
+//            }
+//          ]
+//        }
+//      },
+//      {
+//        "split_style": {
+//          "type": "panel",
+//          "bindings": [
+//            {
+//              "binding_type": "view",
+//              "source_control_name": "armor_hud_split_toggle",
+//              "source_property_name": "#toggle_state",
+//              "target_property_name": "#visible"
+//            }
+//          ],
+//          "controls": [
+//            {
+//              "boots": {
+//                "anchor_from": "bottom_middle",
+//                "anchor_to": "bottom_middle",
+//                "layer": 2,
+//                "renderer": "live_player_renderer",
+//                "size": [18, 18],
+//                "offset": [94, 1040],
+//                "type": "custom"
+//              }
+//            },
+//            {
+//              "leggings": {
+//                "anchor_from": "bottom_middle",
+//                "anchor_to": "bottom_middle",
+//                "layer": 2,
+//                "renderer": "live_player_renderer",
+//                "size": [18, 18],
+//                "offset": [94, 2080],
+//                "type": "custom"
+//              }
+//            },
+//            {
+//              "chestplate": {
+//                "anchor_from": "bottom_middle",
+//                "anchor_to": "bottom_middle",
+//                "layer": 2,
+//                "renderer": "live_player_renderer",
+//                "size": [18, 18],
+//                "offset": [-110, 3147],
+//                "type": "custom"
+//              }
+//            },
+//            {
+//              "helmet": {
+//                "anchor_from": "bottom_middle",
+//                "anchor_to": "bottom_middle",
+//                "layer": 2,
+//                "renderer": "live_player_renderer",
+//                "size": [18, 18],
+//                "offset": [-110, 4187],
+//                "type": "custom"
+//              }
+//            }
+//          ]
+//        }
+//      }
+    ]
+  }
+}

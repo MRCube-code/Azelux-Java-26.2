@@ -1,0 +1,70 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.standing_shadow": {
+            "geometry": "Geometry.status",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "is_hurt_color": {},
+            "on_fire_color": {},
+            "textures": [
+                "Texture.standing_shadow"
+            ]
+        },
+        "controller.render.moving_shadow": {
+            "geometry": "Geometry.status",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "is_hurt_color": {},
+            "on_fire_color": {},
+            "textures": [
+                "Texture.moving_shadow"
+            ]
+        },
+        "controller.render.sprinting_shadow": {
+            "geometry": "Geometry.status",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "is_hurt_color": {},
+            "on_fire_color": {},
+            "textures": [
+                "Texture.sprinting_shadow"
+            ]
+        },
+        "controller.render.jumping_shadow": {
+            "geometry": "Geometry.status",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "is_hurt_color": {},
+            "on_fire_color": {},
+            "textures": [
+                "Texture.jumping_shadow"
+            ]
+        },
+        "controller.render.sneaking_shadow": {
+            "geometry": "Geometry.status",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "is_hurt_color": {},
+            "on_fire_color": {},
+            "textures": [
+                "Texture.sneaking_shadow"
+            ]
+        }
+    }
+}

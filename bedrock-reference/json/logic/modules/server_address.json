@@ -1,0 +1,540 @@
+{
+  "namespace": "server_address_mod",
+
+  "server_address_mod_template": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "panelbg": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "server_address_background_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "server_address_mod_template_bg": {
+                "type": "image",
+                "texture": "textures/ui/Black",
+                "size": [
+                  "100%c",
+                  16
+                ],
+                "alpha": 0.35,
+                "layer": 3,
+                "bindings": [
+                  {
+                    "binding_name": "#player_list_title"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "$online_server_title",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "stack_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "layer": 10,
+                      "controls": [
+                        {
+                          "singleplayer_icon": {
+                            "type": "image",
+                            "size": [
+                              16,
+                              16
+                            ],
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "server_address_icon_toggle",
+                                "source_property_name": "#toggle_state",
+                                "target_property_name": "#visible"
+                              }
+                            ],
+                            "texture": "('azelux/assets/modules/server_address/' + $online_server_icon)"
+                          }
+                        },
+                        {
+                          "spacer": {
+                            "type": "panel",
+                            "size": [
+                              3,
+                              3
+                            ]
+                          }
+                        },
+                        {
+                          "labellmao": {
+                            "type": "panel",
+                            "size": [
+                              "100%c+3px",
+                              16
+                            ],
+                            "layer": 500,
+                            "controls": [
+                              {
+                                "label": {
+                                  "layer": 500,
+                                  "type": "label",
+                                  "shadow": true,
+                                  "text": "$online_server_ip",
+                                  "text_alignment": "left",
+                                  "anchor_from": "left_middle",
+                                  "anchor_to": "left_middle"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panelnobg": {
+          "type": "panel",
+          "layer": 3,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "server_address_background_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "server_address_mod_template_no_bg": {
+                "type": "image",
+                "texture": "textures/ui/Black",
+                "layer": 10,
+                "size": [
+                  "100%c",
+                  16
+                ],
+                "alpha": 0.0,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "bindings": [
+                  {
+                    "binding_name": "#player_list_title"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "$online_server_title",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "stack_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "controls": [
+                        {
+                          "singleplayer_icon": {
+                            "type": "image",
+                            "size": [
+                              16,
+                              16
+                            ],
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "server_address_icon_toggle",
+                                "source_property_name": "#toggle_state",
+                                "target_property_name": "#visible"
+                              }
+                            ],
+                            "texture": "('azelux/assets/modules/server_address/' + $online_server_icon)"
+                          }
+                        },
+                        {
+                          "spacer": {
+                            "type": "panel",
+                            "size": [
+                              3,
+                              3
+                            ]
+                          }
+                        },
+                        {
+                          "labellmao": {
+                            "type": "panel",
+                            "size": [
+                              "100%c+3px",
+                              16
+                            ],
+                            "layer": 500,
+                            "controls": [
+                              {
+                                "label": {
+                                  "layer": 500,
+                                  "type": "label",
+                                  "shadow": true,
+                                  "text": "$online_server_ip",
+                                  "text_alignment": "left",
+                                  "anchor_from": "left_middle",
+                                  "anchor_to": "left_middle"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "azelux_server_address_mod@mod_menu_sliders.movable_mod": {
+    "$x_slider": "server_address_position_x",
+    "$y_slider": "server_address_position_y",
+    "$custom_size_for_fixing": ["100%-30px", "100%-10px"],
+    "$custom_controls": [
+      {
+        "azelux_server_address_mod_real": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "server_address_main_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "type": "panel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [0,-6],
+          "controls": [
+            {
+              "panelsingleplayernobg": {
+                "type": "panel",
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "server_address_background_toggle",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "server_address_mod_template_no_bg": {
+                      "type": "image",
+                      "texture": "textures/ui/Black",
+                      "size": [
+                        "100%c",
+                        16
+                      ],
+                      "alpha": 0.0,
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "bindings": [
+                        {
+                          "binding_name": "#player_list_title"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "$online_server_title",
+                          "target_property_name": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "singleplayer": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "ignored": "$is_on_3p_server",
+                            "bindings": [
+                              {
+                                "binding_name": "#player_list_title"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "((#player_list_title - ('Hive Games') - ('CubeCraft Games') - ('Zeqa Network') - ('NetherGames Network') - ('Pixel Paradise')  - ('Galaxite') - ('Lifeboat Network') - ('Mineville City') = #player_list_title) or (#player_list_title = '')",
+                                "target_property_name": "#visible"
+                              }
+                            ],
+                            "controls": [
+                              {
+                                "singleplayer_icon": {
+                                  "type": "image",
+                                  "size": [16,16],
+                                  "anchor_from": "left_middle",
+                                  "anchor_to": "left_middle",
+                                  "bindings": [
+                                    {
+                                      "binding_type": "view",
+                                      "source_control_name": "server_address_icon_toggle",
+                                      "source_property_name": "#toggle_state",
+                                      "target_property_name": "#visible"
+                                    }
+                                  ],
+                                  "texture": "azelux/assets/modules/server_address/singleplayer"
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [
+                                    3,
+                                    3
+                                  ]
+                                }
+                              },
+                              {
+                                "labellmao": {
+                                  "type": "panel",
+                                  "size": [
+                                    "100%c+3px",
+                                    16
+                                  ],
+                                  "controls": [
+                                    {
+                                      "label": {
+                                        "type": "label",
+                                        "shadow": true,
+                                        "text": "#text",
+                                        "text_alignment": "left",
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#player_list_title"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "#player_list_title",
+                                            "target_property_name": "#text"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panelsingleplayerbg": {
+                "type": "panel",
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "server_address_background_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "server_address_mod_template__bg": {
+                      "type": "image",
+                      "texture": "textures/ui/Black",
+                      "size": [
+                        "100%c",
+                        16
+                      ],
+                      "alpha": 0.3,
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "bindings": [
+                        {
+                          "binding_name": "#player_list_title"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "$online_server_title",
+                          "target_property_name": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "singleplayer": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
+                            "ignored": "$is_on_3p_server",
+                            "bindings": [
+                              {
+                                "binding_name": "#player_list_title"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "((#player_list_title - ('Hive Games') - ('CubeCraft Games') - ('Zeqa Network') - ('NetherGames Network') - ('Pixel Paradise')  - ('Galaxite') - ('Lifeboat Network') - ('Mineville City') = #player_list_title) or (#player_list_title = '')",
+                                "target_property_name": "#visible"
+                              }
+                            ],
+                            "controls": [
+                              {
+                                "singleplayer_icon": {
+                                  "type": "image",
+                                  "size": [16,16],
+                                  "anchor_from": "left_middle",
+                                  "anchor_to": "left_middle",
+                                  "bindings": [
+                                    {
+                                      "binding_type": "view",
+                                      "source_control_name": "server_address_icon_toggle",
+                                      "source_property_name": "#toggle_state",
+                                      "target_property_name": "#visible"
+                                    }
+                                  ],
+                                  "texture": "azelux/assets/modules/server_address/singleplayer"
+                                }
+                              },
+                              {
+                                "spacer": {
+                                  "type": "panel",
+                                  "size": [
+                                    3,
+                                    3
+                                  ]
+                                }
+                              },
+                              {
+                                "labellmao": {
+                                  "type": "panel",
+                                  "size": [
+                                    "100%c+3px",
+                                    16
+                                  ],
+                                  "controls": [
+                                    {
+                                      "label": {
+                                        "type": "label",
+                                        "text": "#text",
+                                        "shadow": true,
+                                        "text_alignment": "left",
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#player_list_title"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "#player_list_title",
+                                            "target_property_name": "#text"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "multiplayer": {
+                "type": "panel",
+                "controls": [
+                  {
+                    "zeqa@server_address_mod.server_address_mod_template": {
+                      "$online_server_title": "(#player_list_title - ('Zeqa Network')) = not #player_list_title",
+                      "$online_server_icon": "zeqa",
+                      "$online_server_ip": "zeqa.net"
+                    }
+                  },
+                  {
+                    "hive@server_address_mod.server_address_mod_template": {
+                      "ignored": "(not $is_on_3p_server)",
+                      "$online_server_title": "(#player_list_title - ('Hive Games')) = not #player_list_title",
+                      "$online_server_icon": "hive",
+                      "$online_server_ip": "geo.hivebedrock.network"
+                    }
+                  },
+                  {
+                    "mineplex@server_address_mod.server_address_mod_template": {
+                      "ignored": "(not $is_on_3p_server)",
+                      "$online_server_title": "(#player_list_title - ('')) = not #player_list_title",
+                      "$online_server_icon": "mineplex",
+                      "$online_server_ip": "mco.mineplex.com"
+                    }
+                  },
+                  {
+                    "cubecraft@server_address_mod.server_address_mod_template": {
+                      "ignored": "(not $is_on_3p_server)",
+                      "$online_server_title": "(#player_list_title - ('CubeCraft Games')) = not #player_list_title",
+                      "$online_server_icon": "cubecraft",
+                      "$online_server_ip": "play.cubecraft.net"
+                    }
+                  },
+                  {
+                    "pixelparadise@server_address_mod.server_address_mod_template": {
+                      "ignored": "(not $is_on_3p_server)",
+                      "$online_server_title": "(#player_list_title - ('Pixel Paradise')) = not #player_list_title",
+                      "$online_server_icon": "pixelparadise",
+                      "$online_server_ip": "play.pixelparadise.gg"
+                    }
+                  },
+                  {
+                    "nethergames@server_address_mod.server_address_mod_template": {
+                      "$online_server_title": "(#player_list_title - ('NetherGames Network')) = not #player_list_title",
+                      "$online_server_icon": "nethergames",
+                      "$online_server_ip": "play.nethergames.org"
+                    }
+                  },
+                  {
+                    "lifeboat@server_address_mod.server_address_mod_template": {
+                      "ignored": "(not $is_on_3p_server)",
+                      "$online_server_title": "(#player_list_title - ('Lifeboat Network')) = not #player_list_title",
+                      "$online_server_icon": "lifeboat",
+                      "$online_server_ip": "mco.lbsg.net"
+                    }
+                  },
+                  {
+                    "galaxite@server_address_mod.server_address_mod_template": {
+                      "ignored": "(not $is_on_3p_server)",
+                      "$online_server_title": "(#player_list_title - ('Galaxite')) = not #player_list_title",
+                      "$online_server_icon": "galaxite",
+                      "$online_server_ip": "play.galaxite.net"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

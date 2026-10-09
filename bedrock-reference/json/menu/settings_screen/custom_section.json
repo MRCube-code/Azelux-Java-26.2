@@ -1,0 +1,196 @@
+{
+  "namespace": "custom_section",
+  "button@settings_common.section_toggle_base": {
+    "$toggle_view_binding_name": "azelux_information_toggle",
+    "$glyph_texture": "azelux/assets/common/logo_512",
+    "$glyph_color_texture": "azelux/assets/common/logo_512",
+    "$glyph_size": [
+      20,
+      20
+    ],
+    "$button_text": "Quick Settings",
+    "$toggle_property_bag": {
+      "#panel_title": "Quick Settings"
+    }
+  },
+  "azelux_section": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "azelux_information_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "fov_slider@settings_common.option_slider": {
+          "$option_label": "#field_of_view_slider_label",
+          "$slider_tts_text_value": "#field_of_view_text_value",
+          "$slider_name": "field_of_view",
+          "$slider_value_binding_name": "#field_of_view",
+          "$option_enabled_binding_name": "#field_of_view_enabled",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ]
+        }
+      },
+      {
+        "option_toggle_hidehand@settings_common.option_toggle": {
+          "$option_label": "options.hidehand",
+          "$option_binding_name": "#hide_hand",
+          "$option_enabled_binding_name": "#hide_hand_enabled",
+          "$toggle_name": "hide_hand"
+        }
+      },
+      {
+        "option_toggle_hidehud@settings_common.option_toggle": {
+          "$option_label": "options.hidehud",
+          "$option_binding_name": "#hide_hud",
+          "$option_enabled_binding_name": "#hide_hud_enabled",
+          "$toggle_name": "hide_hud"
+        }
+      },
+      {
+        "option_toggle_screen_animations@settings_common.option_toggle": {
+          "$option_label": "options.screenAnimations",
+          "$option_binding_name": "#screen_animations",
+          "$option_enabled_binding_name": "#screen_animations_enabled",
+          "$toggle_name": "screen_animations",
+          "bindings": [
+            {
+              "binding_name": "#screen_animations_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "render_distance_slider@general_section.video_menu_customization_option_slider": {
+          "$option_label": "#render_distance_slider_label",
+          "$slider_name": "render_distance",
+          "$slider_value_binding_name": "#render_distance",
+          "$slider_tts_text_value": "#render_distance_text_value",
+          "$option_enabled_binding_name": "#render_distance_enabled",
+          "$slider_steps_binding_name": "#render_distance_steps",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ],
+          "controls": [
+            {
+              "render_distance_warning@general_section.render_distance_warning": {}
+            },
+            {
+              "option_generic_core@settings_common.option_generic_core": {}
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#show_render_distance",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "damage_bob_option_slider@settings_common.option_slider": {
+          "$option_label": "#damage_bob_slider_label",
+          "$slider_name": "damage_bob",
+          "$slider_value_binding_name": "#damage_bob",
+          "$slider_tts_text_value": "#damage_bob_text_value",
+          "$option_enabled_binding_name": "#damage_bob_enabled",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ]
+        }
+      },
+      {
+        "hud_opacity_slider@settings_common.option_slider": {
+          "$option_label": "#interface_opacity_slider_label",
+          "$slider_name": "interface_opacity",
+          "$slider_value_binding_name": "#interface_opacity",
+          "$slider_tts_text_value": "#interface_opacity_text_value",
+          "$option_enabled_binding_name": "#interface_opacity_enabled",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ]
+        }
+      },
+      {
+        "gui_scale_slider@settings_common.option_slider": {
+          "$option_label": "#gui_scale_slider_label",
+          "$slider_name": "gui_scale",
+          "$slider_value_binding_name": "#gui_scale",
+          "$slider_tts_text_value": "#gui_scale_text_value",
+          "$option_enabled_binding_name": "#gui_scale_enabled",
+          "$option_tooltip_binding_type": "global",
+          "$option_tooltip_area": "general_and_controls_sections",
+          "$option_tooltip_text_binding_name": "#gui_scale_disabled_option_tooltip_text",
+          "$option_tooltip_visible_binding_name": "#gui_scale_disabled_option_visible",
+          "$slider_steps_binding_name": "#gui_scale_steps",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#gui_scale_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "option_generic_core@settings_common.option_generic_core": {}
+            }
+          ]
+        }
+      },
+      {
+        "secret": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [
+            "100%c",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "pack_icon": {
+                "type": "image",
+                "texture": "azelux/assets/common/pack_icon",
+                "alpha": 0.3,
+                "size": [
+                  10,
+                  10
+                ]
+              }
+            },
+            {
+              "secret_label": {
+                "type": "label",
+                "text": "pack_icon.png",
+                "font_scale_factor": 0.5,
+                "alpha": 0.3
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
